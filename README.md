@@ -37,14 +37,14 @@ modals ???
 
 ## .env file:
 
-> REACT_APP_APIKEY="apikey..." <br />
-> REACT_APP_AUTHDOMAIN="https://..." <br />
-> REACT_APP_DATABASEURL="https://..." <br />
-> REACT_APP_PROJECTID="clean-code-project..." <br />
-> REACT_APP_STORAGEBUCKET="appspot.com..." <br />
-> REACT_APP_MESSAGINGSENDERID="123... " <br />
-> REACT_APP_APPID="app-id..." <br />
-> REACT_APP_MEASUREMENTID="G-measurement-id..." <br />
+> REACT_APP_APIKEY="..." <br />
+> REACT_APP_AUTHDOMAIN="..." <br />
+> REACT_APP_DATABASEURL="..." <br />
+> REACT_APP_PROJECTID="..." <br />
+> REACT_APP_STORAGEBUCKET="..." <br />
+> REACT_APP_MESSAGINGSENDERID="... " <br />
+> REACT_APP_APPID="..." <br />
+> REACT_APP_MEASUREMENTID="..." <br />
 
 <br />
 <br />
