@@ -36,14 +36,14 @@ modals ???
 
 ## .env file:
 
-REACT_APP_APIKEY="apikey..."
-REACT_APP_AUTHDOMAIN=https://clean-code-project.web.app/
-REACT_APP_DATABASEURL=https://clean-code-project.firebaseio.com
-REACT_APP_PROJECTID=clean-code-project
-REACT_APP_STORAGEBUCKET=clean-code-project.appspot.com
-REACT_APP_MESSAGINGSENDERID="123... "
-REACT_APP_APPID=app-id
-REACT_APP_MEASUREMENTID=G-measurement-id
+> REACT_APP_APIKEY="apikey..."
+> REACT_APP_AUTHDOMAIN=https://clean-code-project.web.app/
+> REACT_APP_DATABASEURL=https://clean-code-project.firebaseio.com
+> REACT_APP_PROJECTID=clean-code-project
+> REACT_APP_STORAGEBUCKET=clean-code-project.appspot.com
+> REACT_APP_MESSAGINGSENDERID="123... "
+> REACT_APP_APPID=app-id
+> REACT_APP_MEASUREMENTID=G-measurement-id
 
 <br />
 <br />
