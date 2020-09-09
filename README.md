@@ -38,7 +38,7 @@ modals ???
 
 > REACT_APP_APIKEY="apikey..." <br />
 > REACT_APP_AUTHDOMAIN=https://clean-code-project.web.app/ <br />
-> REACT_APP_DATABASEURL=https://clean-code-project.firebaseio.com <br />
+> REACT_APP_DATABASEURL="https://..." <br />
 > REACT_APP_PROJECTID=clean-code-project <br />
 > REACT_APP_STORAGEBUCKET=clean-code-project.appspot.com <br />
 > REACT_APP_MESSAGINGSENDERID="123... " <br />
