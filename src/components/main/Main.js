@@ -15,7 +15,7 @@ class Main extends React.Component {
 		this.fetchFirebase();
 	}
 
-	// FETCH FIREBASE TEST
+	// FETCH FIREBASE
 	async fetchFirebase() {
 		const requestOptions = {
 			method: "GET",
