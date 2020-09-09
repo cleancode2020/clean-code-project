@@ -35,7 +35,9 @@ react-router-dom ???
 
 modals ???
 
-## .env file:
+## .env file: 
+
+replace "..." with your access data
 
 > REACT_APP_APIKEY="..." <br />
 > REACT_APP_AUTHDOMAIN="..." <br />
