@@ -1,0 +1,17 @@
+.Header {
+	border: solid 1px black;
+	padding: 5px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.header__h1 {
+	font-size: 18px;
+	margin: 3px;
+}
+
+.header__img {
+	width: 15px;
+	margin: 3px;
+}

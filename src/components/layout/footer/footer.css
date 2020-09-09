@@ -1,0 +1,17 @@
+.Footer {
+	border: solid 1px black;
+	padding: 5px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.footer__h2 {
+	font-size: 18px;
+	margin: 3px;
+}
+
+.footer__img {
+	width: 15px;
+	margin: 3px;
+}
