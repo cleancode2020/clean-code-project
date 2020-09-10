@@ -4,6 +4,7 @@ import firebase from "../../constants/Firebase";
 import Header from "../layout/header/Header";
 import Main from "../main/Main";
 import Footer from "../layout/footer/Footer";
+import Contact from "../contact/Contact";
 
 class App extends React.Component {
   // FETCH FIREBASE
@@ -161,7 +162,9 @@ class App extends React.Component {
 
         {/* HEADER */}
         <Main />
-
+				
+		{/* CONTACT */}
+		<Contact />
         {/* FOOTER */}
         <Footer />
       </div>
