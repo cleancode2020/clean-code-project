@@ -7,6 +7,7 @@
 	align-items: center;
 	background-color: beige;
 }
+
 .header__ul {
 	display: flex;
 }
