@@ -1,17 +1,32 @@
 .Header {
-	border: solid 1px black;
+	/* border: solid 1px black; */
 	padding: 5px;
+	font-size: 15px;
 	display: flex;
 	justify-content: left;
 	align-items: center;
+	background-color: beige;
+}
+.header__ul{
+	display: flex;
+
+}
+.header__ul li {
+	margin: 5px;
 }
 
-.header__h1 {
-	font-size: 18px;
+.header__p {
+	font-size: 10px;
 	margin: 3px;
 }
 
 .header__img {
 	width: 15px;
 	margin: 3px;
+}
+
+.header__form {
+	display: flex;
+	
+
 }
