@@ -15,3 +15,14 @@
 	width: 15px;
 	margin: 3px;
 }
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    padding: 0 1rem;
+}
