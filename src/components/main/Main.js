@@ -22,7 +22,7 @@ class Main extends React.Component {
 			redirect: "follow",
 		};
 
-		await fetch(`${firebase.databaseURL}/.json`, requestOptions)
+		await fetch(`${firebase.databaseURL}/.json`, requestOptions) 
 			// PARSE JSON HTTP RESPONSE TO TRANSFORM INTO JS OBJECT
 			.then((response) => response.json())
 			.then((result) => {

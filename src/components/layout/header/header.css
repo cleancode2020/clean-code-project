@@ -10,7 +10,6 @@
 .header__ul{
 	display: flex;
 
-}
 .header__ul li {
 	margin: 5px;
 }
@@ -27,6 +26,4 @@
 
 .header__form {
 	display: flex;
-	
-
 }

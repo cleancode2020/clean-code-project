@@ -23,6 +23,33 @@
 > - npm run build
 > - firebase deploy
 
+## Technologies:
+
+create-react-app
+
+Firebase
+
+### NPM Packages:
+
+react-router-dom ???
+
+modals ???
+
+## .env file: 
+
+replace "..." with your access data
+
+> REACT_APP_APIKEY="..." <br />
+> REACT_APP_AUTHDOMAIN="..." <br />
+> REACT_APP_DATABASEURL="..." <br />
+> REACT_APP_PROJECTID="..." <br />
+> REACT_APP_STORAGEBUCKET="..." <br />
+> REACT_APP_MESSAGINGSENDERID="... " <br />
+> REACT_APP_APPID="..." <br />
+> REACT_APP_MEASUREMENTID="..." <br />
+
+<br />
+<br />
 
 ### Web deploy:
 
