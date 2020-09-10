@@ -7,9 +7,11 @@
 	align-items: center;
 	background-color: beige;
 }
-.header__ul{
+
+.header__ul {
 	display: flex;
 }
+
 .header__ul li {
 	margin: 5px;
 }
