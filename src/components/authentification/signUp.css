@@ -1,0 +1,94 @@
+/* SIGN UP MODAL BUTTONS */
+.modal-button {
+	margin-left: auto;
+}
+
+/* SIGN UP MODAL OPEN */
+.modal-button-login {
+	color: blue;
+	border: solid 1px blue;
+	background-color: white;
+	font-weight: bold;
+}
+
+.modal-button-login:hover {
+	color: white;
+	border: white;
+	background-color: blue;
+}
+
+/* SIGN UP MODAL CLOSE */
+.modal-button-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: blue;
+	border: solid 1px blue;
+	background-color: white;
+	font-weight: bold;
+}
+
+.modal-button-close:hover {
+	color: white;
+	border: white;
+	background-color: blue;
+}
+
+/* SIGN UP FORM */
+.form-div {
+	box-sizing: border-box;
+	border: solid 1px blue;
+	/* margin: 10vh 0; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
+}
+
+.form-legend {
+	color: blue;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+.form-label {
+	color: blue;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+.form-input {
+	color: blue;
+	font-size: 16px;
+	border: solid 1px blue;
+	/* width: 470px; */
+	margin: 20px 0;
+	padding: 10px;
+}
+
+/* SIGN UP CORRECT LENGTH MESSAGE */
+.div-correct-length {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.p-correct-length {
+	color: red;
+	margin: 10px;
+}
+
+.submit-button {
+	color: blue;
+	border: solid 1px blue;
+	background-color: white;
+	font-weight: bold;
+}
+
+.submit-button:hover {
+	color: white;
+	border: white;
+	background-color: blue;
+}
