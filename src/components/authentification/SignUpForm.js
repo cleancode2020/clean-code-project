@@ -26,6 +26,7 @@ class SignUpForm extends React.Component {
   // FOCUS IN MODAL
   componentDidMount() {
     this.input.current.focus();
+    console.log(this.props.user);
   }
 
   // MAIL SIGN UP SET STATE
@@ -61,11 +62,12 @@ class SignUpForm extends React.Component {
     event.preventDefault();
     // POST TO FIREBASE FUNCTION
     const user = await this.signUpFirebase();
-
+    // console.log(user);
     // VERIFY USER
     if (user !== null) {
       this.sendMailVerification(user);
       this.updateFirebaseUserProfile(user);
+      // debugger;
       await this.sendUserName(user);
     }
 
@@ -79,7 +81,7 @@ class SignUpForm extends React.Component {
     if (this.state.password !== this.state.confirmedPassword) {
       return;
     }
-    debugger;
+    // debugger;
     const requestOptions = {
       method: "POST",
       redirect: "follow",
@@ -160,6 +162,9 @@ class SignUpForm extends React.Component {
   }
 
   async sendUserName(user) {
+    const databaseURL = this.props.firebase.databaseURL;
+    const localId = user.localId;
+    const idToken = user.idToken;
     const requestOptions = {
       method: "PUT",
       redirect: "follow",
@@ -169,8 +174,11 @@ class SignUpForm extends React.Component {
       // CONVERT STATE IN JSON STRING	// }
       body: JSON.stringify(this.state.userName),
     };
+    // console.log(this.props.user.localId);
+    // console.log(this.props.user);
+    // debugger;
     await fetch(
-      `${this.props.firebase.databaseURL}/users/${this.props.user.localId}/userName.json?auth=${this.props.user.idToken}`,
+      `${databaseURL}/users/${localId}/userName.json?auth=${idToken}`,
       requestOptions
     ).catch((error) => console.log("error:", error));
   }
