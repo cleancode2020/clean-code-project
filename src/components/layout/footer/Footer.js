@@ -15,7 +15,7 @@ function Footer() {
                 <li>About</li>
                 <li>Contact</li>
                 <li>Data protection</li>
-                <li>Impression</li>
+                <li>Impressum</li>
             </ul>
             </nav>
         </footer>
