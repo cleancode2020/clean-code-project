@@ -14,11 +14,11 @@ function Header(props) {
       {/* HEADER DIV RIGHT */}
       {/* HEADER LOGOUT OR LOGIN/SIGN UP*/}
       {props.user ? (
-        <>
+        // <>
           <LogOut setUser={props.setUser} />
-        </>
+        // </>
       ) : (
-        <>
+        <div>
           <LogIn fetchFirebase={props.fetchFirebase} setUser={props.setUser} />
 
           <SignUp
@@ -30,7 +30,7 @@ function Header(props) {
             firebase={props.firebase}
             user={props.user}
           />
-        </>
+        </div>
       )}
     </header>
   );
