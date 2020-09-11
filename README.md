@@ -3,7 +3,7 @@
 ## Install:
 
 > - git clone "repo"
-> - cd"repo"
+> - cd "repo"
 > - npm i
 
 ## Git:
@@ -28,6 +28,10 @@
 create-react-app
 
 Firebase
+
+## Design
+
+
 
 ### NPM Packages:
 
