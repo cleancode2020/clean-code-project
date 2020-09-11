@@ -8,7 +8,7 @@ function SignUp(props) {
     <>
       {/* OPEN SIGNUP MODAL BUTTON*/}
       <button
-        className="modal-button modal-button-login"
+        className="modal__button modal__button__login"
         onClick={props.openModal}
       >
         SIGN UP
@@ -18,7 +18,7 @@ function SignUp(props) {
       <Modal isOpen={props.modalIsOpen} onRequestClose={props.closeModal}>
         {/* CLOSE SIGNUP MODAL BUTTON*/}
         <button
-          className="modal-button  modal-button-close"
+          className="modal__button  modal__button__close"
           onClick={props.closeModal}
         >
           x
