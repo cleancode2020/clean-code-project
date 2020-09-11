@@ -1,6 +1,7 @@
 import React from "react";
 import "./main.css";
 import firebase from "../../constants/Firebase";
+import RouteFooter from "../routes/RouteFooter";
 
 class Main extends React.Component {
 	constructor(props) {
@@ -22,7 +23,7 @@ class Main extends React.Component {
 			redirect: "follow",
 		};
 
-		await fetch(`${firebase.databaseURL}/.json`, requestOptions) 
+		await fetch(`${firebase.databaseURL}/.json`, requestOptions)
 			// PARSE JSON HTTP RESPONSE TO TRANSFORM INTO JS OBJECT
 			.then((response) => response.json())
 			.then((result) => {
@@ -41,6 +42,8 @@ class Main extends React.Component {
 					<label htmlFor="#">console: </label>
 					<button onClick={this.handleChange}>FIREBASE RESULT</button>
 				</form>
+				{/* CONNECT ROUTER FOOTER */}
+				<RouteFooter />
 			</main>
 		);
 	}
