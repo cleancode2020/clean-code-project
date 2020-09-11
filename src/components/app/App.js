@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
 import firebase from "../../constants/Firebase";
-// import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import Header from "../layout/header/Header";
 import Main from "../main/Main";
 import Footer from "../layout/footer/Footer";
 import Contact from "../contact/Contact";
+
 
 class App extends React.Component {
 	// FETCH FIREBASE
@@ -123,20 +124,22 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className="App">
-				{/* HEADER */}
-				<Header
-					fetchFirebase={this.fetchUserFirebase}
-					openModal={this.openModal}
-					closeModal={this.closeModal}
-					modalIsOpen={this.state.modalIsOpen}
-					firebase={firebase}
-					setUser={this.setUser}
-					user={this.state.user}
-				/>
+			<BrowserRouter>
+				<div className="App">
 
-				{/* ROUTES LOGGED IN USER */}
-				{/* {this.state.user !== null && (
+					{/* HEADER */}
+					<Header
+						fetchFirebase={this.fetchUserFirebase}
+						openModal={this.openModal}
+						closeModal={this.closeModal}
+						modalIsOpen={this.state.modalIsOpen}
+						firebase={firebase}
+						setUser={this.setUser}
+						user={this.state.user}
+					/>
+
+					{/* ROUTES LOGGED IN USER */}
+					{/* {this.state.user !== null && (
 					<Route path="/">
 						<Home
 							openModal={this.openModal}
@@ -151,8 +154,8 @@ class App extends React.Component {
 					</Route>
 				)} */}
 
-				{/* ROUTES LOGGED OUT USER */}
-				{/* {this.state.user === null && (
+					{/* ROUTES LOGGED OUT USER */}
+					{/* {this.state.user === null && (
 					<Route path="/">
 						<Welcome
 							setUser={this.setUser}
@@ -161,15 +164,16 @@ class App extends React.Component {
 					</Route>
 				)} */}
 
-				{/* HEADER */}
-				<Main />
+					{/* HEADER */}
+					<Main />
 
-				{/* CONTACT */}
-				<Contact />
+					{/* CONTACT */}
+					<Contact />
 
-				{/* FOOTER */}
-				<Footer />
-			</div>
+					{/* FOOTER */}
+					<Footer />
+				</div>
+			</BrowserRouter>
 		);
 	}
 }
