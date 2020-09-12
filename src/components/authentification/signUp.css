@@ -1,12 +1,10 @@
 /* SIGN UP MODAL BUTTONS */
 .modal__button {
-	/* margin-left: auto; */
-	/* justify-self: flex-end; */
+	margin: 5px 20px;
 }
 
 /* SIGN UP MODAL OPEN */
 .modal__button__login {
-	margin-left: auto;
 	color: blue;
 	border: solid 1px blue;
 	background-color: white;
