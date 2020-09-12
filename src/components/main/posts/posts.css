@@ -1,0 +1,21 @@
+/* MAIN POSTS */
+.main__posts {
+	border: solid 1px black;
+	height: 80vh;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+	.main__posts {
+		width: 100%;
+	}
+}
+
+/* H2 TITLE */
+.h2__posts {
+	border: solid 1px greenyellow;
+	margin: 10px;
+}
