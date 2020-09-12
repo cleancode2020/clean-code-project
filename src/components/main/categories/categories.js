@@ -43,7 +43,14 @@ class Categories extends React.Component {
 				</form> */}
 
 				{/* H2 TITLE */}
-				<h2 className="h2_categories">Categories</h2>
+				<h2 className="h2__categories">Categories</h2>
+
+				<ul className="ul__categories">
+					<li>JavaScript</li>
+					<li>Python</li>
+					<li>Rust</li>
+					<li>C++</li>
+				</ul>
 			</main>
 		);
 	}
