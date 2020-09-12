@@ -37,10 +37,19 @@
 	margin: 5px;
 }
 
+.header__img:hover {
+	width: 20px;
+	margin: 0px;
+}
+
 /* HEADER H1 */
 .header__h1 {
 	color: blue;
 	font-weight: bold;
+}
+
+.header__h1:hover {
+	color: black;
 }
 
 /* HEADER LI */
@@ -52,6 +61,10 @@
 .nav__link {
 	text-decoration: none;
 	color: black;
+}
+
+.nav__link:hover {
+	color: blue;
 }
 
 /* HEADER DIV LEFT  */

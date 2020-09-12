@@ -37,7 +37,7 @@
 /* SIGN UP FORM */
 .form__div {
 	box-sizing: border-box;
-	border: solid 1px blue;
+	/* border: solid 1px blue; */
 	/* margin: 10vh 0; */
 	display: flex;
 	flex-direction: column;
@@ -63,6 +63,7 @@
 	color: blue;
 	font-size: 16px;
 	border: solid 1px blue;
+	max-width: 500px;
 	/* width: 470px; */
 	margin: 20px 0;
 	padding: 10px;
@@ -84,6 +85,8 @@
 	color: blue;
 	border: solid 1px blue;
 	background-color: white;
+	padding: 20px;
+	max-width: 500px;
 	font-weight: bold;
 }
 
