@@ -47,7 +47,7 @@ class Categories extends React.Component {
 				</ul>
 
 				{/* FIREBASE RESULT CONSOLE*/}
-				<form className="form__test" action="#">
+				<form className="form__test__cat" action="#">
 					<label htmlFor="#">console: </label>
 					<button onClick={this.handleChange}>FIREBASE RESULT</button>
 				</form>
