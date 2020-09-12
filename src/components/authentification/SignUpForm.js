@@ -182,17 +182,17 @@ class SignUpForm extends React.Component {
         <legend className="form__legend">SIGN UP</legend>
 
         {/* MAIL SIGN UP LABEL */}
-        <label className="form__label" htmlFor="category__title">
+        <label className="form__label" htmlFor="category-title">
           Your Mail
         </label>
 
         {/* MAIL SIGN UP INPUT */}
         <input
           required
-          className="form-input"
+          className="form__input"
           type="text"
-          name="category__title"
-          id="category__title"
+          name="category-title"
+          id="category-title"
           placeholder="my.email@ex..."
           value={this.state.mail}
           onChange={this.handleChangeMail}

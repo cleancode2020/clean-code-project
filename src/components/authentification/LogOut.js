@@ -16,7 +16,7 @@ class LogOut extends React.Component {
 			<>
 				{/* LOGOUT BUTTON */}
 				<button
-					className="modal-button modal-button-login"
+					className="modal__button modal__button__login"
 					onClick={this.logoutFirebase}
 				>
 					LOG OUT
