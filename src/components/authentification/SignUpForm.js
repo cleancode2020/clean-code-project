@@ -177,19 +177,19 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <form className="form-div" action="#">
+      <form className="form__div" action="#">
         {/* SIGN UP FORM LEGEND */}
-        <legend className="form-legend">SIGN UP</legend>
+        <legend className="form__legend">SIGN UP</legend>
 
         {/* MAIL SIGN UP LABEL */}
-        <label className="form-label" htmlFor="category-title">
+        <label className="form__label" htmlFor="category-title">
           Your Mail
         </label>
 
         {/* MAIL SIGN UP INPUT */}
         <input
           required
-          className="form-input"
+          className="form__input"
           type="text"
           name="category-title"
           id="category-title"
@@ -200,31 +200,31 @@ class SignUpForm extends React.Component {
         />
 
         {/* USERNAME SIGN UP LABEL */}
-        <label className="form-label" htmlFor="category-title">
+        <label className="form__label" htmlFor="category-title">
           Choose a User Name:
         </label>
 
         {/* USERNAME SIGN UP INPUT */}
         <input
           required
-          className="form-input"
+          className="form__input"
           type="text"
           name="category-title"
-          id="category-title"
+          id="category__title"
           placeholder="my.email@ex..."
           value={this.state.userName}
           onChange={this.handleChangeUserName}
         />
 
         {/* PASSWORD SIGN UP LABEL */}
-        <label className="form-label" htmlFor="category-title">
+        <label className="form__label" htmlFor="category-title">
           Choose a Password
         </label>
 
         {/* PASSWORD SIGN UP INPUT */}
         <input
           required
-          className="form-input"
+          className="form__input"
           type="password"
           name="category-title"
           id="category-title"
@@ -234,14 +234,14 @@ class SignUpForm extends React.Component {
         />
 
         {/* CONFIRMED PASSWORD SIGN UP LABEL */}
-        <label className="form-label" htmlFor="category-title">
+        <label className="form__label" htmlFor="category-title">
           Confirm Password
         </label>
 
         {/* CONFIRMED PASSWORD SIGN UP INPUT */}
         <input
           required
-          className="form-input"
+          className="form__input"
           type="password"
           name="category-title"
           id="category-title"
@@ -252,8 +252,8 @@ class SignUpForm extends React.Component {
 
         {/* FIREBASE ERROR MESSAGE */}
         {this.state.error && (
-          <div className="div-correct-length">
-            <p className="p-correct-length">
+          <div className="div__correct__length">
+            <p className="p__correct__length">
               Error while trying to authenticate: {this.state.error.message}
             </p>
           </div>
@@ -261,7 +261,7 @@ class SignUpForm extends React.Component {
 
         {/* SUBMIT BUTTON */}
         <button
-          className="submit-button"
+          className="submit__button"
           onClick={(e) => {
             this.submitSignUp(e);
             alert("Please confirm your mail.");
