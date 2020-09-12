@@ -28,7 +28,7 @@ class Categories extends React.Component {
 			.then((result) => {
 				// FIREBASE RESULT		console.log("gerne");
 				console.log("FIREBASE RESULT");
-				console.log(result);
+				console.log(result.categories);
 			})
 			.catch((error) => console.log("error:", error));
 	}
@@ -36,12 +36,6 @@ class Categories extends React.Component {
 	render() {
 		return (
 			<main className="main__categories">
-				{/* FIREBASE RESULT CONSOLE*/}
-				{/* <form className="form__test" action="#">
-					<label htmlFor="#">console: </label>
-					<button onClick={this.handleChange}>FIREBASE RESULT</button>
-				</form> */}
-
 				{/* H2 TITLE */}
 				<h2 className="h2__categories">Categories</h2>
 
@@ -51,6 +45,12 @@ class Categories extends React.Component {
 					<li>Rust</li>
 					<li>C++</li>
 				</ul>
+
+				{/* FIREBASE RESULT CONSOLE*/}
+				<form className="form__test" action="#">
+					<label htmlFor="#">console: </label>
+					<button onClick={this.handleChange}>FIREBASE RESULT</button>
+				</form>
 			</main>
 		);
 	}
