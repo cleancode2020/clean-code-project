@@ -82,19 +82,19 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <form className="form-div" action="#">
+      <form className="form__div" action="#">
         {/* LOGIN FORM LEGEND */}
-        <legend className="form-legend">LOG IN</legend>
+        <legend className="form__legend">LOG IN</legend>
 
         {/* MAIL LOGIN LABEL */}
-        <label className="form-label" htmlFor="category-title">
+        <label className="form__label" htmlFor="category-title">
           Your Mail
         </label>
 
         {/* MAIL LOGIN INPUT */}
         <input
           required
-          className="form-input"
+          className="form__input"
           type="text"
           name="category-title"
           id="category-title"
@@ -105,14 +105,14 @@ class LoginForm extends React.Component {
         />
 
         {/* PASSWORD LOGIN LABEL */}
-        <label className="form-label" htmlFor="category-title">
+        <label className="form__label" htmlFor="category-title">
           Your Password
         </label>
 
         {/* PASSWORD LOGIN INPUT */}
         <input
           required
-          className="form-input"
+          className="form__input"
           type="password"
           name="category-title"
           id="category-title"
@@ -123,15 +123,15 @@ class LoginForm extends React.Component {
 
         {/* FIREBASE ERROR MESSAGE */}
         {this.state.error && (
-          <div className="div-correct-length">
-            <p className="p-correct-length">
+          <div className="div__correct__length">
+            <p className="p__correct__length">
               Error while trying to authenticate: {this.state.error.message}
             </p>
           </div>
         )}
 
         {/* SUBMIT LOGIN BUTTON */}
-        <button className="submit-button" onClick={this.submitLogin}>
+        <button className="submit__button" onClick={this.submitLogin}>
           LOG IN
         </button>
       </form>
