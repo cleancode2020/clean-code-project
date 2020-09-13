@@ -80,7 +80,10 @@ class Submitpost extends React.Component {
       }),
     };
 
-    await fetch(`${this.props.firebase.databaseURL}/posts/.json`, requestOptions)
+    await fetch(
+      `${this.props.firebase.databaseURL}/posts/.json`,
+      requestOptions
+    )
       // .then((response) => response.json())
       .then((result) => {
         // CLOSE MODAL AFTER POST
@@ -124,12 +127,12 @@ class Submitpost extends React.Component {
         <select
           name=""
           id=""
-          value={this.state.categories}
+          //   value={this.state.categories}
           onChange={this.categoriesHandleChange}
         >
-          <option selected disabled>
+          {/* <option selected disabled>
             Choose:
-          </option>
+          </option> */}
           {this.state.categories.map((category) => (
             <option value={category}>{category}</option>
           ))}
@@ -142,12 +145,12 @@ class Submitpost extends React.Component {
         <select
           name=""
           id=""
-          value={this.state.subcategories}
+          //   value={this.state.subcategories}
           onChange={this.subcategoriesHandleChange}
         >
-          <option selected disabled>
+          {/* <option selected disabled>
             Choose:
-          </option>
+          </option> */}
           {this.state.subcategories.map((category) => (
             <option value={category}>{category}</option>
           ))}
