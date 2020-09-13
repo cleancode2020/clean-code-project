@@ -13,6 +13,20 @@
 	}
 }
 
+/* NAV POSTS  */
+.nav__posts {
+	display: flex;
+	justify-content: center;
+	background-color: lightgrey;
+	width: 100%;
+	margin: 5px;
+	border-radius: 25px;
+}
+
+.nav__posts > * {
+	margin: 10px 20px;
+}
+
 /* H2 TITLE */
 .h2__posts {
 	font-weight: bold;

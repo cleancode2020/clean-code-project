@@ -25,6 +25,7 @@
 
 /* H3 POSTS */
 .posts__h3 {
+	text-align: center;
 	font-weight: bold;
 	font-size: 22px;
 	margin: 20px;
@@ -34,12 +35,12 @@
 .posts__h4 {
 	font-weight: bold;
 	font-size: 20px;
-	margin: 20px;
+	margin: 10px;
 }
 
 /* P POSTS */
 .posts__p {
-	margin: 0 20px;
+	margin: 0 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -51,7 +52,7 @@
 /* CODEBLOCK POSTS */
 .codeblock__span__posts {
 	border: solid 1px black;
-	margin: 0 20px;
+	margin: 0 10px;
 }
 
 @media only screen and (max-width: 600px) {

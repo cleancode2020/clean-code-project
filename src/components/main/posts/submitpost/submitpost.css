@@ -1,14 +1,15 @@
 /* POST FORM */
 .post__form {
-	border: solid 1px black;
+	border: solid 1px lightgrey;
+	background-color: lightgrey;
 	box-sizing: border-box;
 	border-radius: 35px;
-	padding: 50px;
-	max-width: 100%;
+	padding: 20px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 }
 
 /* NAV LINK */
@@ -24,23 +25,25 @@
 
 /* LEGEND */
 .post__legend {
+	text-align: center;
 	font-weight: bold;
 	font-size: 20px;
-	margin: 20px;
+	margin: 10px;
 }
 
 /* LABEL */
 .post__label {
 	font-weight: bold;
 	font-size: 16px;
-	margin: 20px 0;
+	margin: 50px 0 10px;
 	text-align: left;
 }
 
 /* ARTICLE */
 .post__textarea {
 	border: solid 1px black;
-	width: 500px;
+	width: 100%;
+	/* margin: 30px; */
 }
 
 @media only screen and (max-width: 600px) {
@@ -52,7 +55,8 @@
 /* CODEBLOCK */
 .codeblock__span {
 	border: solid 1px black;
-	max-width: 500px;
+	width: 100%;
+	/* max-width: 500px; */
 }
 
 @media only screen and (max-width: 600px) {

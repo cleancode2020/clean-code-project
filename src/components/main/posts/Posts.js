@@ -49,20 +49,22 @@ class Posts extends React.Component {
 				{/* H2 TITLE */}
 				<h2 className="h2__posts">Posts</h2>
 
-				{/* POST LINK */}
-				<Link className="nav__link" to="/submitpost">
-					Make a post (click me)
-				</Link>
+				<nav className="nav__posts">
+					{/* POST LINK */}
+					<Link className="nav__link" to="/submitpost">
+						Make a post (click me)
+					</Link>
+
+					{/* POST LINK */}
+					<Link className="nav__link" to="/readposts">
+						Read posts (click me)
+					</Link>
+				</nav>
 
 				{/* POST Component */}
 				<Route path="/submitpost">
 					<Submitpost />
 				</Route>
-
-				{/* POST LINK */}
-				<Link className="nav__link" to="/readposts">
-					Read posts (click me)
-				</Link>
 
 				{/* POST Component */}
 				<Route path="/readposts">
