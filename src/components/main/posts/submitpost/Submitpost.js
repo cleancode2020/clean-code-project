@@ -7,7 +7,7 @@ const Submitpost = () => {
 	return (
 		<form className="post__form">
 			<Link className="nav__link" to="/">
-				x
+				close x
 			</Link>
 			{/* LEGEND */}
 			<legend className="post__legend">Make a post</legend>

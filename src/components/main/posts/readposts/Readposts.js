@@ -7,7 +7,7 @@ const Readposts = () => {
 	return (
 		<section className="readposts-section">
 			<Link className="nav__link__posts" to="/">
-				x
+				close x
 			</Link>
 			{/* LEGEND */}
 			<h3 className="posts__h3">user36</h3>
