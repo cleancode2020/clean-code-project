@@ -1,66 +1,53 @@
 /* POST FORM */
 .post__form {
-	border: solid 1px lightgrey;
-	background-color: lightgrey;
-	box-sizing: border-box;
-	border-radius: 35px;
-	padding: 20px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	/* align-items: center; */
+  border: solid 1px lightgrey;
+  background-color: lightgrey;
+  box-sizing: border-box;
+  border-radius: 35px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 /* NAV LINK */
 .navlink__submitclose {
-	align-self: flex-end;
-	color: black;
-	text-decoration: none;
+  align-self: flex-end;
+  color: black;
+  text-decoration: none;
 }
 
 .navlink__submitclose:hover {
-	color: blue;
+  color: blue;
 }
 
 /* LEGEND */
 .post__legend {
-	text-align: center;
-	font-weight: bold;
-	font-size: 20px;
-	margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px;
 }
 
 /* LABEL */
 .post__label {
-	font-weight: bold;
-	font-size: 16px;
-	margin: 50px 0 10px;
-	text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 50px 0 10px;
+  text-align: left;
 }
 
 /* ARTICLE */
 .post__textarea {
-	border: solid 1px black;
-	width: 100%;
-	/* margin: 30px; */
+  border: solid 1px black;
+  width: 100%;
+  /* margin: 30px; */
 }
 
 @media only screen and (max-width: 600px) {
-	.post__textarea {
-		width: 100%;
-	}
-}
-
-/* CODEBLOCK */
-.codeblock__span {
-	border: solid 1px black;
-	width: 100%;
-	/* max-width: 500px; */
-}
-
-@media only screen and (max-width: 600px) {
-	.codeblock__span {
-		width: 100%;
-	}
+  .post__textarea {
+    width: 100%;
+  }
 }
