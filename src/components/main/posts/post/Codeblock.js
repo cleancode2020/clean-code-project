@@ -1,10 +1,12 @@
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+// import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 
 const Codeblock = () => {
 	const codeString = "(num) => num + 1";
-	const codeString2 = ` function createStyleObject(classNames, style) {
+	const codeString2 = ` 
+	  function createStyleObject(classNames, style) {
 		return classNames.reduce((styleObject, className) => {
 		  return {...styleObject, ...style[className]};
 		}, {});
