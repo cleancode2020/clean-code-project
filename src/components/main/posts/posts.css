@@ -1,7 +1,5 @@
 /* MAIN POSTS */
 .main__posts {
-	border: solid 1px black;
-	/* min-height: 80vh; */
 	width: 70%;
 	display: flex;
 	flex-direction: column;

@@ -77,13 +77,14 @@
 	padding: 10px;
 }
 
-/* CORRECT LENGTH MESSAGE */
+/* DIV CORRECT LENGTH MESSAGE */
 .div__correct__length {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
+/* P CORRECT LENGTH MESSAGE */
 .p__correct__length {
 	color: red;
 	margin: 10px;
