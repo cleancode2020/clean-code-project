@@ -6,7 +6,7 @@ import Codeblock from "./Codeblockread";
 const Readposts = () => {
 	return (
 		<section className="readposts-section">
-			<ul>
+			<ul className="posts__ul">
 				{/* POST 1 */}
 				<li>
 					{/* LEGEND */}
