@@ -1,7 +1,9 @@
 import React from "react";
 import "./posts.css";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import firebase from "../../../constants/Firebase";
-import Post from "./post/Post";
+import Submitpost from "./submitpost/Submitpost";
+import Readposts from "./readposts/Readposts";
 
 class Posts extends React.Component {
 	constructor(props) {
@@ -33,6 +35,7 @@ class Posts extends React.Component {
 			})
 			.catch((error) => console.log("error:", error));
 	}
+	submitpost;
 
 	render() {
 		return (
@@ -46,8 +49,25 @@ class Posts extends React.Component {
 				{/* H2 TITLE */}
 				<h2 className="h2__posts">Posts</h2>
 
-				{/* POST */}
-				<Post />
+				{/* POST LINK */}
+				<Link className="nav__link" to="/submitpost">
+					Make a post (click me)
+				</Link>
+
+				{/* POST Component */}
+				<Route path="/submitpost">
+					<Submitpost />
+				</Route>
+
+				{/* POST LINK */}
+				<Link className="nav__link" to="/readposts">
+					Read posts (click me)
+				</Link>
+
+				{/* POST Component */}
+				<Route path="/readposts">
+					<Readposts />
+				</Route>
 			</main>
 		);
 	}

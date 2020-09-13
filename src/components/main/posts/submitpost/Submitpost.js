@@ -1,10 +1,14 @@
 import React from "react";
-import "./post.css";
-import Codeblock from "./Codeblock";
+import "./submitpost.css";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import Codeblock from "./Codeblocksubmit";
 
-const Post = () => {
+const Submitpost = () => {
 	return (
 		<form className="post__form">
+			<Link className="nav__link" to="/">
+				x
+			</Link>
 			{/* LEGEND */}
 			<legend className="post__legend">Make a post</legend>
 
@@ -31,4 +35,4 @@ const Post = () => {
 	);
 };
 
-export default Post;
+export default Submitpost;
