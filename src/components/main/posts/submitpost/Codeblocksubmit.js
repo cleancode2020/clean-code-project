@@ -1,6 +1,7 @@
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+// import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 // import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 
 const Codeblock = () => {
@@ -49,7 +50,7 @@ const Codeblock = () => {
 	  }`;
 
 	return (
-		<SyntaxHighlighter language="javascript" style={docco}>
+		<SyntaxHighlighter language="javascript" style={dark}>
 			{/* {codeString} */}
 			{codeString2}
 		</SyntaxHighlighter>
