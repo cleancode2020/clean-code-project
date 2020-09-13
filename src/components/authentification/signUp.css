@@ -41,8 +41,8 @@
 	background-color: lightgrey;
 	border: solid 1px lightgrey;
 	border-radius: 50px;
-	max-width: fit-content;
-	margin: 10% auto;
+	width: fit-content;
+	margin: 60px auto;
 	padding: 50px;
 	display: flex;
 	flex-direction: column;
@@ -53,7 +53,6 @@
 /* LEGEND*/
 .form__legend {
 	color: blue;
-
 	font-size: 22px;
 	font-weight: bold;
 	margin: 20px 0;
@@ -73,7 +72,7 @@
 	color: black;
 	font-size: 16px;
 	border: none;
-	max-width: 500px;
+	max-width: 700px;
 	margin: 5px 0 20px;
 	padding: 10px;
 }
