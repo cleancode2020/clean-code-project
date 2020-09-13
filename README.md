@@ -14,8 +14,8 @@
 > - $ git fetch
 > - $ git pull
 
-> - git branch "feature/name"
-> - git checkout "feature/name"
+> - $ git branch "feature/name"
+> - $ git checkout "feature/name"
 
 > - $ git add .
 > - $ git commit -m "commit..."
