@@ -80,7 +80,7 @@ class Submitpost extends React.Component {
       }),
     };
 
-    await fetch(`${this.props.firebase.databaseURL}/posts/`, requestOptions)
+    await fetch(`${this.props.firebase.databaseURL}/posts/.json`, requestOptions)
       // .then((response) => response.json())
       .then((result) => {
         // CLOSE MODAL AFTER POST
