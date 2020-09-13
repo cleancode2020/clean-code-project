@@ -272,7 +272,7 @@ class SignUpForm extends React.Component {
 					className="submit__button"
 					onClick={(e) => {
 						this.submitSignUp(e);
-						alert("Please confirm your mail.");
+						// alert("Please confirm your mail.");
 					}}
 				>
 					SIGN UP
