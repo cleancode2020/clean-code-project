@@ -50,11 +50,11 @@ Firebase
 
 ### NPM Packages:
 
-react-router-dom - npmjs.com/package/react-router-dom
+- react-router-dom - https://www.npmjs.com/package/react-router-dom
 
-react-modal - npmjs.com/package/react-modal
+- react-modal - https://www.npmjs.com/package/react-modal
 
-??? react-syntax-highlighter - npmjs.com/package/react-syntax-highlighter
+- react-syntax-highlighter - https://www.npmjs.com/package/react-syntax-highlighter
 
 <br/>
 
