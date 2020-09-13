@@ -1,6 +1,7 @@
 import React from "react";
 import "./posts.css";
 import firebase from "../../../constants/Firebase";
+import Post from "./post/Post";
 
 class Posts extends React.Component {
 	constructor(props) {
@@ -43,7 +44,10 @@ class Posts extends React.Component {
 				</form> */}
 
 				{/* H2 TITLE */}
-				<h2 className="h2_posts">Posts</h2>
+				<h2 className="h2__posts">Posts</h2>
+
+				{/* POST */}
+				<Post />
 			</main>
 		);
 	}
