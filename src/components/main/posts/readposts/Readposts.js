@@ -6,7 +6,7 @@ import Codeblock from "./Codeblockread";
 const Readposts = () => {
 	return (
 		<section className="readposts-section">
-			<Link className="nav__link__posts" to="/">
+			<Link className="navlink__readclose" to="/">
 				close x
 			</Link>
 			{/* LEGEND */}

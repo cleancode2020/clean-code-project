@@ -1,23 +1,31 @@
 /* MAIN POSTS SECTION */
 .readposts-section {
-	border: solid 1px black;
+	border: solid 1px lightgrey;
+	background-color: lightgrey;
 	border-radius: 35px;
 	padding: 50px;
-	max-width: 100%;
+	width: 100%;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 }
 
 /* NAV LINK */
-.nav__link__posts {
-	border: solid 1px black;
+.navlink__readclose {
+	text-align: right;
+	color: black;
+	text-decoration: none;
+}
+
+.navlink__readclose:hover {
+	color: blue;
 }
 
 /* H3 POSTS */
 .posts__h3 {
+	text-align: center;
 	font-weight: bold;
 	font-size: 22px;
 	margin: 20px;
@@ -27,28 +35,28 @@
 .posts__h4 {
 	font-weight: bold;
 	font-size: 20px;
-	margin: 20px;
+	margin: 10px;
 }
 
 /* P POSTS */
 .posts__p {
-	width: 500px;
+	margin: 0 10px;
 }
 
 @media only screen and (max-width: 600px) {
 	.posts__p {
-		width: 100%;
+		margin: 0;
 	}
 }
 
 /* CODEBLOCK POSTS */
 .codeblock__span__posts {
 	border: solid 1px black;
-	width: 500px;
+	margin: 0 10px;
 }
 
 @media only screen and (max-width: 600px) {
 	.codeblock__span__posts {
-		width: 100%;
+		margin: 0;
 	}
 }

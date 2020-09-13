@@ -6,7 +6,7 @@ import Codeblock from "./Codeblocksubmit";
 const Submitpost = () => {
 	return (
 		<form className="post__form">
-			<Link className="nav__link" to="/">
+			<Link className="navlink__submitclose" to="/">
 				close x
 			</Link>
 			{/* LEGEND */}
