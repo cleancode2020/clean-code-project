@@ -11,6 +11,17 @@
 	align-items: center;
 }
 
+/* NAV LINK */
+.navlink__submitclose {
+	align-self: flex-end;
+	color: black;
+	text-decoration: none;
+}
+
+.navlink__submitclose:hover {
+	color: blue;
+}
+
 /* LEGEND */
 .post__legend {
 	font-weight: bold;
