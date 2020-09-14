@@ -167,7 +167,7 @@ class App extends React.Component {
           <Main firebase={firebase} />
 
           {/* CONTACT */}
-          <Contact />
+          {/* <Contact /> */}
 
           {/* FOOTER */}
           <Footer />
