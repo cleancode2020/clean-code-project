@@ -8,8 +8,8 @@ class Submitpost extends React.Component {
     this.state = {
       username: "Vladimir",
       title: "",
-      categories: ["js", "c++", "python", "rust"],
-      subcategories: ["react", "vue.js", "angular"],
+      categories: "",
+      subcategories: "",
       article: "",
       codeblock: "",
       correctLength: true,
@@ -125,17 +125,24 @@ class Submitpost extends React.Component {
           Categories
         </label>
         <select
-          name=""
+          name="category"
           id=""
-          //   value={this.state.categories}
           onChange={this.categoriesHandleChange}
+          value={this.state.categories}
+          defaultValue="DEFAULT"
         >
-          {/* <option selected disabled>
+          <option disabled value="DEFAULT">
             Choose:
-          </option> */}
-          {this.state.categories.map((category) => (
+          </option>
+          {/* {this.state.categories.map((category) => (
             <option value={category}>{category}</option>
-          ))}
+          ))} */}
+          <option selected value="js">
+            JS
+          </option>
+          <option value="python">Python</option>
+          <option value="c++">C++</option>
+          <option value="rust">Rust</option>
         </select>
 
         {/* SUBCATIGORIES */}
@@ -143,17 +150,23 @@ class Submitpost extends React.Component {
           SubCategories
         </label>
         <select
-          name=""
+          name="subCategory"
           id=""
-          //   value={this.state.subcategories}
+          value={this.state.subcategories}
+          defaultValue="DEFAULT"
           onChange={this.subcategoriesHandleChange}
         >
-          {/* <option selected disabled>
+          <option disabled value="DEFAULT">
             Choose:
-          </option> */}
-          {this.state.subcategories.map((category) => (
+          </option>
+          <option selected value="react">
+            React
+          </option>
+          <option value="vue.js">Vue.js</option>
+          <option value="angular">Angular</option>
+          {/* {this.state.subcategories.map((category) => (
             <option value={category}>{category}</option>
-          ))}
+          ))} */}
         </select>
 
         {/* ARTICLE */}
