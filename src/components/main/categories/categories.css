@@ -15,7 +15,10 @@
 
 /* H2 TITLE */
 .h2__categories {
-	border: solid 1px greenyellow;
+	/* border: solid 1px greenyellow; */
+	text-align: center;
+	font-weight: bold;
+	font-size: 22px;
 	margin: 30px 0;
 }
 
@@ -26,8 +29,10 @@
 .ul__categories li {
 	border: solid 1px lightgrey;
 	background-color: lightgrey;
-	margin: 30px 0;
+	border-radius: 25px;
+	margin: 30px 10px;
 	padding: 30px;
+	font-weight: bold;
 }
 
 .form__test__cat {
