@@ -8,8 +8,12 @@ const Readposts = () => {
 	return (
 		<section className="readposts-section">
 			<ul className="posts__ul">
-				{/* POST 1 */}
+				{/* POST */}
+				<Route path="/userpost">
+					<Userpost />
+				</Route>
 
+				{/* POST 1 */}
 				<Link className="nav__link" to="/userpost">
 					<li className="posts__li">
 						<h2 className="article-h2">Title</h2>
@@ -41,10 +45,6 @@ const Readposts = () => {
 					</li>
 				</Link>
 			</ul>
-
-			<Route path="/userpost">
-				<Userpost />
-			</Route>
 		</section>
 	);
 };
