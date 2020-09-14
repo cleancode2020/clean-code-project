@@ -2,6 +2,7 @@ import React from "react";
 import "./main.css";
 import Categories from "./categories/categories";
 import Posts from "./posts/posts";
+import RouteFooter from "../routes/RouteFooter";
 
 function Main() {
 	return (
@@ -11,6 +12,8 @@ function Main() {
 
 			{/* POSTS */}
 			<Posts />
+			{/* CONNECT ROUTER FOOTER */}
+			<RouteFooter />
 		</main>
 	);
 }
