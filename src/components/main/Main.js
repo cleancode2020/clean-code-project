@@ -1,21 +1,18 @@
 import React from "react";
 import "./main.css";
 import Categories from "./categories/categories";
-import Posts from "./posts/posts";
-import RouteFooter from "../routes/RouteFooter";
+import Posts from "./posts/Posts";
 
-function Main() {
-	return (
-		<main className="Main">
-			{/* CATEGORIES */}
-			<Categories />
+function Main(props) {
+  return (
+    <main className="Main">
+      {/* CATEGORIES */}
+      <Categories firebase={props.firebase} />
 
-			{/* POSTS */}
-			<Posts />
-			{/* CONNECT ROUTER FOOTER */}
-			<RouteFooter />
-		</main>
-	);
+      {/* POSTS */}
+      <Posts firebase={props.firebase} />
+    </main>
+  );
 }
 
 export default Main;
