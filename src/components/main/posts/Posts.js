@@ -51,12 +51,12 @@ class Posts extends React.Component {
 
         <nav className="nav__posts">
           {/* POST LINK */}
-          <Link className="nav__link" to="/">
+          <Link className="read__link" to="/">
             Read posts
           </Link>
 
           {/* POST LINK */}
-          <Link className="nav__link" to="/submitpost">
+          <Link className="postaction__link" to="/submitpost">
             Make a post
           </Link>
         </nav>
