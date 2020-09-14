@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import firebase from "../../constants/Firebase";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../layout/header/Header";
 import Main from "../main/Main";
 import Footer from "../layout/footer/Footer";
@@ -124,9 +124,8 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<BrowserRouter>
+			<Router>
 				<div className="App">
-
 					{/* HEADER */}
 					<Header
 						fetchFirebase={this.fetchUserFirebase}
@@ -173,7 +172,7 @@ class App extends React.Component {
 					{/* FOOTER */}
 					<Footer />
 				</div>
-			</BrowserRouter>
+			</Router>
 		);
 	}
 }

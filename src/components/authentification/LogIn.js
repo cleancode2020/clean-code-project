@@ -30,7 +30,7 @@ class Login extends React.Component {
       <>
         {/* LOGIN OPEN MODAL BUTTON */}
         <button
-          className="modal-button modal-button-login"
+          className="modal__button modal__button__login"
           onClick={this.openModal}
         >
           LOG IN
@@ -40,7 +40,7 @@ class Login extends React.Component {
         <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal}>
           {/* LOGIN CLOSE MODAL BUTTON */}
           <button
-            className="modal-button  modal-button-close"
+            className="modal__button  modal__button__close"
             onClick={this.closeModal}
           >
             x

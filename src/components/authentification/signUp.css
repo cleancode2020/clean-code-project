@@ -1,24 +1,24 @@
 /* SIGN UP MODAL BUTTONS */
-.modal-button {
-	margin-left: auto;
+.modal__button {
+	margin: 5px 20px;
 }
 
 /* SIGN UP MODAL OPEN */
-.modal-button-login {
+.modal__button__login {
 	color: blue;
 	border: solid 1px blue;
 	background-color: white;
 	font-weight: bold;
 }
 
-.modal-button-login:hover {
+.modal__button__login:hover {
 	color: white;
 	border: white;
 	background-color: blue;
 }
 
 /* SIGN UP MODAL CLOSE */
-.modal-button-close {
+.modal__button__close {
 	position: absolute;
 	top: 20px;
 	right: 20px;
@@ -28,16 +28,16 @@
 	font-weight: bold;
 }
 
-.modal-button-close:hover {
+.modal__button__close:hover {
 	color: white;
 	border: white;
 	background-color: blue;
 }
 
 /* SIGN UP FORM */
-.form-div {
+.form__div {
 	box-sizing: border-box;
-	border: solid 1px blue;
+	/* border: solid 1px blue; */
 	/* margin: 10vh 0; */
 	display: flex;
 	flex-direction: column;
@@ -45,49 +45,52 @@
 	/* align-items: center; */
 }
 
-.form-legend {
+.form__legend {
 	color: blue;
 	font-size: 22px;
 	font-weight: bold;
 	margin: 20px 0;
 }
 
-.form-label {
+.form__label {
 	color: blue;
 	font-size: 22px;
 	font-weight: bold;
 	margin: 20px 0;
 }
 
-.form-input {
+.form__input {
 	color: blue;
 	font-size: 16px;
 	border: solid 1px blue;
+	max-width: 500px;
 	/* width: 470px; */
 	margin: 20px 0;
 	padding: 10px;
 }
 
 /* SIGN UP CORRECT LENGTH MESSAGE */
-.div-correct-length {
+.div__correct__length {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.p-correct-length {
+.p__correct__length {
 	color: red;
 	margin: 10px;
 }
 
-.submit-button {
+.submit__button {
 	color: blue;
 	border: solid 1px blue;
 	background-color: white;
+	padding: 20px;
+	max-width: 500px;
 	font-weight: bold;
 }
 
-.submit-button:hover {
+.submit__button:hover {
 	color: white;
 	border: white;
 	background-color: blue;
