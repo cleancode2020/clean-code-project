@@ -8,8 +8,10 @@ class Submitpost extends React.Component {
     this.state = {
       username: "Vladimir",
       title: "",
-      categories: "",
-      subcategories: "",
+      categories: ["js", "c++", "python", "rust"],
+      subcategories: ["react", "vue.js", "angular"],
+      currentCategory: "",
+      currentSubCategory: "",
       article: "",
       codeblock: "",
       correctLength: true,
@@ -34,11 +36,11 @@ class Submitpost extends React.Component {
   }
 
   categoriesHandleChange(e) {
-    this.setState({ categories: e.target.value });
+    this.setState({ currentCategory: e.target.value });
   }
 
   subcategoriesHandleChange(e) {
-    this.setState({ subcategories: e.target.value });
+    this.setState({ currentSubCategory: e.target.value });
   }
 
   articleHandleChange(e) {
@@ -72,9 +74,10 @@ class Submitpost extends React.Component {
       },
       // CONVERT STATE IN JSON STRING
       body: JSON.stringify({
+        username: this.state.username,
         title: this.state.title,
-        categories: this.state.categories,
-        subcategories: this.state.subcategories,
+        categories: this.state.currentCategory,
+        subcategories: this.state.currentSubCategory,
         article: this.state.article,
         codeblock: this.state.codeblock,
       }),
@@ -99,12 +102,10 @@ class Submitpost extends React.Component {
     return (
       <form className="post__form">
         <Link className="navlink__submitclose" to="/">
-          close x
+          close X
         </Link>
         {/* LEGEND */}
-        <legend className="post__legend">
-          {this.state.username}Make a post
-        </legend>
+        <legend className="post__legend">Make a post</legend>
 
         {/* TITLE */}
         <label className="post__label" htmlFor="#">
@@ -125,24 +126,24 @@ class Submitpost extends React.Component {
           Categories
         </label>
         <select
-          name="category"
+          name=""
           id=""
-          onChange={this.categoriesHandleChange}
-          value={this.state.categories}
+          value={this.state.currentCategory}
           defaultValue="DEFAULT"
+          onChange={this.categoriesHandleChange}
         >
-          <option disabled value="DEFAULT">
+          <option value="DEFAULT" disabled>
             Choose:
           </option>
-          {/* {this.state.categories.map((category) => (
-            <option value={category}>{category}</option>
-          ))} */}
           <option selected value="js">
             JS
           </option>
           <option value="python">Python</option>
           <option value="c++">C++</option>
           <option value="rust">Rust</option>
+          {/* {this.state.categories.map((category) => (
+            <option value={category}>{category}</option>
+          ))} */}
         </select>
 
         {/* SUBCATIGORIES */}
@@ -150,9 +151,9 @@ class Submitpost extends React.Component {
           SubCategories
         </label>
         <select
-          name="subCategory"
+          name=""
           id=""
-          value={this.state.subcategories}
+          value={this.state.currentSubCategory}
           defaultValue="DEFAULT"
           onChange={this.subcategoriesHandleChange}
         >
@@ -200,7 +201,10 @@ class Submitpost extends React.Component {
         {this.state.correctLength ? null : (
           <p className="p-correct-length">Title length can be 3 characters.</p>
         )}
-        <button onClick={this.submitPost}>Submit</button>
+        <button className="submit__post" onClick={this.submitPost}>
+          Submit Article
+        </button>
+        <p>{this.state.username}</p>
       </form>
     );
   }
