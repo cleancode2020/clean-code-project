@@ -7,6 +7,7 @@ import Main from "../main/Main";
 import Footer from "../layout/footer/Footer";
 import Contact from "../contact/Contact";
 
+
 class App extends React.Component {
   // FETCH FIREBASE
   constructor(props) {
