@@ -82,9 +82,9 @@ class Submitpost extends React.Component {
         codeblock: this.state.codeblock,
       }),
     };
-
+    debugger;
     await fetch(
-      `${this.props.firebase.databaseURL}/posts/.json`,
+      `${this.props.firebase.databaseURL}/posts.json?auth=${this.props.user.idToken}`,
       requestOptions
     )
       // .then((response) => response.json())

@@ -56,17 +56,21 @@ class Posts extends React.Component {
           </Link>
 
           {/* POST LINK */}
-          <Link className="postaction__link" to="/submitpost">
-            Make a post
-          </Link>
+          {this.props.user ? (
+            <Link className="postaction__link" to="/submitpost">
+              Make a post
+            </Link>
+          ) : null}
         </nav>
 
-        {/* POST Component */}
-        <Route path="/submitpost">
-          <Submitpost firebase={this.props.firebase} />
-        </Route>
+        {/* POST COMPONENT */}
+        {this.props.user ? (
+          <Route path="/submitpost">
+            <Submitpost firebase={this.props.firebase} user={this.props.user} />
+          </Route>
+        ) : null}
 
-        {/* POST Component */}
+        {/* POST COMPONENT */}
         <Route path="/">
           <Readposts />
         </Route>
