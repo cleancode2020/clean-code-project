@@ -7,7 +7,6 @@ import Main from "../main/Main";
 import Footer from "../layout/footer/Footer";
 import Contact from "../contact/Contact";
 
-
 class App extends React.Component {
   // FETCH FIREBASE
   constructor(props) {
@@ -164,8 +163,10 @@ class App extends React.Component {
 				)} */}
 
           {/* HEADER */}
-          <Main firebase={firebase} />
-
+          <Main firebase={firebase} user={this.state.user} />
+          {/* {this.state.user ? (
+            <Main firebase={firebase} user={this.state.user} />
+          ) : null} */}
           {/* CONTACT */}
           {/* <Contact /> */}
 
