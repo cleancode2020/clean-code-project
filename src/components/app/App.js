@@ -126,20 +126,21 @@ class App extends React.Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<div className="App">
-					{/* HEADER */}
-					<Header
-						fetchFirebase={this.fetchUserFirebase}
-						openModal={this.openModal}
-						closeModal={this.closeModal}
-						modalIsOpen={this.state.modalIsOpen}
-						firebase={firebase}
-						setUser={this.setUser}
-						user={this.state.user}
-					/>
+				<Switch>
+					<div className="App">
+						{/* HEADER */}
+						<Header
+							fetchFirebase={this.fetchUserFirebase}
+							openModal={this.openModal}
+							closeModal={this.closeModal}
+							modalIsOpen={this.state.modalIsOpen}
+							firebase={firebase}
+							setUser={this.setUser}
+							user={this.state.user}
+						/>
 
-					{/* ROUTES LOGGED IN USER */}
-					{/* {this.state.user !== null && (
+						{/* ROUTES LOGGED IN USER */}
+						{/* {this.state.user !== null && (
 					<Route path="/">
 						<Home
 							openModal={this.openModal}
@@ -154,8 +155,8 @@ class App extends React.Component {
 					</Route>
 				)} */}
 
-					{/* ROUTES LOGGED OUT USER */}
-					{/* {this.state.user === null && (
+						{/* ROUTES LOGGED OUT USER */}
+						{/* {this.state.user === null && (
 					<Route path="/">
 						<Welcome
 							setUser={this.setUser}
@@ -164,9 +165,8 @@ class App extends React.Component {
 					</Route>
 				)} */}
 
-					<Switch>
 						{/* MAIN */}
-						<Route path="/">
+						<Route exact path="/">
 							<Main firebase={firebase} user={this.state.user} />
 						</Route>
 
@@ -189,11 +189,11 @@ class App extends React.Component {
 						<Route path="/privacy">
 							<Privacy />
 						</Route>
-					</Switch>
 
-					{/* FOOTER */}
-					<Footer />
-				</div>
+						{/* FOOTER */}
+						<Footer />
+					</div>
+				</Switch>
 			</BrowserRouter>
 		);
 	}
