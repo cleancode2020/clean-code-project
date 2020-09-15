@@ -60,7 +60,6 @@ class Posts extends React.Component {
 					{/* POST COMPONENT */}
 					{this.props.user ? (
 						<Route path="/submit">
-							<h1>hallo</h1>
 							<Submitpost
 								firebase={this.props.firebase}
 								user={this.props.user}
