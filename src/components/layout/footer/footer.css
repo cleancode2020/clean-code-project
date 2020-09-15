@@ -1,6 +1,6 @@
 /* FOOTER */
 .Footer {
-  border: solid 1px black;
+  /* border: solid 1px black; */
   padding: 5px;
   display: flex;
   align-items: center;
@@ -8,9 +8,12 @@
 }
 
 /* FOOTER MAIN */
-/* .footer__main {
-  color: antiquewhite;
-} */
+.footer__main {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 10rem;
+}
 
 /* FOOTER IMG */
 .footer__img {
@@ -39,7 +42,6 @@ footer ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 90px 0 90px;
 }
 
 footer ul li {
@@ -56,3 +58,4 @@ footer ul li {
 .footer__name:hover {
   color: blue;
 }
+
