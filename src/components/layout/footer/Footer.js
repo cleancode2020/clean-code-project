@@ -6,16 +6,16 @@ import "./footer.css";
 function Footer() {
 	return (
 		<footer className="Footer">
-			<Link activeClassName="footer__active" to="/">
+			<Link className="footer__main" to="/">
 				<img className="footer__img" src={logo} alt="logo" />
-				<h2 className="footer__h1">Clean Code Footer</h2>
+				<h2 className="footer__h1">cleancode</h2>
 			</Link>
-			<nav>
-				<ul>
-					<li><Link activeClassName="footer__active" to="/about">About</Link></li>
-					<li><Link activeClassName="footer__active" to="/contact">Contact</Link></li>
-					<li><Link activeClassName="footer__active" to="/privacy">Privacy</Link></li>
-					<li><Link activeClassName="footer__active" to="/impressum">Impressum</Link></li>
+			<nav className="footer__nav">
+				<ul className="footer__ul">
+					<li><Link className="footer__name" to="/about">About</Link></li>
+					<li><Link className="footer__name" to="/contact">Contact</Link></li>
+					<li><Link className="footer__name" to="/privacy">Privacy</Link></li>
+					<li><Link className="footer__name" to="/impressum">Impressum</Link></li>
 				</ul>
 			</nav>
 

@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "../layout/header/Header";
 import Main from "../main/Main";
 import Footer from "../layout/footer/Footer";
-import Contact from "../contact/Contact";
+// import Contact from "../contact/Contact";
 import Privacy from "../legal/privacy/Privacy";
 import Impressum from "../legal/impressum/Impressum";
 
