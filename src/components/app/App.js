@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
 import firebase from "../../constants/Firebase";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "../layout/header/Header";
 import Main from "../main/Main";
 import Footer from "../layout/footer/Footer";
 import Contact from "../contact/Contact";
+import Privacy from "../legal/privacy/Privacy";
+import Impressum from "../legal/impressum/Impressum";
 
 class App extends React.Component {
   // FETCH FIREBASE
@@ -123,7 +125,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <BrowserRouter>
         <div className="App">
           {/* HEADER */}
           <Header
@@ -161,19 +163,40 @@ class App extends React.Component {
 						/>
 					</Route>
 				)} */}
-
-          {/* HEADER */}
-          <Main firebase={firebase} user={this.state.user} />
-          {/* {this.state.user ? (
+          <Switch>
+            {/* HEADER */}
+            <Route path="/">
+              <Main firebase={firebase} user={this.state.user} />
+            </Route>
+            {/* {this.state.user ? (
             <Main firebase={firebase} user={this.state.user} />
           ) : null} */}
-          {/* CONTACT */}
-          {/* <Contact /> */}
+
+            {/* CONTACT */}
+            <Route path="/contact">
+              {/* <Contact /> */}
+            </Route>
+
+            {/* ABOUT */}
+            <Route path="/about">
+              {/* <About /> */}
+            </Route>
+
+            {/* IMPRESSUM */}
+            <Route path="/impressum">
+              <Impressum />
+            </Route>
+
+            {/* PRIVACY */}
+            <Route path="/privacy">
+              <Privacy />
+            </Route>
+          </Switch>
 
           {/* FOOTER */}
           <Footer />
         </div>
-      </Router>
+      </BrowserRouter>
     );
   }
 }
