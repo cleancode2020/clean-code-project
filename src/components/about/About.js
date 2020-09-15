@@ -1,14 +1,12 @@
 import React from "react";
-import "../about/About.css";
-import gael from "../../assets/teamImage/gael.jpg";
-import andreas from "../../assets/teamImage/andreas.png";
-import melad from "../../assets/teamImage/melad.png";
-import victoria from "../../assets/teamImage/victoria.jpg";
-import vadim from "../../assets/teamImage/vadim.png";
+import "../about/about.css";
+import gael from "../../assets/teamImage/Gael.jpg";
+import andreas from "../../assets/teamImage/Andreas.png";
+import melad from "../../assets/teamImage/Melad.png";
+import victoria from "../../assets/teamImage/Victoria.jpg";
+import vadim from "../../assets/teamImage/Vadim.png";
 
 class About extends React.Component {
-  
-  
   state = {
     teams: [
       { id: 1, name: "Gael", title: "frontend-management" },
@@ -24,7 +22,7 @@ class About extends React.Component {
 
   render() {
     return (
-      <main>
+      <main className="main__about">
         <h1 className="h1__about">About Us</h1>
 
         {/* DISCRIPTION ABOUT US*/}
@@ -83,10 +81,12 @@ class About extends React.Component {
             <p>Andreas</p>
           </div>
         </div>
-		{/* CONTACT */}
+        {/* CONTACT */}
         <h2 className="h2__style">make contact with us</h2>
         <p>
-          <a href="teamcode35@gmail.com">would you share your opinion on it to make it better </a>
+          <a href="teamcode35@gmail.com">
+            would you share your opinion on it to make it better{" "}
+          </a>
         </p>
       </main>
     );

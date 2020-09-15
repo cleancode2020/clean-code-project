@@ -1,12 +1,17 @@
+.main__about {
+  min-height: 80vh;
+}
+
 img {
-    width: 75px;
-    height: 75px;
-    margin: 10px;
-  }
-  p {
-    text-align: center;
-  }
-  .team__container {
-    display: flex;
-    justify-content: center;
-  }
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+}
+
+p {
+  text-align: center;
+}
+.team__container {
+  display: flex;
+  justify-content: center;
+}
