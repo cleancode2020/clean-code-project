@@ -29,8 +29,7 @@ class Posts extends React.Component {
 			// PARSE JSON HTTP RESPONSE TO TRANSFORM INTO JS OBJECT
 			.then((response) => response.json())
 			.then((result) => {
-				// FIREBASE RESULT		console.log("gerne");
-				// console.log("FIREBASE RESULT");
+				// FIREBASE RESULT
 				// console.log(result);
 			})
 			.catch((error) => console.log("error:", error));
@@ -44,11 +43,6 @@ class Posts extends React.Component {
 					<h2 className="h2__posts">Posts</h2>
 
 					<nav className="nav__posts">
-						{/* POST LINK */}
-						<Link className="read__link" to="/">
-							Read posts
-						</Link>
-
 						{/* POST LINK */}
 						{this.props.user ? (
 							<Link className="postaction__link" to="/submit">
