@@ -10,7 +10,12 @@ function Main(props) {
 			<Categories firebase={props.firebase} />
 
 			{/* POSTS */}
-			<Posts firebase={props.firebase} user={props.user} />
+			<Posts
+				firebase={props.firebase}
+				user={props.user}
+				getFirebase={props.getFirebase}
+				allPostsObject={props.allPostsObject}
+			/>
 		</main>
 	);
 }

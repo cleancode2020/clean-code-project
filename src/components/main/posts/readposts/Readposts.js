@@ -1,54 +1,55 @@
 import React from "react";
 import "./readposts.css";
-import {  Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import Userpost from "./Userpost";
-// import Codeblock from "./Codeblockread";
 
-const Readposts = (props) => {
-	// const firebase = props.firebase;
-	// console.log(firebase);
-	return (
-		<section className="readposts-section">
-			<ul className="posts__ul">
-				{/* POST */}
-				<Route path="/userpost">
-					<Userpost />
-				</Route>
+class Readposts extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
+	componentDidMount() {
+		this.props.getFirebase();
+	}
 
-				{/* POST 1 */}
-				<Link className="nav__link" to="/userpost">
-					<li className="posts__li">
-						<h2 className="article-h2">Title</h2>
-						<p className="article-p">#js</p>
-						<p className="article-p">#React</p>
-						<h3 className="article-h3">User 1</h3>
-					</li>
-				</Link>
+	render() {
+		// DATA
+		let posts = [];
+		if (this.props.allPostsObject) {
+			const allPostsObject = this.props.allPostsObject;
+			const allPostsObjectKeys = Object.keys(allPostsObject);
+			for (let key of allPostsObjectKeys) {
+				const objectData = allPostsObject[key];
+				if (typeof objectData === "object") {
+					const postsValuesArray = Object.values(objectData);
+					posts.push(postsValuesArray);
+					console.log(posts);
+				}
+			}
+		}
 
-				{/* POST 1 */}
+		return (
+			<section className="readposts-section">
+				<ul className="posts__ul">
+					{/* POST */}
+					<Route path="/userpost">
+						<Userpost />
+					</Route>
 
-				<Link className="nav__link" to="/userpost">
-					<li className="posts__li">
-						<h2 className="article-h2">Title</h2>
-						<p className="article-p">#js</p>
-						<p className="article-p">#React</p>
-						<h3 className="article-h3">User 2</h3>
-					</li>
-				</Link>
-
-				{/* POST 1 */}
-
-				<Link className="nav__link" to="/userpost">
-					<li className="posts__li">
-						<h2 className="article-h2">Title</h2>
-						<p className="article-p">#js</p>
-						<p className="article-p">#React</p>
-						<h3 className="article-h3">User 3</h3>
-					</li>
-				</Link>
-			</ul>
-		</section>
-	);
-};
+					{posts.map((item, index) => (
+						<Link className="nav__link" to="/userpost">
+							<li className="posts__li" key={index}>
+								<h2 className="article-h2">{item[0]}</h2>
+								<p className="article-p">{item[1]}</p>
+								<p className="article-p">{item[3]}</p>
+								<h3 className="article-h3">{item[4]}</h3>
+							</li>
+						</Link>
+					))}
+				</ul>
+			</section>
+		);
+	}
+}
 
 export default Readposts;
