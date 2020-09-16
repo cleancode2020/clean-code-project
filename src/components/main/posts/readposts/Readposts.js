@@ -8,7 +8,7 @@ class Readposts extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			postsData: "",
+			allPostsObject: "",
 		};
 
 		this.getFirebase = this.getFirebase.bind(this);
@@ -34,24 +34,26 @@ class Readposts extends React.Component {
 			.then((response) => response.json())
 			.then((result) => {
 				this.setState({
-					postsData: result,
+					allPostsObject: result,
 				});
 			})
 			.catch((error) => console.log("error:", error));
+		
 	}
 
 	render() {
-		let post = [];
-		let postsDataArrayValue = [];
-		if (this.state.postsData) {
-			const postsData = this.state.postsData;
-			const postsDatakeys = Object.keys(postsData);
-			for (post of postsDatakeys) {
-				const objectData = postsData[post];
+		// let post = [];
+		let posts = [];
+
+		if (this.state.allPostsObject) {
+			const allPostsObject = this.state.allPostsObject;
+			const allPostsObjectKeys = Object.keys(allPostsObject);
+			for (let key of allPostsObjectKeys) {
+				const objectData = allPostsObject[key];
 				if (typeof objectData === "object") {
 					const postsValuesArray = Object.values(objectData);
-					postsDataArrayValue = postsValuesArray;
-					console.log(postsDataArrayValue);
+					posts.push(postsValuesArray);
+					console.log(posts);
 				}
 			}
 		}
@@ -63,13 +65,13 @@ class Readposts extends React.Component {
 						<Userpost />
 					</Route>
 
-					{postsDataArrayValue.map((item, index) => (
+					{posts.map((item, index) => (
 						<Link className="nav__link" to="/userpost">
 							<li className="posts__li" key={index}>
-								<h2 className="article-h2">{item}</h2>
-								<p className="article-p">{item}</p>
-								<p className="article-p">{item}</p>
-								<h3 className="article-h3">{item}</h3>
+								<h2 className="article-h2">{item[0]}</h2>
+								<p className="article-p">{item[1]}</p>
+								<p className="article-p">{item[3]}</p>
+								<h3 className="article-h3">{item[4]}</h3>
 							</li>
 						</Link>
 					))}
