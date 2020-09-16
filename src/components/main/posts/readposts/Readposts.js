@@ -24,7 +24,6 @@ class Readposts extends React.Component {
 					const postsValuesArray = Object.values(objectData);
 					posts.push(postsValuesArray);
 					posts.reverse();
-					// console.log(posts);
 				}
 			}
 		}
