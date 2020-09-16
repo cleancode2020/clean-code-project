@@ -18,9 +18,11 @@ class App extends React.Component {
 			userData: {},
 			modalIsOpen: false,
 			user: null,
+			allPostsObject: "",
 		};
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
+		this.getFirebase = this.getFirebase.bind(this);
 		this.fetchUserFirebase = this.fetchUserFirebase.bind(this);
 		this.setUser = this.setUser.bind(this);
 	}
@@ -55,6 +57,26 @@ class App extends React.Component {
 		} else {
 			localStorage.setItem("bkzToken", "");
 		}
+	}
+
+	// POST FIREBASE
+	async getFirebase() {
+		const requestOptions = {
+			method: "GET",
+			redirect: "follow",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+
+		await fetch(`${firebase.databaseURL}/cleancode/posts.json`, requestOptions)
+			.then((response) => response.json())
+			.then((result) => {
+				this.setState({
+					allPostsObject: result,
+				});
+			})
+			.catch((error) => console.log("error:", error));
 	}
 
 	// RECONNECT WITH ID TOKEN WHEN USER DID NOT LOGGED OUT
@@ -139,7 +161,12 @@ class App extends React.Component {
 					<Switch>
 						{/* MAIN */}
 						<Route exact path="/">
-							<Main firebase={firebase} user={this.state.user} />
+							<Main
+								firebase={firebase}
+								user={this.state.user}
+								getFirebase={this.getFirebase}
+								allPostsObject={this.state.allPostsObject}
+							/>
 						</Route>
 
 						{/* CONTACT */}

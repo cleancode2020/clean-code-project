@@ -93,6 +93,7 @@ class Submitpost extends React.Component {
 			// 	window.location.reload();
 			// })
 			.catch((error) => console.log("error:", error));
+		this.props.getFirebase();
 	}
 
 	render() {
@@ -101,6 +102,7 @@ class Submitpost extends React.Component {
 				<Link className="navlink__submitclose" to="/">
 					close X
 				</Link>
+
 				{/* LEGEND */}
 				<legend className="post__legend">Make a post</legend>
 

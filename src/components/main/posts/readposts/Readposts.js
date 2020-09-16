@@ -2,51 +2,21 @@ import React from "react";
 import "./readposts.css";
 import { Route, Link } from "react-router-dom";
 import Userpost from "./Userpost";
-// import Codeblock from "./Codeblockread";
 
 class Readposts extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			allPostsObject: "",
-		};
-
-		this.getFirebase = this.getFirebase.bind(this);
+		this.state = {};
 	}
 	componentDidMount() {
-		this.getFirebase();
-	}
-
-	// POST FIREBASE
-	async getFirebase() {
-		const requestOptions = {
-			method: "GET",
-			redirect: "follow",
-			headers: {
-				"Content-Type": "application/json",
-			},
-		};
-
-		await fetch(
-			`${this.props.firebase.databaseURL}/cleancode/posts.json`,
-			requestOptions
-		)
-			.then((response) => response.json())
-			.then((result) => {
-				this.setState({
-					allPostsObject: result,
-				});
-			})
-			.catch((error) => console.log("error:", error));
-		
+		this.props.getFirebase();
 	}
 
 	render() {
-		// let post = [];
+		// DATA
 		let posts = [];
-
-		if (this.state.allPostsObject) {
-			const allPostsObject = this.state.allPostsObject;
+		if (this.props.allPostsObject) {
+			const allPostsObject = this.props.allPostsObject;
 			const allPostsObjectKeys = Object.keys(allPostsObject);
 			for (let key of allPostsObjectKeys) {
 				const objectData = allPostsObject[key];
@@ -57,6 +27,7 @@ class Readposts extends React.Component {
 				}
 			}
 		}
+
 		return (
 			<section className="readposts-section">
 				<ul className="posts__ul">
