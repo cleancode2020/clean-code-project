@@ -162,7 +162,7 @@ class Submitpost extends React.Component {
 				</select>
 
 				{/* ARTICLE */}
-				<label className="post__label" htmlFor="#">
+				<label className="post__		)}label" htmlFor="#">
 					Article:
 				</label>
 				<textarea
@@ -194,14 +194,16 @@ class Submitpost extends React.Component {
 					<p className="p-correct-length">Title length can be 3 characters.</p>
 				)}
 
-				<button
-					type="button"
-					className="submit__post"
-					await
-					onClick={this.submitPost}
-				>
-					<Link to="/">Submit Article</Link>
-				</button>
+				<Link to="/">
+					<button
+						type="button"
+						className="submit__post"
+						await
+						onClick={this.submitPost}
+					>
+						Submit Article
+					</button>
+				</Link>
 
 				<p>{this.state.displayName}</p>
 			</form>
