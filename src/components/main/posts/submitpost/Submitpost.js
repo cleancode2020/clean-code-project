@@ -1,6 +1,6 @@
 import React from "react";
 import "./submitpost.css";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Submitpost extends React.Component {
 	constructor(props) {
@@ -54,7 +54,7 @@ class Submitpost extends React.Component {
 
 	// SUBMIT
 	submitPost(e) {
-		e.preventDefault();
+		// e.preventDefault();
 
 		if (this.state.title.length >= 3) {
 			this.postFirebase();
@@ -100,6 +100,9 @@ class Submitpost extends React.Component {
 
 		// FETCH AFTER ADD
 		// this.props.fetchFirebase();
+
+		// alert("Post successful submit.");
+		// window.location.reload();
 	}
 
 	render() {
@@ -205,9 +208,17 @@ class Submitpost extends React.Component {
 				{this.state.correctLength ? null : (
 					<p className="p-correct-length">Title length can be 3 characters.</p>
 				)}
-				<button className="submit__post" onClick={this.submitPost}>
-					Submit Article
-				</button>
+
+				<Link to="/">
+					<button
+						type="button"
+						className="submit__post"
+						onClick={this.submitPost}
+					>
+						Submit Article
+					</button>
+				</Link>
+
 				<p>{this.state.displayName}</p>
 			</form>
 		);

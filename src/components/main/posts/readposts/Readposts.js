@@ -1,10 +1,12 @@
 import React from "react";
 import "./readposts.css";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import {  Route, Link } from "react-router-dom";
 import Userpost from "./Userpost";
-import Codeblock from "./Codeblockread";
+// import Codeblock from "./Codeblockread";
 
-const Readposts = () => {
+const Readposts = (props) => {
+	const firebase = props.firebase;
+	console.log(firebase);
 	return (
 		<section className="readposts-section">
 			<ul className="posts__ul">
