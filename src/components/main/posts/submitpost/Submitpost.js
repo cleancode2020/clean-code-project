@@ -188,6 +188,7 @@ class Submitpost extends React.Component {
 					value={this.state.codeblock}
 					onChange={this.codeblockHandleChange}
 				></textarea>
+
 				{/* CORRECT LENGTH CHECK MESSAGE */}
 				{this.state.correctLength ? null : (
 					<p className="p-correct-length">Title length can be 3 characters.</p>
