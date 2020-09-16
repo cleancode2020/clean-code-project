@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import logo from "../../../assets/icons/black-dot.png";
 import "./footer.css";
 
 function Footer() {
 	return (
 		<footer className="Footer">
-			<nav className="footer__nav">
-				<ul className="footer__ul">
-					<li className="footer__logo">
+			<nav>
+				<ul>
+					<li>
 						<Link className="footer__main" to="/">
 							<img className="footer__img" src={logo} alt="logo" />
 							<h2 className="footer__h1">cleancode</h2>

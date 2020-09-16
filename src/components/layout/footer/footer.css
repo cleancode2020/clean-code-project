@@ -18,13 +18,14 @@
 /* FOOTER IMG */
 .footer__img {
   width: 15px;
-  margin: 5px;
+  height: 15px;
+  margin: 3px;
 }
 
 /* FOOTER H1 */
 .footer__h1 {
   color: blue;
-  font-weight: bold;  
+  font-weight: bold;
 }
 
 .footer__h1:hover {
@@ -58,4 +59,3 @@ footer ul li {
 .footer__name:hover {
   color: blue;
 }
-

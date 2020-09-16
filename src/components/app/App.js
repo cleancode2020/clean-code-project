@@ -4,10 +4,11 @@ import firebase from "../../constants/Firebase";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "../layout/header/Header";
 import Main from "../main/Main";
-import Footer from "../layout/footer/Footer";
-// import Contact from "../contact/Contact";
+import About from "../about/About";
+import Contact from "../contact/Contact";
 import Privacy from "../legal/privacy/Privacy";
 import Impressum from "../legal/impressum/Impressum";
+import Footer from "../layout/footer/Footer";
 
 class App extends React.Component {
 	// FETCH FIREBASE
@@ -139,46 +140,20 @@ class App extends React.Component {
 							user={this.state.user}
 						/>
 
-						{/* ROUTES LOGGED IN USER */}
-						{/* {this.state.user !== null && (
-					<Route path="/">
-						<Home
-							openModal={this.openModal}
-							closeModal={this.closeModal}
-							modalIsOpen={this.state.modalIsOpen}
-							fetchFirebase={this.fetchUserFirebase}
-							userID={this.state.user.localId}
-							tabs={userTabs}
-							user={this.state.user}
-							userName={userName}
-						/>
-					</Route>
-				)} */}
-
-						{/* ROUTES LOGGED OUT USER */}
-						{/* {this.state.user === null && (
-					<Route path="/">
-						<Welcome
-							setUser={this.setUser}
-							fetchFirebase={this.fetchUserFirebase}
-						/>
-					</Route>
-				)} */}
-
 						{/* MAIN */}
 						<Route exact path="/">
 							<Main firebase={firebase} user={this.state.user} />
 						</Route>
 
-						{/* {this.state.user ? (
-            <Main firebase={firebase} user={this.state.user} />
-          ) : null} */}
-
 						{/* CONTACT */}
-						<Route path="/contact">{/* <Contact /> */}</Route>
+						<Route path="/contact">
+							<Contact />
+						</Route>
 
 						{/* ABOUT */}
-						<Route path="/about">{/* <About /> */}</Route>
+						<Route path="/about">
+							<About />
+						</Route>
 
 						{/* IMPRESSUM */}
 						<Route path="/impressum">
