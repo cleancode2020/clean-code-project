@@ -188,21 +188,19 @@ class Submitpost extends React.Component {
 					value={this.state.codeblock}
 					onChange={this.codeblockHandleChange}
 				></textarea>
-
 				{/* CORRECT LENGTH CHECK MESSAGE */}
 				{this.state.correctLength ? null : (
 					<p className="p-correct-length">Title length can be 3 characters.</p>
 				)}
 
-				<Link to="/">
-					<button
-						type="button"
-						className="submit__post"
-						onClick={this.submitPost}
-					>
-						Submit Article
-					</button>
-				</Link>
+				<button
+					type="button"
+					className="submit__post"
+					await
+					onClick={this.submitPost}
+				>
+					<Link to="/">Submit Article</Link>
+				</button>
 
 				<p>{this.state.displayName}</p>
 			</form>
