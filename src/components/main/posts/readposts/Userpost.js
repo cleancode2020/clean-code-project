@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Codeblock from "./Codeblockread";
 
 const Userpost = () => {
@@ -27,8 +27,8 @@ const Userpost = () => {
 			<h4 className="posts__h4">codeblock 1</h4>
 			<span className="codeblock__span">
 				<Codeblock />
-      </span>
-      <p className="user__name">User 1</p>
+			</span>
+			<p className="user__name">User 1</p>
 		</div>
 	);
 };

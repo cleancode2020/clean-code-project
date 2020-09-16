@@ -30,8 +30,8 @@ class Posts extends React.Component {
 			.then((response) => response.json())
 			.then((result) => {
 				// FIREBASE RESULT		console.log("gerne");
-				console.log("FIREBASE RESULT");
-				console.log(result);
+				// console.log("FIREBASE RESULT");
+				// console.log(result);
 			})
 			.catch((error) => console.log("error:", error));
 	}
@@ -69,7 +69,7 @@ class Posts extends React.Component {
 
 					{/* POST COMPONENT */}
 					<Route path="/">
-						<Readposts />
+						<Readposts firebase={this.props.firebase} />
 					</Route>
 				</main>
 			</BrowserRouter>
