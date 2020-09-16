@@ -29,8 +29,7 @@ class Posts extends React.Component {
 			// PARSE JSON HTTP RESPONSE TO TRANSFORM INTO JS OBJECT
 			.then((response) => response.json())
 			.then((result) => {
-				// FIREBASE RESULT		console.log("gerne");
-				// console.log("FIREBASE RESULT");
+				// FIREBASE RESULT
 				// console.log(result);
 			})
 			.catch((error) => console.log("error:", error));

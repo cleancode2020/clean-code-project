@@ -5,8 +5,8 @@ import Userpost from "./Userpost";
 // import Codeblock from "./Codeblockread";
 
 const Readposts = (props) => {
-	const firebase = props.firebase;
-	console.log(firebase);
+	// const firebase = props.firebase;
+	// console.log(firebase);
 	return (
 		<section className="readposts-section">
 			<ul className="posts__ul">

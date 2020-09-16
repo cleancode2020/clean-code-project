@@ -32,7 +32,6 @@ class Submitpost extends React.Component {
 
 	// HANDLECHANGE
 	titleHandleChange(e) {
-		// console.log(e.target.value);
 		this.setState({ title: e.target.value });
 	}
 
@@ -83,26 +82,17 @@ class Submitpost extends React.Component {
 				codeblock: this.state.codeblock,
 			}),
 		};
-		// debugger;
-		// console.log("Testtttt:");
-		// console.log(this.props.user);
 
 		await fetch(
 			`${this.props.firebase.databaseURL}/cleancode/posts.json?auth=${this.props.user.idToken}`,
 			requestOptions
 		)
 			// .then((response) => response.json())
-			.then((result) => {
-				// CLOSE MODAL AFTER POST
-				//  window.location.reload()
-			})
+			// .then((result) => {
+			// 	// CLOSE MODAL AFTER POST
+			// 	window.location.reload();
+			// })
 			.catch((error) => console.log("error:", error));
-
-		// FETCH AFTER ADD
-		// this.props.fetchFirebase();
-
-		// alert("Post successful submit.");
-		// window.location.reload();
 	}
 
 	render() {
@@ -148,9 +138,6 @@ class Submitpost extends React.Component {
 					<option value="python">Python</option>
 					<option value="c++">C++</option>
 					<option value="rust">Rust</option>
-					{/* {this.state.categories.map((category) => (
-            <option value={category}>{category}</option>
-          ))} */}
 				</select>
 
 				{/* SUBCATIGORIES */}
@@ -172,9 +159,6 @@ class Submitpost extends React.Component {
 					</option>
 					<option value="vue.js">Vue.js</option>
 					<option value="angular">Angular</option>
-					{/* {this.state.subcategories.map((category) => (
-            <option value={category}>{category}</option>
-          ))} */}
 				</select>
 
 				{/* ARTICLE */}
@@ -204,6 +188,7 @@ class Submitpost extends React.Component {
 					value={this.state.codeblock}
 					onChange={this.codeblockHandleChange}
 				></textarea>
+
 				{/* CORRECT LENGTH CHECK MESSAGE */}
 				{this.state.correctLength ? null : (
 					<p className="p-correct-length">Title length can be 3 characters.</p>
