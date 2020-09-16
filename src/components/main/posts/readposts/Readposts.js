@@ -23,7 +23,8 @@ class Readposts extends React.Component {
 				if (typeof objectData === "object") {
 					const postsValuesArray = Object.values(objectData);
 					posts.push(postsValuesArray);
-					console.log(posts);
+					posts.reverse();
+					// console.log(posts);
 				}
 			}
 		}
