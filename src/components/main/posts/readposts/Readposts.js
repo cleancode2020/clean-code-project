@@ -41,19 +41,20 @@ class Readposts extends React.Component {
 	}
 
 	render() {
+		let post = [];
+		let postsDataArrayValue = [];
 		if (this.state.postsData) {
 			const postsData = this.state.postsData;
-			// const postItem = postsData.map((item) => {
-			// 	return item;
-			// });
-			// console.log(postItem);
-			const postsDataArrayZero = Object.keys(postsData)[0];
-			const objectData = postsData[postsDataArrayZero];
-			const postsDataArrayValue = Object.values(objectData);
-			// console.log(postsDataArrayValue);
-			// const postsDataArrayKeys = Object.keys(objectData);
+			const postsDatakeys = Object.keys(postsData);
+			for (post of postsDatakeys) {
+				const objectData = postsData[post];
+				if (typeof objectData === "object") {
+					const postsValuesArray = Object.values(objectData);
+					postsDataArrayValue = postsValuesArray;
+					console.log(postsDataArrayValue);
+				}
+			}
 		}
-
 		return (
 			<section className="readposts-section">
 				<ul className="posts__ul">
@@ -62,41 +63,16 @@ class Readposts extends React.Component {
 						<Userpost />
 					</Route>
 
-					{/* {this.postsDataArrayValue.map((item) => (
-						<li>{item}</li>
-					))} */}
-
-					{/* POST 1 */}
-					<Link className="nav__link" to="/userpost">
-						<li className="posts__li">
-							<h2 className="article-h2">Title</h2>
-							<p className="article-p">#js</p>
-							<p className="article-p">#React</p>
-							<h3 className="article-h3">User 1</h3>
-						</li>
-					</Link>
-
-					{/* POST 1 */}
-
-					<Link className="nav__link" to="/userpost">
-						<li className="posts__li">
-							<h2 className="article-h2">Title</h2>
-							<p className="article-p">#js</p>
-							<p className="article-p">#React</p>
-							<h3 className="article-h3">User 2</h3>
-						</li>
-					</Link>
-
-					{/* POST 1 */}
-
-					<Link className="nav__link" to="/userpost">
-						<li className="posts__li">
-							<h2 className="article-h2">Title</h2>
-							<p className="article-p">#js</p>
-							<p className="article-p">#React</p>
-							<h3 className="article-h3">User 3</h3>
-						</li>
-					</Link>
+					{postsDataArrayValue.map((item, index) => (
+						<Link className="nav__link" to="/userpost">
+							<li className="posts__li" key={index}>
+								<h2 className="article-h2">{item}</h2>
+								<p className="article-p">{item}</p>
+								<p className="article-p">{item}</p>
+								<h3 className="article-h3">{item}</h3>
+							</li>
+						</Link>
+					))}
 				</ul>
 			</section>
 		);
