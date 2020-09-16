@@ -45,11 +45,6 @@ class Posts extends React.Component {
 
 					<nav className="nav__posts">
 						{/* POST LINK */}
-						<Link className="read__link" to="/">
-							Read posts
-						</Link>
-
-						{/* POST LINK */}
 						{this.props.user ? (
 							<Link className="postaction__link" to="/submit">
 								Make a post
