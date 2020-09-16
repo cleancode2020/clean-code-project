@@ -6,7 +6,7 @@ class Submitpost extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: "Vladimir",
+			displayName: "",
 			title: "",
 			categories: ["js", "c++", "python", "rust"],
 			subcategories: ["react", "vue.js", "angular"],
@@ -27,11 +27,12 @@ class Submitpost extends React.Component {
 	}
 	componentDidMount() {
 		this.input.focus();
+		this.setState({ displayName: this.props.user.displayName });
 	}
 
 	// HANDLECHANGE
 	titleHandleChange(e) {
-		console.log(e.target.value);
+		// console.log(e.target.value);
 		this.setState({ title: e.target.value });
 	}
 
@@ -74,7 +75,7 @@ class Submitpost extends React.Component {
 			},
 			// CONVERT STATE IN JSON STRING
 			body: JSON.stringify({
-				username: this.state.username,
+				username: this.props.user.displayName,
 				title: this.state.title,
 				categories: this.state.currentCategory,
 				subcategories: this.state.currentSubCategory,
@@ -83,11 +84,11 @@ class Submitpost extends React.Component {
 			}),
 		};
 		// debugger;
-		console.log("Testtttt:");
-    console.log(this.props.user);
+		// console.log("Testtttt:");
+		// console.log(this.props.user);
 
 		await fetch(
-			`${this.props.firebase.databaseURL}/posts.json?auth=${this.props.user.idToken}`,
+			`${this.props.firebase.databaseURL}/cleancode/posts.json?auth=${this.props.user.idToken}`,
 			requestOptions
 		)
 			// .then((response) => response.json())
@@ -207,7 +208,7 @@ class Submitpost extends React.Component {
 				<button className="submit__post" onClick={this.submitPost}>
 					Submit Article
 				</button>
-				<p>{this.state.username}</p>
+				<p>{this.state.displayName}</p>
 			</form>
 		);
 	}
