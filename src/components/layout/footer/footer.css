@@ -1,22 +1,43 @@
+/* FOOTER */
 .Footer {
-  border: solid 1px black;
+  /* border: solid 1px black; */
   padding: 5px;
   display: flex;
-  justify-content: left;
   align-items: center;
+  background: lightgray;
 }
 
-.footer__h2 {
-  font-size: 18px;
-  margin: 3px;
+/* FOOTER MAIN */
+.footer__main {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 10rem;
 }
 
+/* FOOTER IMG */
 .footer__img {
   width: 15px;
   height: 15px;
   margin: 3px;
 }
 
+/* FOOTER H1 */
+.footer__h1 {
+  color: blue;
+  font-weight: bold;
+}
+
+.footer__h1:hover {
+  color: black;
+}
+
+/* FOOTER NAV */
+/* .footer__nav {
+  justify-content: center;
+} */
+
+/* FOOTER UL */
 footer ul {
   list-style: none;
   display: flex;
@@ -28,6 +49,13 @@ footer ul li {
   padding: 0 1rem;
 }
 
-/* .footer__active {
-  color: green;
-} */
+/* FOOTER NAME */
+.footer__name {
+  color: black;
+  text-decoration: none;
+  margin: 0 70px 0 70px;
+}
+
+.footer__name:hover {
+  color: blue;
+}
