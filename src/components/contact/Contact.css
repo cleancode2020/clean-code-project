@@ -1,3 +1,9 @@
 .main__contact {
-  min-height: 80vh;
+  min-height: 86.5vh;
+}
+
+.h1__style{
+  text-align: center;
+  margin: 30px;
+  font-weight: bold;
 }
