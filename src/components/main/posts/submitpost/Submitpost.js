@@ -164,7 +164,7 @@ class Submitpost extends React.Component {
 				</select>
 
 				{/* ARTICLE */}
-				<label className="post__		)}label" htmlFor="#">
+				<label className="post__label" htmlFor="#">
 					Article:
 				</label>
 				<textarea
@@ -207,7 +207,7 @@ class Submitpost extends React.Component {
 					</button>
 				</Link>
 
-				<p>{this.state.displayName}</p>
+				<p className="user__name">{this.state.displayName}</p>
 			</form>
 		);
 	}

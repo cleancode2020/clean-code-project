@@ -6,10 +6,27 @@ import Userpost from "./Userpost";
 class Readposts extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			activePost: "",
+			currentPost: [],
+		};
+		this.setPost = this.setPost.bind(this);
 	}
 	componentDidMount() {
 		this.props.getFirebase();
+	}
+
+	// ACTIVE POST
+	setPost(item) {
+		this.setState({
+			activePost: item[0],
+			currentPost: item,
+		});
+	}
+
+	// ACTIVE POST
+	reloadPage() {
+		window.location.reload();
 	}
 
 	render() {
@@ -22,8 +39,10 @@ class Readposts extends React.Component {
 				const objectData = allPostsObject[key];
 				if (typeof objectData === "object") {
 					const postsValuesArray = Object.values(objectData);
-					posts.push(postsValuesArray);
-					console.log(posts);
+					// POST ALONE
+					postsValuesArray.unshift(key);
+					// POSTS
+					posts.unshift(postsValuesArray);
 				}
 			}
 		}
@@ -31,21 +50,47 @@ class Readposts extends React.Component {
 		return (
 			<section className="readposts-section">
 				<ul className="posts__ul">
-					{/* POST */}
-					<Route path="/userpost">
-						<Userpost />
-					</Route>
+					{this.state.activePost ? (
+						<Userpost
+							currentPost={this.state.currentPost}
+							reloadPage={this.reloadPage}
+						/>
+					) : (
+						posts.map((item, index) => (
+							<button
+								className="post__button"
+								onClick={() => this.setPost(item)}
+								to={`/${item[0]}`}
+							>
+								<li className="posts__li" key={index}>
+									<h2 className="article-h2">{item[5]}</h2>
+									<p className="article-p">{item[2]}</p>
+									<p className="article-p">{item[4]}</p>
+									<h3 className="article-h3">{item[6]}</h3>
+								</li>
+							</button>
+						))
+					)}
+					{/* POST IN FULL */}
+					{/* <Route path={`/${this.state.activePost}`}>
+						<Userpost posts={posts} />
+					</Route> */}
 
-					{posts.map((item, index) => (
-						<Link className="nav__link" to="/userpost">
+					{/* POSTS LIST */}
+					{/* {posts.map((item, index) => (
+						<Link
+							className="nav__link"
+							onClick={() => this.setPost(item)}
+							to={`/${item[0]}`}
+						>
 							<li className="posts__li" key={index}>
-								<h2 className="article-h2">{item[0]}</h2>
-								<p className="article-p">{item[1]}</p>
-								<p className="article-p">{item[3]}</p>
-								<h3 className="article-h3">{item[4]}</h3>
+								<h2 className="article-h2">{item[5]}</h2>
+								<p className="article-p">{item[2]}</p>
+								<p className="article-p">{item[4]}</p>
+								<h3 className="article-h3">{item[6]}</h3>
 							</li>
 						</Link>
-					))}
+					))} */}
 				</ul>
 			</section>
 		);
