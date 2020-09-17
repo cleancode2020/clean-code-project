@@ -38,10 +38,10 @@ class Readposts extends React.Component {
 					{posts.map((item, index) => (
 						<Link className="nav__link" to="/userpost">
 							<li className="posts__li" key={index}>
-								<h2 className="article-h2">{item[0]}</h2>
+								<h2 className="article-h2">{item[4]}</h2>
 								<p className="article-p">{item[1]}</p>
 								<p className="article-p">{item[3]}</p>
-								<h3 className="article-h3">{item[4]}</h3>
+								<h3 className="article-h3">{item[5]}</h3>
 							</li>
 						</Link>
 					))}
