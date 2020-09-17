@@ -18,9 +18,11 @@ class App extends React.Component {
 			userData: {},
 			modalIsOpen: false,
 			user: null,
+			allPostsObject: "",
 		};
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
+		this.getFirebase = this.getFirebase.bind(this);
 		this.fetchUserFirebase = this.fetchUserFirebase.bind(this);
 		this.setUser = this.setUser.bind(this);
 	}
@@ -49,8 +51,7 @@ class App extends React.Component {
 		this.setState({
 			user,
 		});
-		// IF USER IS LOGGED IN SAVE TOKEN IN LOCAL STORAGE
-		// ELSE EMPTY LOCAL STORAGE
+		// IF USER IS LOGGED IN SAVE TOKEN IN LOCAL STORAGE ELSE EMPTY LOCAL STORAGE
 		if (user) {
 			localStorage.setItem("bkzToken", user.idToken);
 		} else {
@@ -58,12 +59,32 @@ class App extends React.Component {
 		}
 	}
 
+	// POST FIREBASE
+	async getFirebase() {
+		const requestOptions = {
+			method: "GET",
+			redirect: "follow",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+
+		await fetch(`${firebase.databaseURL}/cleancode/posts.json`, requestOptions)
+			.then((response) => response.json())
+			.then((result) => {
+				this.setState({
+					allPostsObject: result,
+				});
+			})
+			.catch((error) => console.log("error:", error));
+	}
+
 	// RECONNECT WITH ID TOKEN WHEN USER DID NOT LOGGED OUT
 	async logUserBack() {
 		// STORED TOKEN ID
 		const storedToken = localStorage.getItem("bkzToken");
 
-		// 	// CHECK IF TOKEN ID IS VALID
+		// CHECK IF TOKEN ID IS VALID
 		if (storedToken) {
 			const requestOptions = {
 				method: "POST",
@@ -108,9 +129,8 @@ class App extends React.Component {
 			method: "GET",
 			redirect: "follow",
 		};
-
 		await fetch(
-			`${firebase.databaseURL}/users/${this.state.user.localId}.json`,
+			`${firebase.databaseURL}/users/${this.state.user.localId}.json?auth=${this.state.user.idToken}`,
 			requestOptions
 		)
 			// PARSE JSON HTTP RESPONSE TO TRANSFORM INTO JS OBJECT
@@ -127,22 +147,26 @@ class App extends React.Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Switch>
-					<div className="App">
-						{/* HEADER */}
-						<Header
-							fetchFirebase={this.fetchUserFirebase}
-							openModal={this.openModal}
-							closeModal={this.closeModal}
-							modalIsOpen={this.state.modalIsOpen}
-							firebase={firebase}
-							setUser={this.setUser}
-							user={this.state.user}
-						/>
-
+				<div className="App">
+					{/* HEADER */}
+					<Header
+						fetchFirebase={this.fetchUserFirebase}
+						openModal={this.openModal}
+						closeModal={this.closeModal}
+						modalIsOpen={this.state.modalIsOpen}
+						firebase={firebase}
+						setUser={this.setUser}
+						user={this.state.user}
+					/>
+					<Switch>
 						{/* MAIN */}
 						<Route exact path="/">
-							<Main firebase={firebase} user={this.state.user} />
+							<Main
+								firebase={firebase}
+								user={this.state.user}
+								getFirebase={this.getFirebase}
+								allPostsObject={this.state.allPostsObject}
+							/>
 						</Route>
 
 						{/* CONTACT */}
@@ -164,11 +188,11 @@ class App extends React.Component {
 						<Route path="/privacy">
 							<Privacy />
 						</Route>
+					</Switch>
 
-						{/* FOOTER */}
-						<Footer />
-					</div>
-				</Switch>
+					{/* FOOTER */}
+					<Footer />
+				</div>
 			</BrowserRouter>
 		);
 	}

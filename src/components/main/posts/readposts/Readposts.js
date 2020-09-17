@@ -1,52 +1,100 @@
 import React from "react";
 import "./readposts.css";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import Userpost from "./Userpost";
-import Codeblock from "./Codeblockread";
 
-const Readposts = () => {
-	return (
-		<section className="readposts-section">
-			<ul className="posts__ul">
-				{/* POST */}
-				<Route path="/userpost">
-					<Userpost />
-				</Route>
+class Readposts extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			activePost: "",
+			currentPost: [],
+		};
+		this.setPost = this.setPost.bind(this);
+	}
+	componentDidMount() {
+		this.props.getFirebase();
+	}
 
-				{/* POST 1 */}
-				<Link className="nav__link" to="/userpost">
-					<li className="posts__li">
-						<h2 className="article-h2">Title</h2>
-						<p className="article-p">#js</p>
-						<p className="article-p">#React</p>
-						<h3 className="article-h3">User 1</h3>
-					</li>
-				</Link>
+	// ACTIVE POST
+	setPost(item) {
+		this.setState({
+			activePost: item[0],
+			currentPost: item,
+		});
+	}
 
-				{/* POST 1 */}
+	// ACTIVE POST
+	reloadPage() {
+		window.location.reload();
+	}
 
-				<Link className="nav__link" to="/userpost">
-					<li className="posts__li">
-						<h2 className="article-h2">Title</h2>
-						<p className="article-p">#js</p>
-						<p className="article-p">#React</p>
-						<h3 className="article-h3">User 2</h3>
-					</li>
-				</Link>
+	render() {
+		// DATA
+		let posts = [];
+		if (this.props.allPostsObject) {
+			const allPostsObject = this.props.allPostsObject;
+			const allPostsObjectKeys = Object.keys(allPostsObject);
+			for (let key of allPostsObjectKeys) {
+				const objectData = allPostsObject[key];
+				if (typeof objectData === "object") {
+					const postsValuesArray = Object.values(objectData);
+					// POST ALONE
+					postsValuesArray.unshift(key);
+					// POSTS
+					posts.unshift(postsValuesArray);
+				}
+			}
+		}
 
-				{/* POST 1 */}
+		return (
+			<section className="readposts-section">
+				<ul className="posts__ul">
+					{this.state.activePost ? (
+						<Userpost
+							currentPost={this.state.currentPost}
+							reloadPage={this.reloadPage}
+						/>
+					) : (
+						posts.map((item, index) => (
+							<button
+								className="post__button"
+								onClick={() => this.setPost(item)}
+								to={`/${item[0]}`}
+							>
+								<li className="posts__li" key={index}>
+									<h2 className="article-h2">{item[5]}</h2>
+									<p className="article-p">{item[2]}</p>
+									<p className="article-p">{item[4]}</p>
+									<h3 className="article-h3">{item[6]}</h3>
+								</li>
+							</button>
+						))
+					)}
+					{/* POST IN FULL */}
+					{/* <Route path={`/${this.state.activePost}`}>
+						<Userpost posts={posts} />
+					</Route> */}
 
-				<Link className="nav__link" to="/userpost">
-					<li className="posts__li">
-						<h2 className="article-h2">Title</h2>
-						<p className="article-p">#js</p>
-						<p className="article-p">#React</p>
-						<h3 className="article-h3">User 3</h3>
-					</li>
-				</Link>
-			</ul>
-		</section>
-	);
-};
+					{/* POSTS LIST */}
+					{/* {posts.map((item, index) => (
+						<Link
+							className="nav__link"
+							onClick={() => this.setPost(item)}
+							to={`/${item[0]}`}
+						>
+							<li className="posts__li" key={index}>
+								<h2 className="article-h2">{item[5]}</h2>
+								<p className="article-p">{item[2]}</p>
+								<p className="article-p">{item[4]}</p>
+								<h3 className="article-h3">{item[6]}</h3>
+							</li>
+						</Link>
+					))} */}
+				</ul>
+			</section>
+		);
+	}
+}
 
 export default Readposts;
