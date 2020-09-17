@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Codeblock from "./Codeblockread";
 
-const Userpost = () => {
+const Userpost = (props) => {
+	console.log("props.posts");
+	console.log(props.posts);
 	return (
 		<div className="post__div">
 			<Link className="nav__link nav__close" to="/">
