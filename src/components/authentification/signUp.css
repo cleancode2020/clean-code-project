@@ -6,14 +6,15 @@
 /* SIGN UP MODAL OPEN */
 .modal__button__login {
 	color: blue;
-	border: solid 1px blue;
-	background-color: white;
+	border: solid 1px #dad6d6;
+	background-color: #dad6d6;
 	font-weight: bold;
 }
 
 .modal__button__login:hover {
-	color: white;
+	color: #dad6d6;
 	background-color: blue;
+	border: solid 1px blue;
 }
 
 /* SIGN UP MODAL CLOSE */
@@ -29,8 +30,8 @@
 }
 
 .modal__button__close:hover {
-	color: white;
-	border: white;
+	color: #dad6d6;
+	border: #dad6d6;
 	background-color: blue;
 }
 
