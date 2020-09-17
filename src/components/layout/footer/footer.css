@@ -1,78 +1,57 @@
 /* FOOTER */
 .Footer {
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90px;
-  background: #333333;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90px;
+	background: #333333;
+	max-width: 100%;
 }
 
+/* FOOTER NAV */
 footer nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: 100%;
 }
 
 /* FOOTER MAIN */
 .footer__main {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  margin-right: 10rem;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	margin-right: 10rem;
 }
-
-/* FOOTER IMG */
-/* .footer__img {
-  width: 15px;
-  height: 15px;
-  margin: 3px;
-} */
-
-/* FOOTER H1 */
-/* .footer__h1 {
-  color: blue;
-  font-weight: bold;
-} */
-
-/* .footer__h1:hover {
-  color: black;
-} */
-
-/* FOOTER NAV */
-/* .footer__nav {
-  justify-content: center;
-} */
 
 /* FOOTER UL */
 footer ul {
-  width: 80rem;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
+	max-width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 footer ul li {
-  padding: 0 1rem;
+	margin: 10px;
+	padding: 10px;
 }
 
 /* FOOTER NAME */
 .footer__name {
-  color: #dad6d6;
-  font-size: 18px;
-  text-decoration: none;
-  /* margin: 0 90px 0 90px; */
+	color: #dad6d6;
+	font-size: 16px;
+	text-decoration: none;
 }
 
-/* .footer__name:hover {
-  color: blue;
-} */
+.footer__name:hover {
+	color: blue;
+}
 
+/* FOOTER ICON */
 .icon {
-  color: white;
+	color: white;
 }
 
 .icon:hover {
-  transform: scale(1.6);
+	transform: scale(1.2);
 }
