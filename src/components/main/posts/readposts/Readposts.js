@@ -30,11 +30,12 @@ class Readposts extends React.Component {
 		return (
 			<section className="readposts-section">
 				<ul className="posts__ul">
-					{/* POST */}
+					{/* POST IN FULL */}
 					<Route path="/userpost">
 						<Userpost posts={posts} />
 					</Route>
 
+					{/* POSTS LIST */}
 					{posts.map((item, index) => (
 						<Link className="nav__link" to="/userpost">
 							<li className="posts__li" key={index}>
