@@ -22,8 +22,7 @@ class Readposts extends React.Component {
 				const objectData = allPostsObject[key];
 				if (typeof objectData === "object") {
 					const postsValuesArray = Object.values(objectData);
-					posts.push(postsValuesArray);
-					posts.reverse();
+					posts.unshift(postsValuesArray);
 				}
 			}
 		}
@@ -33,7 +32,7 @@ class Readposts extends React.Component {
 				<ul className="posts__ul">
 					{/* POST */}
 					<Route path="/userpost">
-						<Userpost />
+						<Userpost posts={posts} />
 					</Route>
 
 					{posts.map((item, index) => (
