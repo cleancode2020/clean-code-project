@@ -14,25 +14,28 @@
 }
 
 .privacy__h1 {
-  font-size: 1.6em;
+  font-size: 1.1em;
+  padding: 30px 0 15px 0;
+  font-weight: bold;
 }
 
 /* PRIVACY H2 */
 .privacy__h2 {
-  font-size: 1.4em;
+  font-size: 1em;  
+  padding: 15px 0 15px 0;
+  font-weight: bold;
 }
 
 /* PRIVACY H3 */
 .privacy__h3 {
-  font-size: 1em;
+  /* font-size: 0.9em; */
+  padding-bottom: 10px;
 }
 
 .privacy__h1,
 .privacy__h2,
 .privacy__h3 {
-  padding: 30px 0 30px 0;
   text-align: left;
-  font-weight: bold;
 }
 
 /* PRIVACY TEXT */
