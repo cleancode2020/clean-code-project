@@ -1,6 +1,47 @@
-.main__privacy {
-  min-height: 80vh;
-  width: 80%;
-  margin: auto;
+/* PRIVACY MAIN */
+.privacy__main {
+  /* min-height: 80vh; */
+  width: 60%;
+  margin: 2.5rem auto;
 }
+
+/* PRIVACY H1 */
+.privacy__main__h1 {
+  font-size: 2.2em;
+  font-weight: bold;
+  padding: 60px;
+  text-align: center;
+}
+
+.privacy__h1 {
+  font-size: 1.6em;
+}
+
+/* PRIVACY H2 */
+.privacy__h2 {
+  font-size: 1.4em;
+}
+
+/* PRIVACY H3 */
+.privacy__h3 {
+  font-size: 1em;
+}
+
+.privacy__h1,
+.privacy__h2,
+.privacy__h3 {
+  padding: 30px 0 30px 0;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* PRIVACY TEXT */
+.privacy__text p {
+  text-align: justify;
+}
+
+/* PRIVACY LISTS */
+/* .privacy__lists ul li p {
+color: #000;
+} */
 

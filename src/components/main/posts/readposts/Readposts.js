@@ -46,6 +46,7 @@ class Readposts extends React.Component {
 				}
 			}
 		}
+		
 
 		return (
 			<section className="readposts-section">
