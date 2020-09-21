@@ -23,7 +23,7 @@ const Userpost = (props) => {
 			</h4>
 
 			{/* ARTICLE */}
-			<p className="posts__p">{props.currentPost[1]}</p>
+			<p className="posts__art">{props.currentPost[1]}</p>
 
 			{/* CODEBLOCK */}
 			<h4 className="posts__h4">Code:</h4>
