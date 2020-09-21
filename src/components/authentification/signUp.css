@@ -1,18 +1,19 @@
 /* SIGN UP MODAL BUTTONS */
 .modal__button {
 	margin: 5px 20px;
+	padding: 5px 10px;
 }
 
 /* SIGN UP MODAL OPEN */
 .modal__button__login {
 	color: blue;
-	border: solid 1px #dad6d6;
-	background-color: #dad6d6;
+	border: solid 1px white;
+	background-color: white;
 	font-weight: bold;
 }
 
 .modal__button__login:hover {
-	color: #dad6d6;
+	color: white;
 	background-color: blue;
 	border: solid 1px blue;
 }
