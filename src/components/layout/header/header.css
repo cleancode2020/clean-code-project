@@ -1,10 +1,10 @@
 /* HEADER  */
 .Header {
-  padding: 3px 5px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  background-color: lightgrey;
+	padding: 3px 5px;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	background: #333333;
 }
 
 /* HEADER DIV LEFT NAV  */
@@ -45,8 +45,8 @@
 
 /* HEADER H1 */
 .header__h1 {
-  color: blue;
-  font-weight: bold;
+	color: #dad6d6;
+	font-weight: bold;
 }
 
 .header__h1:hover {
@@ -60,8 +60,8 @@
 
 /* HEADER LINK */
 .nav__link {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: #575757;
 }
 
 .nav__link:hover {
@@ -127,7 +127,7 @@
   label div {
     width: 15px;
     height: 8px;
-    background-color: #333945;
+    background-color: #6b6e72;
     margin-bottom: 6px;
     margin-left: 0;
     border-radius: 6px;
