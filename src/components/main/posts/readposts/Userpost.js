@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Codeblock from "./Codeblockread";
 
 const Userpost = (props) => {

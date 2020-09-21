@@ -1,6 +1,5 @@
 import React from "react";
 import "./readposts.css";
-import { Route, Link } from "react-router-dom";
 import Userpost from "./Userpost";
 
 class Readposts extends React.Component {
