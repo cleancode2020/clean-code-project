@@ -6,7 +6,7 @@ import SignUpForm from "./SignUpForm";
 function SignUp(props) {
   return (
     <>
-      {/* OPEN SIGNUP MODAL BUTTON*/}
+      {/* OPEN SIGN UP MODAL BUTTON*/}
       <button
         className="modal__button modal__button__login"
         onClick={props.openModal}
@@ -14,7 +14,7 @@ function SignUp(props) {
         SIGN UP
       </button>
 
-      {/* SIGNUP MODAL*/}
+      {/* SIGN UP MODAL*/}
       <Modal isOpen={props.modalIsOpen} onRequestClose={props.closeModal}>
         {/* CLOSE SIGNUP MODAL BUTTON*/}
         <button
@@ -24,7 +24,7 @@ function SignUp(props) {
           x
         </button>
 
-        {/* SIGNUP FORM COMPONENT*/}
+        {/* SIGN UP FORM COMPONENT*/}
         <SignUpForm
           firebase={props.firebase}
           setUser={props.setUser}

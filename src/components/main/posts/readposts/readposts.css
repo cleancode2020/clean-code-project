@@ -11,6 +11,15 @@
 	margin: 50px auto;
 }
 
+.post__button {
+	border: none;
+	background-color: white;
+	box-sizing: border-box;
+	width: 100%;
+	/* height: fit-content; */
+	/* margin: 10px; */
+}
+
 .posts__li {
 	border-radius: 25px;
 	border: solid 1px lightgrey;

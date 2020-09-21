@@ -7,3 +7,12 @@
   margin: 30px;
   font-weight: bold;
 }
+
+.info-links {
+  text-align: center;
+  
+}
+a {
+  text-decoration: none;
+color: rgb(96, 101, 102);
+}

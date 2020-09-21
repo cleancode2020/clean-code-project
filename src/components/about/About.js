@@ -7,6 +7,7 @@ import victoria from "../../assets/teamImage/Victoria.jpg";
 import vadim from "../../assets/teamImage/Vadim.png";
 
 class About extends React.Component {
+
   state = {
     teams: [
       {
@@ -50,10 +51,11 @@ class About extends React.Component {
     return console.log(this.state.teams[1].title);
   };
 
-  render() {
-    return (
-      <main className="main__about">
-        <h1 className="h1__about">About Us</h1>
+	render() {
+		return (
+			<main className="main__about">
+				<h2 className="h1__about">About Us</h2>
+
 
         {/* DISCRIPTION ABOUT US*/}
         <h2 className="h2__style">who we are</h2>
