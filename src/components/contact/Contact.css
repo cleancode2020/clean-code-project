@@ -1,0 +1,18 @@
+.main__contact {
+  min-height: 86.5vh;
+}
+
+.h1__style{
+  text-align: center;
+  margin: 30px;
+  font-weight: bold;
+}
+
+.info-links {
+  text-align: center;
+  
+}
+a {
+  text-decoration: none;
+color: rgb(96, 101, 102);
+}

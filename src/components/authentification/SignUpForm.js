@@ -1,5 +1,4 @@
 import React from "react";
-// import firebase from "../../constants/Firebase";
 // import "./form.css";
 
 class SignUpForm extends React.Component {

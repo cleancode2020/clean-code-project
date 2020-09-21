@@ -1,15 +1,17 @@
 import React from "react";
 import "./submitpost.css";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Submitpost extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: "Vladimir",
+			displayName: "",
 			title: "",
 			categories: ["js", "c++", "python", "rust"],
 			subcategories: ["react", "vue.js", "angular"],
+			currentCategory: "",
+			currentSubCategory: "",
 			article: "",
 			codeblock: "",
 			correctLength: true,
@@ -25,20 +27,20 @@ class Submitpost extends React.Component {
 	}
 	componentDidMount() {
 		this.input.focus();
+		this.setState({ displayName: this.props.user.displayName });
 	}
 
 	// HANDLECHANGE
 	titleHandleChange(e) {
-		console.log(e.target.value);
 		this.setState({ title: e.target.value });
 	}
 
 	categoriesHandleChange(e) {
-		this.setState({ categories: e.target.value });
+		this.setState({ currentCategory: e.target.value });
 	}
 
 	subcategoriesHandleChange(e) {
-		this.setState({ subcategories: e.target.value });
+		this.setState({ currentSubCategory: e.target.value });
 	}
 
 	articleHandleChange(e) {
@@ -51,7 +53,7 @@ class Submitpost extends React.Component {
 
 	// SUBMIT
 	submitPost(e) {
-		e.preventDefault();
+		// e.preventDefault();
 
 		if (this.state.title.length >= 3) {
 			this.postFirebase();
@@ -72,27 +74,26 @@ class Submitpost extends React.Component {
 			},
 			// CONVERT STATE IN JSON STRING
 			body: JSON.stringify({
+				username: this.props.user.displayName,
 				title: this.state.title,
-				categories: this.state.categories,
-				subcategories: this.state.subcategories,
+				categories: this.state.currentCategory,
+				subcategories: this.state.currentSubCategory,
 				article: this.state.article,
 				codeblock: this.state.codeblock,
 			}),
 		};
 
 		await fetch(
-			`${this.props.firebase.databaseURL}/posts/.json`,
+			`${this.props.firebase.databaseURL}/cleancode/posts.json?auth=${this.props.user.idToken}`,
 			requestOptions
 		)
 			// .then((response) => response.json())
-			.then((result) => {
-				// CLOSE MODAL AFTER POST
-				//  window.location.reload()
-			})
+			// .then((result) => {
+			// 	// CLOSE MODAL AFTER POST
+			// 	window.location.reload();
+			// })
 			.catch((error) => console.log("error:", error));
-
-		// FETCH AFTER ADD
-		// this.props.fetchFirebase();
+		this.props.getFirebase();
 	}
 
 	render() {
@@ -101,6 +102,7 @@ class Submitpost extends React.Component {
 				<Link className="navlink__submitclose" to="/">
 					close X
 				</Link>
+
 				{/* LEGEND */}
 				<legend className="post__legend">Make a post</legend>
 
@@ -125,15 +127,19 @@ class Submitpost extends React.Component {
 				<select
 					name=""
 					id=""
-					//   value={this.state.categories}
+					value={this.state.currentCategory}
+					defaultValue="DEFAULT"
 					onChange={this.categoriesHandleChange}
 				>
-					{/* <option selected disabled>
-            Choose:
-          </option> */}
-					{this.state.categories.map((category) => (
-						<option value={category}>{category}</option>
-					))}
+					<option value="DEFAULT" disabled>
+						Choose:
+					</option>
+					<option selected value="js">
+						JS
+					</option>
+					<option value="python">Python</option>
+					<option value="c++">C++</option>
+					<option value="rust">Rust</option>
 				</select>
 
 				{/* SUBCATIGORIES */}
@@ -143,15 +149,18 @@ class Submitpost extends React.Component {
 				<select
 					name=""
 					id=""
-					//   value={this.state.subcategories}
+					value={this.state.currentSubCategory}
+					defaultValue="DEFAULT"
 					onChange={this.subcategoriesHandleChange}
 				>
-					{/* <option selected disabled>
-            Choose:
-          </option> */}
-					{this.state.subcategories.map((category) => (
-						<option value={category}>{category}</option>
-					))}
+					<option disabled value="DEFAULT">
+						Choose:
+					</option>
+					<option selected value="react">
+						React
+					</option>
+					<option value="vue.js">Vue.js</option>
+					<option value="angular">Angular</option>
 				</select>
 
 				{/* ARTICLE */}
@@ -181,14 +190,24 @@ class Submitpost extends React.Component {
 					value={this.state.codeblock}
 					onChange={this.codeblockHandleChange}
 				></textarea>
+
 				{/* CORRECT LENGTH CHECK MESSAGE */}
 				{this.state.correctLength ? null : (
 					<p className="p-correct-length">Title length can be 3 characters.</p>
 				)}
-				<button className="submit__post" onClick={this.submitPost}>
-					Submit Article
-				</button>
-				<p>{this.state.username}</p>
+
+				<Link to="/">
+					<button
+						type="button"
+						className="submit__post"
+						await
+						onClick={this.submitPost}
+					>
+						Submit Article
+					</button>
+				</Link>
+
+				<p className="user__name">{this.state.displayName}</p>
 			</form>
 		);
 	}

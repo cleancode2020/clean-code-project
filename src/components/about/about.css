@@ -1,0 +1,138 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.h1__about, .h2__style {
+  text-align: center;
+  margin: 30px;
+  font-weight: bold;
+}
+
+.paragraph {
+  text-align: center;
+  margin:40px;
+}
+.main__about {
+  min-height: 100vh;
+  display: inline-block;
+}
+
+.effect__imgs {
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  margin: 10px;
+}
+.team__container {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+}
+
+/* Common style */
+.team__container figure {
+  position: relative;
+  float: center;
+  overflow: hidden;
+  margin: 10px ;
+  text-align: center;
+}
+
+.team__container img {
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+  position: relative;
+  display: inline-block;
+  opacity: 0.9;
+}
+.links a {
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+}
+
+.team__container figure h2,
+.team__container figure .links {
+  word-spacing: -0.55em;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.team__container figure h2,
+.team__container figure .links,
+.team__container figure p {
+  text-align: center;
+  margin: 5px;
+}
+
+.team__container figure .links a {
+  letter-spacing: 6px;
+  font-size: bold 50%;
+  transition: 0.3s ease-in-out;
+}
+.team__container figure .links a:hover {
+  color: rgb(12, 12, 15);
+  font-size: 15px;
+  transform: scale(1);
+}
+
+figure .effect__imgs p.description {
+  position: absolute;
+  bottom: 8em;
+  padding: 2em;
+  color: #fff;
+  text-transform: none;
+  font-size: 90%;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.45s;
+  -webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+}
+
+figure.effect__imgs h2,
+figure.effect__imgs .links,
+.team__container:hover figure p {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 850%, 0);
+  opacity: 1;
+}
+
+figure.effect__imgs .links a {
+  color: rgb(41, 41, 126);
+  text-decoration: none;
+}
+figure.figcaption h2,
+figure.figcaption .links a {
+  display: flex;
+  font-size: bold 5px;
+  color: rgb(0, 0, 0);
+}
+
+figure.effect__imgs:hover p.description {
+  opacity: 0;
+}
+
+.effect__imgs:hover .figcaption,
+.effect__imgs:hover h2,
+.effect__imgs:hover .links {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.effect__imgs:hover h2,
+.effect__imgs:hover .links {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+

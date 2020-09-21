@@ -60,13 +60,18 @@
 	background-color: white;
 	color: blue;
 	font-weight: bold;
-  text-decoration: none;
-  width: fit-content;
-  margin: 30px auto;
+	text-decoration: none;
+	width: fit-content;
+	margin: 30px auto;
 	padding: 20px;
 }
 
 .submit__post {
 	background-color: blue;
 	color: white;
+}
+
+/* USER NAME */
+.user__name {
+	text-align: right;
 }
