@@ -83,9 +83,17 @@
 /* NAV CLOSE BUTTON */
 .nav__close {
 	align-self: flex-end;
-	border: none;
-	background-color: white;
 	font-size: 15px;
+	border-radius: 5px;
+	color: white;
+	border: solid 1px #333333;
+	background-color: #333333;
+	font-weight: bold;
+}
+
+.nav__close:hover {
+	color: #333333;
+	background-color: white;
 }
 
 /* READ POST */
@@ -123,7 +131,7 @@
 
 /* CODEBLOCK POSTS */
 .codeblock__span {
-	/* border: solid 1px black; */
+	border: solid 1px #828282;
 	margin: 0 10px;
 	max-width: 100%;
 }

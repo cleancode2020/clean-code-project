@@ -100,7 +100,7 @@ class Submitpost extends React.Component {
 		return (
 			<form className="post__form">
 				<Link className="navlink__submitclose" to="/">
-					close X
+					x
 				</Link>
 
 				{/* LEGEND */}

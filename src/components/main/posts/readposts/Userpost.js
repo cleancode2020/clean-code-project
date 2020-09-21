@@ -6,9 +6,9 @@ const Userpost = (props) => {
 	console.log(props.currentPost);
 	return (
 		<div className="post__div">
-				{/* CLOSE BUTTON */}
+				{/* CLOSE BUTTON  */}
 			<button className="nav__link nav__close" onClick={props.reloadPage}>
-				x close
+				x
 			</button>
 
 			{/* TITLE */}
@@ -23,7 +23,7 @@ const Userpost = (props) => {
 			</h4>
 
 			{/* ARTICLE */}
-			<p className="posts__art">{props.currentPost[1]}</p>
+			<p className="posts__p">{props.currentPost[1]}</p>
 
 			{/* CODEBLOCK */}
 			<h4 className="posts__h4">Code:</h4>
