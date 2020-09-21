@@ -4,6 +4,14 @@
   margin: 2.5rem auto;
 }
 
+.privacy__main a {
+  color: blue;
+}
+
+.privacy__main a:hover {
+  color: gray;
+}
+
 /* PRIVACY H1 */
 .privacy__main__h1 {
   font-size: 2.2em;
@@ -47,9 +55,9 @@
 }
 
 .privacy__lists ul li {
-  width: 500px;
+  /* width: 500px; */
   color: rgb(100, 96, 96);
-  list-style-type: circle;
+  list-style-type: disc;
   padding: 10px 0 10px 0;
 }
 
