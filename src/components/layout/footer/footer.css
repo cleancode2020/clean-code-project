@@ -43,9 +43,9 @@ footer ul li {
 	text-decoration: none;
 }
 
-.footer__name:hover {
-	color: blue;
-}
+/* .footer__name:hover {
+	color: #7cd0df;
+} */
 
 /* FOOTER ICON */
 .icon {
@@ -53,5 +53,5 @@ footer ul li {
 }
 
 .icon:hover {
-	transform: scale(1.2);
+	transform: scale(1.4);
 }
