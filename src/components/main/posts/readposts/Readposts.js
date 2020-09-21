@@ -62,12 +62,24 @@ class Readposts extends React.Component {
 								onClick={() => this.setPost(item)}
 								to={`/${item[0]}`}
 							>
-								<li className="posts__li" key={index}>
-									<h2 className="article-h2">{item[5]}</h2>
-									<p className="article-p">{item[2]}</p>
-									<p className="article-p">{item[4]}</p>
-									<h3 className="article-h3">{item[6]}</h3>
-								</li>
+								<div>
+									<li className="posts__li" key={index}>
+										<div className="li-top">
+											<h2 className="article-h2">{item[5]}</h2>
+										</div>
+										<div className="li-bottom">
+											<p className="article-p">#{item[2]}</p>
+											<p className="article-p">#{item[4]}</p>
+											<h3 className="article-h3">{item[6]}</h3>
+										</div>
+									</li>
+									{/* <li className="posts__li" key={index}>
+										<h2 className="article-h2">{item[5]}</h2>
+										<p className="article-p">{item[2]}</p>
+										<p className="article-p">{item[4]}</p>
+										<h3 className="article-h3">{item[6]}</h3>
+									</li> */}
+								</div>
 							</button>
 						))
 					)}
