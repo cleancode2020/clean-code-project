@@ -1,6 +1,6 @@
-A
 
-A#
+### A
+
 A+
 ABAP
 ABC
@@ -42,9 +42,9 @@ AutoLISP
 Automatically Programmed Tools (APT)
 awk (awk, gawk, mawk, nawk)
 
-B
 
-B
+### B
+
 B-0
 BANCStar
 BASIC, siehe auch Liste der BASIC-Dialekte
@@ -59,8 +59,9 @@ BLISS (Programmiersprache)
 Blitz Basic
 Boo
 Brainfuck, Brainfuck2D
-C
-C
+
+### C
+
 C++
 C−−
 C#
@@ -97,8 +98,9 @@ CURL
 Curry
 CycL
 Cython
-D
-D
+
+### D
+
 DarkBASIC
 Dart
 Datalog
@@ -106,8 +108,9 @@ Delphi, siehe Object Pascal
 Digital Command Language (DCL)
 Dylan
 Dynamo
-E
-E
+
+### E
+
 Easytrieve
 Eiffel
 ELAN
@@ -121,9 +124,9 @@ Esterel
 Euler
 Euphoria
 EXAPT
-F
-F (Variante von Fortran)
-F#
+
+### F (Variante von Fortran)
+
 Factor
 Faust
 FileMaker Script
@@ -138,8 +141,9 @@ FRACTRAN
 FreeBASIC
 FreeMat
 Funktionsbausteinsprache (FBS oder auch Siemens FUP)
-G
-G
+
+### G
+
 Gambas
 Game Maker Language (GML), siehe Game Maker
 Gauss
@@ -152,7 +156,9 @@ GPSS (General Purpose Simulation System)
 GrGen.NET
 Grape
 Groovy
-H
+
+### H
+
 Hack
 HAL
 Haskell
@@ -160,7 +166,9 @@ Haxe
 High Level Shading Language (HLSL)
 Hollywood
 HQ9+
-I
+
+### I
+
 iCon-L
 Industrial Robot Language (IRL)
 Inform
@@ -168,9 +176,9 @@ Interactive Data Language (IDL)
 INTERCAL
 Io
 ISWIM
-J
-J
-J#
+
+### J
+
 Jasmin
 Java
 JavaScript (JScript, ECMAScript, DHTML)
@@ -181,12 +189,16 @@ JScript
 JScript .NET
 Julia
 Jython (JPython)
-K
+
+### K
+
 KiXtart
 Kontaktplan (KOP)
 Kornshell
 Kotlin
-L
+
+### L
+
 LabVIEW
 Liberty Basic
 Lingo
@@ -203,8 +215,10 @@ Lua
 Luna
 Lustre
 Lite-C
-M
-M
+
+
+### M
+
 M4
 Malbolge
 Maple
@@ -222,7 +236,9 @@ Modula (Modula-2, Modula-2+, Modula-3)
 Monkey X
 MPD
 MUMPS
-N
+
+### N
+
 Nasal
 NATURAL
 NetLogo
@@ -234,7 +250,9 @@ Nice
 Not Quite C (NQC)
 Not eXactly C (NXC)
 Nyquist
-O
+
+### O
+
 Oberon
 Objective-C
 Objective-C++
@@ -248,7 +266,9 @@ OPL
 OpenGL ES Shading Language
 OpenGL Shading Language
 Oz
-P
+
+### P
+
 Pacbase
 Pascal
 Pascal Script
@@ -279,20 +299,25 @@ PS 440
 PureBasic
 Pure Data
 Python
-Q
+
+### Q
+
 Q#
 QuakeC
 QML
-R
-R
+
+
+### R
+
 REBOL
 REXX
 Robot Karol
 RPG
 Ruby
 Rust
-S
-S
+
+### S
+
 S-Lang
 SabreTalk
 SAIL (Stanford AI Language)
@@ -334,7 +359,9 @@ StarOffice Basic (auch bekannt als StarBasic und OOoBasic)
 Swift
 SuperCollider
 System Management Language (SML)
-T
+
+### T
+
 TACL
 TAL (Transaction Application Language)
 Tcl
@@ -347,9 +374,13 @@ TTCN
 TTCN-3
 Turing
 TypeScript
-U
+
+### U
+
 UnrealScript
-V
+
+### V
+
 Vala
 VEE
 Visual Basic Classic (VB)
@@ -362,8 +393,9 @@ Visual Objects (VO)
 Vienna Definition Language (VDL)
 VisSim
 Vulcan.NET
-vvvv
-W
+
+### W
+
 Web
 Web Language
 Whitespace
@@ -371,7 +403,9 @@ WinDev
 WordBasic
 WMLScript
 Wyvern
-X
+
+### X
+
 X10
 Xbase++
 XL
@@ -380,5 +414,7 @@ Xojo
 XProfan
 XSL Transformation (XSLT)
 Xtend
-Z
+
+### Z
+
 Zonnon
