@@ -50,7 +50,7 @@
 }
 
 .header__h1:hover {
-  color: black;
+  color: white;
 }
 
 /* HEADER LI */
@@ -61,11 +61,12 @@
 /* HEADER LINK */
 .nav__link {
 	text-decoration: none;
-	color: #575757;
+	color: #dad6d6;
 }
 
 .nav__link:hover {
-  color: blue;
+  color: white;
+  text-decoration: underline;
 }
 
 /* HEADER DIV LEFT  */

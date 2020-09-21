@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 90px;
+	height: 120px;
 	background: #333333;
 	max-width: 100%;
 }
@@ -36,22 +36,14 @@ footer ul li {
 	padding: 10px;
 }
 
+footer ul li:hover {
+	transform: scale(1.2);
+}
+
 /* FOOTER NAME */
 .footer__name {
 	color: #dad6d6;
 	font-size: 16px;
+	margin: 2px;
 	text-decoration: none;
-}
-
-/* .footer__name:hover {
-	color: #7cd0df;
-} */
-
-/* FOOTER ICON */
-.icon {
-	color: white;
-}
-
-.icon:hover {
-	transform: scale(1.4);
 }
