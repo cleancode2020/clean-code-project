@@ -1,7 +1,7 @@
 /* POST FORM */
 .post__form {
-	border: solid 1px lightgrey;
-	background-color: lightgrey;
+	border: solid 1px #828282;
+	/* background-color: #828282; */
 	border-radius: 25px;
 	box-sizing: border-box;
 	margin: 50px auto;
@@ -16,13 +16,19 @@
 /* NAV LINK */
 .navlink__submitclose {
 	align-self: flex-end;
+	padding: 5px;
+	font-size: 15px;
+	border-radius: 5px;
+	color: white;
+	border: solid 1px #333333;
+	background-color: #333333;
 	font-weight: bold;
-	color: black;
 	text-decoration: none;
 }
 
 .navlink__submitclose:hover {
-	color: blue;
+	color: #333333;
+	background-color: white;
 }
 
 /* LEGEND */
@@ -39,6 +45,18 @@
 	font-size: 16px;
 	margin: 50px 0 10px;
 	text-align: left;
+}
+
+.post__input  {
+	padding: 5px;
+	border: solid 1px black;
+	width: 100%;
+}
+
+.post__select  {
+	padding: 5px;
+	border: solid 1px black;
+	width: 100%;
 }
 
 /* ARTICLE */
@@ -69,6 +87,7 @@
 .submit__post {
 	background-color: blue;
 	color: white;
+	width: 100%;
 }
 
 /* USER NAME */

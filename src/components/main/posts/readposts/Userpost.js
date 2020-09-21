@@ -6,19 +6,21 @@ const Userpost = (props) => {
 	console.log(props.currentPost);
 	return (
 		<div className="post__div">
+				{/* CLOSE BUTTON  */}
 			<button className="nav__link nav__close" onClick={props.reloadPage}>
-				x close
+				x
 			</button>
-			{/* <Link className="nav__link nav__close" to="/">
-				x close
-			</Link> */}
 
 			{/* TITLE */}
 			<h3 className="posts__h3">{props.currentPost[5]}</h3>
 
 			{/* CATEGORIES */}
-			<h4 className="posts__p">{props.currentPost[2]}</h4>
-			<h4 className="posts__p">{props.currentPost[4]}</h4>
+			<h4 className="posts__p">
+				#{props.currentPost[2] ? props.currentPost[2] : "None"}
+			</h4>
+			<h4 className="posts__p">
+				#{props.currentPost[4] ? props.currentPost[4] : "None"}
+			</h4>
 
 			{/* ARTICLE */}
 			<p className="posts__p">{props.currentPost[1]}</p>
