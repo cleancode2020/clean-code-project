@@ -50,6 +50,7 @@
 .postaction__link {
 	border: solid 1px blue;
 	background-color: blue;
+	border-radius: 5px;
 	color: white;
 	font-weight: bold;
 	text-decoration: none;
