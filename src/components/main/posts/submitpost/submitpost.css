@@ -75,6 +75,7 @@
 /* SUBMIT BUTTON */
 .submit__post {
 	border: solid 1px blue;
+	border-radius: 5px;
 	background-color: white;
 	color: blue;
 	font-weight: bold;

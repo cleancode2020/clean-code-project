@@ -2,6 +2,7 @@
 .modal__button {
 	margin: 5px 20px;
 	padding: 5px 10px;
+	border-radius: 5px;
 }
 
 /* SIGN UP MODAL OPEN */
