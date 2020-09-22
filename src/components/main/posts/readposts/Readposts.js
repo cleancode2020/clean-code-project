@@ -58,76 +58,28 @@ class Readposts extends React.Component {
             />
           ) : (
             posts.map((item, index) => (
-              <button
-                className="post__button"
-                onClick={() => this.setPost(item)}
-                to={`/${item[0]}`}
-              >
-                <li className="posts__li" key={index}>
-                  <h2 className="article-h2">{item[5]}</h2>
-                  <p className="article-p">{item[2]}</p>
-                  <p className="article-p">{item[4]}</p>
-                  <h3 className="article-h3">{item[6]}</h3>
-                </li>
-              </button>
+              <li className="posts__li" key={index}>
+                <button
+                  className="post__button"
+                  onClick={() => this.setPost(item)}
+                  to={`/${item[0]}`}
+                >
+                  <div className="li-top">
+                    <h2 className="article-h2">{item[5]}</h2>
+                  </div>
+                  <div className="li-bottom">
+                    <p className="article-p">#{item[2] ? item[2] : "None"}</p>
+                    <p className="article-p">#{item[4] ? item[4] : "None"}</p>
+                    <h3 className="article-h3">{item[6]}</h3>
+                  </div>
+                </button>
+              </li>
             ))
           )}
         </ul>
       </section>
     );
   }
-  // render() {
-  // 	// DATA
-  // 	let posts = [];
-  // 	if (this.props.allPostsObject) {
-  // 		const allPostsObject = this.props.allPostsObject;
-  // 		const allPostsObjectKeys = Object.keys(allPostsObject);
-  // 		for (let key of allPostsObjectKeys) {
-  // 			const objectData = allPostsObject[key];
-  // 			if (typeof objectData === "object") {
-  // 				const postsValuesArray = Object.values(objectData);
-  // 				// POST ALONE
-  // 				postsValuesArray.unshift(key);
-  // 				// POSTS
-  // 				posts.unshift(postsValuesArray);
-  // 			}
-  // 		}
-  // 	}
-
-  // 	return (
-  // 		<section className="readposts-section">
-  // 			<ul className="posts__ul">
-  // 				{this.state.activePost ? (
-  // 					<Userpost
-  // 						currentPost={this.state.currentPost}
-  // 						reloadPage={this.reloadPage}
-  // 					/>
-  // 				) : (
-  // 					posts.map((item, index) => (
-  // 						<button
-  // 							className="post__button"
-  // 							onClick={() => this.setPost(item)}
-  // 							to={`/${item[0]}`}
-  // 						>
-  // 							<div>
-  // 								<li className="posts__li" key={index}>
-  // 									<div className="li-top">
-  // 										<h2 className="article-h2">{item[5]}</h2>
-  // 									</div>
-  // 									<div className="li-bottom">
-  // 										<p className="article-p">#{item[2] ? item[2] : "None"}</p>
-  // 										<p className="article-p">#{item[4] ? item[4] : "None"}</p>
-  // 										<h3 className="article-h3">{item[6]}</h3>
-  // 									</div>
-  // 								</li>
-  // 							</div>
-  // 						</button>
-  // 					))
-  // 				)}
-  // 			</ul>
-  // 		</section>
-  // 	);
-  // }
 }
 
 export default Readposts;

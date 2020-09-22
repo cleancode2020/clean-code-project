@@ -149,32 +149,3 @@
   margin: 30px;
   font-weight: bold;
 }
-
-/* USER POST */
-/* POST FORM */
-.form__main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.form__title {
-  padding-bottom: 30px;
-}
-.form__comment {
-  position: absolute;
-  left: 31px;
-  top: 33px;
-  padding: 5px;
-  background-color: #fff;
-}
-
-.form__button {
-  color: black;
-  background-color: darkgrey;
-  padding: 10px;
-  font-weight: bold;
-  border-radius: 15px;
-  max-width: 50px;
-  margin-top: 10px;
-}
