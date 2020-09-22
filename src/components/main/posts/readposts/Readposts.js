@@ -60,6 +60,7 @@ class Readposts extends React.Component {
 					) : (
 						posts.map((item, index) => (
 							<li className="posts__li" key={index}>
+								{/* <Vote /> */}
 								<button
 									className="post__button"
 									onClick={() => this.setPost(item)}
