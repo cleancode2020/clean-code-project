@@ -34,6 +34,7 @@ function Posts(props) {
 				{/* POST COMPONENT */}
 				<Route path="/">
 					<Readposts
+						user={props.user}
 						firebase={props.firebase}
 						getFirebase={props.getFirebase}
 						allPostsObject={props.allPostsObject}
