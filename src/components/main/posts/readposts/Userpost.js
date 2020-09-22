@@ -13,14 +13,14 @@ const Userpost = (props) => {
         </button>
 
         {/* TITLE */}
-        <h3 className="posts__h3">{props.currentPost[5]}</h3>
+        <h3 className="posts__h3">{props.currentPost[6]}</h3>
 
         {/* CATEGORIES */}
         <h4 className="posts__p">
           #{props.currentPost[2] ? props.currentPost[2] : "None"}
         </h4>
         <h4 className="posts__p">
-          #{props.currentPost[4] ? props.currentPost[4] : "None"}
+          #{props.currentPost[5] ? props.currentPost[5] : "None"}
         </h4>
 
         {/* ARTICLE */}
@@ -33,7 +33,7 @@ const Userpost = (props) => {
         </span>
 
         {/* USER NAME */}
-        <p className="user__name">{props.currentPost[6]}</p>
+        <p className="user__name">{props.currentPost[7]}</p>
       </div>
       {/* COMMENTS HERE IN FUTURE */}
 
