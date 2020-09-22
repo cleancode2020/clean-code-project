@@ -72,7 +72,7 @@ class Readposts extends React.Component {
 					) : (
 						posts.map((item, index) => (
 							<li className="posts__li" key={index}>
-								{this.props.user ? <Vote /> : ""}
+								{this.props.user ? <Vote /> : null}
 
 								<button
 									className="post__button"
@@ -81,22 +81,15 @@ class Readposts extends React.Component {
 								>
 									<div className="li-top">
 										<h2 className="article-h2">{item[5]}</h2>
-										<p className="vote__count vote__countLeft">
-											<span>0</span>
-											<span aria-label="Thumbs Up" role="img">
-												👍
-											</span>
-										</p>
-										<p className="vote__count">
-											<span>0</span>
-											<span aria-label="Thumbs Down" role="img">
-												👎
-											</span>
-										</p>
 									</div>
 									<div className="li-bottom">
-										<p className="article-p">#{item[2] ? item[2] : "None"}</p>
-										<p className="article-p">#{item[4] ? item[4] : "None"}</p>
+										<p className="article-p">
+											{item[2] ? `#${item[2]}` : null}
+										</p>
+										<p className="article-p">
+											{item[4] ? `#${item[4]}` : null}
+										</p>
+										
 										<h3 className="article-h3">{item[6]}</h3>
 									</div>
 								</button>

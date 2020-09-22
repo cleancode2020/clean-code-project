@@ -5,7 +5,7 @@ const Userpost = (props) => {
 	console.log(props.currentPost);
 	return (
 		<div className="post__div">
-				{/* CLOSE BUTTON  */}
+			{/* CLOSE BUTTON  */}
 			<button className="nav__link nav__close" onClick={props.reloadPage}>
 				x
 			</button>
@@ -14,12 +14,30 @@ const Userpost = (props) => {
 			<h3 className="posts__h3">{props.currentPost[5]}</h3>
 
 			{/* CATEGORIES */}
-			<h4 className="posts__p">
-				#{props.currentPost[2] ? props.currentPost[2] : "None"}
-			</h4>
-			<h4 className="posts__p">
-				#{props.currentPost[4] ? props.currentPost[4] : "None"}
-			</h4>
+			<div className="vote__wrapper">
+				<h4 className="posts__p">
+					{props.currentPost[2] ? `#${props.currentPost[2]}` : null}
+				</h4>
+				<h4 className="posts__p">
+					{props.currentPost[4] ? `#${props.currentPost[4]}` : null}
+				</h4>
+			</div>
+
+			{/* VOTES */}
+			<div className="vote__wrapper">
+				<p className="count__p">
+					<span>0</span>
+					<span aria-label="Thumbs Up" role="img">
+						👍
+					</span>
+				</p>
+				<p className="count__p">
+					<span>0</span>
+					<span aria-label="Thumbs Down" role="img">
+						👎
+					</span>
+				</p>
+			</div>
 
 			{/* ARTICLE */}
 			<p className="posts__art">{props.currentPost[1]}</p>
