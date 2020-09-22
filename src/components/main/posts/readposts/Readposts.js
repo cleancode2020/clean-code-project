@@ -9,6 +9,8 @@ class Readposts extends React.Component {
 		this.state = {
 			activePost: "",
 			currentPost: [],
+			upVote: 0,
+			downVote: 0,
 		};
 		this.setPost = this.setPost.bind(this);
 		this.voteUpHandleChange = this.voteUpHandleChange.bind(this);
@@ -33,14 +35,45 @@ class Readposts extends React.Component {
 
 	// VOTE UP HANDLE CHANGE
 	voteUpHandleChange(item) {
-		// console.log("upz");
-		// console.log(item);
+		console.log(this.props.allPostsObject);
+		this.setState({
+			upVote: +1,
+		});
+	}
+
+	async postUpVote() {
+		const requestOptions = {
+			method: "POST",
+			redirect: "follow",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			// CONVERT STATE IN JSON STRING
+			body: JSON.stringify({
+				upVote: this.state.upVote,
+			}),
+		};
+
+		await fetch(
+			`${this.props.firebase.databaseURL}/cleancode/posts.json?auth=${this.props.user.idToken}`,
+			requestOptions
+		)
+			// .then((response) => response.json())
+			// .then((result) => {
+			// 	// CLOSE MODAL AFTER POST
+			// 	window.location.reload();
+			// })
+			.catch((error) => console.log("error:", error));
+		this.props.getFirebase();
 	}
 
 	// VOTE DOWN HANDLE CHANGE
 	voteDownHandleChange(item) {
 		// console.log("downz");
 		// console.log(item);
+		this.setState({
+			downVote: +1,
+		});
 	}
 
 	render() {
@@ -74,6 +107,7 @@ class Readposts extends React.Component {
 							<li className="posts__li" key={index}>
 								{this.props.user ? (
 									<Vote
+										currentPost={this.state.currentPost}
 										voteUpHandleChange={this.voteUpHandleChange}
 										voteDownHandleChange={this.voteDownHandleChange}
 									/>
