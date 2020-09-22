@@ -5,11 +5,13 @@ function Contact() {
 	return (
 		<div className="vote__div">
 			<button className="vote__button">
-				<span className="vote__span">👍</span>
+				<span>👍</span>
+				<span>+</span>
 			</button>
-			{/* <p>Vote</p> */}
+
 			<button className="vote__button">
-				<span className="vote__span">👎</span>
+				<span>-</span>
+				<span>👎</span>
 			</button>
 		</div>
 	);
