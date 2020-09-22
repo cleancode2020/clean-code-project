@@ -72,6 +72,7 @@ class App extends React.Component {
 		await fetch(`${firebase.databaseURL}/cleancode/posts.json`, requestOptions)
 			.then((response) => response.json())
 			.then((result) => {
+				// debugger;
 				this.setState({
 					allPostsObject: result,
 				});
