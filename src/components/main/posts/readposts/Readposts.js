@@ -11,8 +11,8 @@ class Readposts extends React.Component {
 			currentPost: [],
 		};
 		this.setPost = this.setPost.bind(this);
-		this.voteUpHandlechange = this.voteUpHandlechange.bind(this);
-		this.voteDownHandlechange = this.voteDownHandlechange.bind(this);
+		this.voteUpHandleChange = this.voteUpHandleChange.bind(this);
+		this.voteDownHandleChange = this.voteDownHandleChange.bind(this);
 	}
 	componentDidMount() {
 		this.props.getFirebase();
@@ -32,15 +32,15 @@ class Readposts extends React.Component {
 	}
 
 	// VOTE UP HANDLE CHANGE
-	voteUpHandlechange(item) {
-		console.log("upz");
-		console.log(item);
+	voteUpHandleChange(item) {
+		// console.log("upz");
+		// console.log(item);
 	}
 
 	// VOTE DOWN HANDLE CHANGE
-	voteDownHandlechange(item) {
-		console.log("downz");
-		console.log(item);
+	voteDownHandleChange(item) {
+		// console.log("downz");
+		// console.log(item);
 	}
 
 	render() {
@@ -72,7 +72,12 @@ class Readposts extends React.Component {
 					) : (
 						posts.map((item, index) => (
 							<li className="posts__li" key={index}>
-								{this.props.user ? <Vote /> : null}
+								{this.props.user ? (
+									<Vote
+										voteUpHandleChange={this.voteUpHandleChange}
+										voteDownHandleChange={this.voteDownHandleChange}
+									/>
+								) : null}
 
 								<button
 									className="post__button"
@@ -89,7 +94,7 @@ class Readposts extends React.Component {
 										<p className="article-p">
 											{item[4] ? `#${item[4]}` : null}
 										</p>
-										
+
 										<h3 className="article-h3">{item[6]}</h3>
 									</div>
 								</button>
