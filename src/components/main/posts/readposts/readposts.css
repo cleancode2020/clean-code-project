@@ -54,6 +54,21 @@
   font-weight: bold;
 }
 
+.vote__count {
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+	margin: 0 10px;
+	justify-self: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.vote__count span {
+	margin: 0 5px;
+}
+
 .article-h3 {
   font-size: 17px;
   font-weight: bold;
@@ -104,6 +119,23 @@
   font-size: 22px;
   margin: 80px;
 }
+
+
+.vote__wrapper {
+	display: flex;
+	margin: 10px 0;
+}
+.count__p {
+	display: flex;
+	margin: 5px 10px;
+}
+
+.count__p span {
+	display: flex;
+	margin: 0 3px;
+}
+
+
 
 /* READ POST */
 /* H4 POSTS */

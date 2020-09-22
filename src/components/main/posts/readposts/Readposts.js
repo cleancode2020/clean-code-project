@@ -1,6 +1,7 @@
 import React from "react";
 import "./readposts.css";
 import Userpost from "./Userpost";
+import Vote from "../vote/vote";
 
 class Readposts extends React.Component {
 	constructor(props) {
