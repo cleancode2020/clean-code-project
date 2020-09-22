@@ -100,7 +100,7 @@ class Submitpost extends React.Component {
 		return (
 			<form className="post__form">
 				<Link className="navlink__submitclose" to="/">
-					close X
+					x
 				</Link>
 
 				{/* LEGEND */}
@@ -108,9 +108,10 @@ class Submitpost extends React.Component {
 
 				{/* TITLE */}
 				<label className="post__label" htmlFor="#">
-					Title:
+					Title
 				</label>
 				<input
+					className="post__input"
 					type="text"
 					placeholder="..."
 					value={this.state.title}
@@ -125,18 +126,18 @@ class Submitpost extends React.Component {
 					Categories
 				</label>
 				<select
+					className="post__select"
 					name=""
 					id=""
 					value={this.state.currentCategory}
 					defaultValue="DEFAULT"
 					onChange={this.categoriesHandleChange}
 				>
-					<option value="DEFAULT" disabled>
+					{/* <option value="DEFAULT" disabled>
 						Choose:
-					</option>
-					<option selected value="js">
-						JS
-					</option>
+					</option> */}
+					<option value="none">None</option>
+					<option value="js">JS</option>
 					<option value="python">Python</option>
 					<option value="c++">C++</option>
 					<option value="rust">Rust</option>
@@ -147,25 +148,25 @@ class Submitpost extends React.Component {
 					SubCategories
 				</label>
 				<select
+					className="post__select"
 					name=""
 					id=""
 					value={this.state.currentSubCategory}
 					defaultValue="DEFAULT"
 					onChange={this.subcategoriesHandleChange}
 				>
-					<option disabled value="DEFAULT">
+					{/* <option disabled value="DEFAULT">
 						Choose:
-					</option>
-					<option selected value="react">
-						React
-					</option>
+					</option> */}
+					<option value="none">None</option>
+					<option value="react">React</option>
 					<option value="vue.js">Vue.js</option>
 					<option value="angular">Angular</option>
 				</select>
 
 				{/* ARTICLE */}
 				<label className="post__label" htmlFor="#">
-					Article:
+					Article
 				</label>
 				<textarea
 					className="post__textarea"
@@ -179,7 +180,7 @@ class Submitpost extends React.Component {
 
 				{/* CODEBLOCK */}
 				<label className="post__label" htmlFor="#">
-					Code Block:
+					Code Block
 				</label>
 				<textarea
 					className="post__textarea"

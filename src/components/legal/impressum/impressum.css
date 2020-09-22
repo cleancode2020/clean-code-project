@@ -1,12 +1,11 @@
 /* IMPRESSUM MAIN */
 .impressum__main {
-  /* min-height: 80vh; */
   width: 60%;
   margin: 2.5rem auto;
 }
 
 .impressum__main h1 {
-  font-size: 1.6em;
+  font-size: 2.2em;
   font-weight: bold;
   text-align: center;
   padding: 50px;
@@ -15,7 +14,11 @@
 /* IMPRESSUM ADDRESS */
 .impressum__address {
   width: 20rem;
-  margin: 0 auto;
+  margin: 30px 0;
+}
+
+.impressum__address > * {
+  margin: 6px 0;
 }
 
 /* IMPRESSUM TITLE */
