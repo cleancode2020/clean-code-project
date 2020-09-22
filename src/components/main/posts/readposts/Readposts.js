@@ -11,6 +11,8 @@ class Readposts extends React.Component {
 			currentPost: [],
 		};
 		this.setPost = this.setPost.bind(this);
+		this.voteUpHandlechange = this.voteUpHandlechange.bind(this);
+		this.voteDownHandlechange = this.voteDownHandlechange.bind(this);
 	}
 	componentDidMount() {
 		this.props.getFirebase();
@@ -27,6 +29,18 @@ class Readposts extends React.Component {
 	// ACTIVE POST
 	reloadPage() {
 		window.location.reload();
+	}
+
+	// VOTE UP HANDLE CHANGE
+	voteUpHandlechange(item) {
+		console.log("upz");
+		console.log(item);
+	}
+
+	// VOTE DOWN HANDLE CHANGE
+	voteDownHandlechange(item) {
+		console.log("downz");
+		console.log(item);
 	}
 
 	render() {
@@ -59,7 +73,7 @@ class Readposts extends React.Component {
 						posts.map((item, index) => (
 							<li className="posts__li" key={index}>
 								{this.props.user ? <Vote /> : ""}
-								
+
 								<button
 									className="post__button"
 									onClick={() => this.setPost(item)}
@@ -67,6 +81,18 @@ class Readposts extends React.Component {
 								>
 									<div className="li-top">
 										<h2 className="article-h2">{item[5]}</h2>
+										<p className="vote__count vote__countLeft">
+											<span>0</span>
+											<span aria-label="Thumbs Up" role="img">
+												👍
+											</span>
+										</p>
+										<p className="vote__count">
+											<span>0</span>
+											<span aria-label="Thumbs Down" role="img">
+												👎
+											</span>
+										</p>
 									</div>
 									<div className="li-bottom">
 										<p className="article-p">#{item[2] ? item[2] : "None"}</p>

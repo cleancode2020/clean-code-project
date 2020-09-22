@@ -52,6 +52,25 @@
 	font-weight: bold;
 }
 
+.vote__count {
+	font-size: 14px;
+	font-weight: bold;
+	color: black;
+	margin: 0 10px;
+	justify-self: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.vote__count span {
+	margin: 0 5px;
+}
+
+.vote__countLeft {
+	margin-left: auto;
+}
+
 .article-h3 {
 	font-size: 17px;
 	font-weight: bold;
