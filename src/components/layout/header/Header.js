@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../../assets/icons/black-dot.png";
 import "./header.css";
-import "./burger.css";
 import { Link } from "react-router-dom";
 import LogIn from "../../authentification/LogIn";
 import SignUp from "../../authentification/SignUp";
