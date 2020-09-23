@@ -1,6 +1,7 @@
 import React from "react";
 import "./readposts.css";
 import Userpost from "./Userpost";
+import Vote from "../vote/vote";
 
 class Readposts extends React.Component {
 	constructor(props) {
@@ -45,8 +46,7 @@ class Readposts extends React.Component {
 				}
 			}
 		}
-		
-
+		// debugger;
 		return (
 			<section className="readposts-section">
 				<ul className="posts__ul">
@@ -54,27 +54,30 @@ class Readposts extends React.Component {
 						<Userpost
 							currentPost={this.state.currentPost}
 							reloadPage={this.reloadPage}
+							user={this.props.user}
+							firebase={this.props.firebase}
 						/>
 					) : (
 						posts.map((item, index) => (
-							<button
-								className="post__button"
-								onClick={() => this.setPost(item)}
-								to={`/${item[0]}`}
-							>
-								<div>
-									<li className="posts__li" key={index}>
-										<div className="li-top">
-											<h2 className="article-h2">{item[5]}</h2>
-										</div>
-										<div className="li-bottom">
-											<p className="article-p">#{item[2] ? item[2] : "None"}</p>
-											<p className="article-p">#{item[4] ? item[4] : "None"}</p>
-											<h3 className="article-h3">{item[6]}</h3>
-										</div>
-									</li>
-								</div>
-							</button>
+							<li className="posts__li" key={index}>
+								{/* VOTE */}
+								{this.props.user ? <Vote /> : null}
+
+								<button
+									className="post__button"
+									onClick={() => this.setPost(item)}
+									to={`/${item[0]}`}
+								>
+									<div className="li-top">
+										<h2 className="article-h2">{item[5]}</h2>
+									</div>
+									<div className="li-bottom">
+										<p className="article-p">#{item[2] ? item[2] : "None"}</p>
+										<p className="article-p">#{item[5] ? item[5] : "None"}</p>
+										<h3 className="article-h3">{item[6]}</h3>
+									</div>
+								</button>
+							</li>
 						))
 					)}
 				</ul>
