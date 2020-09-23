@@ -72,8 +72,8 @@ class Readposts extends React.Component {
 										<h2 className="article-h2">{item[5]}</h2>
 									</div>
 									<div className="li-bottom">
-										<p className="article-p">{item[2] ? `#${item[2]}` : "None"}</p>
-										<p className="article-p">{item[4] ? `#${item[4]}` : "None"}</p>
+										<p className="article-p">{item[2] ? `#${item[2]}` : null}</p>
+										<p className="article-p">{item[4] ? `#${item[4]}` : null}</p>
 										<h3 className="article-h3">{item[6]}</h3>
 									</div>
 								</button>
