@@ -155,7 +155,7 @@ class Contact extends React.Component {
         </div>
         {/* END OF SINGLE ITEM */}
         <div className={this.state.sent ? "msg msgAppear" : "msg"}>
-          Massage has been sent
+          Message has been sent
         </div>
 
         <button className="contact__button" type="submit" onClick={this.formSubmit}>

@@ -1,125 +1,126 @@
 /* SIGN UP MODAL BUTTONS */
 .modal__button {
-  margin: 5px 20px;
-  padding: 5px 10px;
-  border-radius: 5px;
+	margin: 5px 20px;
+	padding: 5px 10px;
+	border-radius: 5px;
 }
 
 .modal__button:active {
-  border: none;
-  outline: none;
+	border: none;
+	outline: none;
 }
 
 /* SIGN UP MODAL OPEN */
 .modal__button__login {
-  color: white;
-  border: solid 1px #333333;
-  background-color: #333333;
-  font-weight: bold;
+	color: white;
+	border: solid 1px #333333;
+	background-color: #333333;
+	font-weight: bold;
 }
 
 .modal__button__login:hover {
-  color: white;
-  border: solid 1px white;
+	color: white;
+	border: solid 1px white;
 }
 
 /* SIGN UP MODAL CLOSE */
 .modal__button__close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  border-radius: 5px;
-  color: white;
-  border: solid 1px #333333;
-  background-color: #333333;
-  font-weight: bold;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border-radius: 5px;
+	color: white;
+	border: solid 1px #333333;
+	background-color: #333333;
+	font-weight: bold;
 }
 
 .modal__button__close:hover {
-  color: #333333;
-  background-color: white;
+	color: #333333;
+	background-color: white;
 }
 
 /* SIGN UP FORM */
 .form__div {
-  box-sizing: border-box;
-  /* background-color: #333333; */
-  border: solid 1px #333333;
-  border-radius: 10px;
-  max-width: fit-content;
-  margin: 60px auto;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	box-sizing: border-box;
+	/* background-color: #333333; */
+	border: solid 1px #333333;
+	border-radius: 10px;
+	max-width: fit-content;
+	margin: 60px auto;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 @media screen and (max-width: 786px) {
-  .form__div {
-    padding: 5px;
-  }
+	.form__div {
+		padding: 5px;
+	}
 }
 
 /* LEGEND*/
 .form__legend {
-  color: blue;
-  font-size: 22px;
-  font-weight: bold;
-  margin: 20px 0;
+	color: blue;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 20px 0;
 }
 
 /* LABEL */
 .form__label {
-  color: black;
-  align-self: flex-start;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 20px 0 5px;
+	color: black;
+	align-self: flex-start;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0 5px;
 }
 
 /* INPUT */
 .form__input {
-  color: black;
-  border: solid 1px #333333;
-  border-radius: 10px;
-  font-size: 16px;
-  width: 500px;
-  margin: 5px 0 20px;
-  padding: 10px;
+	color: black;
+	border: solid 1px #333333;
+	border-radius: 10px;
+	font-size: 16px;
+	width: 500px;
+	margin: 5px 0 20px;
+	padding: 10px;
 }
 
 @media screen and (max-width: 786px) {
-  .form__input {
-    max-width: 100%;
-  }
+	.form__input {
+		max-width: 100%;
+	}
 }
 
 /* DIV CORRECT LENGTH MESSAGE */
 .div__correct__length {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* P CORRECT LENGTH MESSAGE */
 .p__correct__length {
-  color: red;
-  margin: 10px;
+	color: red;
+	margin: 10px;
 }
 
 /* SUBMIT BUTTON */
 .submit__button {
-  color: white;
-  border: solid 1px #333333;
+	color: white;
+	border: solid 1px #333333;
   background-color: #333333;
-  padding: 20px;
-  max-width: 500px;
-  font-weight: bold;
-  border-radius: 10px;
+  margin: 20px 0;
+	padding: 20px;
+	width: 100%;
+	font-weight: bold;
+	border-radius: 10px;
 }
 
 .submit__button:hover {
-  color: #333333;
-  background-color: white;
+	color: #333333;
+	background-color: white;
 }
