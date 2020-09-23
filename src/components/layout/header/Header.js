@@ -21,7 +21,7 @@ function Header(props) {
       {/* HEADER NAV LEFT */}
       <nav className="nav__tag">
         <input type="checkbox" id="menuCheckbox" />
-        <label htmlFor="menuCheckbox">
+        <label className="burger__label" htmlFor="menuCheckbox">
           <div></div>
           <div></div>
           <div></div>
