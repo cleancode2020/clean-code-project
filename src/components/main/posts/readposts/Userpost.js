@@ -12,15 +12,15 @@ const Userpost = (props) => {
         </button>
 
         {/* TITLE */}
-        <h3 className="posts__h3">{props.currentPost[6]}</h3>
+        <h3 className="posts__h3">{props.currentPost[5]}</h3>
 
         {/* CATEGORIES */}
         <div className="vote__wrapper">
           <h4 className="posts__p">
-            #{props.currentPost[2] ? props.currentPost[2] : "None"}
+            {props.currentPost[2] ? `#${props.currentPost[2]}` : null}
           </h4>
           <h4 className="posts__p">
-            #{props.currentPost[5] ? props.currentPost[5] : "None"}
+            {props.currentPost[4] ? `#${props.currentPost[4]}` : null}
           </h4>
         </div>
 

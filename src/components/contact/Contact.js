@@ -23,31 +23,39 @@ class Contact extends React.Component {
       lastname: e.target.value,
     });
   };
+
   handleEmail = (e) => {
     this.setState({
       email: e.target.value,
     });
   };
+
   handleMessage = (e) => {
     this.setState({
       message: e.target.value,
     });
   };
-  // END OF HANDLE INPUTS
 
-  fromSubmit = (e) => {
+  // END OF HANDLE INPUTS
+  formSubmit = (e) => {
     e.preventDefault();
 
+    this.postContactForm()
+  };
+
+  postContactForm =()=>{
     const data = {
       name: this.state.name,
       lastsname: this.state.lastname,
       email: this.state.email,
       message: this.state.message,
     };
+
     let apiUrl = null;
     if (Math.random() < 0.5) {
       apiUrl = "https://formspree.io/xknpnbpw";
-    } else {
+    }
+     else {
       apiUrl = "https://formkeep.com/f/b260984f95b2";
     }
     axios
@@ -60,7 +68,7 @@ class Contact extends React.Component {
       .catch(() => {
         console.log("message not sent");
       });
-  };
+  }
 
   // FOR RESETING INTIAL DATA
   resetForm = () => {
@@ -79,84 +87,86 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <h1 className="h1__style">let us make it better for you</h1>
-        <p className="text__contact">
-          if you have any question or Feedback let us know
-        </p>
-        <form onSubmit={this.fromSubmit}>
-          {/* SINGLE ITEM */}
-          <div className="singleItem">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              name="name"
-              className="name"
-              placeholder="your name..."
-              value={this.state.name}
-              onChange={this.handleName}
-            ></input>
-          </div>
-
-          {/* END OF SINGLE ITEM */}
-          {/* SINGLE ITEM */}
-          <div className="singleItem">
-            <label htmlFor="lastname">Last Name</label>
-            <input
-              type="text"
-              name="lastname"
-              className="lastname"
-              placeholder="your last name..."
-              value={this.state.lastname}
-              onChange={this.handleLastName}
-            ></input>
-          </div>
-
-          {/* END OF SINGLE ITEM */}
-          {/* SINGLE ITEM */}
-          <div className="singleItem">
-            <label htmlFor="email">E-Mail</label>
-            <input
-              type="text"
-              name="email"
-              className="email"
-              placeholder="your email..."
-              value={this.state.email}
-              onChange={this.handleEmail}
-              required
-            ></input>
-          </div>
-          {/* END OF SINGLE ITEM */}
-          {/* SINGLE ITEM */}
-          <div className="textArea singleItem">
-            <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              id=""
-              cols="30"
-              rows="5"
-              placeholder="your message..."
-              value={this.state.message}
-              onChange={this.handleMessage}
-            ></textarea>
-          </div>
-          {/* END OF SINGLE ITEM */}
-          <div className={this.state.sent ? "msg msgAppear" : "msg"}>
-            {" "}
-            Massage has been sent
-          </div>
-          <div className="btn">
-            <button type="submit">Send</button>
-          </div>
-        </form>
-
-        <div className="main__contact">
-          <h2 className="h2__contact">send us direct an E-Mail</h2>
-          <p className="info-links">
-            <a href="mailto: codeteam35@gmail.com">Email</a>
-          </p>
+      <form className="container" >
+        <legend className="contact__legend">Contact us</legend>
+        {/* SINGLE ITEM */}
+        <div className="single__item">
+          <label className="contact__label" htmlFor="name">
+            Name
+          </label>
+          <input
+            className="contact__input"
+            type="text"
+            name="name"
+            placeholder="your name..."
+            value={this.state.name}
+            onChange={this.handleName}
+          ></input>
         </div>
-      </div>
+
+        {/* END OF SINGLE ITEM */}
+        {/* SINGLE ITEM */}
+        <div className="single__item">
+          <label className="contact__label" htmlFor="lastname">
+            Last Name
+          </label>
+          <input
+            className="contact__input"
+            type="text"
+            name="lastname"
+            placeholder="your last name..."
+            value={this.state.lastname}
+            onChange={this.handleLastName}
+          ></input>
+        </div>
+
+        {/* END OF SINGLE ITEM */}
+        {/* SINGLE ITEM */}
+        <div className="single__item">
+          <label className="contact__label" htmlFor="email">
+            E-Mail
+          </label>
+          <input
+            className="contact__input"
+            type="text"
+            name="email"
+            placeholder="your email..."
+            value={this.state.email}
+            onChange={this.handleEmail}
+            required
+          ></input>
+        </div>
+        {/* END OF SINGLE ITEM */}
+        {/* SINGLE ITEM */}
+        <div className="textArea single__item">
+          <label className="contact__label" htmlFor="message">
+            Message
+          </label>
+          <textarea
+            className="contact__textarea"
+            name="message"
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="your message..."
+            value={this.state.message}
+            onChange={this.handleMessage}
+          ></textarea>
+        </div>
+        {/* END OF SINGLE ITEM */}
+        <div className={this.state.sent ? "msg msgAppear" : "msg"}>
+          Message has been sent
+        </div>
+
+        <button className="contact__button" type="submit" onClick={this.formSubmit}>
+          Send
+        </button>
+        <div className="email__link__wrapper">
+          <a className="email__link" href="mailto:codeteam35@gmail.com">
+            Send us an email instead
+          </a>
+        </div>
+      </form>
     );
   }
 }

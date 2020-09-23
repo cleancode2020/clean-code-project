@@ -1,139 +1,93 @@
-
-
-.h1__style {
-  text-align: center;
-  font-size: x-large;
-  margin: 30px;
-  font-weight: bold;
-  padding-top: 40px;
-}
-.text__contact,
-.h2__contact{
-  text-align: center;
-  background-image: linear-gradient(rgb(143, 140, 140), white);
-  margin: 50px 50px;
-  padding: 20px;
-  border-radius: 15px;
-
-  }
-
-.info-links {
-  text-align: center;
-  padding-bottom: 50px;
-  border-radius: 15px;
-}
-a {
-  text-decoration: none;
-  color: rgb(47, 49, 49);
-  transition: all 0.5s;
-}
-a:hover {
-  background-color: rgb(131, 141, 144);
-  transform: scale(0.1s);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* CONTAINER */
 .container {
-  background-color: rgb(115, 137, 151);
-  margin: 100px auto;
-  width: 90%;
-  box-shadow: 1px 1px 4px 1px lightgrey;
+	border: solid 1px #333333;
+	border-radius: 10px;
+	margin: 100px auto;
+	width: 60%;
+	padding: 20px;
+	box-shadow: 1px 1px 4px 1px lightgrey;
 }
 
-.container form {
-  width: 80%;
-  margin: auto;
-  padding: 10px;
+@media screen and (max-width: 800px) {
+	.container {
+		width: 90%;
+	}
 }
 
-.container label {
-  display: contents;
-  width: auto;
-  letter-spacing: 0.1rem;
-  font-style: italic;
-  margin-bottom: 3px;
+/* LEGEND */
+.contact__legend {
+	color: blue;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	margin: 50px;
 }
 
-.container input,
-.container textarea {
-  width: 100%;
-  margin: 5px auto;
-  padding: 10px;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 1px 1px 4px 1px rgb(58, 57, 57);
+/* DIV */
+.single__item {
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+	/* border: solid 1px red; */
 }
 
-.container input:focus,
-.container textarea:focus {
-  box-shadow: 1px 1px 4px 1px rgb(49, 170, 240);
+/* LABEL */
+.contact__label {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 5px 0;
 }
 
-.singleItem {
-    margin: 10px 0;
+/* INPUT AND TEXTAREA */
+.contact__input,
+.contact__textarea {
+	border: solid 1px #333333;
+	border-radius: 10px;
+	padding: 10px;
 }
 
-.btn {
-    width: 100%;
-    text-align: center;
-    
-  }
-  
-  .btn button {
-    width: 150px;
-    font-size: 18px;
-    letter-spacing: 0.2rem;
-    padding: 5px 10px;
-    border: 1px solid transparent;
-    outline: none;
-    transition: all 0.5s ease-in-out;
-    position: relative;
-    margin-top: 5px ;
-    border-radius: 15px;
-}
-
-.btn button:hover {
-    border: 1px solid #efefef;
-    background-color: rgb(199,202,199);
-    cursor: pointer;
-}
-
-.msg{
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    letter-spacing: 0.2rem;
-    font-style: italic;
-    width: 340px;
-    padding: 3px;
-    font-size: 16px;
-    font-weight: bold;
-    color: rgb(5, 110, 5);
-    background-color: #fff;
-    border-radius: 5px;
-    display: none;
+/* SUCCESS MESSAGE */
+.msg {
+	text-align: center;
+	margin: 0 auto 20px;
+	font-size: 18px;
+	color: green;
+	display: none;
 }
 
 .msgAppear {
-    display: block;
+	display: block;
 }
 
-@media screen and (min-width:664px){
-.container {
-    width: 60%;
-
+/* SUBMIT BUTTON */
+.contact__button {
+	color: white;
+	background-color: #333333;
+	border: solid 1px #333333;
+	padding: 20px 30px;
+	border-radius: 5px;
+	/* margin: auto; */
+	width: 100%;
+	cursor: pointer;
 }
 
+.contact__button:hover {
+	color: #333333;
+	background-color: white;
 }
-@media screen and (min-width:986px){
-    .container {
-        width: 40%;
-        
-    }
-   
-    }
+
+/* EMAIL WRAPPER */
+.email__link__wrapper {
+	text-align: center;
+	padding: 50px;
+}
+
+/* EMAIL LINK */
+.email__link {
+	color: blue;
+	text-decoration: none;
+}
+
+.email__link:hover {
+	text-decoration: underline;
+}
