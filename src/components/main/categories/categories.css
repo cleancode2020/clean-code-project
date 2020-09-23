@@ -29,6 +29,7 @@
 	margin: 30px 20px;
 	padding: 30px;
 	font-weight: bold;
+	word-break: break-all;
 }
 
 .ul__categories li:hover {
