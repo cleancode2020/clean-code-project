@@ -18,10 +18,10 @@ const Userpost = (props) => {
 				{/* CATEGORIES */}
 				<div className="vote__wrapper">
 					<h4 className="posts__p">
-						{props.currentPost[2] ? `#${props.currentPost[2]}` : "None"}
+						{props.currentPost[2] ? `#${props.currentPost[2]}` : null}
 					</h4>
 					<h4 className="posts__p">
-						{props.currentPost[4] ? `#${props.currentPost[4]}` : "None"}
+						{props.currentPost[4] ? `#${props.currentPost[4]}` : null}
 					</h4>
 				</div>
 
