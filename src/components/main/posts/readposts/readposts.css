@@ -57,18 +57,18 @@
 }
 
 .vote__count {
-	font-size: 14px;
-	font-weight: bold;
-	color: #333333;
-	margin: 0 10px;
-	justify-self: right;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  margin: 0 10px;
+  justify-self: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .vote__count span {
-	margin: 0 5px;
+  margin: 0 5px;
 }
 
 .article-h3 {
@@ -122,23 +122,20 @@
   margin: 80px;
 }
 
-
 .vote__wrapper {
-	display: flex;
-	margin: 10px 0;
+  display: flex;
+  margin: 10px 0;
 }
 
 .count__p {
-	display: flex;
-	margin: 5px 10px;
+  display: flex;
+  margin: 5px 10px;
 }
 
 .count__p span {
-	display: flex;
-	margin: 0 3px;
+  display: flex;
+  margin: 0 3px;
 }
-
-
 
 /* READ POST */
 /* H4 POSTS */
@@ -166,9 +163,14 @@
 
 /* CODEBLOCK POSTS */
 .codeblock__span {
-  border: solid 1px #828282;
+  /* border: solid 1px #828282; */
   margin: 0 10px;
   max-width: 100%;
+  margin: 10px;
+}
+.codeblock {
+  padding: 10px !important;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 600px) {

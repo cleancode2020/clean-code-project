@@ -4,16 +4,18 @@ import CodeBlockComment from "./CodeBlockComment";
 
 function Comments(props) {
   return (
-    <div>
+    <ul className="comment__ul">
       {props.comments.map((item, index) => (
-        <div className="comment" key={index}>
-          <p className="comment__author">{item[5]}</p>
-          <p className="comment__text">{item[2]}</p>
-          <CodeBlockComment code={item[1]} />
+        <li className="comment__li" key={index}>
+          <h4 className="comment__author">{item[5]}</h4>
+          <h3 className="comment__text">{item[2]}</h3>
+          <span className=" codeblock__comment">
+            <CodeBlockComment code={item[1]} />
+          </span>
           <p className="comment__time">{item[4]}</p>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
