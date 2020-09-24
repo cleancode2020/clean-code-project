@@ -35,10 +35,10 @@ class Readposts extends React.Component {
 
 	// VOTE UP
 	async voteUpHandleChange() {
-		console.log("upz");
+		// console.log("upz");
 		const postID = this.state.currentPost[0];
 		const requestOptions = {
-			method: "POST",
+			method: "PATCH",
 			redirect: "follow",
 			headers: {
 				"Content-Type": "application/json",
@@ -49,7 +49,7 @@ class Readposts extends React.Component {
 			}),
 		};
 		await fetch(
-			`${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zVoteUp.json?auth=${this.props.user.idToken}`,
+			`${this.props.firebase.databaseURL}/cleancode/posts/${postID}.json?auth=${this.props.user.idToken}`,
 			requestOptions
 		)
 			// .then((response) => response.json())
@@ -63,8 +63,32 @@ class Readposts extends React.Component {
 	}
 
 	// VOTE DOWN
-	voteDownHandleChange() {
+	async voteDownHandleChange() {
 		// console.log("downz");
+		const postID = this.state.currentPost[0];
+		const requestOptions = {
+			method: "PATCH",
+			redirect: "follow",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			// CONVERT STATE IN JSON STRING
+			body: JSON.stringify({
+				zVoteDown: -1,
+			}),
+		};
+		await fetch(
+			`${this.props.firebase.databaseURL}/cleancode/posts/${postID}.json?auth=${this.props.user.idToken}`,
+			requestOptions
+		)
+			// .then((response) => response.json())
+			// .then((result) => {
+			// 	// CLOSE MODAL AFTER POST
+			// 	this.setState({
+			// 		voteUp: result,
+			// 	});
+			// })
+			.catch((error) => console.log("error:", error));
 	}
 
 	render() {
@@ -104,7 +128,7 @@ class Readposts extends React.Component {
 							<li className="posts__li" key={index}>
 								{/* VOTE */}
 								{this.props.user ? (
-									<Vote upVote={item[7]} downVote={item[8]} />
+									<Vote upVote={item[8]} downVote={item[7]} />
 								) : null}
 								<button
 									className="post__button"

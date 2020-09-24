@@ -27,13 +27,13 @@ const Userpost = (props) => {
 
 				<div className="vote__container">
 					<button className="count__button" onClick={props.voteUpHandleChange}>
-						<span>{props.currentPost[7]}</span>
+						<span>{props.currentPost[8]}</span>
 						<span aria-label="Thumbs Up" role="img">
 							👍
 						</span>
 					</button>
 					<button className="count__button" onClick={props.voteDownHandleChange}>
-						<span>{props.currentPost[8]}</span>
+						<span>{props.currentPost[7]}</span>
 						<span aria-label="Thumbs Down" role="img">
 							👎
 						</span>
