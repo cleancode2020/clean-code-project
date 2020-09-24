@@ -115,7 +115,7 @@ class SubmitComment extends Component {
 		let comments = [];
 		if (this.props.currentPost[9]) {
 			const allCommnetsObj = this.state.allComments;
-			const allCommnetsObjKeys = Object.keys(allCommnetsObj);
+			const allCommnetsObjKeys = Object.keys(allCommnetsObj).reverse();
 
 			for (let key of allCommnetsObjKeys) {
 				const objectData = allCommnetsObj[key];
