@@ -17,7 +17,7 @@ class SubmitComment extends Component {
 		this.textAreaCodeChange = this.textAreaCodeChange.bind(this);
 		this.addComment = this.addComment.bind(this);
 		this.sendCommentToFirebase = this.sendCommentToFirebase.bind(this);
-		// this.getCommentsOfFirebase = this.getCommentsOfFirebase.bind(this);
+		this.getCommentsOfFirebase = this.getCommentsOfFirebase.bind(this);
 	}
 
 	// COMMENT
