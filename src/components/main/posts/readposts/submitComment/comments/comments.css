@@ -1,0 +1,15 @@
+.comment {
+  padding: 7 20px;
+  border-bottom: 1px solid black;
+}
+.comment__author {
+  color: blue;
+  font-weight: 500;
+  padding: 5px;
+}
+.comment__text {
+  padding: 5px;
+}
+.comment__time {
+  padding: 5px;
+}
