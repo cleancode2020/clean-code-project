@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 120px;
+	min-height: 120px;
 	background: #333333;
 	max-width: 100%;
 }
@@ -47,3 +47,9 @@ footer ul li:hover {
 	margin: 2px;
 	text-decoration: none;
 }
+
+@media only screen and (max-width: 450px) {
+	.Footer nav ul {
+	  flex-direction: column;
+	}
+  }
