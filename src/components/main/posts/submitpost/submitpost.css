@@ -4,9 +4,9 @@
 	/* background-color: #828282; */
 	border-radius: 10px;
 	box-sizing: border-box;
-	margin: 50px auto;
-	padding: 50px;
-	width: 80%;
+	margin: 50px 10px;
+	padding: 20px;
+	width: 97%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -50,18 +50,21 @@
 .post__input  {
 	padding: 5px;
 	border: solid 1px black;
+	border-radius: 10px;
 	width: 100%;
 }
 
 .post__select  {
 	padding: 5px;
 	border: solid 1px black;
+	border-radius: 10px;
 	width: 100%;
 }
 
 /* ARTICLE */
 .post__textarea {
 	border: solid 1px black;
+	border-radius: 10px;
 	width: 100%;
 	/* margin: 30px; */
 }
@@ -75,6 +78,7 @@
 /* SUBMIT BUTTON */
 .submit__post {
 	border: solid 1px blue;
+	border-radius: 5px;
 	background-color: white;
 	color: blue;
 	font-weight: bold;
