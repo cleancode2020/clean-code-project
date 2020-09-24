@@ -54,6 +54,7 @@ const Userpost = (props) => {
       {/* COMMENTS HERE IN FUTURE */}
 
       {/* COMMENT BLOCK */}
+
       <SubmitComment
         currentPost={props.currentPost}
         user={props.user}

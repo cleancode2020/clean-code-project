@@ -125,46 +125,42 @@ class SubmitComment extends Component {
     return (
       <>
         {/* COMMENT BLOCK */}
-        <div className="posts__comment ">
-          {/* COMMENT FORM */}
-          {this.props.user ? (
-            <form action="#" className="form__main">
-              <legend className="form__title">
-                Tell us what do you think about this:
-              </legend>
-              <label htmlFor="form__comment" className="form__comment">
-                Comment
-              </label>
-              <textarea
-                onChange={this.textAreaCommentChange}
-                name="comment"
-                className="form__textComment"
-                id="form__comment"
-                cols="50"
-                rows="10"
-                value={this.state.comment}
-              ></textarea>
-              <label htmlFor="form__code" className="form__code">
-                Code:
-              </label>
-              <textarea
-                onChange={this.textAreaCodeChange}
-                name="code"
-                className="form__textCode"
-                id="form__code"
-                cols="50"
-                rows="10"
-                value={this.state.code}
-              ></textarea>
-              <button className="form__button" onClick={this.addComment}>
-                Add
-              </button>
-            </form>
-          ) : null}
-          {/* COMMENTS */}
+        <Comments comments={comments} />
 
-          <Comments comments={comments} />
-        </div>
+        {/* COMMENT FORM */}
+        {this.props.user ? (
+          <form action="#" className="form__main">
+            <legend className="form__title">Comment this</legend>
+            <label htmlFor="form__comment" className="comment__label">
+              Comment
+            </label>
+            <textarea
+              onChange={this.textAreaCommentChange}
+              name="comment"
+              className="comment__textarea"
+              id="form__comment"
+              cols="50"
+              rows="10"
+              value={this.state.comment}
+            ></textarea>
+            <label htmlFor="form__code" className="comment__label">
+              Code
+            </label>
+            <textarea
+              onChange={this.textAreaCodeChange}
+              name="code"
+              className="comment__textarea"
+              id="form__code"
+              cols="50"
+              rows="10"
+              value={this.state.code}
+            ></textarea>
+            <button className="comment__button" onClick={this.addComment}>
+              Send Comment
+            </button>
+          </form>
+        ) : null}
+        {/* COMMENTS */}
       </>
     );
   }
