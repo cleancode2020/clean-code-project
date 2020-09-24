@@ -261,8 +261,8 @@ function Privacy() {
       </div>
 
       <div className="privacy__text">
-        <p>Under California Civil Code Section 1798 (California's Shine the Light law), California residents with an established business relationship with us can request information once a year about sharing their Personal Data with third parties for the third parties' direct marketing purposes.</p>
-        <p>If you'd like to request more information under the California Shine the Light law, and if you are a California resident, You can contact Us using the contact information provided below.</p>
+        <p>Under California Civil Code Section 1798 (California's Shine the Light law), California residents with an established business relationship with us can request information once a year about sharing their Personal Data with third parties for the third parties' direct marketing purposes.
+           If you'd like to request more information under the California Shine the Light law, and if you are a California resident, You can contact Us using the contact information provided below.</p>
       </div>
 
       <div className="privacy__h1">
@@ -280,8 +280,8 @@ function Privacy() {
       </div>
 
       <div className="privacy__text">
-        <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
-        <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+        <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
+           We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
       </div>
 
       <div className="privacy__h1">
