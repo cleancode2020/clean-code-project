@@ -5,18 +5,22 @@
 	border-radius: 5px;
 }
 
+.modal__button:active {
+	border: none;
+	outline: none;
+}
+
 /* SIGN UP MODAL OPEN */
 .modal__button__login {
-	color: blue;
-	border: solid 1px white;
-	background-color: white;
+	color: white;
+	border: solid 1px #333333;
+	background-color: #333333;
 	font-weight: bold;
 }
 
 .modal__button__login:hover {
 	color: white;
-	background-color: blue;
-	border: solid 1px blue;
+	border: solid 1px white;
 }
 
 /* SIGN UP MODAL CLOSE */
@@ -42,13 +46,19 @@
 	/* background-color: #333333; */
 	border: solid 1px #333333;
 	border-radius: 10px;
-	width: fit-content;
+	max-width: fit-content;
 	margin: 60px auto;
 	padding: 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+@media screen and (max-width: 786px) {
+	.form__div {
+		padding: 5px;
+	}
 }
 
 /* LEGEND*/
@@ -79,6 +89,12 @@
 	padding: 10px;
 }
 
+@media screen and (max-width: 786px) {
+	.form__input {
+		max-width: 100%;
+	}
+}
+
 /* DIV CORRECT LENGTH MESSAGE */
 .div__correct__length {
 	display: flex;
@@ -96,9 +112,10 @@
 .submit__button {
 	color: white;
 	border: solid 1px #333333;
-	background-color: #333333;
+  background-color: #333333;
+  margin: 20px 0;
 	padding: 20px;
-	max-width: 500px;
+	width: 100%;
 	font-weight: bold;
 	border-radius: 10px;
 }

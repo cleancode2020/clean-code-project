@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../../assets/icons/black-dot.png";
 import "./header.css";
+import "./burger.css";
 import { Link } from "react-router-dom";
 import LogIn from "../../authentification/LogIn";
 import SignUp from "../../authentification/SignUp";
@@ -50,7 +51,7 @@ function Header(props) {
               fetchFirebase={props.fetchFirebase}
               setUser={props.setUser}
             />
-
+      
             <SignUp
               fetchFirebase={props.fetchFirebase}
               openModal={props.openModal}

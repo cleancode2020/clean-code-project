@@ -59,7 +59,7 @@ class About extends React.Component {
 
         {/* DISCRIPTION ABOUT US*/}
         <h2 className="h2__style">who we are</h2>
-        <p className="paragraph">
+        <p className="about__paragraph">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
@@ -69,7 +69,7 @@ class About extends React.Component {
 
         {/* OUR PRODUCT */}
         <h2 className="h2__style">Our Product</h2>
-        <p className="paragraph">
+        <p className="about__paragraph">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
