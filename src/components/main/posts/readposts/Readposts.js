@@ -9,14 +9,19 @@ class Readposts extends React.Component {
     this.state = {
       activePost: "",
       currentPost: [],
-      zVote: 0,
+
+      zVote: [],
     };
     this.setPost = this.setPost.bind(this);
     this.voteUpHandleChange = this.voteUpHandleChange.bind(this);
     this.voteDownHandleChange = this.voteDownHandleChange.bind(this);
+    this.voteValues = this.voteValues.bind(this);
   }
   componentDidMount() {
     this.props.getFirebase();
+  }
+  componentDidUpdate() {
+    this.voteValues();
   }
 
   // ACTIVE POST
@@ -94,8 +99,47 @@ class Readposts extends React.Component {
       .catch((error) => console.log("error:", error));
   }
 
+  //   VOTEVALUES
+  async voteValues() {
+    // const postID = Object.keys(this.props.allPostsObject);
+
+    //   const itemValue = Object.values(zVote);
+    //   let zVoteUp = 0;
+    //   let zVoteDown = 0;
+    //   itemValue.map((item) => {
+    //     if (item > 0) {
+    //       zVoteUp++;
+    //     } else {
+    //       zVoteDown++;
+    //     }
+    //   });
+    const postID = this.state.currentPost[0];
+    // const localID = this.props.user.localId;
+    // debugger;
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // CONVERT STATE IN JSON STRING
+    };
+
+    await fetch(
+      `${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zVote.json?auth=${this.props.user.idToken}`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        // CLOSE MODAL AFTER POST
+        // this.setState({
+        // 	voteUp: result,
+        // });
+        console.log(result);
+      })
+      .catch((error) => console.log("error:", error));
+  }
   render() {
-    console.log(this.props);
     // DATA
     let posts = [];
     if (this.props.allPostsObject) {
@@ -113,7 +157,6 @@ class Readposts extends React.Component {
       }
     }
 
-    // debugger;
     return (
       <section className="readposts-section">
         <ul className="posts__ul">
@@ -130,10 +173,9 @@ class Readposts extends React.Component {
           ) : (
             posts.map((item, index) => (
               <li className="posts__li" key={index}>
+                {/* <button onClick={() => this.voteValues()}>Test</button> */}
                 {/* VOTE */}
-                {this.props.user ? (
-                  <Vote upVote={item[8]} downVote={item[7]} />
-                ) : null}
+                {this.props.user ? <Vote zVote={item[7]} /> : null}
                 <button
                   className="post__button"
                   onClick={() => this.setPost(item)}
