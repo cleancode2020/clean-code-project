@@ -9,27 +9,28 @@ class Readposts extends React.Component {
     this.state = {
       activePost: "",
       currentPost: [],
-
       zVote: [],
+      like: 0,
+      dislike: 0,
     };
     this.setPost = this.setPost.bind(this);
     this.voteUpHandleChange = this.voteUpHandleChange.bind(this);
     this.voteDownHandleChange = this.voteDownHandleChange.bind(this);
     this.voteValues = this.voteValues.bind(this);
+    this.voting = this.voting.bind(this);
   }
   componentDidMount() {
     this.props.getFirebase();
   }
-  componentDidUpdate() {
-    this.voteValues();
-  }
 
   // ACTIVE POST
-  setPost(item) {
-    this.setState({
+  async setPost(item) {
+    await this.setState({
       activePost: item[0],
       currentPost: item,
     });
+
+    this.voteValues();
   }
 
   // ACTIVE POST
@@ -39,10 +40,9 @@ class Readposts extends React.Component {
 
   //   VOTE UP
   async voteUpHandleChange() {
-    // console.log("upz");
     const postID = this.state.currentPost[0];
     const localID = this.props.user.localId;
-    console.log(localID);
+
     const requestOptions = {
       method: "PATCH",
       redirect: "follow",
@@ -70,10 +70,9 @@ class Readposts extends React.Component {
 
   // VOTE DOWN
   async voteDownHandleChange() {
-    // console.log("downz");
     const postID = this.state.currentPost[0];
     const localID = this.props.user.localId;
-    // debugger;
+
     const requestOptions = {
       method: "PATCH",
       redirect: "follow",
@@ -101,21 +100,8 @@ class Readposts extends React.Component {
 
   //   VOTEVALUES
   async voteValues() {
-    // const postID = Object.keys(this.props.allPostsObject);
-
-    //   const itemValue = Object.values(zVote);
-    //   let zVoteUp = 0;
-    //   let zVoteDown = 0;
-    //   itemValue.map((item) => {
-    //     if (item > 0) {
-    //       zVoteUp++;
-    //     } else {
-    //       zVoteDown++;
-    //     }
-    //   });
     const postID = this.state.currentPost[0];
-    // const localID = this.props.user.localId;
-    // debugger;
+
     const requestOptions = {
       method: "GET",
       redirect: "follow",
@@ -126,18 +112,35 @@ class Readposts extends React.Component {
     };
 
     await fetch(
-      `${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zVote.json?auth=${this.props.user.idToken}`,
+      `${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zVote.json`,
       requestOptions
     )
       .then((response) => response.json())
       .then((result) => {
-        // CLOSE MODAL AFTER POST
-        // this.setState({
-        // 	voteUp: result,
-        // });
-        console.log(result);
+        this.setState({
+          zVote: result,
+        });
       })
       .catch((error) => console.log("error:", error));
+    this.voting();
+  }
+
+  voting() {
+    const itemValue = Object.values(this.state.zVote);
+    let zVoteUp = 0;
+    let zVoteDown = 0;
+    itemValue.map((item) => {
+      if (item > 0) {
+        zVoteUp++;
+      } else {
+        zVoteDown++;
+      }
+    });
+    this.setState({
+      like: zVoteUp,
+      dislike: zVoteDown,
+    });
+    console.log(this.state.like);
   }
   render() {
     // DATA
@@ -169,6 +172,8 @@ class Readposts extends React.Component {
               getFirebase={this.props.getFirebase}
               voteUpHandleChange={this.voteUpHandleChange}
               voteDownHandleChange={this.voteDownHandleChange}
+              like={this.state.like}
+              dislike={this.state.dislike}
             />
           ) : (
             posts.map((item, index) => (

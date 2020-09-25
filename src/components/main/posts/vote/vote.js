@@ -8,11 +8,11 @@ function Vote(props) {
         <span aria-label="Thumbs Up" role="img">
           👍
         </span>
-        {/* <span>{props.upVote}</span> */}
+        <span>{props.like}</span>
       </div>
 
       <div className="vote__wrapper" onClick={props.voteDownHandleChange}>
-        {/* <span>{props.downVote}</span> */}
+        <span>{props.dislike}</span>
         <span aria-label="Thumbs Down" role="img">
           👎
         </span>
