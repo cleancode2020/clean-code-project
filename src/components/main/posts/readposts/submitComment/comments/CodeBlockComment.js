@@ -1,13 +1,15 @@
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { atelierLakesideLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
 function CodeBlockComment(props) {
   return (
-    <div>
-      <SyntaxHighlighter language="javascript" style={docco}>
-        {props.code}
-      </SyntaxHighlighter>
-    </div>
+    <SyntaxHighlighter
+      language="javascript"
+      style={atelierLakesideLight}
+      className="codeblock"
+    >
+      {props.code}
+    </SyntaxHighlighter>
   );
 }
 
