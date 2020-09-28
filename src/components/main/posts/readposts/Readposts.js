@@ -66,6 +66,7 @@ class Readposts extends React.Component {
       // 	});
       // })
       .catch((error) => console.log("error:", error));
+    this.voteValues();
   }
 
   // VOTE DOWN
@@ -96,6 +97,7 @@ class Readposts extends React.Component {
       // 	});
       // })
       .catch((error) => console.log("error:", error));
+    this.voteValues();
   }
 
   //   VOTEVALUES
@@ -159,7 +161,7 @@ class Readposts extends React.Component {
         }
       }
     }
-
+    console.log(posts);
     return (
       <section className="readposts-section">
         <ul className="posts__ul">
