@@ -3,9 +3,11 @@ import "./comments.css";
 import CodeBlockComment from "./CodeBlockComment";
 
 function Comments(props) {
+  // console.log(props)
   return (
     <ul className="comment__ul">
       {props.comments.map((item, index) => (
+      
         <li className="comment__li" key={index}>
           <h4 className="comment__author">{item[5]}</h4>
           <h3 className="comment__text">{item[2]}</h3>

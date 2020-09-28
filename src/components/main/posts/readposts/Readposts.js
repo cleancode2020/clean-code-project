@@ -140,7 +140,7 @@ class Readposts extends React.Component {
       like: zVoteUp,
       dislike: zVoteDown,
     });
-    console.log(this.state.like);
+    // console.log(this.state.like);
   }
   render() {
     // DATA

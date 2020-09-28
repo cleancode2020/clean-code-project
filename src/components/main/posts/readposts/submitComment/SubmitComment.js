@@ -23,7 +23,7 @@ class SubmitComment extends Component {
 	// COMMENT
 	componentDidMount() {
 		this.setState({
-			allComments: this.props.currentPost[9],
+			allComments: this.props.currentPost[8],
 		});
 	}
 
@@ -113,7 +113,9 @@ class SubmitComment extends Component {
 
 	render() {
 		let comments = [];
-		if (this.props.currentPost[9]) {
+		// console.log(this.props.currentPost)
+		if (this.props.currentPost[8]) {
+		
 			const allCommnetsObj = this.state.allComments;
 			const allCommnetsObjKeys = Object.keys(allCommnetsObj).reverse();
 
