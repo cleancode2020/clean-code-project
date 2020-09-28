@@ -48,20 +48,22 @@
 
 /* HEADER IMG */
 .header__img {
-  width: 15px;
-  height: 15px;
-  margin: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
 }
 
-.header__img:hover {
+/* .header__img:hover {
   width: 20px;
   margin: 0px;
-}
+} */
 
 /* HEADER H1 */
 .header__h1 {
-  color: #dad6d6;
+  color: #00b8ff;
+  font-size: 24px;
   font-weight: bold;
+  font-family: 'Tomorrow', sans-serif;
 }
 
 .header__h1:hover {
