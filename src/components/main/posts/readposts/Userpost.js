@@ -15,7 +15,7 @@ const Userpost = (props) => {
         <h3 className="posts__h3">{props.currentPost[5]}</h3>
 
         {/* CATEGORIES */}
-        <div className="vote__wrapper">
+        <div className="vote__container">
           <h4 className="posts__p">
             {props.currentPost[2] ? `#${props.currentPost[2]}` : null}
           </h4>
@@ -24,19 +24,22 @@ const Userpost = (props) => {
           </h4>
         </div>
 
-        <div className="vote__wrapper">
-          <p className="count__p">
-            <span>0</span>
+        <div className="vote__container">
+          <button className="count__button" onClick={props.voteUpHandleChange}>
+            <span>{props.like}</span>
             <span aria-label="Thumbs Up" role="img">
               👍
             </span>
-          </p>
-          <p className="count__p">
-            <span>0</span>
+          </button>
+          <button
+            className="count__button"
+            onClick={props.voteDownHandleChange}
+          >
+            <span>{props.dislike}</span>
             <span aria-label="Thumbs Down" role="img">
               👎
             </span>
-          </p>
+          </button>
         </div>
 
         {/* ARTICLE */}
@@ -54,6 +57,7 @@ const Userpost = (props) => {
       {/* COMMENTS HERE IN FUTURE */}
 
       {/* COMMENT BLOCK */}
+
       <SubmitComment
         currentPost={props.currentPost}
         user={props.user}
