@@ -20,7 +20,7 @@ class SubmitComment extends Component {
 		this.getCommentsOfFirebase = this.getCommentsOfFirebase.bind(this);
 	}
 
-	// COMMENT
+	// COMMENT DID
 	componentDidMount() {
 		this.setState({
 			allComments: this.props.currentPost[8],
