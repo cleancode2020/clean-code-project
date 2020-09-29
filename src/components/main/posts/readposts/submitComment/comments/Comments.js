@@ -46,7 +46,28 @@ function Comments(props) {
               </span>
             </button>
           </div>
-        ) : null}
+        ) : (
+          <div className="vote__container">
+            <button
+              className="count__button"
+              onClick={() => props.voteSubtracted()}
+            >
+              <span>{zVoteUp}</span>
+              <span aria-label="Thumbs Up" role="img">
+                👍
+              </span>
+            </button>
+            <button
+              className="count__button"
+              onClick={() => props.voteSubtracted()}
+            >
+              <span>{zVoteDown}</span>
+              <span aria-label="Thumbs Down" role="img">
+                👎
+              </span>
+            </button>
+          </div>
+        )}
       </li>
       {/* ))} */}
     </ul>

@@ -18,6 +18,7 @@ class Readposts extends React.Component {
     this.voteDownHandleChange = this.voteDownHandleChange.bind(this);
     this.voteValues = this.voteValues.bind(this);
     this.voting = this.voting.bind(this);
+    this.voteSubtracted = this.voteSubtracted.bind(this);
   }
   componentDidMount() {
     this.props.getFirebase();
@@ -144,6 +145,9 @@ class Readposts extends React.Component {
     });
     // console.log(this.state.like);
   }
+  voteSubtracted() {
+    document.querySelector(".modal__button").click();
+  }
   render() {
     // DATA
     let posts = [];
@@ -176,13 +180,14 @@ class Readposts extends React.Component {
               voteDownHandleChange={this.voteDownHandleChange}
               like={this.state.like}
               dislike={this.state.dislike}
+              voteSubtracted={this.voteSubtracted}
             />
           ) : (
             posts.map((item, index) => (
               <li className="posts__li" key={index}>
                 {/* <button onClick={() => this.voteValues()}>Test</button> */}
                 {/* VOTE */}
-                {this.props.user ? <Vote zVote={item[7]} /> : null}
+                <Vote zVote={item[7]} />
                 <button
                   className="post__button"
                   onClick={() => this.setPost(item)}

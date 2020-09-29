@@ -44,7 +44,22 @@ const Userpost = (props) => {
               </span>
             </button>
           </div>
-        ) : null}
+        ) : (
+          <div className="vote__container">
+            <button className="count__button" onClick={props.voteSubtracted}>
+              <span>{props.like}</span>
+              <span aria-label="Thumbs Up" role="img">
+                👍
+              </span>
+            </button>
+            <button className="count__button" onClick={props.voteSubtracted}>
+              <span>{props.dislike}</span>
+              <span aria-label="Thumbs Down" role="img">
+                👎
+              </span>
+            </button>
+          </div>
+        )}
 
         {/* ARTICLE */}
         <p className="posts__art">{props.currentPost[1]}</p>

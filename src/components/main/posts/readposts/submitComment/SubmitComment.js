@@ -23,6 +23,7 @@ class SubmitComment extends Component {
     this.voteDownCommentHandleChange = this.voteDownCommentHandleChange.bind(
       this
     );
+    this.voteSubtracted = this.voteSubtracted.bind(this);
   }
 
   // COMMENT
@@ -160,6 +161,11 @@ class SubmitComment extends Component {
     this.getCommentsOfFirebase();
   }
 
+  // VOTE IS SUBTRACTED
+  voteSubtracted() {
+    document.querySelector(".modal__button").click();
+  }
+
   render() {
     let comments = [];
     // console.log(this.props.currentPost)
@@ -189,6 +195,7 @@ class SubmitComment extends Component {
             voteUpCommentHandleChange={this.voteUpCommentHandleChange}
             voteDownCommentHandleChange={this.voteDownCommentHandleChange}
             user={this.props.user}
+            voteSubtracted={this.voteSubtracted}
           />
         ))}
 
