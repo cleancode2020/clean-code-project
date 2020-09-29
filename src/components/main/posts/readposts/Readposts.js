@@ -165,7 +165,7 @@ class Readposts extends React.Component {
         }
       }
     }
-    console.log(posts);
+
     return (
       <section className="readposts-section">
         <ul className="posts__ul">

@@ -3,12 +3,10 @@ import "./comments.css";
 import CodeBlockComment from "./CodeBlockComment";
 
 function Comments(props) {
-  console.log(props.comment[6]);
   const itemValue = Object.values(props.comment[6]);
   let zVoteUp = 0;
   let zVoteDown = 0;
   itemValue.map((item) => {
-    console.log(item);
     if (item > 0) {
       zVoteUp++;
     } else {
