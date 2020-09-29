@@ -12,15 +12,17 @@ class SubmitComment extends Component {
       currentPost: "",
       userName: "",
       allComments: [],
-      zVoteComment: [],
-      like: 0,
-      dislike: 0,
+      zVoteComment: "",
     };
     this.textAreaCommentChange = this.textAreaCommentChange.bind(this);
     this.textAreaCodeChange = this.textAreaCodeChange.bind(this);
     this.addComment = this.addComment.bind(this);
     this.sendCommentToFirebase = this.sendCommentToFirebase.bind(this);
     this.getCommentsOfFirebase = this.getCommentsOfFirebase.bind(this);
+    this.voteUpCommentHandleChange = this.voteUpCommentHandleChange.bind(this);
+    this.voteDownCommentHandleChange = this.voteDownCommentHandleChange.bind(
+      this
+    );
   }
 
   // COMMENT
@@ -72,6 +74,7 @@ class SubmitComment extends Component {
         date: new Date(),
         currentPost: this.props.currentPost[0],
         userName: this.props.user.displayName,
+        zVoteComment: this.state.zVoteComment,
       }),
     };
 
@@ -87,11 +90,9 @@ class SubmitComment extends Component {
         });
       })
       .catch((error) => console.log("error:", error));
-    // this.getCommentsOfFirebase();
-    // this.props.getFirebase();
   }
 
-  // COMMENT
+  //GET COMMENTS
   async getCommentsOfFirebase() {
     const postID = this.props.currentPost[0];
     const requestOptions = {
@@ -112,6 +113,51 @@ class SubmitComment extends Component {
         });
       })
       .catch((error) => console.log("error:", error));
+  }
+
+  // VOTE UP
+  async voteUpCommentHandleChange(item) {
+    const postID = this.props.currentPost[0];
+    const localID = this.props.user.localId;
+
+    const requestOptions = {
+      method: "PATCH",
+      redirect: "follow",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      //   CONVERT STATE IN JSON STRING
+      body: JSON.stringify({
+        [localID]: 1,
+      }),
+    };
+    await fetch(
+      `${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zcomments/${item[0]}/zVoteComment.json?auth=${this.props.user.idToken}`,
+      requestOptions
+    ).catch((error) => console.log("error:", error));
+    this.getCommentsOfFirebase();
+  }
+
+  // VOTE DOWN
+  async voteDownCommentHandleChange(item) {
+    const postID = this.props.currentPost[0];
+    const localID = this.props.user.localId;
+    const requestOptions = {
+      method: "PATCH",
+      redirect: "follow",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // CONVERT STATE IN JSON STRING
+      body: JSON.stringify({
+        [localID]: -1,
+      }),
+    };
+    await fetch(
+      `${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zcomments/${item[0]}/zVoteComment.json?auth=${this.props.user.idToken}`,
+      requestOptions
+    ).catch((error) => console.log("error:", error));
+    this.getCommentsOfFirebase();
   }
 
   render() {
@@ -136,7 +182,15 @@ class SubmitComment extends Component {
     return (
       <>
         {/* COMMENT BLOCK */}
-        <Comments comments={comments} />
+        {comments.map((item, index) => (
+          <Comments
+            comment={item}
+            index={index}
+            voteUpCommentHandleChange={this.voteUpCommentHandleChange}
+            voteDownCommentHandleChange={this.voteDownCommentHandleChange}
+            user={this.props.user}
+          />
+        ))}
 
         {/* COMMENT FORM */}
         {this.props.user ? (

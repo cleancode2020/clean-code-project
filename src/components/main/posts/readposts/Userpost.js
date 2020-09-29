@@ -23,24 +23,28 @@ const Userpost = (props) => {
             {props.currentPost[4] ? `#${props.currentPost[4]}` : null}
           </h4>
         </div>
-
-        <div className="vote__container">
-          <button className="count__button" onClick={props.voteUpHandleChange}>
-            <span>{props.like}</span>
-            <span aria-label="Thumbs Up" role="img">
-              👍
-            </span>
-          </button>
-          <button
-            className="count__button"
-            onClick={props.voteDownHandleChange}
-          >
-            <span>{props.dislike}</span>
-            <span aria-label="Thumbs Down" role="img">
-              👎
-            </span>
-          </button>
-        </div>
+        {props.user ? (
+          <div className="vote__container">
+            <button
+              className="count__button"
+              onClick={props.voteUpHandleChange}
+            >
+              <span>{props.like}</span>
+              <span aria-label="Thumbs Up" role="img">
+                👍
+              </span>
+            </button>
+            <button
+              className="count__button"
+              onClick={props.voteDownHandleChange}
+            >
+              <span>{props.dislike}</span>
+              <span aria-label="Thumbs Down" role="img">
+                👎
+              </span>
+            </button>
+          </div>
+        ) : null}
 
         {/* ARTICLE */}
         <p className="posts__art">{props.currentPost[1]}</p>
