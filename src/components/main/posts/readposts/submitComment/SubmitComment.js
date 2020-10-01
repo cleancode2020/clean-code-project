@@ -12,32 +12,42 @@ class SubmitComment extends Component {
       currentPost: "",
       userName: "",
       allComments: [],
+      zVoteComment: "",
     };
     this.textAreaCommentChange = this.textAreaCommentChange.bind(this);
     this.textAreaCodeChange = this.textAreaCodeChange.bind(this);
     this.addComment = this.addComment.bind(this);
     this.sendCommentToFirebase = this.sendCommentToFirebase.bind(this);
-    // this.getCommentsOfFirebase = this.getCommentsOfFirebase.bind(this);
+    this.getCommentsOfFirebase = this.getCommentsOfFirebase.bind(this);
+    this.voteUpCommentHandleChange = this.voteUpCommentHandleChange.bind(this);
+    this.voteDownCommentHandleChange = this.voteDownCommentHandleChange.bind(
+      this
+    );
+    this.voteSubtracted = this.voteSubtracted.bind(this);
   }
 
+  // COMMENT
   componentDidMount() {
     this.setState({
-      allComments: this.props.currentPost[7],
+      allComments: this.props.currentPost[8],
     });
   }
 
+  // COMMENT
   textAreaCommentChange(e) {
     this.setState({
       comment: e.target.value,
     });
   }
 
+  // COMMENT
   textAreaCodeChange(e) {
     this.setState({
       code: e.target.value,
     });
   }
 
+  // COMMENT
   addComment(e) {
     e.preventDefault();
     this.sendCommentToFirebase();
@@ -49,6 +59,7 @@ class SubmitComment extends Component {
     this.getCommentsOfFirebase();
   }
 
+  // COMMENT
   async sendCommentToFirebase() {
     const postID = this.props.currentPost[0];
     const requestOptions = {
@@ -64,8 +75,10 @@ class SubmitComment extends Component {
         date: new Date(),
         currentPost: this.props.currentPost[0],
         userName: this.props.user.displayName,
+        zVoteComment: this.state.zVoteComment,
       }),
     };
+
     await fetch(
       `${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zcomments.json?auth=${this.props.user.idToken}`,
       requestOptions
@@ -78,9 +91,9 @@ class SubmitComment extends Component {
         });
       })
       .catch((error) => console.log("error:", error));
-    // this.getCommentsOfFirebase();
-    // this.props.getFirebase();
   }
+
+  //GET COMMENTS
   async getCommentsOfFirebase() {
     const postID = this.props.currentPost[0];
     const requestOptions = {
@@ -90,7 +103,6 @@ class SubmitComment extends Component {
         "Content-Type": "application/json",
       },
     };
-
     await fetch(
       `${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zcomments.json`,
       requestOptions
@@ -104,11 +116,62 @@ class SubmitComment extends Component {
       .catch((error) => console.log("error:", error));
   }
 
+  // VOTE UP
+  async voteUpCommentHandleChange(item) {
+    const postID = this.props.currentPost[0];
+    const localID = this.props.user.localId;
+
+    const requestOptions = {
+      method: "PATCH",
+      redirect: "follow",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      //   CONVERT STATE IN JSON STRING
+      body: JSON.stringify({
+        [localID]: 1,
+      }),
+    };
+    await fetch(
+      `${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zcomments/${item[0]}/zVoteComment.json?auth=${this.props.user.idToken}`,
+      requestOptions
+    ).catch((error) => console.log("error:", error));
+    this.getCommentsOfFirebase();
+  }
+
+  // VOTE DOWN
+  async voteDownCommentHandleChange(item) {
+    const postID = this.props.currentPost[0];
+    const localID = this.props.user.localId;
+    const requestOptions = {
+      method: "PATCH",
+      redirect: "follow",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // CONVERT STATE IN JSON STRING
+      body: JSON.stringify({
+        [localID]: -1,
+      }),
+    };
+    await fetch(
+      `${this.props.firebase.databaseURL}/cleancode/posts/${postID}/zcomments/${item[0]}/zVoteComment.json?auth=${this.props.user.idToken}`,
+      requestOptions
+    ).catch((error) => console.log("error:", error));
+    this.getCommentsOfFirebase();
+  }
+
+  // VOTE IS SUBTRACTED
+  voteSubtracted() {
+    document.querySelector(".modal__button").click();
+  }
+
   render() {
     let comments = [];
-    if (this.props.currentPost[7]) {
+    // console.log(this.props.currentPost)
+    if (this.props.currentPost[8]) {
       const allCommnetsObj = this.state.allComments;
-      const allCommnetsObjKeys = Object.keys(allCommnetsObj);
+      const allCommnetsObjKeys = Object.keys(allCommnetsObj).reverse();
 
       for (let key of allCommnetsObjKeys) {
         const objectData = allCommnetsObj[key];
@@ -125,46 +188,51 @@ class SubmitComment extends Component {
     return (
       <>
         {/* COMMENT BLOCK */}
-        <div className="posts__comment ">
-          {/* COMMENT FORM */}
-          {this.props.user ? (
-            <form action="#" className="form__main">
-              <legend className="form__title">
-                Tell us what do you think about this:
-              </legend>
-              <label htmlFor="form__comment" className="form__comment">
-                Comment
-              </label>
-              <textarea
-                onChange={this.textAreaCommentChange}
-                name="comment"
-                className="form__textComment"
-                id="form__comment"
-                cols="50"
-                rows="10"
-                value={this.state.comment}
-              ></textarea>
-              <label htmlFor="form__code" className="form__code">
-                Code:
-              </label>
-              <textarea
-                onChange={this.textAreaCodeChange}
-                name="code"
-                className="form__textCode"
-                id="form__code"
-                cols="50"
-                rows="10"
-                value={this.state.code}
-              ></textarea>
-              <button className="form__button" onClick={this.addComment}>
-                Add
-              </button>
-            </form>
-          ) : null}
-          {/* COMMENTS */}
+        {comments.map((item, index) => (
+          <Comments
+            comment={item}
+            index={index}
+            voteUpCommentHandleChange={this.voteUpCommentHandleChange}
+            voteDownCommentHandleChange={this.voteDownCommentHandleChange}
+            user={this.props.user}
+            voteSubtracted={this.voteSubtracted}
+          />
+        ))}
 
-          <Comments comments={comments} />
-        </div>
+        {/* COMMENT FORM */}
+        {this.props.user ? (
+          <form action="#" className="form__main">
+            <legend className="form__title">Comment this</legend>
+            <label htmlFor="form__comment" className="comment__label">
+              Comment
+            </label>
+            <textarea
+              onChange={this.textAreaCommentChange}
+              name="comment"
+              className="comment__textarea"
+              id="form__comment"
+              cols="50"
+              rows="10"
+              value={this.state.comment}
+            ></textarea>
+            <label htmlFor="form__code" className="comment__label">
+              Code
+            </label>
+            <textarea
+              onChange={this.textAreaCodeChange}
+              name="code"
+              className="comment__textarea"
+              id="form__code"
+              cols="50"
+              rows="10"
+              value={this.state.code}
+            ></textarea>
+            <button className="comment__button" onClick={this.addComment}>
+              Send Comment
+            </button>
+          </form>
+        ) : null}
+        {/* COMMENTS */}
       </>
     );
   }

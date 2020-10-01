@@ -15,6 +15,7 @@ class Submitpost extends React.Component {
       article: "",
       codeblock: "",
       correctLength: true,
+      zVote: "",
     };
     this.input = React.createRef();
     this.titleHandleChange = this.titleHandleChange.bind(this);
@@ -80,6 +81,7 @@ class Submitpost extends React.Component {
         subcategories: this.state.currentSubCategory,
         article: this.state.article,
         codeblock: this.state.codeblock,
+        zVote: this.state.zVote,
       }),
     };
 
@@ -127,10 +129,8 @@ class Submitpost extends React.Component {
         </label>
         <select
           className="post__select"
-          name=""
-          id=""
           value={this.state.currentCategory}
-          defaultValue="DEFAULT"
+          // defaultValue="DEFAULT"
           onChange={this.categoriesHandleChange}
         >
           {/* <option value="DEFAULT" disabled>
@@ -149,10 +149,8 @@ class Submitpost extends React.Component {
         </label>
         <select
           className="post__select"
-          name=""
-          id=""
           value={this.state.currentSubCategory}
-          defaultValue="DEFAULT"
+          // defaultValue="DEFAULT"
           onChange={this.subcategoriesHandleChange}
         >
           {/* <option disabled value="DEFAULT">
@@ -201,7 +199,6 @@ class Submitpost extends React.Component {
           <button
             type="button"
             className="submit__post"
-            await
             onClick={this.submitPost}
           >
             Submit Article

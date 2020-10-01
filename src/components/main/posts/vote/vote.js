@@ -2,23 +2,33 @@ import React from "react";
 import "./vote.css";
 
 function Vote(props) {
-	return (
-		<div className="vote__div">
-			<button className="vote__button" onClick={props.voteUpHandleChange}>
-				<span aria-label="Thumbs Up" role="img">
-					👍
-				</span>
-				<span>0</span>
-			</button>
+  const itemValue = Object.values(props.zVote);
+  let zVoteUp = 0;
+  let zVoteDown = 0;
+  itemValue.map((item) => {
+    if (item > 0) {
+      zVoteUp++;
+    } else {
+      zVoteDown++;
+    }
+  });
+  return (
+    <div className="vote__div">
+      <div className="vote__wrapper" onClick={props.voteUpHandleChange}>
+        <span aria-label="Thumbs Up" role="img">
+          👍
+        </span>
+        <span>{zVoteUp}</span>
+      </div>
 
-			<button className="vote__button" onClick={props.voteDownHandleChange}>
-				<span>0</span>
-				<span aria-label="Thumbs Down" role="img">
-					👎
-				</span>
-			</button>
-		</div>
-	);
+      <div className="vote__wrapper" onClick={props.voteDownHandleChange}>
+        <span>{zVoteDown}</span>
+        <span aria-label="Thumbs Down" role="img">
+          👎
+        </span>
+      </div>
+    </div>
+  );
 }
 
 export default Vote;
