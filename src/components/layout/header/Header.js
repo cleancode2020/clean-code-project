@@ -40,10 +40,12 @@ function Header(props) {
         </ul>
       </nav>
       {/* SEARCH BAR */}
-      <form className="nav__search">
-        <input type="search" name="search" placeholder="Search" />
-        <button><i className="nav__icon fas fa-search"></i></button>
-      </form>
+      <div className="nav__search">
+        <div className="nav__searchbar">
+          <input className="nav__input" type="search" name="search" placeholder="Search" />
+          <button type="submit"><i className="nav__icon fas fa-search"></i></button>
+        </div>
+      </div>
       <div className="header__left">
         {/* HEADER DIV RIGHT */}
         {/* HEADER LOGOUT OR LOGIN/SIGN UP*/}
