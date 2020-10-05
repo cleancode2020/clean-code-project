@@ -1,6 +1,5 @@
 /* HEADER  */
 .Header {
-
   padding: 3px 5px;
   font-size: 15px;
   display: flex;
@@ -18,7 +17,7 @@
 
 /* HEADER DIV LEFT NAV  */
 .nav__tag {
-  width: 85%;
+  width: 15%;
 }
 
 /* HEADER UL */
@@ -63,7 +62,7 @@
   color: #00b8ff;
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Tomorrow', sans-serif;
+  font-family: "Tomorrow", sans-serif;
 }
 
 .header__h1:hover {
@@ -72,7 +71,7 @@
 
 /* HEADER LI */
 /* .nav__li {
-	border: solid 1px red;
+    border: solid 1px red;
 } */
 
 /* HEADER LINK */
@@ -89,8 +88,62 @@
 /* HEADER DIV LEFT  */
 .header__left {
   width: 20%;
+  margin-left: auto;
   display: flex;
   justify-content: flex-end;
+}
+
+/* SEARCH BAR */
+.nav__search {
+  /* max-width: 30rem;
+  margin: 0 auto; */
+  width: 25%;
+  position: absolute;
+  transform: translate(150%);
+}
+
+.nav__searchbar {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.nav__input {
+  width: 100%;
+}
+
+/* .nav__search input {
+  width: 25rem;
+  padding: 0 1rem;
+} */
+
+.nav__icon {
+  color: black;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 990px) {
+  .nav__search {
+    transform: translate(180%);
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .nav__search {
+    transform: translate(190%);
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .nav__search {
+    transform: translate(10%);
+  }
+}
+
+/* NAV STROKE */
+.nav__stroke {
+  height: 40px;
+  border-right: 1px solid rgb(248, 245, 245);
 }
 
 @media screen and (max-width: 786px) {
