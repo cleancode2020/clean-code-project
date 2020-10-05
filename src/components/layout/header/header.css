@@ -114,11 +114,11 @@
     color: #00b8ff;
   }
 
-  .header__info:hover {
+  /* .header__info:hover {
     width: 100%;
     height: 50px;
     background-color: blue;
-  }
+  } */
   
 /* NAV STROKE */
   .nav__stroke {
