@@ -44,6 +44,7 @@ function Header(props) {
         <input type="search" name="search" placeholder="Search" />
         <button><i className="nav__icon fas fa-search"></i></button>
       </form>
+      <div className="header__info"><i class="fas fa-info-circle"></i></div>
       <div className="header__left">
         {/* HEADER DIV RIGHT */}
         {/* HEADER LOGOUT OR LOGIN/SIGN UP*/}
