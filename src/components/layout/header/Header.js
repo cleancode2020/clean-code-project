@@ -5,12 +5,19 @@ import { Link } from "react-router-dom";
 import LogIn from "../../authentification/LogIn";
 import SignUp from "../../authentification/SignUp";
 import LogOut from "../../authentification/LogOut";
+import Modal from "react-modal";
 import imgInfo from "../../../assets/info.png"
 
 function Header(props) {
   const [isInfoActive, setIsInfoActive] = React.useState(false)
-  const showInfo=()=>{
-    setIsInfoActive(!isInfoActive)
+  // const showInfo=()=>{
+  //   setIsInfoActive(!isInfoActive)
+  // }
+  const openInfoModal = ( )=> {
+    setIsInfoActive(true);
+  }
+  const closeInfoModal = ( )=> {
+    setIsInfoActive(false);
   }
   return (
     <header className="Header">
@@ -49,9 +56,18 @@ function Header(props) {
         <input type="search" name="search" placeholder="Search" />
         <button><i className="nav__icon fas fa-search"></i></button>
       </form>
+      {/* HEADER INFO */}
       <div className="header__info">
-        <i className="fas fa-info-circle" onClick={()=>showInfo()}></i>
-        {isInfoActive && <img src={imgInfo} alt="" />}
+        <span onClick={()=>openInfoModal()}>Info <i className="fas fa-chevron-circle-down"></i></span>
+       {/* {isInfoActive && <img src={imgInfo} alt="" />}*/}
+       <Modal className="modal__info" isOpen={isInfoActive} onRequestClose={closeInfoModal}>
+       <button className="close__info" onClick={closeInfoModal}>x</button>
+       <div className="info__text">
+       <p>Let's programming now!</p>
+       <p>Choose your programming language and start your clean code</p>
+       </div>
+         {/* <img className="modal__infoimg" src={imgInfo} alt=""/>*/}
+       </Modal>
       </div>
       <div className="header__left">
         {/* HEADER DIV RIGHT */}

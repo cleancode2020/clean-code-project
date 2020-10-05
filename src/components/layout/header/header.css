@@ -93,38 +93,68 @@
   justify-content: flex-end;
 }
 
- /* SEARCH BAR */
- .nav__search {
+/* SEARCH BAR */
+.nav__search {
   max-width: 30rem;
   margin: 0 auto;
 }
 
-  .nav__search input {
-    width: 25rem;
-    padding: 0 1rem;
-  }
+.nav__search input {
+  width: 25rem;
+  padding: 0 1rem;
+}
 
-  .nav__icon {
-    color: black;
-    font-size: 1em;
-  }
+.nav__icon {
+  color: black;
+  font-size: 1em;
+}
 
-  .header__info {
-    font-size: 1.2rem;
-    color: #00b8ff;
-  }
+.header__info {
+  font-size: 1.2rem;
+  color: #00b8ff;
+}
 
-  /* .header__info:hover {
-    width: 100%;
-    height: 50px;
-    background-color: blue;
-  } */
-  
+.close__info {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+
+.modal__info {
+  width: 90vw;
+  height: 80vh;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 4rem;
+  /* background-color: rgba(255, 255, 240, 0.8); */
+  background-color: white;
+  background-image: url(../../../assets/info.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ReactModal__Overlay  {
+  background: none !important;
+}
+
+.info__text {
+  width: 30rem;
+  /* margin-top: 2rem; */
+  margin-left: 3rem;
+  font-size: 2.5em;
+  line-height: 1.5em;
+  color: #00b8ff;
+}
+
 /* NAV STROKE */
-  .nav__stroke {
-    height: 40px;
-    border-right: 1px solid rgb(248, 245, 245);
-  }
+.nav__stroke {
+  height: 40px;
+  border-right: 1px solid rgb(248, 245, 245);
+}
 
 @media screen and (max-width: 786px) {
   .header__left {
