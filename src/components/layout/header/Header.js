@@ -6,17 +6,17 @@ import LogIn from "../../authentification/LogIn";
 import SignUp from "../../authentification/SignUp";
 import LogOut from "../../authentification/LogOut";
 import Modal from "react-modal";
-import imgInfo from "../../../assets/m.png"
+import imgInfo from "../../../assets/info.png"
 
 function Header(props) {
   const [isInfoActive, setIsInfoActive] = React.useState(false)
   // const showInfo=()=>{
   //   setIsInfoActive(!isInfoActive)
   // }
-  const openInfoModal = ( )=> {
+  const openInfoModal = () => {
     setIsInfoActive(true);
   }
-  const closeInfoModal = ( )=> {
+  const closeInfoModal = () => {
     setIsInfoActive(false);
   }
   return (
@@ -58,16 +58,16 @@ function Header(props) {
       </form>
       {/* HEADER INFO */}
       <div className="header__info">
-        <span onClick={()=>openInfoModal()}>Info <i className="fas fa-chevron-circle-down"></i></span>
-       {/* {isInfoActive && <img src={imgInfo} alt="" />}*/}
-       <Modal className="modal__info" isOpen={isInfoActive} onRequestClose={closeInfoModal}>
-       <button className="close__info" onClick={closeInfoModal}>x</button>
-       <div className="info__text">
-       <p>Let's programming now!</p>
-       <p>Choose your programming language and start your clean code</p>
-       </div>
-         {/* <img className="modal__infoimg" src={imgInfo} alt=""/>*/}
-       </Modal>
+        <span onClick={() => openInfoModal()}>Info <i className="fas fa-chevron-circle-down"></i></span>
+        {/* {isInfoActive && <img src={imgInfo} alt="" />}*/}
+        <Modal className="modal__info" isOpen={isInfoActive} onRequestClose={closeInfoModal}>
+          <button className="close__info" onClick={closeInfoModal}>x</button>
+          <div className="info__text">
+            <p>Let's programming now!</p>
+            <p>Choose your programming language and start your clean code.</p>
+          </div>
+          {/* <img className="modal__infoimg" src={imgInfo} alt=""/>*/}
+        </Modal>
       </div>
       <div className="header__left">
         {/* HEADER DIV RIGHT */}
