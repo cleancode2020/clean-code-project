@@ -5,7 +5,6 @@ import andreas from "../../assets/teamImage/Andreas.png";
 import melad from "../../assets/teamImage/Melad.png";
 import victoria from "../../assets/teamImage/Victoria.jpg";
 import vadim from "../../assets/teamImage/Vadim.png";
-import picture from "../../assets/teamImage/g12.png";
 
 class About extends React.Component {
 
@@ -56,7 +55,6 @@ class About extends React.Component {
 		return (
 			<main className="main__about">
 				<h2 className="h1__about">About Us</h2>
-      <img src={picture} alt=""/>
 
         {/* DISCRIPTION ABOUT US*/}
         <h2 className="h2__style">who we are</h2>
