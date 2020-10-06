@@ -54,7 +54,7 @@ class About extends React.Component {
 		return (
 			<main className="main__about">
 				<h2 className="h1__about">About</h2>
-				<div>
+				<div className="sub__about">
 					{/* DESCRIPTION ABOUT US*/}
 					<h2 className="h2__style">What is Cleancode?</h2>
 					<p className="about__paragraph">

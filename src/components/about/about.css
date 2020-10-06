@@ -11,6 +11,12 @@
 	display: inline-block;
 }
 
+.sub__about {
+  /* border: solid 1px red; */
+  width: 80%;
+  margin: auto;
+}
+
 .h1__about,
 .h2__style {
 	text-align: center;
