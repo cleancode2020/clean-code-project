@@ -69,6 +69,46 @@
   color: white;
 }
 
+/* HEADER INFO */
+.header__info {
+  border: solid red 2px;
+  font-size: 1.2rem;
+  color: #00b8ff;
+}
+
+.close__info {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+
+.modal__info {
+  width: 90vw;
+  height: 80vh;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  background-color: white;
+  background-image: url(../../../assets/info.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ReactModal__Overlay  {
+  background: none !important;
+}
+
+.info__text {
+  width: 23rem;
+  margin: 2rem 0 0 10rem;
+  font-size: 1.9em;
+  line-height: 1.5em;
+  color: black;
+}
+
 /* HEADER LI */
 /* .nav__li {
     border: solid 1px red;
@@ -122,61 +162,34 @@
   font-size: 1em;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1155px) {
   .nav__search {
     transform: translate(180%);
   }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 960px) {
   .nav__search {
     transform: translate(190%);
   }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 900px) {
   .nav__search {
-    transform: translate(10%);
+    transform: translate(200%);
   }
 }
 
-/* HEADER INFO */
-.header__info {
-  font-size: 1.2rem;
-  color: #00b8ff;
+@media screen and (max-width: 860px) {
+  .nav__search {
+    transform: translate(210%);
+  }
 }
 
-.close__info {
-  position: absolute;
-  top: 6rem;
-  right: 6rem;
-}
-
-.modal__info {
-  width: 90vw;
-  height: 80vh;
-  margin: 0 auto;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5rem;
-  background-color: white;
-  background-image: url(../../../assets/info.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.ReactModal__Overlay  {
-  background: none !important;
-}
-
-.info__text {
-  width: 23rem;
-  margin: 2rem 0 0 10rem;
-  font-size: 1.9em;
-  line-height: 1.5em;
-  color: black;
+@media screen and (max-width: 777px) {
+  .nav__search {
+    transform: translate(210%);
+  }
 }
 
 /* NAV STROKE */
