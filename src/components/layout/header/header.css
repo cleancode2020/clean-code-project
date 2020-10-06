@@ -132,7 +132,7 @@
   margin-top: 4rem;
   /* background-color: rgba(255, 255, 240, 0.8); */
   background-color: white;
-  background-image: url(../../../assets/info.png);
+  background-image: url(../../../assets/m.png);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -144,10 +144,10 @@
 .info__text {
   width: 30rem;
   /* margin-top: 2rem; */
-  margin-left: 3rem;
-  font-size: 2.5em;
+  margin-right: 4rem;
+  font-size: 1.9em;
   line-height: 1.5em;
-  color: #00b8ff;
+  color: black;
 }
 
 /* NAV STROKE */

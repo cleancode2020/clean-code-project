@@ -6,7 +6,7 @@ import LogIn from "../../authentification/LogIn";
 import SignUp from "../../authentification/SignUp";
 import LogOut from "../../authentification/LogOut";
 import Modal from "react-modal";
-import imgInfo from "../../../assets/info.png"
+import imgInfo from "../../../assets/m.png"
 
 function Header(props) {
   const [isInfoActive, setIsInfoActive] = React.useState(false)
