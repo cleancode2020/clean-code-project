@@ -106,6 +106,10 @@
   display: flex;
 }
 
+.nav__searchbar button {
+  margin-right: 1rem;
+}
+
 .nav__input {
   width: 100%;
 }
@@ -131,7 +135,6 @@
 
 /* HEADER INFO */
 .header__info {
-  margin: 0 0 0 2opx;
   font-size: 1.2rem;
   color: #00b8ff;
 }
@@ -155,6 +158,7 @@
   background-image: url(../../../assets/info.png);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .ReactModal__Overlay  {
