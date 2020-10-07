@@ -10,10 +10,10 @@ class About extends React.Component {
 	render() {
 		return (
 			<main className="main__about">
-				<h2 className="h1__about">About</h2>
+				<h2 className="h2__about">About</h2>
 				<div className="sub__about">
 					{/* DESCRIPTION ABOUT US*/}
-					<h2 className="h2__style">What is Cleancode?</h2>
+					<h3 className="h3__about">What is Cleancode?</h3>
 					<p className="about__paragraph">
 						Cleancode is a web platform to exchange about clean coding and
 						everything around it. You can post only working code. No direct bug
@@ -29,7 +29,7 @@ class About extends React.Component {
 					</p>
 
 					{/* OUR PRODUCT */}
-					<h2 className="h2__style">Who are we?</h2>
+					<h3 className="h3__about">Who are we?</h3>
 					<p className="about__paragraph">
 						We, Victoria, Vadim, Melad, Andreas and Gael are 5 students from the
 						DCI Berlin full stack web development course. Cleancode is the
@@ -51,7 +51,7 @@ class About extends React.Component {
 					</p>
 
 					{/* OUR PRODUCT */}
-					<h2 className="h2__style">How does it work?</h2>
+					<h3 className="h3__about">How does it work?</h3>
 					<p className="about__paragraph">
 						First thing, of course you can just read posts and discussion that
 						are already online. The possibility to read posts is accessible to
@@ -72,7 +72,7 @@ class About extends React.Component {
 				</div>
 
 				{/* TEAM PICS AND SOME TEXT ABOUT THEM */}
-				<h2 className="h2__style">Our Team</h2>
+				<h3 className="h3__team">Our Team</h3>
 				<ul className="sub__about sub__team">
 					<li>
 						<div className="card__up card__victoria">
@@ -83,7 +83,9 @@ class About extends React.Component {
 							/>
 						</div>
 						<div className="card__down">
+							<h4 className="h4__about">Victoria</h4>
 							<a
+								className="social__link"
 								href="https://www.linkedin.com/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -91,6 +93,7 @@ class About extends React.Component {
 								LinkedIn
 							</a>
 							<a
+								className="social__link"
 								href="https://github.com/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -104,7 +107,9 @@ class About extends React.Component {
 							<img className="card__img" src={vadim} alt="Girl in a jacket" />
 						</div>
 						<div className="card__down">
+							<h4 className="h4__about">Vadim</h4>
 							<a
+								className="social__link"
 								href="https://www.linkedin.com/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -112,6 +117,7 @@ class About extends React.Component {
 								LinkedIn
 							</a>
 							<a
+								className="social__link"
 								href="https://github.com/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -125,7 +131,9 @@ class About extends React.Component {
 							<img className="card__img" src={melad} alt="Girl in a jacket" />
 						</div>
 						<div className="card__down">
+							<h4 className="h4__about">Melad</h4>
 							<a
+								className="social__link"
 								href="https://www.linkedin.com/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -133,6 +141,7 @@ class About extends React.Component {
 								LinkedIn
 							</a>
 							<a
+								className="social__link"
 								href="https://github.com/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -146,7 +155,9 @@ class About extends React.Component {
 							<img className="card__img" src={andreas} alt="Girl in a jacket" />
 						</div>
 						<div className="card__down">
+							<h4 className="h4__about">Andreas</h4>
 							<a
+								className="social__link"
 								href="https://www.linkedin.com/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -154,6 +165,7 @@ class About extends React.Component {
 								LinkedIn
 							</a>
 							<a
+								className="social__link"
 								href="https://github.com/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -167,7 +179,9 @@ class About extends React.Component {
 							<img className="card__img" src={gael} alt="Girl in a jacket" />
 						</div>
 						<div className="card__down">
+							<h4 className="h4__about">Gael</h4>
 							<a
+								className="social__link"
 								href="https://www.linkedin.com/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -175,6 +189,7 @@ class About extends React.Component {
 								LinkedIn
 							</a>
 							<a
+								className="social__link"
 								href="https://github.com/"
 								target="_blank"
 								rel="noopener noreferrer"
