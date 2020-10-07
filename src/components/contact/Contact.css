@@ -1,18 +1,93 @@
-.main__contact {
-  min-height: 86.5vh;
+/* CONTAINER */
+.container {
+	border: solid 1px #333333;
+	border-radius: 10px;
+	margin: 100px auto;
+	width: 60%;
+	padding: 20px;
+	box-shadow: 1px 1px 4px 1px lightgrey;
 }
 
-.h1__style{
-  text-align: center;
-  margin: 30px;
-  font-weight: bold;
+@media screen and (max-width: 800px) {
+	.container {
+		width: 90%;
+	}
 }
 
-.info-links {
-  text-align: center;
-  
+/* LEGEND */
+.contact__legend {
+	color: blue;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	margin: 50px;
 }
-a {
-  text-decoration: none;
-color: rgb(96, 101, 102);
+
+/* DIV */
+.single__item {
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+	/* border: solid 1px red; */
+}
+
+/* LABEL */
+.contact__label {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+/* INPUT AND TEXTAREA */
+.contact__input,
+.contact__textarea {
+	border: solid 1px #333333;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+/* SUCCESS MESSAGE */
+.msg {
+	text-align: center;
+	margin: 0 auto 20px;
+	font-size: 18px;
+	color: green;
+	display: none;
+}
+
+.msgAppear {
+	display: block;
+}
+
+/* SUBMIT BUTTON */
+.contact__button {
+	color: white;
+	background-color: #333333;
+	border: solid 1px #333333;
+	padding: 20px 30px;
+	border-radius: 10px;
+	/* margin: auto; */
+	width: 100%;
+	cursor: pointer;
+}
+
+.contact__button:hover {
+	color: #333333;
+	background-color: white;
+}
+
+/* EMAIL WRAPPER */
+.email__link__wrapper {
+	text-align: center;
+	padding: 50px;
+}
+
+/* EMAIL LINK */
+.email__link {
+	color: blue;
+	text-decoration: none;
+}
+
+.email__link:hover {
+	text-decoration: underline;
 }

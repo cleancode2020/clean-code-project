@@ -1,20 +1,26 @@
 /* SIGN UP MODAL BUTTONS */
 .modal__button {
 	margin: 5px 20px;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.modal__button:active {
+	border: none;
+	outline: none;
 }
 
 /* SIGN UP MODAL OPEN */
 .modal__button__login {
-	color: blue;
-	border: solid 1px #dad6d6;
-	background-color: #dad6d6;
+	color: white;
+	border: solid 1px #333333;
+	background-color: #333333;
 	font-weight: bold;
 }
 
 .modal__button__login:hover {
-	color: #dad6d6;
-	background-color: blue;
-	border: solid 1px blue;
+	color: white;
+	border: solid 1px white;
 }
 
 /* SIGN UP MODAL CLOSE */
@@ -23,31 +29,36 @@
 	top: 20px;
 	right: 20px;
 	border-radius: 5px;
-	color: black;
-	border: solid 1px darkgrey;
-	background-color: darkgrey;
+	color: white;
+	border: solid 1px #333333;
+	background-color: #333333;
 	font-weight: bold;
 }
 
 .modal__button__close:hover {
-	color: #dad6d6;
-	border: #dad6d6;
-	background-color: blue;
+	color: #333333;
+	background-color: white;
 }
 
 /* SIGN UP FORM */
 .form__div {
 	box-sizing: border-box;
-	background-color: lightgrey;
-	border: solid 1px lightgrey;
-	border-radius: 50px;
-	width: fit-content;
+	/* background-color: #333333; */
+	border: solid 1px #333333;
+	border-radius: 10px;
+	max-width: fit-content;
 	margin: 60px auto;
 	padding: 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+@media screen and (max-width: 786px) {
+	.form__div {
+		padding: 5px;
+	}
 }
 
 /* LEGEND*/
@@ -70,11 +81,18 @@
 /* INPUT */
 .form__input {
 	color: black;
+	border: solid 1px #333333;
+	border-radius: 10px;
 	font-size: 16px;
-	border: none;
 	width: 500px;
 	margin: 5px 0 20px;
 	padding: 10px;
+}
+
+@media screen and (max-width: 786px) {
+	.form__input {
+		max-width: 100%;
+	}
 }
 
 /* DIV CORRECT LENGTH MESSAGE */
@@ -92,17 +110,17 @@
 
 /* SUBMIT BUTTON */
 .submit__button {
-	color: black;
-	border: solid 1px darkgrey;
-	background-color: darkgrey;
+	color: white;
+	border: solid 1px #333333;
+  background-color: #333333;
+  margin: 20px 0;
 	padding: 20px;
-	max-width: 500px;
+	width: 100%;
 	font-weight: bold;
-	border-radius: 15px;
+	border-radius: 10px;
 }
 
 .submit__button:hover {
-	color: white;
-	border: white;
-	background-color: blue;
+	color: #333333;
+	background-color: white;
 }

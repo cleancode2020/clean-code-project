@@ -1,0 +1,33 @@
+.comment__ul {
+  /* border: 1px solid #828282;
+  border-radius: 10px;
+  padding: 20px; */
+}
+
+.comment__li {
+  border: 1px solid #828282;
+  padding: 20px;
+  border-radius: 10px;
+
+  margin: 0 0 20px;
+}
+
+.comment__author {
+  color: blue;
+  font-weight: bold;
+  margin: 20px 10px 40px;
+  font-size: 18px;
+}
+
+.comment__text {
+  margin: 10px;
+}
+
+.codeblock__comment {
+  max-width: 100%;
+  margin: 10px;
+}
+
+.comment__time {
+  margin: 10px;
+}

@@ -1,0 +1,47 @@
+/* USER POST */
+/* POST FORM */
+
+.form__main {
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  border: 1px solid #828282;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0 0;
+}
+
+.form__title {
+  margin: 30px auto;
+  font-weight: bold;
+  font-size: 22px;
+  color: blue;
+}
+
+.comment__label {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin: 30px 10px 10px;
+}
+
+.comment__textarea {
+  margin: 5px 10px 10px;
+  border: 1px solid #828282;
+  border-radius: 10px;
+  padding: 10px;
+}
+.comment__button {
+  color: white;
+  background-color: #333333;
+  padding: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+
+  margin: 20px 10px;
+  max-width: 100%;
+}
+.comment__button:hover {
+  color: #333333;
+  background-color: white;
+}

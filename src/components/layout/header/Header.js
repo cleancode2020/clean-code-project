@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/icons/black-dot.png";
+import logo from "../../../assets/icons/logo.png";
 import "./header.css";
 import { Link } from "react-router-dom";
 import LogIn from "../../authentification/LogIn";
@@ -21,7 +21,7 @@ function Header(props) {
       {/* HEADER NAV LEFT */}
       <nav className="nav__tag">
         <input type="checkbox" id="menuCheckbox" />
-        <label htmlFor="menuCheckbox">
+        <label className="burger__label" htmlFor="menuCheckbox">
           <div></div>
           <div></div>
           <div></div>
@@ -39,29 +39,36 @@ function Header(props) {
           </li>
         </ul>
       </nav>
+      {/* SEARCH BAR */}
+      <div className="nav__search">
+        <div className="nav__searchbar">
+          <input className="nav__input" type="search" name="search" placeholder="Search" />
+          <button type="submit"><i className="nav__icon fas fa-search"></i></button>
+        </div>
+      </div>
       <div className="header__left">
         {/* HEADER DIV RIGHT */}
         {/* HEADER LOGOUT OR LOGIN/SIGN UP*/}
         {props.user ? (
           <LogOut setUser={props.setUser} />
         ) : (
-          <>
-            <LogIn
-              fetchFirebase={props.fetchFirebase}
-              setUser={props.setUser}
-            />
-
-            <SignUp
-              fetchFirebase={props.fetchFirebase}
-              openModal={props.openModal}
-              closeModal={props.closeModal}
-              modalIsOpen={props.modalIsOpen}
-              setUser={props.setUser}
-              firebase={props.firebase}
-              user={props.user}
-            />
-          </>
-        )}
+            <>
+              <LogIn
+                fetchFirebase={props.fetchFirebase}
+                setUser={props.setUser}
+              />
+              <div className="nav__stroke"></div>
+              <SignUp
+                fetchFirebase={props.fetchFirebase}
+                openModal={props.openModal}
+                closeModal={props.closeModal}
+                modalIsOpen={props.modalIsOpen}
+                setUser={props.setUser}
+                firebase={props.firebase}
+                user={props.user}
+              />
+            </>
+          )}
       </div>
     </header>
   );

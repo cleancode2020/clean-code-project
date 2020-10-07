@@ -1,12 +1,12 @@
 /* POST FORM */
 .post__form {
-	border: solid 1px lightgrey;
-	background-color: lightgrey;
-	border-radius: 25px;
+	border: solid 1px #828282;
+	/* background-color: #828282; */
+	border-radius: 10px;
 	box-sizing: border-box;
-	margin: 50px auto;
-	padding: 50px;
-	width: 80%;
+	margin: 50px 10px;
+	padding: 20px;
+	width: 97%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -16,13 +16,19 @@
 /* NAV LINK */
 .navlink__submitclose {
 	align-self: flex-end;
+	padding: 5px;
+	font-size: 15px;
+	border-radius: 5px;
+	color: white;
+	border: solid 1px #333333;
+	background-color: #333333;
 	font-weight: bold;
-	color: black;
 	text-decoration: none;
 }
 
 .navlink__submitclose:hover {
-	color: blue;
+	color: #333333;
+	background-color: white;
 }
 
 /* LEGEND */
@@ -41,9 +47,24 @@
 	text-align: left;
 }
 
+.post__input  {
+	padding: 5px;
+	border: solid 1px black;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.post__select  {
+	padding: 5px;
+	border: solid 1px black;
+	border-radius: 10px;
+	width: 100%;
+}
+
 /* ARTICLE */
 .post__textarea {
 	border: solid 1px black;
+	border-radius: 10px;
 	width: 100%;
 	/* margin: 30px; */
 }
@@ -57,6 +78,7 @@
 /* SUBMIT BUTTON */
 .submit__post {
 	border: solid 1px blue;
+	border-radius: 5px;
 	background-color: white;
 	color: blue;
 	font-weight: bold;
@@ -69,6 +91,7 @@
 .submit__post {
 	background-color: blue;
 	color: white;
+	width: 100%;
 }
 
 /* USER NAME */
