@@ -27,19 +27,6 @@ function Header(props) {
           </Link>
         </li>
       </ul>
-      {/* HEADER INFO */}
-      <div className="header__info">
-        <span onClick={() => openInfoModal()}>Info <i className="fas fa-chevron-circle-down"></i></span>
-        {/* {isInfoActive && <img src={imgInfo} alt="" />}*/}
-        <Modal className="modal__info" isOpen={isInfoActive} onRequestClose={closeInfoModal}>
-          <button className="close__info" onClick={closeInfoModal}>x</button>
-          <div className="info__text">
-            <p>Let's programming now!</p>
-            <p>Choose your programming language and start your clean code.</p>
-          </div>
-          {/* <img className="modal__infoimg" src={imgInfo} alt=""/>*/}
-        </Modal>
-      </div>
       {/* HEADER NAV LEFT */}
       <nav className="nav__tag">
         <input type="checkbox" id="menuCheckbox" />
@@ -66,9 +53,19 @@ function Header(props) {
         <div className="nav__searchbar">
           <input className="nav__input" type="search" name="search" placeholder="Search" />
           <button type="submit"><i className="nav__icon fas fa-search"></i></button>
+          {/* HEADER INFO */}
+          <div className="header__info">
+            <span onClick={() => openInfoModal()}><i class="far fa-question-circle"></i></span>
+            <Modal className="modal__info" isOpen={isInfoActive} onRequestClose={closeInfoModal}>
+              <button className="close__info" onClick={closeInfoModal}>x</button>
+              <div className="info__text">
+                <p>Clean code is a community that was founded for programmers.</p>
+                <p>Choose your programming language and start your clean code.</p>
+              </div>
+            </Modal>
+          </div>
         </div>
       </div>
-      
       <div className="header__left">
         {/* HEADER DIV RIGHT */}
         {/* HEADER LOGOUT OR LOGIN/SIGN UP*/}

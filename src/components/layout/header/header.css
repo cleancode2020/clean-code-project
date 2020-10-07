@@ -69,8 +69,69 @@
   color: white;
 }
 
+/* HEADER LI */
+/* .nav__li {
+    border: solid 1px red;
+} */
+
+/* HEADER LINK */
+.nav__link {
+  text-decoration: none;
+  color: #dad6d6;
+}
+
+.nav__link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* HEADER DIV LEFT  */
+.header__left {
+  width: 20%;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* SEARCH BAR */
+.nav__search {
+  width: 25%;
+  position: absolute;
+  transform: translate(150%);
+}
+
+.nav__searchbar {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.nav__input {
+  width: 100%;
+}
+
+.nav__icon {
+  color: black;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 1155px) {
+  .nav__search {
+    transform: translate(180%);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .nav__search {
+    transform: translate(210%);
+    position: relative;
+    right: 50%;
+  }
+}
+
 /* HEADER INFO */
 .header__info {
+  margin: 0 0 0 2opx;
   font-size: 1.2rem;
   color: #00b8ff;
 }
@@ -101,10 +162,10 @@
 }
 
 .info__text {
-  width: 23rem;
+  width: 30rem;
   margin: 2rem 0 0 10rem;
   font-size: 1.9em;
-  line-height: 1.5em;
+  line-height: 1.2em;
   color: black;
 }
 
@@ -119,73 +180,6 @@
 @media screen and (max-width: 480px) {
   .close__info {
    right: 3rem;
-  }
-}
-
-/* HEADER LI */
-/* .nav__li {
-    border: solid 1px red;
-} */
-
-/* HEADER LINK */
-.nav__link {
-  text-decoration: none;
-  color: #dad6d6;
-}
-
-.nav__link:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-/* HEADER DIV LEFT  */
-.header__left {
-  width: 20%;
-  margin-left: auto;
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* SEARCH BAR */
-.nav__search {
-  /* max-width: 30rem;
-  margin: 0 auto; */
-  width: 25%;
-  position: absolute;
-  transform: translate(150%);
-}
-
-.nav__searchbar {
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-
-.nav__input {
-  width: 100%;
-}
-
-/* .nav__search input {
-  width: 25rem;
-  padding: 0 1rem;
-} */
-
-.nav__icon {
-  color: black;
-  font-size: 1em;
-}
-
-@media screen and (max-width: 1155px) {
-  .nav__search {
-    transform: translate(180%);
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .nav__search {
-    transform: translate(210%);
-    position: relative;
-    right: 50%;
   }
 }
 
