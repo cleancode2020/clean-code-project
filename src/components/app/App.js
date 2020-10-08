@@ -158,6 +158,7 @@ class App extends React.Component {
             firebase={firebase}
             setUser={this.setUser}
             user={this.state.user}
+            allPostsObject={this.state.allPostsObject}
           />
           <Switch>
             {/* MAIN */}

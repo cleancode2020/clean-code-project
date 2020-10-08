@@ -8,7 +8,6 @@ import vadim from "../../assets/teamImage/Vadim.png";
 import picture from "../../assets/teamImage/g12.png";
 
 class About extends React.Component {
-
   state = {
     teams: [
       {
@@ -52,11 +51,11 @@ class About extends React.Component {
     return console.log(this.state.teams[1].title);
   };
 
-	render() {
-		return (
-			<main className="main__about">
-				<h2 className="h1__about">About Us</h2>
-      <img src={picture} alt=""/>
+  render() {
+    return (
+      <main className="main__about">
+        <h2 className="h1__about">About Us</h2>
+        <img src={picture} alt="" />
 
         {/* DISCRIPTION ABOUT US*/}
         <h2 className="h2__style">who we are</h2>

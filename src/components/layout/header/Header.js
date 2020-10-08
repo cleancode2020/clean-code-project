@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import LogIn from "../../authentification/LogIn";
 import SignUp from "../../authentification/SignUp";
 import LogOut from "../../authentification/LogOut";
+import Searchbar from "./Searchbar";
 
 function Header(props) {
   return (
@@ -40,35 +41,31 @@ function Header(props) {
         </ul>
       </nav>
       {/* SEARCH BAR */}
-      <div className="nav__search">
-        <div className="nav__searchbar">
-          <input className="nav__input" type="search" name="search" placeholder="Search" />
-          <button type="submit"><i className="nav__icon fas fa-search"></i></button>
-        </div>
-      </div>
+      <Searchbar allPostsObject={props.allPostsObject} />
+
       <div className="header__left">
         {/* HEADER DIV RIGHT */}
         {/* HEADER LOGOUT OR LOGIN/SIGN UP*/}
         {props.user ? (
           <LogOut setUser={props.setUser} />
         ) : (
-            <>
-              <LogIn
-                fetchFirebase={props.fetchFirebase}
-                setUser={props.setUser}
-              />
-              <div className="nav__stroke"></div>
-              <SignUp
-                fetchFirebase={props.fetchFirebase}
-                openModal={props.openModal}
-                closeModal={props.closeModal}
-                modalIsOpen={props.modalIsOpen}
-                setUser={props.setUser}
-                firebase={props.firebase}
-                user={props.user}
-              />
-            </>
-          )}
+          <>
+            <LogIn
+              fetchFirebase={props.fetchFirebase}
+              setUser={props.setUser}
+            />
+            <div className="nav__stroke"></div>
+            <SignUp
+              fetchFirebase={props.fetchFirebase}
+              openModal={props.openModal}
+              closeModal={props.closeModal}
+              modalIsOpen={props.modalIsOpen}
+              setUser={props.setUser}
+              firebase={props.firebase}
+              user={props.user}
+            />
+          </>
+        )}
       </div>
     </header>
   );
