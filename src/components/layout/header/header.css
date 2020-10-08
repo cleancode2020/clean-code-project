@@ -119,7 +119,28 @@
   font-size: 1em;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 950px){
+.nav__search {
+    transform: translate(220%);
+    position: relative;
+    right: 50%;
+}
+}
+
+@media screen and (max-width: 685px){
+  .nav__input {
+    width: 10rem;
+    margin-left: -3rem;
+  }
+  }
+
+/* @media screen and (max-width: 1155px){
+.nav__search {
+    transform: translate(180%);
+}
+} */
+
+/* @media screen and (max-width: 990px) {
   .nav__search {
     transform: translate(180%);
   }
@@ -135,7 +156,7 @@
   .nav__search {
     transform: translate(10%);
   }
-}
+} */
 
 /* HEADER INFO */
 .header__info {
