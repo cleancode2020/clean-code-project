@@ -134,9 +134,9 @@ class Readposts extends React.Component {
     let zVoteDown = 0;
     itemValue.map((item) => {
       if (item > 0) {
-        zVoteUp++;
+        return zVoteUp++;
       } else {
-        zVoteDown++;
+        return zVoteDown++;
       }
     });
     this.setState({

@@ -8,6 +8,13 @@ import LogOut from "../../authentification/LogOut";
 import Searchbar from "./Searchbar";
 
 function Header(props) {
+  const [isInfoActive, setIsInfoActive] = React.useState(false)
+  const openInfoModal = () => {
+    setIsInfoActive(true);
+  }
+  const closeInfoModal = () => {
+    setIsInfoActive(false);
+  }
   return (
     <header className="Header">
       {/* HAMBURGER LOGO */}
