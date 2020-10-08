@@ -7,9 +7,9 @@ function Vote(props) {
   let zVoteDown = 0;
   itemValue.map((item) => {
     if (item > 0) {
-      zVoteUp++;
+      return zVoteUp++;
     } else {
-      zVoteDown++;
+      return zVoteDown++;
     }
   });
   return (
@@ -18,7 +18,7 @@ function Vote(props) {
        {/* <span aria-label="Thumbs Up" role="img">
           👍
         </span>*/} 
-        <i class="far fa-thumbs-up"></i>
+        <i className="far fa-thumbs-up"></i>
         <span>{zVoteUp}</span>
       </div>
 
@@ -27,7 +27,7 @@ function Vote(props) {
        {/* <span aria-label="Thumbs Down" role="img">
           👎
         </span>*/} 
-        <i class="far fa-thumbs-down"></i>
+        <i className="far fa-thumbs-down"></i>
       </div>
     </div>
   );

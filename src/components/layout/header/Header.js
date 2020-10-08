@@ -6,7 +6,7 @@ import LogIn from "../../authentification/LogIn";
 import SignUp from "../../authentification/SignUp";
 import LogOut from "../../authentification/LogOut";
 import Modal from "react-modal";
-import imgInfo from "../../../assets/info.png"
+// import imgInfo from "../../../assets/info.png"
 
 function Header(props) {
   const [isInfoActive, setIsInfoActive] = React.useState(false)
@@ -55,7 +55,7 @@ function Header(props) {
           <button type="submit"><i className="nav__icon fas fa-search"></i></button>
           {/* HEADER INFO */}
           <div className="header__info">
-            <span onClick={() => openInfoModal()}><i class="far fa-question-circle"></i></span>
+            <span onClick={() => openInfoModal()}><i className="far fa-question-circle"></i></span>
             <Modal className="modal__info" isOpen={isInfoActive} onRequestClose={closeInfoModal}>
               <button className="close__info" onClick={closeInfoModal}>x</button>
               <div className="info__text">
