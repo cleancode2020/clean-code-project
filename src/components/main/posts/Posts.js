@@ -12,6 +12,9 @@ function Posts(props) {
         <h2 className="h2__posts">Posts</h2>
 
         <nav className="nav__posts">
+          <button className="postaction__link" onClick={props.getFirebase}>
+            reset filter
+          </button>
           {/* POST LINK */}
           {props.user ? (
             <Link className="postaction__link" to="/submit">

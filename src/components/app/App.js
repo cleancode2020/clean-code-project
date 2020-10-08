@@ -25,6 +25,7 @@ class App extends React.Component {
     this.getFirebase = this.getFirebase.bind(this);
     this.fetchUserFirebase = this.fetchUserFirebase.bind(this);
     this.setUser = this.setUser.bind(this);
+    this.categoryChose = this.categoryChose.bind(this);
   }
   // FOCUS IN MODAL
   componentDidMount() {
@@ -145,6 +146,25 @@ class App extends React.Component {
       .catch((error) => console.log("error:", error));
   }
 
+  async categoryChose(item) {
+    await this.getFirebase();
+    const postsObj = this.state.allPostsObject;
+    const postsArr = Object.entries(postsObj);
+
+    let postsFiltred = [];
+    for (let post of postsArr) {
+      console.log(post);
+      if (post[1].categories === item.name) {
+        postsFiltred.push(post);
+      }
+    }
+    let postsFiltredObj = Object.fromEntries(postsFiltred);
+    this.setState({
+      allPostsObject: postsFiltredObj,
+    });
+    // let postFilter = allPosts.map((post) => console.log(post));
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -167,6 +187,7 @@ class App extends React.Component {
                 user={this.state.user}
                 getFirebase={this.getFirebase}
                 allPostsObject={this.state.allPostsObject}
+                categoryChose={this.categoryChose}
               />
             </Route>
 
