@@ -5,8 +5,17 @@ import { Link } from "react-router-dom";
 import LogIn from "../../authentification/LogIn";
 import SignUp from "../../authentification/SignUp";
 import LogOut from "../../authentification/LogOut";
+import Modal from "react-modal";
+import imgInfo from "../../../assets/info.png"
 
 function Header(props) {
+  const [isInfoActive, setIsInfoActive] = React.useState(false)
+  const openInfoModal = () => {
+    setIsInfoActive(true);
+  }
+  const closeInfoModal = () => {
+    setIsInfoActive(false);
+  }
   return (
     <header className="Header">
       {/* HAMBURGER LOGO */}
@@ -44,6 +53,17 @@ function Header(props) {
         <div className="nav__searchbar">
           <input className="nav__input" type="search" name="search" placeholder="Search" />
           <button type="submit"><i className="nav__icon fas fa-search"></i></button>
+          {/* HEADER INFO */}
+          <div className="header__info">
+            <span onClick={() => openInfoModal()}><i class="far fa-question-circle"></i></span>
+            <Modal className="modal__info" isOpen={isInfoActive} onRequestClose={closeInfoModal}>
+              <button className="close__info" onClick={closeInfoModal}>x</button>
+              <div className="info__text">
+                <p>Clean code is a community that was founded for programmers.</p>
+                <p>Choose your programming language and start your clean code.</p>
+              </div>
+            </Modal>
+          </div>
         </div>
       </div>
       <div className="header__left">

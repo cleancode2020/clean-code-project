@@ -7,25 +7,27 @@ function Vote(props) {
   let zVoteDown = 0;
   itemValue.map((item) => {
     if (item > 0) {
-      return zVoteUp++;
+      zVoteUp++;
     } else {
-      return zVoteDown++;
+      zVoteDown++;
     }
   });
   return (
     <div className="vote__div">
       <div className="vote__wrapper" onClick={props.voteUpHandleChange}>
-        <span aria-label="Thumbs Up" role="img">
+       {/* <span aria-label="Thumbs Up" role="img">
           👍
-        </span>
+        </span>*/} 
+        <i class="far fa-thumbs-up"></i>
         <span>{zVoteUp}</span>
       </div>
 
       <div className="vote__wrapper" onClick={props.voteDownHandleChange}>
         <span>{zVoteDown}</span>
-        <span aria-label="Thumbs Down" role="img">
+       {/* <span aria-label="Thumbs Down" role="img">
           👎
-        </span>
+        </span>*/} 
+        <i class="far fa-thumbs-down"></i>
       </div>
     </div>
   );
