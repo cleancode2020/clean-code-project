@@ -7,9 +7,9 @@ function Vote(props) {
   let zVoteDown = 0;
   itemValue.map((item) => {
     if (item > 0) {
-      zVoteUp++;
+      return zVoteUp++;
     } else {
-      zVoteDown++;
+      return zVoteDown++;
     }
   });
   return (
