@@ -19,6 +19,10 @@ class App extends React.Component {
       modalIsOpen: false,
       user: null,
       allPostsObject: "",
+      searchInput: "",
+      result: {},
+      loading: false,
+      message: "",
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -58,6 +62,29 @@ class App extends React.Component {
       localStorage.setItem("bkzToken", "");
     }
   }
+  // SEARCHBAR
+
+  inputHandleChange = (event) => {
+    this.setState({
+      searchInput: event.target.value,
+      loading: true,
+      message: "",
+    });
+  };
+
+  onBtnSubmit = () => {
+    const searchArray = Object.values(this.state.allPostsObject);
+    // console.log(this.props.allPostsObject);
+    console.log(searchArray);
+    // debugger;
+    searchArray.map((item) => {
+      if (item.article === this.state.searchInput) {
+        console.log(JSON.stringify(item));
+        // return JSON.stringify(item);
+      }
+      return searchArray;
+    });
+  };
 
   // POST FIREBASE
   async getFirebase() {
@@ -159,6 +186,12 @@ class App extends React.Component {
             setUser={this.setUser}
             user={this.state.user}
             allPostsObject={this.state.allPostsObject}
+            // result={this.state.result}
+            // loading={this.state.loading}
+            // message={this.state.message}
+            searchInput={this.state.searchInput}
+            inputHandleChange = {this.inputHandleChange}
+            onBtnSubmit = {this.onBtnSubmit}
           />
           <Switch>
             {/* MAIN */}

@@ -8,13 +8,13 @@ import LogOut from "../../authentification/LogOut";
 import Searchbar from "./Searchbar";
 
 function Header(props) {
-  const [isInfoActive, setIsInfoActive] = React.useState(false)
+  const [isInfoActive, setIsInfoActive] = React.useState(false);
   const openInfoModal = () => {
     setIsInfoActive(true);
-  }
+  };
   const closeInfoModal = () => {
     setIsInfoActive(false);
-  }
+  };
   return (
     <header className="Header">
       {/* HAMBURGER LOGO */}
@@ -48,7 +48,15 @@ function Header(props) {
         </ul>
       </nav>
       {/* SEARCH BAR */}
-      <Searchbar allPostsObject={props.allPostsObject} />
+      <Searchbar
+        // allPostsObject={props.allPostsObject}
+        // result={props.result}
+        // loading={props.loading}
+        // message={props.message}
+        searchInput={props.searchInput}
+        inputHandleChange={props.inputHandleChange}
+        onBtnSubmit={props.onBtnSubmit}
+      />
 
       <div className="header__left">
         {/* HEADER DIV RIGHT */}

@@ -7,44 +7,11 @@
 
 /* //////////////////  */
 
-<<<<<<< HEAD
-.effect__imgs {
-  display: flex;
-  flex-direction: column;
-}
-
-.figcaption {
-  height: 280px;
-  width: 300px;
-  margin: 100px auto;
-}
-
-.team__container img {
-  width: 120px;
-  height: 120px;
-  position: relative;
-  display: inline-block;
-  opacity: 1;
-}
-
-
-.description {
-  margin: 10px;
-}
-
-/* Common style */
-
-.links a {
-  display: flex;
-  flex-direction: column;
-  margin: 4px;
-=======
 /* MAIN DIV */
 .main__about {
 	min-height: 100vh;
 	margin: auto;
 	display: inline-block;
->>>>>>> dev
 }
 
 /* SUB DIV */
