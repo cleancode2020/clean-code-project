@@ -44,7 +44,7 @@ class Categories extends React.Component {
 					<li><i className="ul__icons fab fa-java"></i>Java</li>
 					<li><i className="ul__icons fab fa-python"></i>Python</li>
 					<li><i className="ul__icons fab fa-rust"></i>Rust</li>
-					<li className="li__icon"><img className="ul__icons" width="40" src="https://img.icons8.com/ios-filled/50/000000/c-plus-plus-logo.png"/><p>C++</p></li>
+					<li className="li__icon"><img alt="c++ icon" className="ul__icons" width="40" src="https://img.icons8.com/ios-filled/50/000000/c-plus-plus-logo.png"/><p>C++</p></li>
 				</ul>
 			</main>
 		);
