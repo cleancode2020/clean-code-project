@@ -26,6 +26,7 @@ class App extends React.Component {
     this.fetchUserFirebase = this.fetchUserFirebase.bind(this);
     this.setUser = this.setUser.bind(this);
     this.categoryChose = this.categoryChose.bind(this);
+    this.subCategoryChose = this.subCategoryChose.bind(this);
   }
   // FOCUS IN MODAL
   componentDidMount() {
@@ -154,7 +155,27 @@ class App extends React.Component {
     let postsFiltred = [];
     for (let post of postsArr) {
       console.log(post);
-      if (post[1].categories === item.name) {
+      if (post[1].categories === item) {
+        postsFiltred.push(post);
+      }
+    }
+    let postsFiltredObj = Object.fromEntries(postsFiltred);
+    this.setState({
+      allPostsObject: postsFiltredObj,
+    });
+    // let postFilter = allPosts.map((post) => console.log(post));
+  }
+
+  async subCategoryChose(item) {
+    await this.getFirebase();
+    const postsObj = this.state.allPostsObject;
+    const postsArr = Object.entries(postsObj);
+    let subcategorieToLowerCase = item.toLowerCase();
+    console.log(subcategorieToLowerCase);
+    let postsFiltred = [];
+    for (let post of postsArr) {
+      console.log(post);
+      if (post[1].subcategories === subcategorieToLowerCase) {
         postsFiltred.push(post);
       }
     }
@@ -188,6 +209,7 @@ class App extends React.Component {
                 getFirebase={this.getFirebase}
                 allPostsObject={this.state.allPostsObject}
                 categoryChose={this.categoryChose}
+                subCategoryChose={this.subCategoryChose}
               />
             </Route>
 

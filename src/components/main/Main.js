@@ -10,6 +10,7 @@ function Main(props) {
       <Categories
         firebase={props.firebase}
         categoryChose={props.categoryChose}
+        subCategoryChose={props.subCategoryChose}
       />
 
       {/* POSTS */}

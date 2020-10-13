@@ -1,40 +1,75 @@
 /* MAIN CATEGORIES */
-.main__categories {
+.categories__main {
   width: 20%;
   display: flex;
   flex-direction: column;
+  /* background-color: #ebf8ff; */
+  background-color: #b3ddf0;
 }
 
 @media only screen and (max-width: 600px) {
-  .main__categories {
+  .categories__main {
     width: 100%;
   }
 }
 
 /* H2 TITLE */
-.h2__categories {
-  text-align: center;
+.categories__h2 {
+  text-align: left;
   font-weight: bold;
-  font-size: 22px;
-  margin: 50px 0;
+  font-size: 24px;
+  margin: 60px 0 0 50px;
 }
 
-.ul__categories {
+.categories__ul {
   /* border: solid 1px black; */
 }
 
-.ul__categories li {
-  border: solid 1px #828282;
-  border-radius: 10px;
-  margin: 30px 20px;
-  padding: 30px;
+.categories__li {
+  /* border: solid 1px #828282; */
+  /* border-radius: 10px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid 0.5px black;
+  margin: 20px 20px;
+  padding: 20px;
   font-weight: bold;
   word-break: break-all;
+  cursor: pointer;
 }
 
-.ul__categories li:hover {
-  background-color: #828282;
+.categories__info {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
+
+.subcategory__name {
+  margin: 20px 20px;
+  padding: 5px;
+  opacity: 0.8;
+  margin-left: 70px;
+  cursor: pointer;
+  border-bottom: solid 0.5px gray;
+}
+
+.ul__icons {
+  font-size: 1.5rem;
+  padding: 6px;
+}
+
+.li__icon {
+  display: flex;
+}
+
+.li__icon p {
+  margin-top: 1rem;
+}
+
+/* .ul__categories li:hover {
+	color: #00b8ff;
+} */
 
 .form__test__cat {
   border: solid 1px black;
@@ -43,10 +78,55 @@
   margin: 30px 0;
   padding: 30px;
 }
-.subcategory {
+
+.categoryC {
   display: none;
 }
-.subcategoryOpen {
+.categoryJs {
+  display: none;
+}
+.categoryJava {
+  display: none;
+}
+.categoryPython {
+  display: none;
+}
+.categoryRust {
+  display: none;
+}
+
+.categoryCOpen {
   display: block;
-  border: red 1px solid;
+}
+.categoryJsOpen {
+  display: block;
+}
+.categoryJavaOpen {
+  display: block;
+}
+.categoryPythonOpen {
+  display: block;
+}
+.categoryRustOpen {
+  display: block;
+}
+
+.button__arrow {
+  width: 20px;
+  height: 20px;
+  background-color: #00b8ff;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 3px 4px;
+  text-decoration: none;
+}
+.button__arrow:hover {
+  background-color: #1e62d0;
+}
+.button__arrow:active {
+  position: relative;
+  top: 1px;
 }

@@ -30,33 +30,37 @@ const Userpost = (props) => {
               onClick={props.voteUpHandleChange}
             >
               <span>{props.like}</span>
-              <span aria-label="Thumbs Up" role="img">
+             {/*  <span aria-label="Thumbs Up" role="img">
                 👍
-              </span>
+              </span>*/}
+              <i class="fas fa-thumbs-up"></i>
             </button>
             <button
               className="count__button"
               onClick={props.voteDownHandleChange}
             >
               <span>{props.dislike}</span>
-              <span aria-label="Thumbs Down" role="img">
+              {/* <span aria-label="Thumbs Down" role="img">
                 👎
-              </span>
+              </span>*/}
+              <i class="fas fa-thumbs-down"></i>
             </button>
           </div>
         ) : (
           <div className="vote__container">
             <button className="count__button" onClick={props.voteSubtracted}>
               <span>{props.like}</span>
-              <span aria-label="Thumbs Up" role="img">
+               {/*<span aria-label="Thumbs Up" role="img">
                 👍
-              </span>
+              </span>*/}
+              <i class="fas fa-thumbs-up"></i>
             </button>
             <button className="count__button" onClick={props.voteSubtracted}>
               <span>{props.dislike}</span>
-              <span aria-label="Thumbs Down" role="img">
+              {/*<span aria-label="Thumbs Down" role="img">
                 👎
-              </span>
+              </span>*/}
+              <i class="fas fa-thumbs-down"></i>
             </button>
           </div>
         )}
@@ -65,6 +69,7 @@ const Userpost = (props) => {
         <p className="posts__art">{props.currentPost[1]}</p>
 
         {/* CODEBLOCK */}
+        <h4 className="posts__h4">Code:</h4>
         <span className="codeblock__span">
           <Codeblock currentPost={props.currentPost} />
         </span>
@@ -87,3 +92,4 @@ const Userpost = (props) => {
 };
 
 export default Userpost;
+
