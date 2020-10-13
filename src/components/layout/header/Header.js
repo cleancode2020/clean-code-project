@@ -19,14 +19,15 @@ function Header(props) {
 	return (
 		<header className="Header">
 			{/* HAMBURGER LOGO */}
-			<ul className="nav__logo">
+			{/* <ul className="nav__logo">
 				<li className="nav__li">
 					<Link className="nav__link" to="/">
 						<img className="header__img" src={logo} alt="logo" />
 						<h1 className="header__h1">Cleancode</h1>
 					</Link>
 				</li>
-			</ul>
+				
+			</ul> */}
 			{/* HEADER NAV LEFT */}
 			<nav className="nav__tag">
 				<input type="checkbox" id="menuCheckbox" />
@@ -36,6 +37,12 @@ function Header(props) {
 					<div></div>
 				</label>
 				<ul className="nav__ul">
+					<li className="nav__li">
+						<Link className="nav__link" to="/">
+							<img className="header__img" src={logo} alt="logo" />
+							<h1 className="header__h1">Cleancode</h1>
+						</Link>
+					</li>
 					<li className="nav__li">
 						<Link className="nav__link" to="/contact">
 							Contact
@@ -57,7 +64,7 @@ function Header(props) {
 						name="search"
 						placeholder="Search"
 					/>
-					<button type="submit">
+					<button className="info__button" type="submit">
 						<i className="nav__icon fas fa-search"></i>
 					</button>
 					{/* HEADER INFO */}

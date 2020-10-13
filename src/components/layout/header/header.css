@@ -1,6 +1,6 @@
 /* HEADER  */
 .Header {
-	padding: 3px 5px;
+	padding: 0px;
 	/* font-size: 15px; */
 	display: flex;
 	align-items: center;
@@ -48,14 +48,14 @@
 	color: #dad6d6;
 }
 .nav__link:hover {
-	color: white;
+	color: #dad6d6;
 	text-decoration: underline;
 }
 
 /* HEADER IMG */
 .header__img {
 	width: 26px;
-	margin: 10px;
+	margin: 0 10px;
 }
 
 /* .header__img:hover {
@@ -66,13 +66,13 @@
 /* HEADER H1 */
 .header__h1 {
 	color: #00b8ff;
-	font-size: 20px;
+	font-size: 22px;
 	/* font-weight: bold; */
 	/* font-family: "Tomorrow", sans-serif; */
 }
 
 .header__h1:hover {
-	color: white;
+	color: #dad6d6;
 }
 
 /* HEADER LI */
@@ -105,6 +105,7 @@
 
 .nav__input {
 	width: 100%;
+	border: none;
 }
 
 /* .nav__search input {
@@ -112,8 +113,15 @@
   padding: 0 1rem;
 } */
 
+.info__button {
+	background-color: #dad6d6;
+	border: none;
+}
+
 .nav__icon {
 	color: black;
+	/* background-color: #dad6d6; */
+	/* border: none; */
 	font-size: 1em;
 }
 
@@ -138,7 +146,7 @@
 /* NAV STROKE */
 .nav__stroke {
 	height: 40px;
-	border-right: 1px solid rgb(248, 245, 245);
+	border-right: 1px solid #dad6d6;
 }
 
 @media screen and (max-width: 786px) {
@@ -434,7 +442,7 @@
 	display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
 	/* .header__left {
     margin-right: 80px;
   } */
