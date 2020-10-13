@@ -226,7 +226,7 @@
 }
 /* HEADER  */
 .Header {
-	padding: 5px;
+	padding: 3px 5px;
 	display: flex;
 	align-items: center;
 	background: #333333;
