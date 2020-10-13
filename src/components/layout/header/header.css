@@ -54,7 +54,7 @@
 
 /* HEADER IMG */
 .header__img {
-	width: 26px;
+	width: 22px;
 	margin: 0 10px;
 }
 
@@ -225,9 +225,8 @@
 		width: 25px;
 	}
 	.header__img {
-		width: 40px;
-		height: 40px;
-		margin: 10px;
+		width: 22px;
+		margin: 0 10px;
 	}
 	.burger__ulabel div:last-child {
 		width: 15px;
@@ -257,7 +256,7 @@
 }
 /* HEADER  */
 .Header {
-	padding: 3px 5px;
+	padding: 0px 5px;
 	/* font-size: 15px; */
 	display: flex;
 	align-items: center;
