@@ -1,7 +1,6 @@
 /* HEADER  */
 .Header {
 	padding: 0px;
-	/* font-size: 15px; */
 	display: flex;
 	align-items: center;
 	background: #333333;
@@ -58,27 +57,15 @@
 	margin: 0 10px;
 }
 
-/* .header__img:hover {
-  width: 20px;
-  margin: 0px;
-} */
-
 /* HEADER H1 */
 .header__h1 {
 	color: #00b8ff;
 	font-size: 22px;
-	/* font-weight: bold; */
-	/* font-family: "Tomorrow", sans-serif; */
 }
 
 .header__h1:hover {
 	color: #dad6d6;
 }
-
-/* HEADER LI */
-/* .nav__li {
-    border: solid 1px red;
-} */
 
 /* HEADER DIV LEFT  */
 .header__left {
@@ -90,8 +77,6 @@
 
 /* SEARCH BAR */
 .nav__search {
-	/* max-width: 30rem;
-  margin: 0 auto; */
 	width: 25%;
 	position: absolute;
 	transform: translate(150%);
@@ -108,11 +93,6 @@
 	border: none;
 }
 
-/* .nav__search input {
-  width: 25rem;
-  padding: 0 1rem;
-} */
-
 .info__button {
 	background-color: #dad6d6;
 	border: none;
@@ -120,8 +100,7 @@
 
 .nav__icon {
 	color: black;
-	/* background-color: #dad6d6; */
-	/* border: none; */
+
 	font-size: 1em;
 }
 
@@ -161,10 +140,6 @@
 }
 
 @media screen and (max-width: 768px) {
-	/* .header__left {
-    margin-right: 80px;
-  } */
-
 	.nav__tag .nav__ul {
 		display: flex;
 		flex-direction: column;
@@ -183,10 +158,6 @@
 		padding: 10px;
 		margin: 20px 40px;
 	}
-
-	/* .nav__tag .nav__li:hover {
-    background-color: rgb(121, 115, 115);
-  } */
 
 	#menuCheckbox:checked ~ .nav__ul {
 		display: block;
@@ -237,7 +208,6 @@
 	}
 
 	#menuCheckbox:checked + label div {
-		/* margin-top: 12px; */
 		margin-left: 12px;
 	}
 	#menuCheckbox:checked + label div:nth-child(1) {
@@ -257,7 +227,6 @@
 /* HEADER  */
 .Header {
 	padding: 0px 5px;
-	/* font-size: 15px; */
 	display: flex;
 	align-items: center;
 	background: #333333;
@@ -293,35 +262,6 @@
 		margin: 20px;
 	}
 }
-
-/* HEADER IMG */
-/* .header__img {
-	width: 40px;
-	height: 40px;
-	margin: 10px;
-} */
-
-/* .header__img:hover {
-  width: 20px;
-  margin: 0px;
-} */
-
-/* HEADER H1 */
-/* .header__h1 {
-	color: #00b8ff;
-	font-size: 24px;
-	font-weight: bold;
-	font-family: "Tomorrow", sans-serif;
-}
-
-.header__h1:hover {
-	color: white;
-} */
-
-/* HEADER LI */
-/* .nav__li {
-    border: solid 1px red;
-} */
 
 /* HEADER DIV LEFT  */
 .header__left {
@@ -442,10 +382,6 @@
 }
 
 @media screen and (max-width: 990px) {
-	/* .header__left {
-    margin-right: 80px;
-  } */
-
 	.nav__tag .nav__ul {
 		display: flex;
 		flex-direction: column;
@@ -464,10 +400,6 @@
 		padding: 10px;
 		margin: 20px 40px;
 	}
-
-	/* .nav__tag .nav__li:hover {
-    background-color: rgb(121, 115, 115);
-  } */
 
 	#menuCheckbox:checked ~ .nav__ul {
 		display: block;
@@ -515,7 +447,6 @@
 	}
 
 	#menuCheckbox:checked + label div {
-		/* margin-top: 12px; */
 		margin-left: 12px;
 	}
 	#menuCheckbox:checked + label div:nth-child(1) {
