@@ -185,14 +185,13 @@ class App extends React.Component {
       .catch((error) => console.log("error:", error));
   }
 
+  // CATEGORIES FILTER
   async categoryChose(item) {
     await this.getFirebase();
     const postsObj = this.state.allPostsObject;
     const postsArr = Object.entries(postsObj);
-
     let postsFiltred = [];
     for (let post of postsArr) {
-      console.log(post);
       if (post[1].categories === item) {
         postsFiltred.push(post);
       }
@@ -201,18 +200,16 @@ class App extends React.Component {
     this.setState({
       allPostsObject: postsFiltredObj,
     });
-    // let postFilter = allPosts.map((post) => console.log(post));
   }
 
+  // SUBCATEGORIES FILTER
   async subCategoryChose(item) {
     await this.getFirebase();
     const postsObj = this.state.allPostsObject;
     const postsArr = Object.entries(postsObj);
     let subcategorieToLowerCase = item.toLowerCase();
-    console.log(subcategorieToLowerCase);
     let postsFiltred = [];
     for (let post of postsArr) {
-      console.log(post);
       if (post[1].subcategories === subcategorieToLowerCase) {
         postsFiltred.push(post);
       }
@@ -221,11 +218,9 @@ class App extends React.Component {
     this.setState({
       allPostsObject: postsFiltredObj,
     });
-    // let postFilter = allPosts.map((post) => console.log(post));
   }
 
   render() {
-    // console.log("this.state.allPostsObject render", this.state.allPostsObject);
     return (
       <BrowserRouter>
         <div className="App">

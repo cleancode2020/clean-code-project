@@ -1,6 +1,5 @@
 import React from "react";
 import "./categories.css";
-import firebase from "../../../constants/Firebase";
 
 class Categories extends React.Component {
   constructor(props) {
@@ -73,39 +72,14 @@ class Categories extends React.Component {
         "TurboGears",
       ],
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.fetchFirebase = this.fetchFirebase.bind(this);
   }
 
-  // HANDLE CHANGE BUTTON ONCLICK
-  handleChange() {
-    this.fetchFirebase();
-  }
-
-  // FETCH FIREBASE
-  async fetchFirebase() {
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
-    await fetch(`${firebase.databaseURL}/.json`, requestOptions)
-      // PARSE JSON HTTP RESPONSE TO TRANSFORM INTO JS OBJECT
-      .then((response) => response.json())
-      .then((result) => {
-        // FIREBASE RESULT		console.log("gerne");
-        console.log("FIREBASE RESULT");
-        console.log(result.categories);
-      })
-      .catch((error) => console.log("error:", error));
-  }
+  //UPDATE CLASSNAME TO OPEN SUBCATEGORIES
   updateClass(item) {
     let arrowCurrent = item + "Arrow";
-    console.log(this.state[item]);
     let nameToUpperCase = item[0].toUpperCase() + item.slice(1);
     let className = this.state.className;
     let classNameCurrent = className + nameToUpperCase + "Open";
-    console.log(classNameCurrent.slice(0, -4));
     if (this.state[item] === classNameCurrent) {
       this.setState({
         [item]: className + nameToUpperCase,
