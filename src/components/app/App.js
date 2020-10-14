@@ -76,15 +76,12 @@ class App extends React.Component {
     });
   };
 
-  onBtnSubmit = () => {
+  onBtnSubmit = async () => {
+    await this.getFirebase();
     const searchObject = Object.entries(this.state.allPostsObject);
-    // console.log(this.state.allPostsObject);
-    // console.log(searchObject)
-
     let searchResultObject = {};
 
     for (const [key, value] of searchObject) {
-      console.log(value);
       if (
         value.article.includes(this.state.searchInput) ||
         value.title.includes(this.state.searchInput)
@@ -100,7 +97,6 @@ class App extends React.Component {
         console.log(searchResultObject);
       }
     );
-    // console.log(searchResultObject)
   };
 
   // POST FIREBASE
@@ -243,9 +239,6 @@ class App extends React.Component {
             setUser={this.setUser}
             user={this.state.user}
             allPostsObject={this.state.allPostsObject}
-            // result={this.state.result}
-            // loading={this.state.loading}
-            // message={this.state.message}
             searchInput={this.state.searchInput}
             inputHandleChange={this.inputHandleChange}
             onBtnSubmit={this.onBtnSubmit}
