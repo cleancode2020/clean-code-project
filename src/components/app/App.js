@@ -29,6 +29,8 @@ class App extends React.Component {
     this.getFirebase = this.getFirebase.bind(this);
     this.fetchUserFirebase = this.fetchUserFirebase.bind(this);
     this.setUser = this.setUser.bind(this);
+    this.inputHandleChange = this.inputHandleChange.bind(this);
+    this.onBtnSubmit = this.onBtnSubmit.bind(this);
   }
   // FOCUS IN MODAL
   componentDidMount() {
@@ -62,28 +64,41 @@ class App extends React.Component {
       localStorage.setItem("bkzToken", "");
     }
   }
-  // SEARCHBAR
 
+  // SEARCHBAR
   inputHandleChange = (event) => {
     this.setState({
       searchInput: event.target.value,
-      loading: true,
-      message: "",
+      // loading: true,
+      // message: "",
     });
   };
 
   onBtnSubmit = () => {
-    const searchArray = Object.values(this.state.allPostsObject);
-    // console.log(this.props.allPostsObject);
-    console.log(searchArray);
-    // debugger;
-    searchArray.map((item) => {
-      if (item.article === this.state.searchInput) {
-        console.log(JSON.stringify(item));
-        // return JSON.stringify(item);
+    const searchObject = Object.entries(this.state.allPostsObject);
+    // console.log(this.state.allPostsObject);
+    // console.log(searchObject)
+
+    let searchResultObject = {};
+
+    for (const [key, value] of searchObject) {
+      console.log(value);
+      if (
+        value.article.includes(this.state.searchInput) ||
+        value.title.includes(this.state.searchInput)
+      ) {
+        searchResultObject[key] = value;
       }
-      return searchArray;
-    });
+    }
+    this.setState(
+      {
+        allPostsObject: searchResultObject,
+      },
+      () => {
+        console.log(searchResultObject);
+      }
+    );
+    // console.log(searchResultObject)
   };
 
   // POST FIREBASE
@@ -173,6 +188,7 @@ class App extends React.Component {
   }
 
   render() {
+    // console.log("this.state.allPostsObject render", this.state.allPostsObject);
     return (
       <BrowserRouter>
         <div className="App">
@@ -190,8 +206,8 @@ class App extends React.Component {
             // loading={this.state.loading}
             // message={this.state.message}
             searchInput={this.state.searchInput}
-            inputHandleChange = {this.inputHandleChange}
-            onBtnSubmit = {this.onBtnSubmit}
+            inputHandleChange={this.inputHandleChange}
+            onBtnSubmit={this.onBtnSubmit}
           />
           <Switch>
             {/* MAIN */}

@@ -4,6 +4,7 @@ import Categories from "./categories/categories";
 import Posts from "./posts/Posts";
 
 function Main(props) {
+	// console.log('props.allPostsObject main', props.allPostsObject)
 	return (
 		<main className="Main">
 			{/* CATEGORIES */}
