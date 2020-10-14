@@ -31,6 +31,8 @@ class App extends React.Component {
     this.setUser = this.setUser.bind(this);
     this.inputHandleChange = this.inputHandleChange.bind(this);
     this.onBtnSubmit = this.onBtnSubmit.bind(this);
+    this.categoryChose = this.categoryChose.bind(this);
+    this.subCategoryChose = this.subCategoryChose.bind(this);
   }
   // FOCUS IN MODAL
   componentDidMount() {
@@ -187,6 +189,45 @@ class App extends React.Component {
       .catch((error) => console.log("error:", error));
   }
 
+  async categoryChose(item) {
+    await this.getFirebase();
+    const postsObj = this.state.allPostsObject;
+    const postsArr = Object.entries(postsObj);
+
+    let postsFiltred = [];
+    for (let post of postsArr) {
+      console.log(post);
+      if (post[1].categories === item) {
+        postsFiltred.push(post);
+      }
+    }
+    let postsFiltredObj = Object.fromEntries(postsFiltred);
+    this.setState({
+      allPostsObject: postsFiltredObj,
+    });
+    // let postFilter = allPosts.map((post) => console.log(post));
+  }
+
+  async subCategoryChose(item) {
+    await this.getFirebase();
+    const postsObj = this.state.allPostsObject;
+    const postsArr = Object.entries(postsObj);
+    let subcategorieToLowerCase = item.toLowerCase();
+    console.log(subcategorieToLowerCase);
+    let postsFiltred = [];
+    for (let post of postsArr) {
+      console.log(post);
+      if (post[1].subcategories === subcategorieToLowerCase) {
+        postsFiltred.push(post);
+      }
+    }
+    let postsFiltredObj = Object.fromEntries(postsFiltred);
+    this.setState({
+      allPostsObject: postsFiltredObj,
+    });
+    // let postFilter = allPosts.map((post) => console.log(post));
+  }
+
   render() {
     // console.log("this.state.allPostsObject render", this.state.allPostsObject);
     return (
@@ -217,6 +258,8 @@ class App extends React.Component {
                 user={this.state.user}
                 getFirebase={this.getFirebase}
                 allPostsObject={this.state.allPostsObject}
+                categoryChose={this.categoryChose}
+                subCategoryChose={this.subCategoryChose}
               />
             </Route>
 
