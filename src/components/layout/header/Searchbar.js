@@ -10,6 +10,7 @@ function Searchbar(props) {
         placeholder="Search"
         value={props.searchInput}
         onChange={props.inputHandleChange}
+        onKeyUp={props.onBtnSubmit}
       />
       <button type="submit" onClick={props.onBtnSubmit}>
         <i className="nav__icon fas fa-search"></i>
