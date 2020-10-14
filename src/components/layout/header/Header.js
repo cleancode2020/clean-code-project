@@ -7,7 +7,7 @@ import SignUp from "../../authentification/SignUp";
 import LogOut from "../../authentification/LogOut";
 import Searchbar from "./Searchbar";
 import Modal from "react-modal";
-// import imgInfo from "../../../assets/info.png"
+import imgInfo from "../../../assets/info.png";
 
 function Header(props) {
   const [isInfoActive, setIsInfoActive] = React.useState(false);
@@ -20,14 +20,15 @@ function Header(props) {
   return (
     <header className="Header">
       {/* HAMBURGER LOGO */}
-      <ul className="nav__logo">
-        <li className="nav__li">
-          <Link className="nav__link" to="/">
-            <img className="header__img" src={logo} alt="logo" />
-            <h1 className="header__h1">cleancode</h1>
-          </Link>
-        </li>
-      </ul>
+      {/* <ul className="nav__logo">
+				<li className="nav__li">
+					<Link className="nav__link" to="/">
+						<img className="header__img" src={logo} alt="logo" />
+						<h1 className="header__h1">Cleancode</h1>
+					</Link>
+				</li>
+				
+			</ul> */}
       {/* HEADER NAV LEFT */}
       <nav className="nav__tag">
         <input type="checkbox" id="menuCheckbox" />
@@ -37,6 +38,12 @@ function Header(props) {
           <div></div>
         </label>
         <ul className="nav__ul">
+          <li className="nav__li">
+            <Link className="nav__link" to="/">
+              <img className="header__img" src={logo} alt="logo" />
+              <h1 className="header__h1">Cleancode</h1>
+            </Link>
+          </li>
           <li className="nav__li">
             <Link className="nav__link" to="/contact">
               Contact
@@ -51,14 +58,39 @@ function Header(props) {
       </nav>
       {/* SEARCH BAR */}
       <Searchbar
-        // allPostsObject={props.allPostsObject}
-        // result={props.result}
-        // loading={props.loading}
-        // message={props.message}
         searchInput={props.searchInput}
         inputHandleChange={props.inputHandleChange}
         onBtnSubmit={props.onBtnSubmit}
       />
+
+      {/* HEADER INFO */}
+
+      <div className="header__info">
+        <span onClick={() => openInfoModal()}>
+          <i className="far fa-question-circle"></i>
+        </span>
+        <Modal
+          className="modal__info"
+          isOpen={isInfoActive}
+          onRequestClose={closeInfoModal}
+        >
+          <button className="close__info" onClick={closeInfoModal}>
+            x
+          </button>
+          <div className="info__text">
+            <p>
+              Cleancode is a web platform to exchange about clean coding and
+              everything around it.
+            </p>
+            <p>
+              Register, post working code and ask anything you want about clean
+              coding, conventions, naming, refactoring or related topic. Or
+              respond to existing posts and exchange with the community.
+            </p>
+            <img className="info__imgcodes" src={imgInfo} alt="info" />
+          </div>
+        </Modal>
+      </div>
 
       <div className="header__left">
         {/* HEADER DIV RIGHT */}

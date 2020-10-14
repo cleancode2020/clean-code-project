@@ -40,11 +40,27 @@ class Categories extends React.Component {
 				<h2 className="h2__categories">Categories</h2>
 
 				<ul className="ul__categories">
-					<li><i className="ul__icons fab fa-js"></i>JavaScript</li>
-					<li><i className="ul__icons fab fa-java"></i>Java</li>
-					<li><i className="ul__icons fab fa-python"></i>Python</li>
-					<li><i className="ul__icons fab fa-rust"></i>Rust</li>
-					<li className="li__icon"><img alt="c++ icon" className="ul__icons" width="40" src="https://img.icons8.com/ios-filled/50/000000/c-plus-plus-logo.png"/><p>C++</p></li>
+					<li>
+						<i className="ul__icons fab fa-js"></i>JavaScript
+					</li>
+					<li>
+						<i className="ul__icons fab fa-java"></i>Java
+					</li>
+					<li>
+						<i className="ul__icons fab fa-python"></i>Python
+					</li>
+					<li>
+						<i className="ul__icons fab fa-rust"></i>Rust
+					</li>
+					<li className="li__icon">
+						<img
+							alt="c++ icon"
+							className="ul__icons"
+							width="40"
+							src="https://img.icons8.com/ios-filled/50/000000/c-plus-plus-logo.png"
+						/>
+						<p>C++</p>
+					</li>
 				</ul>
 			</main>
 		);
