@@ -1,7 +1,7 @@
 /* CONTAINER */
 .container {
 	border: solid 1px #333333;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	margin: 100px auto;
 	width: 60%;
 	padding: 20px;
@@ -16,7 +16,7 @@
 
 /* LEGEND */
 .contact__legend {
-	color: blue;
+	color: #00b8ff;
 	font-size: 22px;
 	font-weight: bold;
 	text-align: center;
@@ -65,7 +65,7 @@
 	background-color: #333333;
 	border: solid 1px #333333;
 	padding: 20px 30px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	/* margin: auto; */
 	width: 100%;
 	cursor: pointer;
@@ -84,7 +84,7 @@
 
 /* EMAIL LINK */
 .email__link {
-	color: blue;
+	color: #00b8ff;
 	text-decoration: none;
 }
 

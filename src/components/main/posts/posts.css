@@ -33,24 +33,24 @@
 
 /* READ LINK */
 .read__link {
-	border: solid 1px blue;
+	border: solid 1px #00b8ff;
 	background-color: white;
-	color: blue;
+	color: #00b8ff;
 	font-weight: bold;
 	text-decoration: none;
 	padding: 10px;
 }
 
 .read__link:hover {
-	background-color: blue;
+	background-color: #00b8ff;
 	color: white;
 }
 
 /* READ LINK */
 .postaction__link {
-	border: solid 1px blue;
-	background-color: blue;
-	border-radius: 5px;
+	border: solid 1px #00b8ff;
+	background-color: #00b8ff;
+	/* border-radius: 5px; */
 	color: white;
 	font-weight: bold;
 	text-decoration: none;
@@ -59,5 +59,5 @@
 
 .postaction__link:hover {
 	background-color: white;
-	color: blue;
+	color: #00b8ff;
 }

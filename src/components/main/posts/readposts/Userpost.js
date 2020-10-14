@@ -69,7 +69,6 @@ const Userpost = (props) => {
         <p className="posts__art">{props.currentPost[1]}</p>
 
         {/* CODEBLOCK */}
-        <h4 className="posts__h4">Code:</h4>
         <span className="codeblock__span">
           <Codeblock currentPost={props.currentPost} />
         </span>
