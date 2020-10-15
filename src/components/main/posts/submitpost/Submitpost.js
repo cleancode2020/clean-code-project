@@ -9,7 +9,7 @@ class Submitpost extends React.Component {
       displayName: "",
       title: "",
       categories: ["js", "c++", "python", "rust"],
-      subcategories: ["react", "vue.js", "angular"],
+      subcategories: [],
       currentCategory: "",
       currentSubCategory: "",
       article: "",
@@ -37,6 +37,79 @@ class Submitpost extends React.Component {
   }
 
   categoriesHandleChange(e) {
+    if (e.target.value === "js") {
+      this.setState({
+        currentCategory: e.target.value,
+        subcategories: [
+          "react",
+          "angular",
+          "vue.js",
+          "ember.js",
+          "node.js",
+          "polymer",
+          "aurelia",
+          "backbone.js",
+          "mithril",
+          "meteor",
+        ],
+      });
+    } else if (e.target.value === "java") {
+      this.setState({
+        currentCategory: e.target.value,
+        subcategories: [
+          "spring",
+          "hibernate",
+          "struts",
+          "google web toolkit",
+          "javaServer Faces",
+          "grails",
+          "vaadin",
+          "blade",
+          "dropwizard",
+          "play",
+        ],
+      });
+    } else if (e.target.value === "c++") {
+      this.setState({
+        currentCategory: e.target.value,
+        subcategories: [
+          "kigs framework",
+          "libPhenom",
+          "openFrameworks",
+          "reason",
+          "rOOT",
+          "ultimate++",
+        ],
+      });
+    } else if (e.target.value === "python") {
+      this.setState({
+        currentCategory: e.target.value,
+        subcategories: [
+          "django",
+          "flask",
+          "tornado",
+          "web2py",
+          "bottle",
+          "cherryPy",
+          "falcon ",
+          "pyramid",
+          "hug ",
+          "turboGears",
+        ],
+      });
+    } else if (e.target.value === "rust") {
+      this.setState({
+        currentCategory: e.target.value,
+        subcategories: [
+          "Actix",
+          "Rocket",
+          "wrap",
+          "Gotham",
+          "Nickle",
+          "pencil",
+        ],
+      });
+    }
     this.setState({ currentCategory: e.target.value });
   }
 
@@ -138,6 +211,7 @@ class Submitpost extends React.Component {
 					</option> */}
           <option value="none">None</option>
           <option value="js">JS</option>
+          <option value="java">Java</option>
           <option value="python">Python</option>
           <option value="c++">C++</option>
           <option value="rust">Rust</option>
@@ -157,9 +231,13 @@ class Submitpost extends React.Component {
 						Choose:
 					</option> */}
           <option value="none">None</option>
-          <option value="react">React</option>
-          <option value="vue.js">Vue.js</option>
-          <option value="angular">Angular</option>
+          {this.state.subcategories.length > 1
+            ? this.state.subcategories.map((item, index) => (
+                <option value={item} key={index}>
+                  {item}
+                </option>
+              ))
+            : null}
         </select>
 
         {/* ARTICLE */}
