@@ -86,7 +86,7 @@ class About extends React.Component {
 							<h4 className="h4__about">Victoria</h4>
 							<a
 								className="social__link"
-								href="https://www.linkedin.com/"
+								href="https://www.linkedin.com/in/victoria15/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -94,7 +94,7 @@ class About extends React.Component {
 							</a>
 							<a
 								className="social__link"
-								href="https://github.com/"
+								href="https://github.com/victoria2266"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -110,7 +110,7 @@ class About extends React.Component {
 							<h4 className="h4__about">Vadim</h4>
 							<a
 								className="social__link"
-								href="https://www.linkedin.com/"
+								href="https://www.linkedin.com/in/vadim-eremia-6a846510a/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -118,7 +118,7 @@ class About extends React.Component {
 							</a>
 							<a
 								className="social__link"
-								href="https://github.com/"
+								href="https://github.com/wadush"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -134,7 +134,7 @@ class About extends React.Component {
 							<h4 className="h4__about">Melad</h4>
 							<a
 								className="social__link"
-								href="https://www.linkedin.com/"
+								href="https://www.linkedin.com/in/melad-kewan-a087221b2/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -142,7 +142,7 @@ class About extends React.Component {
 							</a>
 							<a
 								className="social__link"
-								href="https://github.com/"
+								href="https://github.com/melkew"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -166,7 +166,7 @@ class About extends React.Component {
 							</a>
 							<a
 								className="social__link"
-								href="https://github.com/"
+								href="https://github.com/jokk3r"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -182,7 +182,7 @@ class About extends React.Component {
 							<h4 className="h4__about">Gael</h4>
 							<a
 								className="social__link"
-								href="https://www.linkedin.com/"
+								href="https://www.linkedin.com/in/gael-src/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -190,7 +190,7 @@ class About extends React.Component {
 							</a>
 							<a
 								className="social__link"
-								href="https://github.com/"
+								href="https://github.com/gael-src"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
