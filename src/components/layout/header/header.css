@@ -108,7 +108,7 @@
 	/* max-height: 20px; */
 	width: 100%;
 	border: none;
-	border-left: solid 1px #fafaff;
+	border-left: solid 1px #787878;
 	background-color: #181818;
 	color: #fafaff;
 	margin: 5px;
@@ -120,7 +120,7 @@
 }
 
 .nav__input::placeholder {
-	color: #fafaff;
+	color: #787878;
 	opacity: 1;
 }
 .nav__input:focus {
@@ -176,7 +176,7 @@
 /* NAV STROKE */
 .nav__stroke {
 	/* height: 40px; */
-	border-right: 1px solid #fafaff;
+	border-right: 2px solid #787878;
 }
 
 @media screen and (max-width: 786px) {
@@ -314,7 +314,7 @@
 /* HEADER INFO */
 .header__info {
 	font-size: 1rem;
-	color: #fafaff;
+	color: #787878;
 	margin: auto;
 }
 

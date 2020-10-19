@@ -5,7 +5,7 @@
 	justify-content: center;
 	align-items: center;
 	min-height: 120px;
-	background: #333333;
+	background-color: #181818;
 	max-width: 100%;
 }
 
@@ -42,7 +42,7 @@ footer ul li:hover {
 
 /* FOOTER NAME */
 .footer__name {
-	color: #dad6d6;
+	color: #fafaff;
 	font-size: 16px;
 	margin: 2px;
 	text-decoration: none;
@@ -50,6 +50,6 @@ footer ul li:hover {
 
 @media only screen and (max-width: 450px) {
 	.Footer nav ul {
-	  flex-direction: column;
+		flex-direction: column;
 	}
-  }
+}
