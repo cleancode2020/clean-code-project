@@ -1,12 +1,13 @@
 /* MAIN */
 .Main {
-	min-height: 100vh;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
 	.Main {
 		flex-direction: column;
+		height: auto;
 	}
 }
