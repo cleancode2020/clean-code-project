@@ -29,41 +29,43 @@ function Header(props) {
 				</li>
 				
 			</ul> */}
-			{/* HEADER NAV LEFT */}
-			<nav className="nav__tag">
-				<input type="checkbox" id="menuCheckbox" />
-				<label className="burger__label" htmlFor="menuCheckbox">
-					<div></div>
-					<div></div>
-					<div></div>
-				</label>
-				<ul className="nav__ul">
-					<li className="nav__li">
-						<Link className="nav__link" to="/">
-							<img className="header__img" src={logo} alt="logo" />
-							<h1 className="header__h1">Cleancode</h1>
-						</Link>
-					</li>
-					<li className="nav__li">
-						<Link className="nav__link" to="/contact">
-							Contact
-						</Link>
-					</li>
-					<li className="nav__li">
-						<Link className="nav__link" to="/about">
-							About
-						</Link>
-					</li>
-				</ul>
-			</nav>
-			<div className="nav__search">
-				<div className="nav__searchbar">
-					{/* SEARCH BAR */}
-					<Searchbar
-						searchInput={props.searchInput}
-						inputHandleChange={props.inputHandleChange}
-						onBtnSubmit={props.onBtnSubmit}
-					/>
+      {/* HEADER NAV LEFT */}
+      <nav className="nav__tag">
+        <input type="checkbox" id="menuCheckbox" />
+        <label className="burger__label" htmlFor="menuCheckbox">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+        <ul className="nav__ul">
+          <li className="nav__li">
+            <Link className="nav__link" to="/">
+              <img className="header__img" src={logo} alt="logo" />
+              <h1 className="header__h1">Cleancode</h1>
+            </Link>
+          </li>
+          <li className="nav__li">
+            <Link className="nav__link" to="/contact">
+              Contact
+            </Link>
+          </li>
+          <li className="nav__li">
+            <Link className="nav__link" to="/about">
+              About
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      {/* SEARCH BAR */}
+
+      <div className="nav__search">
+        <div className="nav__searchbar">
+          <Searchbar
+            searchInput={props.searchInput}
+            inputHandleChange={props.inputHandleChange}
+            onBtnSubmit={props.onBtnSubmit}
+          />
 
 					{/* HEADER INFO */}
 
