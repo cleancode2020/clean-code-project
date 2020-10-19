@@ -14,17 +14,27 @@
 	outline: none;
 }
 
+.modal__button:focus {
+	outline-color: transparent;
+	outline-style: none;
+}
+
 /* SIGN UP MODAL OPEN */
 .modal__button__login {
-	color: #dad6d6;
-	border: solid 1px #333333;
-	background-color: #333333;
+	color: #FAFAFF;
+	border: solid 1px #181818;
+	background-color: #181818;
 	font-weight: bold;
 }
 
 .modal__button__login:hover {
-	color: #dad6d6;
-	border: solid 1px #dad6d6;
+	color: #FAFAFF;
+	border: solid 1px #FAFAFF;
+}
+
+.modal__button__login:focus {
+	outline-color: transparent;
+	outline-style: none;
 }
 
 /* SIGN UP MODAL CLOSE */
@@ -33,15 +43,15 @@
 	top: 20px;
 	right: 20px;
 	border-radius: 5px;
-	color: #dad6d6;
-	border: solid 1px #333333;
-	background-color: #333333;
+	color: #FAFAFF;
+	border: solid 1px #181818;
+	background-color: #181818;
 	font-weight: bold;
 }
 
 .modal__button__close:hover {
-	color: #333333;
-	background-color: #dad6d6;
+	color: #181818;
+	background-color: #FAFAFF;
 }
 
 /* SIGN UP FORM */
@@ -66,7 +76,7 @@
 
 /* LEGEND*/
 .form__legend {
-	color: #00b8ff;
+	color: #2f80ed;
 	font-size: 22px;
 	font-weight: bold;
 	margin: 20px 0;
@@ -113,9 +123,9 @@
 
 /* SUBMIT BUTTON */
 .submit__button {
-	color: #dad6d6;
-	border: solid 1px #00b8ff;
-	background-color: #00b8ff;
+	color: #FAFAFF;
+	border: solid 1px #2f80ed;
+	background-color: #2f80ed;
 	margin: 20px 0;
 	padding: 20px;
 	width: 100%;
@@ -124,6 +134,6 @@
 }
 
 .submit__button:hover {
-	color: #00b8ff;
-	background-color: white;
+	color: #2f80ed;
+	background-color: #181818;
 }
