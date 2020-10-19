@@ -18,13 +18,6 @@ function Posts(props) {
 		<BrowserRouter>
 			<main className="main__posts">
 				<div className="posts__header">
-					<button
-						className="postaction__link__resetfilter"
-						onClick={props.getFirebase}
-					>
-						Reset filter
-					</button>
-
 					{/* POST LINK */}
 					{props.user ? (
 						<Link className="postaction__link__makeapost" to="/submit">
@@ -48,8 +41,8 @@ function Posts(props) {
 								<div className="info__text">
 									<img className="info__imgcodes" src={imgInfo} alt="info" />
 									<p>
-										Cleancode is a web platform to exchange
-										about clean coding and everything around it.
+										Cleancode is a web platform to exchange about clean coding
+										and everything around it.
 									</p>
 									<p>
 										Register, post working code and ask anything you want about

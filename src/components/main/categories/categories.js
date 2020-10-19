@@ -96,10 +96,18 @@ class Categories extends React.Component {
 	render() {
 		return (
 			<main className="categories__main">
-				{/* H2 TITLE */}
-				<h2 className="categories__h2">Categories</h2>
+				{/* RESET FILTER */}
+				<button
+					className="postaction__link__resetfilter"
+					onClick={() => {
+						window.location.reload(false);
+					}}
+				>
+					Reset filter
+				</button>
 
 				<ul className="categories__ul">
+					{/* JAVASCRIPT */}
 					<li
 						className="categories__li"
 						onClick={() => this.props.categoryChose("js")}
@@ -107,56 +115,60 @@ class Categories extends React.Component {
 						<div className="categories__info">
 							<i className="ul__icons fab fa-js"></i>
 							<p>JavaScript</p>
-						</div>
-						<button
-							className="button__arrow"
-							onClick={(event) => {
-								event.stopPropagation();
-								this.updateClass("js");
-							}}
-						>
-							{this.state.jsArrow}
-						</button>
-					</li>
-					<ul className={this.state.js}>
-						{this.state.subcategoryJS.map((item, index) => (
-							<li
-								className="subcategory__name"
-								key={index}
-								onClick={() => this.props.subCategoryChose(item)}
+							<button
+								className="button__arrow"
+								onClick={(event) => {
+									event.stopPropagation();
+									this.updateClass("js");
+								}}
 							>
-								{item}
-							</li>
-						))}
-					</ul>
+								{this.state.jsArrow}
+							</button>
+						</div>
+						<ul className={this.state.js}>
+							{this.state.subcategoryJS.map((item, index) => (
+								<li
+									className="subcategory__name"
+									key={index}
+									onClick={() => this.props.subCategoryChose(item)}
+								>
+									{item}
+								</li>
+							))}
+						</ul>
+					</li>
+
+					{/* JAVA */}
 					<li
 						className="categories__li"
 						onClick={() => this.props.categoryChose("java")}
 					>
 						<div className="categories__info">
 							<i className="ul__icons fab fa-java"></i> <p>Java</p>
-						</div>
-						<button
-							className="button__arrow"
-							onClick={(event) => {
-								event.stopPropagation();
-								this.updateClass("java");
-							}}
-						>
-							{this.state.javaArrow}
-						</button>
-					</li>
-					<ul className={this.state.java}>
-						{this.state.subcategoryJava.map((item, index) => (
-							<li
-								className="subcategory__name"
-								key={index}
-								onClick={() => this.props.subCategoryChose(item)}
+							<button
+								className="button__arrow"
+								onClick={(event) => {
+									event.stopPropagation();
+									this.updateClass("java");
+								}}
 							>
-								{item}
-							</li>
-						))}
-					</ul>
+								{this.state.javaArrow}
+							</button>
+						</div>
+						<ul className={this.state.java}>
+							{this.state.subcategoryJava.map((item, index) => (
+								<li
+									className="subcategory__name"
+									key={index}
+									onClick={() => this.props.subCategoryChose(item)}
+								>
+									{item}
+								</li>
+							))}
+						</ul>
+					</li>
+
+					{/* PYTHON */}
 					<li
 						className="categories__li"
 						onClick={() => this.props.categoryChose("python")}
@@ -164,28 +176,30 @@ class Categories extends React.Component {
 						<div className="categories__info">
 							<i className="ul__icons fab fa-python"></i>
 							<p>Python</p>
-						</div>
-						<button
-							className="button__arrow"
-							onClick={(event) => {
-								event.stopPropagation();
-								this.updateClass("python");
-							}}
-						>
-							{this.state.pythonArrow}
-						</button>
-					</li>
-					<ul className={this.state.python}>
-						{this.state.subcategoryPython.map((item, index) => (
-							<li
-								className="subcategory__name"
-								key={index}
-								onClick={() => this.props.subCategoryChose(item)}
+							<button
+								className="button__arrow"
+								onClick={(event) => {
+									event.stopPropagation();
+									this.updateClass("python");
+								}}
 							>
-								{item}
-							</li>
-						))}
-					</ul>
+								{this.state.pythonArrow}
+							</button>
+						</div>
+						<ul className={this.state.python}>
+							{this.state.subcategoryPython.map((item, index) => (
+								<li
+									className="subcategory__name"
+									key={index}
+									onClick={() => this.props.subCategoryChose(item)}
+								>
+									{item}
+								</li>
+							))}
+						</ul>
+					</li>
+
+					{/* RUST */}
 					<li
 						className="categories__li"
 						onClick={() => this.props.categoryChose("rust")}
@@ -193,28 +207,30 @@ class Categories extends React.Component {
 						<div className="categories__info">
 							<i className="ul__icons fab fa-rust"></i>
 							<p>Rust</p>
-						</div>
-						<button
-							className="button__arrow"
-							onClick={(event) => {
-								event.stopPropagation();
-								this.updateClass("rust");
-							}}
-						>
-							{this.state.rustArrow}
-						</button>
-					</li>
-					<ul className={this.state.rust}>
-						{this.state.subcategoryRust.map((item, index) => (
-							<li
-								className="subcategory__name"
-								key={index}
-								onClick={() => this.props.subCategoryChose(item)}
+							<button
+								className="button__arrow"
+								onClick={(event) => {
+									event.stopPropagation();
+									this.updateClass("rust");
+								}}
 							>
-								{item}
-							</li>
-						))}
-					</ul>
+								{this.state.rustArrow}
+							</button>
+						</div>
+						<ul className={this.state.rust}>
+							{this.state.subcategoryRust.map((item, index) => (
+								<li
+									className="subcategory__name"
+									key={index}
+									onClick={() => this.props.subCategoryChose(item)}
+								>
+									{item}
+								</li>
+							))}
+						</ul>
+					</li>
+
+					{/* C */}
 					<li
 						className="li__icon categories__li"
 						onClick={() => this.props.categoryChose("c++")}
@@ -222,28 +238,28 @@ class Categories extends React.Component {
 						<div className="categories__info">
 							<i className="ul__icons fas fas fa-circle"></i>
 							<p>C++</p>
-						</div>
-						<button
-							className="button__arrow"
-							onClick={(event) => {
-								event.stopPropagation();
-								this.updateClass("c");
-							}}
-						>
-							{this.state.cArrow}
-						</button>
-					</li>
-					<ul className={this.state.c}>
-						{this.state.subcategoryC.map((item, index) => (
-							<li
-								className="subcategory__name"
-								key={index}
-								onClick={() => this.props.subCategoryChose(item)}
+							<button
+								className="button__arrow"
+								onClick={(event) => {
+									event.stopPropagation();
+									this.updateClass("c");
+								}}
 							>
-								{item}
-							</li>
-						))}
-					</ul>
+								{this.state.cArrow}
+							</button>
+						</div>
+						<ul className={this.state.c}>
+							{this.state.subcategoryC.map((item, index) => (
+								<li
+									className="subcategory__name"
+									key={index}
+									onClick={() => this.props.subCategoryChose(item)}
+								>
+									{item}
+								</li>
+							))}
+						</ul>
+					</li>
 				</ul>
 			</main>
 		);
