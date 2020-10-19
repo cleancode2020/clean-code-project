@@ -1,66 +1,60 @@
 /* PRIVACY MAIN */
 .privacy__main {
-  width: 60%;
-  margin: 2.5rem auto;
+	width: 60%;
+	margin: 2.5rem auto;
 }
 
 .privacy__main a {
-  color: #00b8ff;
+	color: #00b8ff;
 }
 
 .privacy__main a:hover {
-  color: gray;
+	color: gray;
 }
 
 /* PRIVACY H1 */
 .privacy__main__h1 {
-  font-size: 2.2em;
-  font-weight: bold;
-  text-align: center;
-  padding: 50px;  
+	font-size: 2.2em;
+	font-weight: bold;
+	text-align: center;
+	padding: 50px;
 }
 
 .privacy__h1 {
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
-  padding: 50px 0 50px 0;  
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align: center;
+	padding: 50px 0 50px 0;
 }
 
 /* PRIVACY H2 */
 .privacy__h2 {
-  font-size: 1em;
-  font-weight: bold; 
+	font-size: 1em;
+	font-weight: bold;
 }
-
-/* PRIVACY H3 */
-/* .privacy__h3 {
-  color: #000;
-} */
 
 .privacy__h2,
 .privacy__h3 {
-  text-align: left;
-  padding: 15px 0 15px 0;
+	text-align: left;
+	padding: 15px 0 15px 0;
 }
 
 /* PRIVACY TEXT */
 .privacy__text p {
-  text-align: justify;
+	text-align: justify;
 }
 
 /* PRIVACY LISTS */
 .privacy__lists {
-  padding: 20px 0 20px 50px;
+	padding: 20px 0 20px 50px;
 }
 
 .privacy__lists ul li {
-  /* width: 500px; */
-  color: rgb(100, 96, 96);
-  list-style-type: disc;
-  padding: 10px 0 10px 0;
+	color: rgb(100, 96, 96);
+	list-style-type: disc;
+	padding: 10px 0 10px 0;
 }
 
 .privacy__lists strong {
-  font-weight: bold;
+	font-weight: bold;
 }

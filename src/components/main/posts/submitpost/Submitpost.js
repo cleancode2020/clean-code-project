@@ -131,12 +131,8 @@ class Submitpost extends React.Component {
 					<select
 						className="post__select"
 						value={this.state.currentCategory}
-						// defaultValue="DEFAULT"
 						onChange={this.categoriesHandleChange}
 					>
-						{/* <option value="DEFAULT" disabled>
-						Choose:
-					</option> */}
 						<option value="none">None</option>
 						<option value="js">JS</option>
 						<option value="python">Python</option>
@@ -151,12 +147,8 @@ class Submitpost extends React.Component {
 					<select
 						className="post__select"
 						value={this.state.currentSubCategory}
-						// defaultValue="DEFAULT"
 						onChange={this.subcategoriesHandleChange}
 					>
-						{/* <option disabled value="DEFAULT">
-						Choose:
-					</option> */}
 						<option value="none">None</option>
 						<option value="react">React</option>
 						<option value="vue.js">Vue.js</option>

@@ -4,15 +4,15 @@ import { atelierLakesideLight } from "react-syntax-highlighter/dist/esm/styles/h
 // import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 
 const Codeblock = (props) => {
-  return (
-    <SyntaxHighlighter
-      language="javascript"
-      style={atelierLakesideLight}
-      className="codeblock"
-    >
-      {props.currentPost[3]}
-    </SyntaxHighlighter>
-  );
+	return (
+		<SyntaxHighlighter
+			language="javascript"
+			style={atelierLakesideLight}
+			className="codeblock"
+		>
+			{props.currentPost[3]}
+		</SyntaxHighlighter>
+	);
 };
 
 export default Codeblock;

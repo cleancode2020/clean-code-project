@@ -34,7 +34,7 @@ function Posts(props) {
 						<div className="postaction__link__makeapost" to="/about">
 							{/* HEADER INFO */}
 
-							<span className="info__span" ca onClick={() => openInfoModal()}>
+							<span className="info__span" onClick={() => openInfoModal()}>
 								What is Cleancode?
 							</span>
 							<Modal

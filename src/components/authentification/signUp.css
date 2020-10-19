@@ -2,7 +2,6 @@
 .modal__button {
 	margin: 0px 20px;
 	padding: 3px 10px;
-	border-radius: 5px;
 }
 
 .modal__button:hover {
@@ -21,15 +20,15 @@
 
 /* SIGN UP MODAL OPEN */
 .modal__button__login {
-	color: #FAFAFF;
+	color: #fafaff;
 	border: solid 1px #181818;
 	background-color: #181818;
 	font-weight: bold;
 }
 
 .modal__button__login:hover {
-	color: #FAFAFF;
-	border: solid 1px #FAFAFF;
+	color: #fafaff;
+	border: solid 1px #fafaff;
 }
 
 .modal__button__login:focus {
@@ -42,8 +41,8 @@
 	position: absolute;
 	top: 20px;
 	right: 20px;
-	border-radius: 5px;
-	color: #FAFAFF;
+	border-radius: 2px;
+	color: #fafaff;
 	border: solid 1px #181818;
 	background-color: #181818;
 	font-weight: bold;
@@ -51,14 +50,13 @@
 
 .modal__button__close:hover {
 	color: #181818;
-	background-color: #FAFAFF;
+	background-color: #fafaff;
 }
 
 /* SIGN UP FORM */
 .form__div {
 	box-sizing: border-box;
 	border: solid 1px #b3ddf0;
-	/* border-radius: 10px; */
 	max-width: fit-content;
 	margin: 60px auto;
 	padding: 50px;
@@ -95,7 +93,6 @@
 .form__input {
 	color: black;
 	border: solid 1px #b3ddf0;
-	/* border-radius: 10px; */
 	font-size: 16px;
 	width: 500px;
 	margin: 5px 0 20px;
@@ -123,14 +120,13 @@
 
 /* SUBMIT BUTTON */
 .submit__button {
-	color: #FAFAFF;
+	color: #fafaff;
 	border: solid 1px #2f80ed;
 	background-color: #2f80ed;
 	margin: 20px 0;
 	padding: 20px;
 	width: 100%;
 	font-weight: bold;
-	/* border-radius: 10px; */
 }
 
 .submit__button:hover {

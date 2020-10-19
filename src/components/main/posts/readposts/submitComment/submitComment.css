@@ -1,16 +1,13 @@
-/* USER POST */
-/* POST FORM */
-
+/* USER POST POST FORM */
 .form__main {
 	display: flex;
 	flex-direction: column;
-	/* position: relative; */
 	border: 1px solid #d8d8d8;
-	/* border-radius: 10px; */
 	padding: 20px;
 	margin: 5px;
 }
 
+/* FORM */
 .form__title {
 	margin: 30px auto;
 	font-weight: bold;
@@ -18,6 +15,7 @@
 	color: #00b8ff;
 }
 
+/* FORM */
 .comment__label {
 	font-size: 20px;
 	font-weight: bold;
@@ -25,24 +23,25 @@
 	margin: 30px 10px 10px;
 }
 
+/* FORM */
 .comment__textarea {
 	margin: 5px 10px 10px;
 	border: 1px solid #b3ddf0;
-	/* border-radius: 10px; */
 	padding: 10px;
 }
+
+/* FORM */
 .comment__button {
 	color: white;
 	background-color: #00b8ff;
 	border: solid 1px #00b8ff;
 	padding: 20px;
 	font-weight: bold;
-
-	/* border-radius: 10px; */
-
 	margin: 20px 10px;
 	max-width: 100%;
 }
+
+/* FORM */
 .comment__button:hover {
 	color: #00b8ff;
 	background-color: white;

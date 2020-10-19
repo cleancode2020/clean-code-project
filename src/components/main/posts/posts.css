@@ -3,7 +3,6 @@
 	width: 80%;
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
 	align-items: center;
 	overflow-y: auto;
 	background-color: #fafaff;
@@ -49,7 +48,6 @@
 
 /* MAKE POST BUTTON */
 .postaction__link__makeapost {
-	/* border: solid red 2px; */
 	margin: 15px;
 	padding: 20px;
 	min-height: 100%;
@@ -72,7 +70,6 @@
 }
 
 .info__span {
-	/* border: solid red 2px; */
 	margin: 0;
 	height: 100%;
 	width: 100%;
@@ -85,7 +82,6 @@
 .nav__posts {
 	display: flex;
 	justify-content: center;
-	/* margin: 5px; */
 }
 
 .nav__posts > * {
@@ -118,7 +114,6 @@
 .postaction__link {
 	border: solid 1px #00b8ff;
 	background-color: #00b8ff;
-	/* border-radius: 5px; */
 	color: white;
 	font-weight: bold;
 	text-decoration: none;

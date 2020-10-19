@@ -219,10 +219,6 @@ class Categories extends React.Component {
 						className="li__icon categories__li"
 						onClick={() => this.props.categoryChose("c++")}
 					>
-						{/* <div className="categories__info">
-							<i className="ul__icons fab fa-rust"></i>
-							<p>C++</p>
-						</div> */}
 						<div className="categories__info">
 							<i className="ul__icons fas fas fa-circle"></i>
 							<p>C++</p>

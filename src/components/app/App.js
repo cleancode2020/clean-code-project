@@ -71,8 +71,6 @@ class App extends React.Component {
 	inputHandleChange = (event) => {
 		this.setState({
 			searchInput: event.target.value,
-			// loading: true,
-			// message: "",
 		});
 	};
 
@@ -92,9 +90,6 @@ class App extends React.Component {
 		this.setState(
 			{
 				allPostsObject: searchResultObject,
-			},
-			() => {
-				console.log(searchResultObject);
 			}
 		);
 	};
@@ -112,7 +107,6 @@ class App extends React.Component {
 		await fetch(`${firebase.databaseURL}/cleancode/posts.json`, requestOptions)
 			.then((response) => response.json())
 			.then((result) => {
-				// debugger;
 				this.setState({
 					allPostsObject: result,
 				});

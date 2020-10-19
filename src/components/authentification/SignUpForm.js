@@ -25,7 +25,6 @@ class SignUpForm extends React.Component {
 	// FOCUS IN MODAL
 	componentDidMount() {
 		this.input.current.focus();
-		console.log(this.props.user);
 	}
 
 	// MAIL SIGN UP SET STATE
@@ -61,12 +60,10 @@ class SignUpForm extends React.Component {
 		event.preventDefault();
 		// POST TO FIREBASE FUNCTION
 		const user = await this.signUpFirebase();
-		// console.log(user);
 		// VERIFY USER
 		if (user !== null) {
 			this.sendMailVerification(user);
 			this.updateFirebaseUserProfile(user);
-			// debugger;
 			await this.sendUserName(user);
 		}
 
@@ -80,7 +77,6 @@ class SignUpForm extends React.Component {
 		if (this.state.password !== this.state.confirmedPassword) {
 			return;
 		}
-		// debugger;
 		const requestOptions = {
 			method: "POST",
 			redirect: "follow",
@@ -173,9 +169,6 @@ class SignUpForm extends React.Component {
 			// CONVERT STATE IN JSON STRING	// }
 			body: JSON.stringify(this.state.userName),
 		};
-		// console.log(this.props.user.localId);
-		// console.log(this.props.user);
-		// debugger;
 		await fetch(
 			`${databaseURL}/users/${localId}/userName.json?auth=${idToken}`,
 			requestOptions

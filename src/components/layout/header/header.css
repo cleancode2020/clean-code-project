@@ -4,9 +4,7 @@
 	font-size: 16px;
 	display: flex;
 	align-items: center;
-	/* background-color: #1C1C1C; */
 	background-color: #181818;
-	/* color: #FAFAFF; */
 	height: fit-content;
 }
 
@@ -47,14 +45,11 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	/* font-size: 16px; */
 	text-decoration: none;
-	/* color: #dad6d6; */
-	/* color: #1C1C1C; */
 	color: #fafaff;
 }
+
 .nav__link:hover {
-	/* color: #dad6d6; */
 	color: #fafaff;
 	text-decoration: underline;
 }
@@ -68,8 +63,6 @@
 /* HEADER H1 */
 .header__h1 {
 	color: #fafaff;
-	/* font-size: 22px; */
-	/* margin */
 }
 
 .header__h1:hover {
@@ -87,7 +80,6 @@
 /* SEARCH BAR */
 .nav__search {
 	width: 25%;
-	/* position: absolute; */
 	transform: translate(150%);
 }
 
@@ -105,7 +97,6 @@
 }
 
 .nav__input {
-	/* max-height: 20px; */
 	width: 100%;
 	border: none;
 	border-left: solid 1px #787878;
@@ -130,7 +121,6 @@
 
 @media screen and (max-width: 950px) {
 	.nav__search {
-		/* transform: translate(220%); */
 		position: relative;
 		right: 50%;
 	}
@@ -142,18 +132,6 @@
 		margin-left: -3rem;
 	}
 }
-
-/* ??????????????????????????? */
-/* .info__button {
-	background-color: #FAFAFF;
-	border: none;
-} */
-
-/* .nav__icon {
-	color: black;
-
-	font-size: 1em;
-} */
 
 @media screen and (max-width: 990px) {
 	.nav__search {
@@ -175,7 +153,6 @@
 
 /* NAV STROKE */
 .nav__stroke {
-	/* height: 40px; */
 	border-right: 2px solid #787878;
 }
 
@@ -200,7 +177,6 @@
 		top: 160px;
 		display: none;
 		padding: 20px 10px;
-		/* ???????????????????????????????????  */
 		background-image: linear-gradient(#181818, #828282);
 		height: 100vh;
 		z-index: 2;
@@ -298,19 +274,6 @@
 	display: flex;
 }
 
-/* .nav__searchbar button {
-	margin-right: 1rem;
-} */
-
-/* .nav__input {
-	width: 100%;
-} */
-
-/* .nav__icon {
-	color: black;
-	font-size: 1em;
-} */
-
 /* HEADER INFO */
 .header__info {
 	font-size: 1rem;
@@ -363,12 +326,6 @@
 		display: none;
 	}
 }
-
-/* NAV STROKE */
-/* .nav__stroke {
-	height: 40px;
-	border-right: 1px solid rgb(248, 245, 245);
-} */
 
 @media screen and (max-width: 786px) {
 	.header__left {
