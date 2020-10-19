@@ -5,11 +5,10 @@
 }
 
 .comment__li {
-  border: 1px solid #b3ddf0;
+  border: 1px solid #d8d8d8;
   padding: 20px;
   /* border-radius: 10px; */
-
-  margin: 0 0 20px;
+  margin: 5px;
 }
 
 .comment__author {
