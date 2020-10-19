@@ -118,7 +118,6 @@ class Categories extends React.Component {
 							{this.state.jsArrow}
 						</button>
 					</li>
-
 					<ul className={this.state.js}>
 						{this.state.subcategoryJS.map((item, index) => (
 							<li
