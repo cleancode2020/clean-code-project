@@ -1,16 +1,17 @@
 /* POST FORM */
 .post__form {
-	border: solid 1px #b3ddf0;
-	/* background-color: #828282; */
-	/* border-radius: 10px; */
-	box-sizing: border-box;
-	margin: 50px 10px;
-	padding: 20px;
-	width: 85%;
+	width: 100%;
+}
+
+.post__form__div {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* align-items: center; */
+	box-sizing: border-box;
+	padding: 10px;
+	max-width: 100%;
+	margin: 15px;
+	border: solid 1px #202020;
 }
 
 /* NAV LINK */
