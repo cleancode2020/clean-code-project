@@ -83,7 +83,7 @@ function Header(props) {
 							</button>
 							<div className="info__text">
 								<p>
-									Cleancode is a web platform to exchange about clean coding and
+									Cleancode is a web platformA Stateful Component to exchange about clean coding and
 									everything around it.
 								</p>
 								<p>
