@@ -56,9 +56,11 @@ function Header(props) {
           </li>
         </ul>
       </nav>
+
+      {/* SEARCH BAR */}
+
       <div className="nav__search">
         <div className="nav__searchbar">
-          {/* SEARCH BAR */}
           <Searchbar
             searchInput={props.searchInput}
             inputHandleChange={props.inputHandleChange}
