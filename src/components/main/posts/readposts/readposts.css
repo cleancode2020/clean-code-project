@@ -7,6 +7,7 @@
 	padding: 10px;
 	width: 100%;
 	margin: 10px;
+	color: #181818;
 }
 
 /* POSTS */
@@ -28,6 +29,12 @@
 
 .posts__li:hover .post__button {
 	color: #00b8ff;
+	cursor: pointer;
+}
+
+.post__button:focus {
+	outline-color: transparent;
+	outline-style: none;
 }
 
 /* POSTS */
@@ -55,7 +62,7 @@
 .vote__count {
 	font-size: 14px;
 	font-weight: bold;
-	color: #333333;
+	color: #181818;
 	margin: 0 10px;
 	justify-self: right;
 	display: flex;
@@ -93,16 +100,22 @@
 .nav__close {
 	align-self: flex-end;
 	font-size: 15px;
-	border-radius: 5px;
-	color: #fafaff;
-	border: solid 1px #333333;
-	background-color: #333333;
+	padding: 5px;
+	/* border-radius: 5px; */
+	color: #787878;
+	border: solid 2px #787878;
+	background-color: #fafaff;
 	font-weight: bold;
 }
 
 .nav__close:hover {
-	color: #333333;
-	background-color: white;
+	color: #00b8ff;
+	border: solid 2px #00b8ff;
+}
+
+.nav__close:focus {
+	outline-color: transparent;
+	outline-style: none;
 }
 
 /* READ POST */
@@ -116,17 +129,30 @@
 
 /* VOTE */
 .vote__container {
+	/* border: solid 1px red; */
+	color: #787878;
 	display: flex;
-	margin: 10px 0;
+	align-items: center;
+	width: 50%;
+	/* margin: 10px 0; */
+}
+
+.container__left {
+	justify-content: flex-end;
+}
+
+.posts__informations {
+	/* border: solid 1px red; */
+	display: flex;
 }
 
 /* VOTE */
 .count__button {
 	border: none;
 	background-color: white;
-	color: #333333;
+	color: #787878;
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 16px;
 	display: flex;
 	margin: 5px 10px;
 	padding: 10px;
@@ -153,7 +179,7 @@
 /* READ POST */
 /* P POSTS */
 .posts__p {
-	margin: 0 10px 10px;
+	margin: 10px;
 }
 
 .posts__art {

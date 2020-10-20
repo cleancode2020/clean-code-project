@@ -39,6 +39,7 @@ footer ul li {
 /* FOOTER NAME */
 .footer__name {
 	font-size: 16px;
+	font-weight: bold;
 	margin: 2px;
 	text-decoration: none;
 	color: #fafaff;

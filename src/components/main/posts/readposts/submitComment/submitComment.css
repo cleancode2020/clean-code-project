@@ -17,7 +17,7 @@
 
 /* FORM */
 .comment__label {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
 	color: #181818;
 	margin: 30px 10px 10px;
@@ -26,9 +26,15 @@
 /* FORM */
 .comment__textarea {
 	margin: 5px 10px 10px;
-	border: 1px solid #b3ddf0;
+	border: 1px solid #d3d3d3;
 	padding: 10px;
+	min-height: 30vh;
 }
+.comment__textarea:focus {
+	outline-color: transparent;
+	outline-style: none;
+}
+
 
 /* FORM */
 .comment__button {
