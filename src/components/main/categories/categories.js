@@ -130,7 +130,10 @@ class Categories extends React.Component {
                 <li
                   className="subcategory__name"
                   key={index}
-                  onClick={() => this.props.subCategoryChose(item)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    this.props.subCategoryChose(item);
+                  }}
                 >
                   {item}
                 </li>
@@ -160,7 +163,10 @@ class Categories extends React.Component {
                 <li
                   className="subcategory__name"
                   key={index}
-                  onClick={() => this.props.subCategoryChose(item)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    this.props.subCategoryChose(item);
+                  }}
                 >
                   {item}
                 </li>
@@ -191,7 +197,10 @@ class Categories extends React.Component {
                 <li
                   className="subcategory__name"
                   key={index}
-                  onClick={() => this.props.subCategoryChose(item)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    this.props.subCategoryChose(item);
+                  }}
                 >
                   {item}
                 </li>
@@ -222,7 +231,10 @@ class Categories extends React.Component {
                 <li
                   className="subcategory__name"
                   key={index}
-                  onClick={() => this.props.subCategoryChose(item)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    this.props.subCategoryChose(item);
+                  }}
                 >
                   {item}
                 </li>
@@ -253,7 +265,10 @@ class Categories extends React.Component {
                 <li
                   className="subcategory__name"
                   key={index}
-                  onClick={() => this.props.subCategoryChose(item)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    this.props.subCategoryChose(item);
+                  }}
                 >
                   {item}
                 </li>
