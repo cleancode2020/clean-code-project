@@ -80,9 +80,10 @@ class App extends React.Component {
 		let searchResultObject = {};
 
 		for (const [key, value] of searchObject) {
+
 			if (
-				value.article.includes(this.state.searchInput) ||
-				value.title.includes(this.state.searchInput)
+				value.article.toString().toLowerCase().includes(this.state.searchInput.toString().toLowerCase()) ||
+				value.title.toString().toLowerCase().includes(this.state.searchInput.toString().toLowerCase())
 			) {
 				searchResultObject[key] = value;
 			}
