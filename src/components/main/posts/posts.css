@@ -23,25 +23,41 @@
 	align-items: center;
 }
 
+/* POSTS TITLE */
+.posts__title {
+	margin: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #181818;
+}
+
 /* MAKE POST BUTTON */
 .postaction__link__makeapost {
+	/* border-radius: 100rem; */
 	margin: 15px;
+	margin-left: auto;
 	padding: 20px;
-	width: 100%;
+	width: 30%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 18px;
 	font-weight: bold;
-	background-color: #fafaff;
-	color: #00b8ff;
+	background-color: #00b8ff;
+	color: #fafaff;
 	border: solid 1px #00b8ff;
 	text-decoration: none;
 }
 
 .postaction__link__makeapost:hover {
-	color: #fafaff;
-	background-color: #00b8ff;
+	background-color: #fafaff;
+	color: #00b8ff;
+}
+
+@media screen and (max-width: 900px) {
+	.postaction__link__makeapost {
+		width: 50%;
+	}
 }
 
 .info__span {

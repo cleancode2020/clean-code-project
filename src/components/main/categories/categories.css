@@ -15,38 +15,40 @@
 
 /* RESET FILTER */
 .postaction__link__resetfilter {
-	margin: 15px;
-	padding: 10px 20px;
+	margin: 30px 10px 10px 10px;
+	padding: 10px;
 	max-width: 100%;
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
 	align-items: center;
-	font-size: 18px;
-	font-weight: bold;
+	font-size: 16px;
+	/* font-weight: bold; */
 	color: #787878;
 	background-color: #202020;
-	border: solid 1px #787878;
+	/* border: solid 1px #787878; */
+	border: none;
 	text-decoration: none;
 }
 
 .postaction__link__resetfilter:hover {
-	color: #202020;
-	background-color: #787878;
+	/* color: #202020; */
+	/* background-color: #787878; */
+	color: #00b8ff;
 }
 
 /* H2 TITLE */
-.categories__h2 {
+/* .categories__h2 {
 	text-align: left;
 	color: #787878;
 	font-weight: bold;
 	font-size: 24px;
 	margin: 20px;
 	padding: 20px;
-}
+} */
 
 .categories__ul {
 	display: flex;
-	/* height: 100%; */
+	height: auto;
 	flex-direction: column;
 	justify-content: space-around;
 }
@@ -56,10 +58,9 @@
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	border-bottom: solid 0.5px #383838;
-	margin: 20px 20px;
-	padding: 20px;
-	font-weight: bold;
+	font-size: 16px;
+	margin: 30px 10px;
+	padding: 10px;
 	word-break: break-all;
 	cursor: pointer;
 }
@@ -74,14 +75,15 @@
 .subcategory__name {
 	margin: 20px 20px 20px 30px;
 	padding: 5px 10px;
-	opacity: 0.8;
+	font-size: 14px;
 	font-weight: 100;
 	cursor: pointer;
-	color: #fafaff;
+	color: #787878;
 }
 
 .ul__icons {
-	padding: 0 6px 0 0;
+	padding: 0 15px 0 0;
+	font-size: 20px;
 }
 
 .li__icon {
@@ -132,7 +134,8 @@
 .button__arrow {
 	width: 20px;
 	height: 20px;
-	background-color: #181818;
+	font-size: 16px;
+	background-color: #202020;
 	border-radius: 15px;
 	border: none;
 	cursor: pointer;
@@ -142,9 +145,13 @@
 	text-decoration: none;
 }
 .button__arrow:hover {
-	background-color: #1e62d0;
+	color: #00b8ff;
 }
 .button__arrow:active {
 	position: relative;
 	top: 1px;
+}
+.button__arrow:focus {
+	outline-color: transparent;
+	outline-style: none;
 }

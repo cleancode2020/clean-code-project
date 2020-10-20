@@ -18,6 +18,7 @@ function Posts(props) {
 		<BrowserRouter>
 			<main className="main__posts">
 				<div className="posts__header">
+					<h2 className="posts__title">Posts</h2>
 					{/* POST LINK */}
 					{props.user ? (
 						<Link className="postaction__link__makeapost" to="/submit">

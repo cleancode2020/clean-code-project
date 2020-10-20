@@ -78,6 +78,7 @@ function Header(props) {
 								clean coding, conventions, naming, refactoring or related topic.
 								Or respond to existing posts and exchange with the community.
 							</p>
+							<p>Signup to start exchange with the community</p>
 						</div>
 					</Modal>
 				</div>

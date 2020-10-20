@@ -30,7 +30,7 @@ function Comments(props) {
 						>
 							<span>{zVoteUp}</span>
 							<span aria-label="Thumbs Up" role="img">
-								👍
+								<i class="fas fa-thumbs-up"></i>
 							</span>
 						</button>
 						<button
@@ -39,7 +39,7 @@ function Comments(props) {
 						>
 							<span>{zVoteDown}</span>
 							<span aria-label="Thumbs Down" role="img">
-								👎
+								<i class="fas fa-thumbs-down"></i>
 							</span>
 						</button>
 					</div>
@@ -51,7 +51,7 @@ function Comments(props) {
 						>
 							<span>{zVoteUp}</span>
 							<span aria-label="Thumbs Up" role="img">
-								👍
+								<i class="fas fa-thumbs-up"></i>
 							</span>
 						</button>
 						<button
@@ -60,7 +60,7 @@ function Comments(props) {
 						>
 							<span>{zVoteDown}</span>
 							<span aria-label="Thumbs Down" role="img">
-								👎
+								<i class="fas fa-thumbs-down"></i>
 							</span>
 						</button>
 					</div>
