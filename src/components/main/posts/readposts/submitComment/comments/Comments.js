@@ -21,7 +21,7 @@ function Comments(props) {
 				<span className=" codeblock__comment">
 					<CodeBlockComment code={props.comment[1]} />
 				</span>
-				<p className="comment__time">{props.comment[4]}</p>
+				{/* <p className="comment__time">{props.comment[4]}</p> */}
 				{props.user ? (
 					<div className="vote__container">
 						<button
