@@ -35,6 +35,10 @@
 	/* background-color: #787878; */
 	color: #00b8ff;
 }
+.postaction__link__resetfilter:focus {
+	outline-color: transparent;
+	outline-style: none;
+}
 
 /* H2 TITLE */
 /* .categories__h2 {
