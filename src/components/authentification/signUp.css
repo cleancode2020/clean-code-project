@@ -27,8 +27,8 @@
 }
 
 .modal__button__login:hover {
-	color: #fafaff;
-	border: solid 1px #fafaff;
+	color: #00b8ff;
+	/* border: solid 1px #fafaff; */
 }
 
 .modal__button__login:focus {
@@ -56,7 +56,8 @@
 /* SIGN UP FORM */
 .form__div {
 	box-sizing: border-box;
-	border: solid 1px #b3ddf0;
+	border: solid 1px #d8d8d8;
+	box-shadow: 1px 1px 4px 1px #d8d8d8;
 	max-width: fit-content;
 	margin: 60px auto;
 	padding: 50px;
@@ -74,7 +75,7 @@
 
 /* LEGEND*/
 .form__legend {
-	color: #2f80ed;
+	color: #00b8ff;
 	font-size: 22px;
 	font-weight: bold;
 	margin: 20px 0;
@@ -82,7 +83,7 @@
 
 /* LABEL */
 .form__label {
-	color: black;
+	color: #181818;
 	align-self: flex-start;
 	font-size: 16px;
 	font-weight: bold;
@@ -91,8 +92,8 @@
 
 /* INPUT */
 .form__input {
-	color: black;
-	border: solid 1px #b3ddf0;
+	color: #181818;
+	border: solid 1px #d8d8d8;
 	font-size: 16px;
 	width: 500px;
 	margin: 5px 0 20px;
@@ -121,8 +122,8 @@
 /* SUBMIT BUTTON */
 .submit__button {
 	color: #fafaff;
-	border: solid 1px #2f80ed;
-	background-color: #2f80ed;
+	border: solid 1px #00b8ff;
+	background-color: #00b8ff;
 	margin: 20px 0;
 	padding: 20px;
 	width: 100%;
@@ -130,6 +131,6 @@
 }
 
 .submit__button:hover {
-	color: #2f80ed;
+	color: #00b8ff;
 	background-color: #181818;
 }

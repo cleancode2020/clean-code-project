@@ -1,10 +1,10 @@
 /* CONTAINER */
 .container {
-	border: solid 1px #333333;
+	border: solid 1px #d8d8d8;
 	margin: 100px auto;
 	width: 60%;
 	padding: 20px;
-	box-shadow: 1px 1px 4px 1px lightgrey;
+	box-shadow: 1px 1px 4px 1px #d8d8d8;
 }
 
 @media screen and (max-width: 800px) {
@@ -39,7 +39,7 @@
 /* INPUT AND TEXTAREA */
 .contact__input,
 .contact__textarea {
-	border: solid 1px #333333;
+	border: solid 1px #d8d8d8;
 	padding: 10px;
 }
 

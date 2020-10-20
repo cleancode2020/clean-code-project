@@ -36,16 +36,16 @@ footer ul li {
 	padding: 10px;
 }
 
-footer ul li:hover {
-	transform: scale(1.2);
-}
-
 /* FOOTER NAME */
 .footer__name {
-	color: #fafaff;
 	font-size: 16px;
 	margin: 2px;
 	text-decoration: none;
+	color: #fafaff;
+}
+
+.footer__name:hover {
+	color: #00b8ff;
 }
 
 @media only screen and (max-width: 450px) {

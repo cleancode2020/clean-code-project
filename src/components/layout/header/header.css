@@ -25,7 +25,6 @@
 		width: 100%;
 		margin: 20px;
 	}
-	
 }
 
 .header__sub__right {
@@ -85,11 +84,12 @@
 	align-items: center;
 	text-decoration: none;
 	color: #fafaff;
+	font-weight: bold;
 }
 
 .nav__link:hover {
-	color: #fafaff;
-	text-decoration: underline;
+	color: #00b8ff;
+
 }
 
 /* HEADER IMG */
@@ -101,10 +101,11 @@
 /* HEADER H1 */
 .header__h1 {
 	color: #fafaff;
+	font-weight: bold;
 }
 
 .header__h1:hover {
-	color: #fafaff;
+	color: #00b8ff;
 }
 
 /* HEADER DIV LEFT  */
