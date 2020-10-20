@@ -3,13 +3,13 @@ import Codeblock from "./Codeblockread";
 import SubmitComment from "./submitComment/SubmitComment";
 
 const Userpost = (props) => {
-	console.log(props.currentPost[8])
+	console.log(props.currentPost[8]);
 	return (
 		<>
 			<div className="post__div">
 				{/* CLOSE BUTTON  */}
 				<button className="nav__link nav__close" onClick={props.reloadPage}>
-					x
+					<i className="fas fa-times"></i>
 				</button>
 
 				{/* TITLE */}

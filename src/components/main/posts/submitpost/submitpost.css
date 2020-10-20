@@ -46,7 +46,8 @@
 	text-decoration: none;
 	color: #787878;
 	background-color: #fafaff;
-	border: solid 2px #787878;
+	/* border: solid 2px #787878; */
+	border: none;
 }
 
 .navlink__submitclose:focus {
@@ -56,7 +57,7 @@
 
 .navlink__submitclose:hover {
 	color: #00b8ff;
-	border: solid 2px #00b8ff;
+	/* border: solid 2px #00b8ff; */
 }
 
 /* LEGEND */

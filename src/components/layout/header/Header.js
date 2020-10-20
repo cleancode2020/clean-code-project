@@ -65,7 +65,7 @@ function Header(props) {
 						onRequestClose={closeInfoModal}
 					>
 						<button className="close__info" onClick={closeInfoModal}>
-							x
+							<i className="fas fa-times"></i>
 						</button>
 						<div className="info__text">
 							<img className="info__imgcodes" src={imgInfo} alt="info" />

@@ -24,6 +24,7 @@
 	color: #fafaff;
 	border: solid 1px #181818;
 	background-color: #181818;
+	border: none;
 	font-weight: bold;
 }
 
@@ -42,16 +43,15 @@
 	position: absolute;
 	top: 20px;
 	right: 20px;
-	border-radius: 2px;
-	color: #fafaff;
-	border: solid 1px #181818;
-	background-color: #181818;
+	font-size: 18px;
+	color: #787878;
+	border: none;
+	background-color: #fafaff;
 	font-weight: bold;
 }
 
 .modal__button__close:hover {
-	color: #181818;
-	background-color: #fafaff;
+	color: #00b8ff;
 }
 
 /* SIGN UP FORM */

@@ -21,7 +21,7 @@ function SignUp(props) {
 					className="modal__button  modal__button__close"
 					onClick={props.closeModal}
 				>
-					x
+					<i className="fas fa-times"></i>
 				</button>
 
 				{/* SIGN UP FORM COMPONENT*/}

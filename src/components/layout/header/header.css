@@ -176,7 +176,8 @@
 	font-weight: bold;
 	color: #787878;
 	background-color: #fafaff;
-	border: solid 2px #787878;
+	/* border: solid 2px #787878; */
+	border: none;
 }
 
 .close__info:focus {
@@ -184,10 +185,9 @@
 	outline-style: none;
 }
 
-
 .close__info:hover {
 	color: #00b8ff;
-	border: solid 2px #00b8ff;
+	/* border: solid 2px #00b8ff; */
 }
 
 /* MODAL INFO */

@@ -99,18 +99,19 @@
 /* NAV CLOSE BUTTON */
 .nav__close {
 	align-self: flex-end;
-	font-size: 15px;
+	font-size: 18px;
 	padding: 5px;
 	/* border-radius: 5px; */
 	color: #787878;
-	border: solid 2px #787878;
+	/* border: solid 2px #787878; */
+	border: none;
 	background-color: #fafaff;
 	font-weight: bold;
 }
 
 .nav__close:hover {
 	color: #00b8ff;
-	border: solid 2px #00b8ff;
+	/* border: solid 2px #00b8ff; */
 }
 
 .nav__close:focus {

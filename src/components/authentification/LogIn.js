@@ -43,7 +43,7 @@ class Login extends React.Component {
 						className="modal__button  modal__button__close"
 						onClick={this.closeModal}
 					>
-						x
+						<i className="fas fa-times"></i>
 					</button>
 
 					{/* LOGIN FORM COMPONENT */}
