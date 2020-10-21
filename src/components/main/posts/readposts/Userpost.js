@@ -23,9 +23,6 @@ const Userpost = (props) => {
 					<Codeblock currentPost={props.currentPost} />
 				</span>
 
-				{/* USER NAME */}
-				<p className="user__name">{props.currentPost[6]}</p>
-
 				{/* CATEGORIES */}
 				<div className="posts__informations">
 					{props.user ? (
@@ -44,6 +41,12 @@ const Userpost = (props) => {
 								<span>{props.dislike}</span>
 								<i class="fas fa-thumbs-down"></i>
 							</button>
+							<h4 className="posts__p">
+								{props.currentPost[2] ? `#${props.currentPost[2]}` : null}
+							</h4>
+							<h4 className="posts__p">
+								{props.currentPost[4] ? `#${props.currentPost[4]}` : null}
+							</h4>
 						</div>
 					) : (
 						<div className="vote__container ">
@@ -55,16 +58,18 @@ const Userpost = (props) => {
 								<span>{props.dislike}</span>
 								<i class="fas fa-thumbs-down"></i>
 							</button>
+							<h4 className="posts__p">
+								{props.currentPost[2] ? `#${props.currentPost[2]}` : null}
+							</h4>
+							<h4 className="posts__p">
+								{props.currentPost[4] ? `#${props.currentPost[4]}` : null}
+							</h4>
 						</div>
 					)}
 
 					<div className="vote__container container__left">
-						<h4 className="posts__p">
-							{props.currentPost[2] ? `#${props.currentPost[2]}` : null}
-						</h4>
-						<h4 className="posts__p">
-							{props.currentPost[4] ? `#${props.currentPost[4]}` : null}
-						</h4>
+						{/* USER NAME */}
+						<p className="user__name">{props.currentPost[6]}</p>
 					</div>
 				</div>
 			</div>

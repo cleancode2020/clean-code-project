@@ -152,10 +152,9 @@
 	background-color: white;
 	color: #787878;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 14px;
 	display: flex;
-	margin: 5px 10px;
-	padding: 10px;
+	padding: 5px;
 }
 
 .count__button:hover {
@@ -179,7 +178,7 @@
 /* READ POST */
 /* P POSTS */
 .posts__p {
-	margin: 10px;
+	padding: 5px 10px;
 }
 
 .posts__art {
