@@ -15,8 +15,8 @@ function Vote(props) {
 	return (
 		<div className="vote__div">
 			<div className="vote__wrapper" onClick={props.voteUpHandleChange}>
-				<i className="far fa-thumbs-up"></i>
 				<span>{zVoteUp}</span>
+				<i className="far fa-thumbs-up"></i>
 			</div>
 
 			<div className="vote__wrapper" onClick={props.voteDownHandleChange}>

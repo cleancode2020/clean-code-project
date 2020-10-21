@@ -51,6 +51,7 @@
 	padding: 10px 20px;
 	display: flex;
 	justify-content: left;
+	align-items: center;
 }
 
 /* ARTICLE  */
@@ -134,7 +135,7 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
-	/* margin: 10px 0; */
+	/* margin: 0 10px; */
 }
 
 .container__left {
@@ -178,7 +179,7 @@
 /* READ POST */
 /* P POSTS */
 .posts__p {
-	padding: 5px 10px;
+	padding: 0 10px 0 30px;
 }
 
 .posts__art {
