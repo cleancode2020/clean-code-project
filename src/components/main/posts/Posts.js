@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import Submitpost from "./submitpost/Submitpost";
 import Readposts from "./readposts/Readposts";
 import Modal from "react-modal";
-import imgInfo from "../../../assets/info.png";
+import logo from "../../../assets/icons/logo.png";
 
 function Posts(props) {
 	const [isInfoActive, setIsInfoActive] = React.useState(false);
@@ -40,7 +40,8 @@ function Posts(props) {
 									<i className="fas fa-times"></i>
 								</button>
 								<div className="info__text">
-									<img className="info__imgcodes" src={imgInfo} alt="info" />
+									<img className="info__imgcodes" src={logo} alt="info" />
+									<h2 className="info__title">Cleancode</h2>
 									<p>
 										Cleancode is a web platform to exchange about clean coding
 										and everything around it.

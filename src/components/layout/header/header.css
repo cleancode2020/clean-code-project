@@ -203,16 +203,28 @@
 	font-size: 20px;
 }
 
+@media screen and (max-width: 900px) {
+	.info__text {
+		width: 90%;
+	}
+}
+
 .info__text p {
 	margin: 10px;
 }
 
 /* MODAL INFO */
 .info__imgcodes {
-	width: 20%;
+	width: 60px;
 	margin: 20px auto 50px auto;
 }
 
+.info__title {
+	font-size: 28px;
+	font-weight: bold;
+	margin: 0 auto 50px auto;
+	color: #00b8ff;
+}
 /* /////////////////////// */
 
 /* HEADER  */
