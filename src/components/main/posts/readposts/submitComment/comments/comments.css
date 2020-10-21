@@ -4,14 +4,15 @@
 
 .comment__li {
 	border: 1px solid #d8d8d8;
+	/* border: 1px solid red; */
 	padding: 20px;
 	margin: 5px;
 }
 
 .comment__author {
-	color: #00b8ff;
+	/* color: #00b8ff; */
 	font-weight: bold;
-	margin: 20px 10px 40px;
+	margin-left: auto;
 	font-size: 18px;
 }
 

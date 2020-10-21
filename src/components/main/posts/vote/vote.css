@@ -1,8 +1,9 @@
 /* VOTE DIV */
 .vote__div {
-	padding: 10px;
+	/* border: solid 1px red; */
+	padding: 0 20px 0 0;
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	justify-content: space-evenly;
 }
 
@@ -10,15 +11,16 @@
 .vote__wrapper {
 	border: none;
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	justify-content: center;
 	align-items: center;
-	font-size: 13px;
-	padding: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	/* padding: 5px; */
 }
 
 .vote__wrapper span {
-	padding: 3px 0;
+	padding: 3px;
 }
 
 .vote__button:focus {

@@ -130,11 +130,10 @@
 
 /* VOTE */
 .vote__container {
-	/* border: solid 1px red; */
 	color: #787878;
 	display: flex;
 	align-items: center;
-	width: 50%;
+	width: 100%;
 	/* margin: 10px 0; */
 }
 

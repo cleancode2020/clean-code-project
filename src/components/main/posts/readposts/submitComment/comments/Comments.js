@@ -16,7 +16,6 @@ function Comments(props) {
 	return (
 		<ul className="comment__ul">
 			<li className="comment__li" key={props.index}>
-				<h4 className="comment__author">{props.comment[5]}</h4>
 				<h3 className="comment__text">{props.comment[2]}</h3>
 				<span className=" codeblock__comment">
 					<CodeBlockComment code={props.comment[1]} />
@@ -42,6 +41,7 @@ function Comments(props) {
 								<i class="fas fa-thumbs-down"></i>
 							</span>
 						</button>
+						<h4 className="comment__author">{props.comment[5]}</h4>
 					</div>
 				) : (
 					<div className="vote__container">
@@ -63,6 +63,7 @@ function Comments(props) {
 								<i class="fas fa-thumbs-down"></i>
 							</span>
 						</button>
+						<h4 className="comment__author">{props.comment[5]}</h4>
 					</div>
 				)}
 			</li>

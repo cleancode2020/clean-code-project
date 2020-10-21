@@ -184,8 +184,6 @@ class Readposts extends React.Component {
 					) : (
 						posts.map((item, index) => (
 							<li className="posts__li" key={index}>
-								{/* VOTE */}
-								<Vote zVote={item[7]} />
 								<button
 									className="post__button"
 									onClick={() => this.setPost(item)}
@@ -195,6 +193,8 @@ class Readposts extends React.Component {
 										<h2 className="article-h2">{item[5]}</h2>
 									</div>
 									<div className="li-bottom">
+										{/* VOTE */}
+										<Vote zVote={item[7]} />
 										<p className="article-p">#{item[2] ? item[2] : "None"}</p>
 										<p className="article-p">#{item[4] ? item[4] : "None"}</p>
 										<h3 className="article-h3">{item[6]}</h3>
