@@ -140,7 +140,7 @@
 
 .nav__input::placeholder {
 	color: #787878;
-	border-left: solid 1px #787878;
+	/* border-left: solid 1px #787878; */
 }
 
 /* BURGER MENU */
