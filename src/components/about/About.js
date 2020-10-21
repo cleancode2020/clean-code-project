@@ -7,10 +7,15 @@ import andreas from "../../assets/teamImage/andreas.jpeg";
 import gael from "../../assets/teamImage/gael.jpeg";
 
 class About extends React.Component {
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
 	render() {
 		return (
 			<main className="main__about">
-				<h2 className="h2__about">About</h2>
+				<h2 className="h2__about" id="#aboutID">
+					About
+				</h2>
 				<div className="sub__about">
 					{/* DESCRIPTION ABOUT US*/}
 					<h3 className="h3__about">What is Cleancode?</h3>

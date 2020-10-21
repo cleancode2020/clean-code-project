@@ -9,7 +9,7 @@ function Footer() {
 			<nav>
 				<ul>
 					<li>
-						<Link className="footer__name" to="/about">
+						<Link className="footer__name" to={`/about`}>
 							<i className="fas fa-users icon"></i> About
 						</Link>
 					</li>

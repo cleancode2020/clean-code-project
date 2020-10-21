@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./privacy.css";
 
 function Privacy() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<section className="privacy__main">
 			<div className="privacy__main__h1">
