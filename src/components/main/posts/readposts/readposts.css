@@ -169,7 +169,7 @@
 /* VOTE */
 .count__button {
 	border: none;
-	background-color: white;
+	background-color: #fafaff;
 	color: #787878;
 	font-weight: bold;
 	font-size: 14px;
@@ -178,8 +178,7 @@
 }
 
 .count__button:hover {
-	background-color: #b3ddf0;
-	color: white;
+	color: #00b8ff;
 }
 
 .count__button span {
