@@ -5,6 +5,7 @@
 	margin: 10px auto 50px;
 	width: 50%;
 	padding: 20px;
+	height: 90vh;
 }
 
 @media screen and (max-width: 800px) {
