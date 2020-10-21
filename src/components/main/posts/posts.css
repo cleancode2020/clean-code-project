@@ -4,7 +4,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	overflow-y: auto;
+	/* overflow-y: auto; */
 	background-color: #fafaff;
 	color: #787878;
 }
