@@ -72,6 +72,7 @@
 @media screen and (max-width: 786px) {
 	.form__div {
 		padding: 5px;
+		width: 100%;
 	}
 }
 
@@ -106,6 +107,7 @@
 	width: 100%;
 	margin: 5px 0 20px;
 	padding: 10px;
+	width: 100%;
 }
 
 .form__input:focus {
@@ -113,11 +115,11 @@
 	outline-style: none;
 }
 
-@media screen and (max-width: 786px) {
+/* @media screen and (max-width: 786px) {
 	.form__input {
 		max-width: 100%;
 	}
-}
+} */
 
 /* DIV CORRECT LENGTH MESSAGE */
 .div__correct__length {
@@ -153,4 +155,10 @@
 .submit__button:focus {
 	outline-color: transparent;
 	outline-style: none;
+}
+
+@media screen and (max-width: 786px) {
+	.submit__button {
+		padding: 20px;
+	}
 }

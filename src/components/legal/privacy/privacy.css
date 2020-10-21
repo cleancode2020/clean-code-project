@@ -1,8 +1,15 @@
 /* PRIVACY MAIN */
 .privacy__main {
-	width: 60%;
+	width: 55%;
 	margin: 2.5rem auto;
 }
+
+@media only screen and (max-width: 700px) {
+	.privacy__main {
+		width: 90%;
+	}
+}
+
 
 .privacy__main a {
 	color: #00b8ff;
