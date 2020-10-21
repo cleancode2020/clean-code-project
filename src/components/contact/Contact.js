@@ -92,6 +92,13 @@ class Contact extends React.Component {
 		return (
 			<form className="container">
 				<legend className="contact__legend">Contact us</legend>
+
+				<div className="email__link__wrapper">
+					<a className="email__link" href="mailto:codeteam35@gmail.com">
+						Send us an email
+					</a>
+				</div>
+
 				{/* SINGLE ITEM */}
 				<div className="single__item">
 					<label className="contact__label" htmlFor="name">
@@ -168,11 +175,6 @@ class Contact extends React.Component {
 				>
 					Send
 				</button>
-				<div className="email__link__wrapper">
-					<a className="email__link" href="mailto:codeteam35@gmail.com">
-						Send us an email instead
-					</a>
-				</div>
 			</form>
 		);
 	}

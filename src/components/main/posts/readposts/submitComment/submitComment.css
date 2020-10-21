@@ -35,20 +35,25 @@
 	outline-style: none;
 }
 
-
 /* FORM */
 .comment__button {
 	color: white;
 	background-color: #00b8ff;
 	border: solid 1px #00b8ff;
-	padding: 20px;
+	padding: 20px 50px;
 	font-weight: bold;
 	margin: 20px 10px;
-	max-width: 100%;
+	font-size: 16px;
+	width: fit-content;
 }
 
 /* FORM */
 .comment__button:hover {
 	color: #00b8ff;
 	background-color: white;
+}
+
+.comment__button:focus {
+	outline-color: transparent;
+	outline-style: none;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import firebase from "../../constants/Firebase";
+import logo from "../../assets/icons/logo.png";
 // import "./form.css";
 
 class LoginForm extends React.Component {
@@ -83,6 +84,9 @@ class LoginForm extends React.Component {
 	render() {
 		return (
 			<form className="form__div" action="#">
+				{/* LOGO */}
+				<img className="loginlogo__img" src={logo} alt="logo" />
+
 				{/* LOGIN FORM LEGEND */}
 				<legend className="form__legend">LOG IN</legend>
 
@@ -98,7 +102,7 @@ class LoginForm extends React.Component {
 					type="text"
 					name="category-title"
 					id="category-title"
-					placeholder="..."
+					placeholder="ex@mail.com"
 					value={this.state.email}
 					onChange={this.handleChangeMail}
 					ref={this.input}
@@ -116,7 +120,7 @@ class LoginForm extends React.Component {
 					type="password"
 					name="category-title"
 					id="category-title"
-					placeholder="..."
+					placeholder="***"
 					value={this.state.password}
 					onChange={this.handleChangePassword}
 				/>

@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/icons/logo.png";
 // import "./form.css";
 
 class SignUpForm extends React.Component {
@@ -178,6 +179,9 @@ class SignUpForm extends React.Component {
 	render() {
 		return (
 			<form className="form__div" action="#">
+				{/* LOGO */}
+				<img className="loginlogo__img" src={logo} alt="logo" />
+
 				{/* SIGN UP FORM LEGEND */}
 				<legend className="form__legend">SIGN UP</legend>
 
@@ -193,7 +197,7 @@ class SignUpForm extends React.Component {
 					type="text"
 					name="category-title"
 					id="category-title"
-					placeholder="..."
+					placeholder="ex@mail.com"
 					value={this.state.mail}
 					onChange={this.handleChangeMail}
 					ref={this.input}
@@ -211,7 +215,7 @@ class SignUpForm extends React.Component {
 					type="text"
 					name="category-title"
 					id="category__title"
-					placeholder="..."
+					placeholder="Tom42"
 					value={this.state.userName}
 					onChange={this.handleChangeUserName}
 				/>
@@ -228,7 +232,7 @@ class SignUpForm extends React.Component {
 					type="password"
 					name="category-title"
 					id="category-title"
-					placeholder="..."
+					placeholder="***"
 					value={this.state.password}
 					onChange={this.handleChangePassword}
 				/>
@@ -245,7 +249,7 @@ class SignUpForm extends React.Component {
 					type="password"
 					name="category-title"
 					id="category-title"
-					placeholder="..."
+					placeholder="***"
 					value={this.state.confirmedPassword}
 					onChange={this.handleChangePasswordConfirm}
 				/>

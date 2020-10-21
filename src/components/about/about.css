@@ -28,7 +28,7 @@
 /* MAIN TITLE */
 .h2__about {
 	text-align: center;
-	margin: 50px;
+	margin: 60px auto 10px auto;
 	font-size: 30px;
 	font-weight: bold;
 }
@@ -36,7 +36,7 @@
 /* H3 */
 .h3__about {
 	text-align: center;
-	margin: 30px;
+	margin: 50px auto;
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -67,13 +67,14 @@
 
 /* P */
 .about__paragraph {
-	margin: 40px;
-	max-width: 100%;
+	margin: 40px auto 100px auto;
+	max-width: 60%;
 }
 
 @media screen and (max-width: 800px) {
 	.about__paragraph {
 		margin: 10px;
+		max-width: 100%;
 	}
 }
 

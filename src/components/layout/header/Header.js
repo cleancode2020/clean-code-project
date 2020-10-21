@@ -7,7 +7,6 @@ import SignUp from "../../authentification/SignUp";
 import LogOut from "../../authentification/LogOut";
 import Searchbar from "./Searchbar";
 import Modal from "react-modal";
-import imgInfo from "../../../assets/info.png";
 
 function Header(props) {
 	const [isInfoActive, setIsInfoActive] = React.useState(false);
@@ -68,7 +67,8 @@ function Header(props) {
 							<i className="fas fa-times"></i>
 						</button>
 						<div className="info__text">
-							<img className="info__imgcodes" src={imgInfo} alt="info" />
+							<img className="info__imgcodes" src={logo} alt="info" />
+							<h2 className="info__title">Cleancode</h2>
 							<p>
 								Cleancode is a web platform to exchange about clean coding and
 								everything around it.

@@ -136,7 +136,8 @@
 }
 
 .button__arrow {
-	width: 20px;
+	display: flex;
+	width: 100%;
 	height: 20px;
 	font-size: 16px;
 	background-color: #202020;
@@ -145,8 +146,11 @@
 	cursor: pointer;
 	color: #ffffff;
 	font-weight: bold;
-	margin-left: auto;
+
 	text-decoration: none;
+}
+.button__arrow p {
+	margin-right: auto;
 }
 .button__arrow:hover {
 	color: #00b8ff;

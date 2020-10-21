@@ -113,8 +113,6 @@ class Categories extends React.Component {
 						onClick={() => this.props.categoryChose("js")}
 					>
 						<div className="categories__info">
-							<i className="ul__icons fab fa-js"></i>
-							<p>JavaScript</p>
 							<button
 								className="button__arrow"
 								onClick={(event) => {
@@ -122,6 +120,8 @@ class Categories extends React.Component {
 									this.updateClass("js");
 								}}
 							>
+								<i className="ul__icons fab fa-js"></i>
+								<p>JavaScript</p>
 								{this.state.jsArrow}
 							</button>
 						</div>
@@ -147,7 +147,6 @@ class Categories extends React.Component {
 						onClick={() => this.props.categoryChose("java")}
 					>
 						<div className="categories__info">
-							<i className="ul__icons fab fa-java"></i> <p>Java</p>
 							<button
 								className="button__arrow"
 								onClick={(event) => {
@@ -155,6 +154,8 @@ class Categories extends React.Component {
 									this.updateClass("java");
 								}}
 							>
+								<i className="ul__icons fab fa-java"></i>
+								<p>Java</p>
 								{this.state.javaArrow}
 							</button>
 						</div>
@@ -180,8 +181,6 @@ class Categories extends React.Component {
 						onClick={() => this.props.categoryChose("python")}
 					>
 						<div className="categories__info">
-							<i className="ul__icons fab fa-python"></i>
-							<p>Python</p>
 							<button
 								className="button__arrow"
 								onClick={(event) => {
@@ -189,6 +188,8 @@ class Categories extends React.Component {
 									this.updateClass("python");
 								}}
 							>
+								<i className="ul__icons fab fa-python"></i>
+								<p>Python</p>
 								{this.state.pythonArrow}
 							</button>
 						</div>
@@ -214,8 +215,6 @@ class Categories extends React.Component {
 						onClick={() => this.props.categoryChose("rust")}
 					>
 						<div className="categories__info">
-							<i className="ul__icons fab fa-rust"></i>
-							<p>Rust</p>
 							<button
 								className="button__arrow"
 								onClick={(event) => {
@@ -223,6 +222,8 @@ class Categories extends React.Component {
 									this.updateClass("rust");
 								}}
 							>
+								<i className="ul__icons fab fa-rust"></i>
+								<p>Rust</p>
 								{this.state.rustArrow}
 							</button>
 						</div>
@@ -248,8 +249,6 @@ class Categories extends React.Component {
 						onClick={() => this.props.categoryChose("c++")}
 					>
 						<div className="categories__info">
-							<i className="ul__icons fas fas fa-circle"></i>
-							<p>C++</p>
 							<button
 								className="button__arrow"
 								onClick={(event) => {
@@ -257,6 +256,8 @@ class Categories extends React.Component {
 									this.updateClass("c");
 								}}
 							>
+								<i className="ul__icons fas fas fa-circle"></i>
+								<p>C++</p>
 								{this.state.cArrow}
 							</button>
 						</div>

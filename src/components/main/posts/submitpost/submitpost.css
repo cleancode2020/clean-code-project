@@ -126,16 +126,23 @@
 	text-decoration: none;
 	width: fit-content;
 	margin: 30px auto;
-	padding: 20px;
+	padding: 20px 50px;
 	background-color: #00b8ff;
 	color: white;
-	width: 100%;
+	font-size: 16px;
+	width: fit-content;
 }
 
 .submit__post:hover {
 	background-color: white;
 	color: #00b8ff;
 }
+
+.submit__post:focus {
+	outline-color: transparent;
+	outline-style: none;
+}
+
 
 /* USER NAME */
 .user__name {
