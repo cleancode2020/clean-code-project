@@ -199,9 +199,7 @@
 	margin: 10px;
 }
 .codeblock {
-	padding: 0 !important;
 	background-color: #fafaff !important;
-	/* border: solid 1px #d8d8d8; */
 	font-size: 14px;
 }
 
