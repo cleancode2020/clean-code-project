@@ -14,6 +14,7 @@ function Main(props) {
 			/>
 
 			{/* POSTS */}
+
 			<Posts
 				firebase={props.firebase}
 				user={props.user}

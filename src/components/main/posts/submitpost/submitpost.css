@@ -22,22 +22,6 @@
 }
 
 /* NAV LINK */
-/* .navlink__submitclose {
-	align-self: flex-end;
-	padding: 5px;
-	font-size: 15px;
-	color: #787878;
-	border: solid 2px #787878;
-	background-color: #fafaff;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-.navlink__submitclose:hover {
-	color: #333333;
-	background-color: white;
-} */
-
 .navlink__submitclose {
 	margin: 20px 20px 20px auto;
 	font-size: 18px;
@@ -46,7 +30,6 @@
 	text-decoration: none;
 	color: #787878;
 	background-color: #fafaff;
-	/* border: solid 2px #787878; */
 	border: none;
 }
 
@@ -57,7 +40,6 @@
 
 .navlink__submitclose:hover {
 	color: #00b8ff;
-	/* border: solid 2px #00b8ff; */
 }
 
 /* LEGEND */
@@ -142,7 +124,6 @@
 	outline-color: transparent;
 	outline-style: none;
 }
-
 
 /* USER NAME */
 .user__name {
