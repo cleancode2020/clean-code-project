@@ -20,28 +20,29 @@
 }
 
 /* PRIVACY H1 */
-.privacy__main__h1 {
-	font-size: 2.2em;
+.privacy__main__h2 {
+	font-size: 30px;
+	color: #00b8ff;
 	font-weight: bold;
 	text-align: center;
 	padding: 50px;
 }
 
-.privacy__h1 {
-	font-size: 1.1em;
+.privacy__h2 {
+	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
 	padding: 50px 0 50px 0;
 }
 
 /* PRIVACY H2 */
-.privacy__h2 {
+.privacy__h3 {
 	font-size: 1em;
 	font-weight: bold;
 }
 
-.privacy__h2,
-.privacy__h3 {
+.privacy__h3,
+.privacy__h4 {
 	text-align: left;
 	padding: 15px 0 15px 0;
 }
@@ -57,7 +58,7 @@
 }
 
 .privacy__lists ul li {
-	color: rgb(100, 96, 96);
+	color: 	#686868;
 	list-style-type: disc;
 	padding: 10px 0 10px 0;
 }

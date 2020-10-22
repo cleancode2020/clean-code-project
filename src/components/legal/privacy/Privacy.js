@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./privacy.css";
 
 function Privacy() {
@@ -7,8 +7,8 @@ function Privacy() {
 	}, []);
 	return (
 		<section className="privacy__main">
-			<div className="privacy__main__h1">
-				<h1>Privacy Policy</h1>
+			<div className="privacy__main__h2">
+				<h2>Privacy Policy</h2>
 			</div>
 
 			<div className="privacy__text">
@@ -23,6 +23,7 @@ function Privacy() {
 					information in accordance with this Privacy Policy. This Privacy
 					Policy has been created with the help of the{" "}
 					<a
+						className
 						href="https://www.privacypolicies.com/privacy-policy-generator/"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -33,12 +34,12 @@ function Privacy() {
 				</p>
 			</div>
 
-			<div className="privacy__h1">
-				<h1>Interpretation and Definitions</h1>
+			<div className="privacy__h2">
+				<h2>Interpretation and Definitions</h2>
 			</div>
 
-			<div className="privacy__h2">
-				<h2>Interpretation</h2>
+			<div className="privacy__h3">
+				<h3>Interpretation</h3>
 			</div>
 
 			<div className="privacy__text">
@@ -50,8 +51,8 @@ function Privacy() {
 				</p>
 			</div>
 
-			<div className="privacy__h2">
-				<h2>Definitions</h2>
+			<div className="privacy__h3">
+				<h3>Definitions</h3>
 			</div>
 
 			<div className="privacy__text">
@@ -150,12 +151,12 @@ function Privacy() {
 				</ul>
 			</div>
 
-			<div className="privacy__h1">
-				<h1>Collecting and Using Your Personal Data</h1>
+			<div className="privacy__h2">
+				<h2>Collecting and Using Your Personal Data</h2>
 			</div>
 
-			<div className="privacy__h2">
-				<h2>Types of Data Collected</h2>
+			<div className="privacy__h3">
+				<h3>Types of Data Collected</h3>
 			</div>
 
 			<div className="privacy__h3">
@@ -385,8 +386,8 @@ function Privacy() {
 				</ul>
 			</div>
 
-			<div className="privacy__h2">
-				<h2>Retention of Your Personal Data</h2>
+			<div className="privacy__h3">
+				<h3>Retention of Your Personal Data</h3>
 			</div>
 
 			<div className="privacy__text">
@@ -405,8 +406,8 @@ function Privacy() {
 				</p>
 			</div>
 
-			<div className="privacy__h2">
-				<h2>Transfer of Your Personal Data</h2>
+			<div className="privacy__h3">
+				<h3>Transfer of Your Personal Data</h3>
 			</div>
 
 			<div className="privacy__text">
@@ -483,8 +484,8 @@ function Privacy() {
 				</ul>
 			</div>
 
-			<div className="privacy__h2">
-				<h2>Security of Your Personal Data</h2>
+			<div className="privacy__h3">
+				<h3>Security of Your Personal Data</h3>
 			</div>
 
 			<div className="privacy__text">
@@ -497,10 +498,10 @@ function Privacy() {
 				</p>
 			</div>
 
-			<div className="privacy__h1">
-				<h1>
+			<div className="privacy__h3">
+				<h3>
 					Your California Privacy Rights (California's Shine the Light law)
-				</h1>
+				</h3>
 			</div>
 
 			<div className="privacy__text">
@@ -516,11 +517,11 @@ function Privacy() {
 				</p>
 			</div>
 
-			<div className="privacy__h1">
-				<h1>
+			<div className="privacy__h3">
+				<h3>
 					California Privacy Rights for Minor Users (California Business and
 					Professions Code Section 22581)
-				</h1>
+				</h3>
 			</div>
 
 			<div className="privacy__text">
@@ -538,8 +539,8 @@ function Privacy() {
 				</p>
 			</div>
 
-			<div className="privacy__h1">
-				<h1>Links to Other Websites</h1>
+			<div className="privacy__h3">
+				<h3>Links to Other Websites</h3>
 			</div>
 
 			<div className="privacy__text">
@@ -553,8 +554,8 @@ function Privacy() {
 				</p>
 			</div>
 
-			<div className="privacy__h1">
-				<h1>Changes to this Privacy Policy</h1>
+			<div className="privacy__h3">
+				<h3>Changes to this Privacy Policy</h3>
 			</div>
 
 			<div className="privacy__text">
@@ -569,8 +570,8 @@ function Privacy() {
 				</p>
 			</div>
 
-			<div className="privacy__h1">
-				<h1>Contact Us</h1>
+			<div className="privacy__h3">
+				<h3>Contact Us</h3>
 			</div>
 
 			<div className="privacy__text">

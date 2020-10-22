@@ -7,7 +7,7 @@ function Impressum() {
 	}, []);
 	return (
 		<section className="impressum__main">
-			<h1>Impressum</h1>
+			<h2>Impressum</h2>
 			<div className="impressum__address">
 				<p>Angaben gemäß § 5 TMG</p>
 				<p>cleancode Team</p>

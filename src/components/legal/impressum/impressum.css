@@ -11,11 +11,12 @@
 	}
 }
 
-.impressum__main h1 {
-	font-size: 2.2em;
+.impressum__main h2 {
+	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
 	padding: 50px;
+	color: #00b8ff;
 }
 
 /* IMPRESSUM ADDRESS */
