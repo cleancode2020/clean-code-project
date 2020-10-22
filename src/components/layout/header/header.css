@@ -237,11 +237,12 @@
 .infologinbutton__wrapperlogin {
 	width: 100%;
 	margin: 20px auto 0 0 ;
+	color: #787878;
 }
 
 .infologinbutton__wrapperlogin button {
 	/* border: solid 1px red; */
-	margin: 0;
+	margin: 0 5px;
 	color: #282828;
 	background-color: #fafaff;
 }

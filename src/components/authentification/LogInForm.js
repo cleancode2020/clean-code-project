@@ -140,6 +140,7 @@ class LoginForm extends React.Component {
 					LOG IN
 				</button>
 				<div className="infologinbutton__wrapperlogin">
+					or
 					<SignUp
 						fetchFirebase={this.props.fetchFirebase}
 						openModal={this.props.openModal}
@@ -149,6 +150,7 @@ class LoginForm extends React.Component {
 						firebase={this.props.firebase}
 						user={this.props.user}
 					/>
+					instead
 				</div>
 			</form>
 		);
