@@ -23,7 +23,6 @@ function Privacy() {
 					information in accordance with this Privacy Policy. This Privacy
 					Policy has been created with the help of the{" "}
 					<a
-						className
 						href="https://www.privacypolicies.com/privacy-policy-generator/"
 						target="_blank"
 						rel="noopener noreferrer"

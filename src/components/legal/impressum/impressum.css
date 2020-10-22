@@ -29,6 +29,11 @@
 	margin: 6px 0;
 }
 
+.impressum__address a {
+	color: #00b8ff;
+	padding: 0 5px;
+}
+
 /* IMPRESSUM TITLE */
 .impressum__title {
 	padding: 30px;

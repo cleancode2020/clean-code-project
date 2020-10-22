@@ -22,7 +22,12 @@ function Impressum() {
 				<p> Telefon: 030-364286190</p>
 				<p>
 					E-Mail:
-					<a href="mailto:codeteam35@gmail.com">codeteam35@gmail.com</a>
+					<a
+						rel="noopener noreferrer"
+						href="mailto:codeteam35@gmail.com"
+					>
+						codeteam35@gmail.com
+					</a>
 				</p>
 			</div>
 
