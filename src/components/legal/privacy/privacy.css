@@ -3,6 +3,7 @@
 	width: 55%;
 	margin: 2.5rem auto;
 	line-height: 1.2;
+	color: #101010;
 }
 
 @media only screen and (max-width: 700px) {
@@ -16,7 +17,7 @@
 }
 
 .privacy__main a:hover {
-	color: gray;
+	color: #101010;
 }
 
 /* PRIVACY H1 */
@@ -58,7 +59,7 @@
 }
 
 .privacy__lists ul li {
-	color: 	#686868;
+	color: #383838;
 	list-style-type: disc;
 	padding: 10px 0 10px 0;
 }
