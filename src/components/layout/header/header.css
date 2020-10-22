@@ -155,10 +155,10 @@
 	height: 90vh;
 	margin: 30px;
 	border-radius: 5px;
-	/* padding: 1rem; */
+	padding: 5%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	/* margin-top: 5rem; */
 	background-color: #fafaff;
@@ -196,6 +196,7 @@
 	display: flex;
 	flex-direction: column;
 	/* justify-content: center; */
+	margin: 5%;
 	align-items: center;
 	width: 55%;
 	height: 100%;
@@ -215,15 +216,18 @@
 
 /* MODAL INFO */
 .info__imgcodes {
-	width: 60px;
-	margin: 20px auto 50px auto;
+	width: 50px;
+	margin: 10px;
 }
 
 .info__title {
 	font-size: 28px;
 	font-weight: bold;
-	margin: 0 auto 50px auto;
+	/* margin: 0 auto 50px auto; */
 	color: #00b8ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 /* /////////////////////// */
 

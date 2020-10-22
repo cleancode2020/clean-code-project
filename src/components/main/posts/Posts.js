@@ -39,9 +39,11 @@ function Posts(props) {
 								<button className="close__info" onClick={closeInfoModal}>
 									<i className="fas fa-times"></i>
 								</button>
-								<div className="info__text">
+								<h2 className="info__title">
 									<img className="info__imgcodes" src={logo} alt="info" />
-									<h2 className="info__title">Cleancode</h2>
+									Cleancode
+								</h2>
+								<div className="info__text">
 									<p>
 										Cleancode is a web platform to exchange about clean coding
 										and everything around it.
@@ -52,6 +54,7 @@ function Posts(props) {
 										topic. Or respond to existing posts and exchange with the
 										community.
 									</p>
+									<p>Signup to start exchange with the community</p>
 								</div>
 							</Modal>
 						</div>

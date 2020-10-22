@@ -95,7 +95,7 @@ class Contact extends React.Component {
 
 				<div className="email__link__wrapper">
 					<a className="email__link" href="mailto:codeteam35@gmail.com">
-						Send us an email
+						<i className="mail__icon fas fa-envelope"></i>Send us an email
 					</a>
 				</div>
 

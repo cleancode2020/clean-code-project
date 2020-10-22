@@ -256,7 +256,7 @@ class Categories extends React.Component {
 									this.updateClass("c");
 								}}
 							>
-								<i className="ul__icons fas fas fa-circle"></i>
+								<i className="ul__icons fas fa-plus-circle"></i>
 								<p>C++</p>
 								{this.state.cArrow}
 							</button>
