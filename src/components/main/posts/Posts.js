@@ -17,7 +17,6 @@ function Posts(props) {
 	};
 	return (
 		<BrowserRouter>
-			u
 			<main className="main__posts">
 				<div className="posts__header">
 					<h2 className="posts__title">Browse / Submit posts</h2>
