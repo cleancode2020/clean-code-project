@@ -1,6 +1,7 @@
 import React from "react";
 import firebase from "../../constants/Firebase";
 import logo from "../../assets/icons/logo.png";
+import SignUp from "../authentification/SignUp";
 // import "./form.css";
 
 class LoginForm extends React.Component {
@@ -138,6 +139,17 @@ class LoginForm extends React.Component {
 				<button className="submit__button" onClick={this.submitLogin}>
 					LOG IN
 				</button>
+				<div className="infologinbutton__wrapperlogin">
+					<SignUp
+						fetchFirebase={this.props.fetchFirebase}
+						openModal={this.props.openModal}
+						closeModal={this.props.closeModal}
+						modalIsOpen={this.props.modalIsOpen}
+						setUser={this.props.setUser}
+						firebase={this.props.firebase}
+						user={this.props.user}
+					/>
+				</div>
 			</form>
 		);
 	}

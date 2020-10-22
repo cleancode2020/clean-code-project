@@ -81,6 +81,18 @@ function Header(props) {
 								Or respond to existing posts and exchange with the community.
 							</p>
 							<p>Signup to start exchange with the community</p>
+
+							<div className="infologinbutton__wrapper">
+								<LogIn
+									fetchFirebase={props.fetchFirebase}
+									setUser={props.setUser}
+									openModal={props.openModal}
+									closeModal={props.closeModal}
+									modalIsOpen={props.modalIsOpen}
+									firebase={props.firebase}
+									user={props.user}
+								/>
+							</div>
 						</div>
 					</Modal>
 				</div>
@@ -94,14 +106,19 @@ function Header(props) {
 						<LogIn
 							fetchFirebase={props.fetchFirebase}
 							setUser={props.setUser}
+							openModal={props.openModal}
+							closeModal={props.closeModal}
+							modalIsOpen={props.modalIsOpen}
+							firebase={props.firebase}
+							user={props.user}
 						/>
 						<div className="nav__stroke"></div>
 						<SignUp
 							fetchFirebase={props.fetchFirebase}
+							setUser={props.setUser}
 							openModal={props.openModal}
 							closeModal={props.closeModal}
 							modalIsOpen={props.modalIsOpen}
-							setUser={props.setUser}
 							firebase={props.firebase}
 							user={props.user}
 						/>

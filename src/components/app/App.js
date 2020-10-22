@@ -246,6 +246,9 @@ class App extends React.Component {
 								allPostsObject={this.state.allPostsObject}
 								categoryChose={this.categoryChose}
 								subCategoryChose={this.subCategoryChose}
+								openModal={this.openModal}
+								closeModal={this.closeModal}
+								modalIsOpen={this.state.modalIsOpen}
 							/>
 						</Route>
 

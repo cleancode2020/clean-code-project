@@ -108,16 +108,14 @@ class Categories extends React.Component {
 
 				<ul className="categories__ul">
 					{/* JAVASCRIPT */}
-					<li
-						className="categories__li"
-						onClick={() => this.props.categoryChose("js")}
-					>
+					<li className="categories__li">
 						<div className="categories__info">
 							<button
 								className="button__arrow"
 								onClick={(event) => {
 									event.stopPropagation();
 									this.updateClass("js");
+									this.props.categoryChose("js");
 								}}
 							>
 								<i className="ul__icons fab fa-js"></i>
@@ -142,16 +140,14 @@ class Categories extends React.Component {
 					</li>
 
 					{/* JAVA */}
-					<li
-						className="categories__li"
-						onClick={() => this.props.categoryChose("java")}
-					>
+					<li className="categories__li">
 						<div className="categories__info">
 							<button
 								className="button__arrow"
 								onClick={(event) => {
 									event.stopPropagation();
 									this.updateClass("java");
+									this.props.categoryChose("java");
 								}}
 							>
 								<i className="ul__icons fab fa-java"></i>
@@ -176,16 +172,14 @@ class Categories extends React.Component {
 					</li>
 
 					{/* PYTHON */}
-					<li
-						className="categories__li"
-						onClick={() => this.props.categoryChose("python")}
-					>
+					<li className="categories__li">
 						<div className="categories__info">
 							<button
 								className="button__arrow"
 								onClick={(event) => {
 									event.stopPropagation();
 									this.updateClass("python");
+									this.props.categoryChose("python");
 								}}
 							>
 								<i className="ul__icons fab fa-python"></i>
@@ -210,16 +204,14 @@ class Categories extends React.Component {
 					</li>
 
 					{/* RUST */}
-					<li
-						className="categories__li"
-						onClick={() => this.props.categoryChose("rust")}
-					>
+					<li className="categories__li">
 						<div className="categories__info">
 							<button
 								className="button__arrow"
 								onClick={(event) => {
 									event.stopPropagation();
 									this.updateClass("rust");
+									this.props.categoryChose("rust");
 								}}
 							>
 								<i className="ul__icons fab fa-rust"></i>
@@ -244,16 +236,14 @@ class Categories extends React.Component {
 					</li>
 
 					{/* C */}
-					<li
-						className="li__icon categories__li"
-						onClick={() => this.props.categoryChose("c++")}
-					>
+					<li className="li__icon categories__li">
 						<div className="categories__info">
 							<button
 								className="button__arrow"
 								onClick={(event) => {
 									event.stopPropagation();
 									this.updateClass("c");
+									this.props.categoryChose("c++");
 								}}
 							>
 								<i className="ul__icons fas fa-plus-circle"></i>

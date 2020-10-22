@@ -5,6 +5,7 @@ import Submitpost from "./submitpost/Submitpost";
 import Readposts from "./readposts/Readposts";
 import Modal from "react-modal";
 import logo from "../../../assets/icons/logo.png";
+import LogIn from "../../authentification/LogIn";
 
 function Posts(props) {
 	const [isInfoActive, setIsInfoActive] = React.useState(false);
@@ -16,6 +17,7 @@ function Posts(props) {
 	};
 	return (
 		<BrowserRouter>
+			u
 			<main className="main__posts">
 				<div className="posts__header">
 					<h2 className="posts__title">Browse / Submit posts</h2>
@@ -55,6 +57,18 @@ function Posts(props) {
 										community.
 									</p>
 									<p>Signup to start exchange with the community</p>
+
+									<div className="infologinbutton__wrapper">
+										<LogIn
+											fetchFirebase={props.fetchFirebase}
+											setUser={props.setUser}
+											openModal={props.openModal}
+											closeModal={props.closeModal}
+											modalIsOpen={props.modalIsOpen}
+											firebase={props.firebase}
+											user={props.user}
+										/>
+									</div>
 								</div>
 							</Modal>
 						</div>

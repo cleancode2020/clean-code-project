@@ -50,6 +50,11 @@ class Login extends React.Component {
 					<LoginForm
 						setUser={this.props.setUser}
 						fetchFirebase={this.props.fetchFirebase}
+						openModal={this.props.openModal}
+						closeModal={this.props.closeModal}
+						modalIsOpen={this.props.modalIsOpen}
+						firebase={this.props.firebase}
+						user={this.props.user}
 					/>
 				</Modal>
 			</>
