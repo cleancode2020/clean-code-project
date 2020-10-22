@@ -32,6 +32,7 @@
 	margin: 60px auto 10px auto;
 	font-size: 30px;
 	font-weight: bold;
+	color: #00b8ff;
 }
 
 /* H3 */
@@ -46,14 +47,16 @@
 .h3__team {
 	text-align: center;
 	margin: 100px 0 50px;
-	font-size: 22px;
+	font-size: 26px;
 	font-weight: bold;
+	color: #00b8ff;
 }
 
 /* H4 */
 .h4__about {
 	font-weight: bold;
 	font-size: 20px;
+	color: #00b8ff;
 }
 
 /* A */
