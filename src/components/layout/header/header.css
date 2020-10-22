@@ -152,10 +152,10 @@
 	max-height: 90vh;
 	margin: 40px;
 	border-radius: 5px;
-	padding: 5%;
+	padding: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	/* justify-content: center; */
 	align-items: center;
 	background-color: #fafaff;
 	line-height: 1.2;
@@ -189,7 +189,7 @@
 .info__text {
 	display: flex;
 	flex-direction: column;
-	margin: 5%;
+	margin: 2% 5% 10% 5%;
 	width: 60%;
 	height: 100%;
 	color: #181818;
