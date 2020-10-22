@@ -116,7 +116,7 @@ class Contact extends React.Component {
 
 				{/* END OF SINGLE ITEM */}
 				{/* SINGLE ITEM */}
-				<div className="single__item">
+				{/* <div className="single__item">
 					<label className="contact__label" htmlFor="lastname">
 						Last Name
 					</label>
@@ -128,7 +128,7 @@ class Contact extends React.Component {
 						value={this.state.lastname}
 						onChange={this.handleLastName}
 					></input>
-				</div>
+				</div> */}
 
 				{/* END OF SINGLE ITEM */}
 				{/* SINGLE ITEM */}
