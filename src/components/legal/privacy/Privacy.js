@@ -551,23 +551,6 @@ function Privacy() {
 				</p>
 			</div>
 
-			<div className="privacy__h3">
-				<h3>Contact Us</h3>
-			</div>
-
-			<div className="privacy__text">
-				<p>
-					If you have any questions about this Privacy Policy, You can contact
-					us:
-				</p>
-			</div>
-
-			<div className="privacy__lists">
-				<ul>
-					<li>By email: codeteam35@gmail.com</li>
-				</ul>
-			</div>
-
 			<div className="privacy__text">
 				<p>
 					This Privacy Policy describes Our policies and procedures on the
@@ -586,6 +569,23 @@ function Privacy() {
 					</a>
 					.
 				</p>
+			</div>
+
+			<div className="privacy__h2">
+				<h2>Contact Us</h2>
+			</div>
+
+			<div className="privacy__text">
+				<p>
+					If you have any questions about this Privacy Policy, You can contact
+					us:
+				</p>
+			</div>
+
+			<div className="privacy__lists">
+				<ul>
+					<li>By email: codeteam35@gmail.com</li>
+				</ul>
 			</div>
 		</section>
 	);
