@@ -56,16 +56,6 @@ Firebase
 
 - react-syntax-highlighter - https://www.npmjs.com/package/react-syntax-highlighter
 
-<br/>
-
-### Design
-
-https://www.figma.com/file/XRfL0pTCiJrz6dqjIg6Yid/Clean-Code?node-id=34%3A105
-
-### Trello
-
-https://trello.com/b/C27NrRnC/clean-code
-
 <br />
 <br />
 
