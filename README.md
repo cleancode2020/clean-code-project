@@ -71,4 +71,4 @@ https://trello.com/b/C27NrRnC/clean-code
 
 ### Web deploy:
 
-https://clean-code-project.web.app/
+https://cleancode.fun/
