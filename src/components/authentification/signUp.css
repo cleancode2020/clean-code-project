@@ -30,7 +30,6 @@
 
 .modal__button__login:hover {
 	color: #00b8ff;
-	/* border: solid 1px #fafaff; */
 }
 
 .modal__button__login:focus {
@@ -41,8 +40,8 @@
 /* SIGN UP MODAL CLOSE */
 .modal__button__close {
 	position: absolute;
-	top: 20px;
-	right: 20px;
+	top: 30px;
+	right: 30px;
 	font-size: 18px;
 	border: solid 1px #d8d8d8;
 	color: #787878;
@@ -55,13 +54,20 @@
 	color: #00b8ff;
 }
 
+/* FLEX WRAPPER */
+.form__flexwrapper {
+	min-height: 100%;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* SIGN UP FORM */
 .form__div {
+	margin: auto;
 	box-sizing: border-box;
-	/* border: solid 1px #d8d8d8; */
-	/* box-shadow: 1px 1px 4px 1px #d8d8d8; */
 	width: 50%;
-	margin: 0 auto;
 	padding: 30px 50px;
 	display: flex;
 	flex-direction: column;
@@ -114,12 +120,6 @@
 	outline-color: transparent;
 	outline-style: none;
 }
-
-/* @media screen and (max-width: 786px) {
-	.form__input {
-		max-width: 100%;
-	}
-} */
 
 /* DIV CORRECT LENGTH MESSAGE */
 .div__correct__length {

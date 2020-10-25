@@ -24,14 +24,16 @@ function SignUp(props) {
 					<i className="fas fa-times"></i>
 				</button>
 
-				{/* SIGN UP FORM COMPONENT*/}
-				<SignUpForm
-					firebase={props.firebase}
-					setUser={props.setUser}
-					fetchFirebase={props.fetchFirebase}
-					user={props.user}
-					closeModal={props.closeModal}
-				/>
+				<div className="form__flexwrapper">
+					{/* SIGN UP FORM COMPONENT*/}
+					<SignUpForm
+						firebase={props.firebase}
+						setUser={props.setUser}
+						fetchFirebase={props.fetchFirebase}
+						user={props.user}
+						closeModal={props.closeModal}
+					/>
+				</div>
 			</Modal>
 		</>
 	);

@@ -1,9 +1,12 @@
 /* CONTAINER */
 .container {
-	margin: 10px auto 50px;
+	margin: auto;
 	width: 50%;
-	padding: 20px;
-	min-height: 90vh;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -14,11 +17,20 @@
 
 /* LEGEND */
 .contact__legend {
+	text-align: center;
 	color: #00b8ff;
 	font-size: 28px;
 	font-weight: bold;
-	text-align: center;
-	margin: 50px;
+	margin: 0 auto 60px auto;
+}
+
+/* FLEX WRAPPER */
+.contactform__flexwrapper {
+	min-height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 /* DIV */

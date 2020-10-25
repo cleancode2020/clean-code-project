@@ -95,7 +95,6 @@
 	margin: 0 20px 0 0;
 }
 
-/* READ POST */
 /* H3 POSTS */
 .post__div {
 	border: solid 1px #d8d8d8;
@@ -105,15 +104,12 @@
 	flex-direction: column;
 }
 
-/* READ POST */
 /* NAV CLOSE BUTTON */
 .nav__close {
 	align-self: flex-end;
 	font-size: 18px;
 	padding: 5px;
-	/* border-radius: 5px; */
 	color: #787878;
-	/* border: solid 2px #787878; */
 	border: none;
 	background-color: #fafaff;
 	font-weight: bold;
@@ -121,7 +117,6 @@
 
 .nav__close:hover {
 	color: #00b8ff;
-	/* border: solid 2px #00b8ff; */
 }
 
 .nav__close:focus {
@@ -129,7 +124,6 @@
 	outline-style: none;
 }
 
-/* READ POST */
 /* H3 POSTS */
 .posts__h3 {
 	width: 100%;
@@ -145,7 +139,6 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
-	/* margin: 0 10px; */
 }
 
 @media only screen and (max-width: 330px) {
@@ -162,7 +155,6 @@
 }
 
 .posts__informations {
-	/* border: solid 1px red; */
 	display: flex;
 }
 
@@ -186,7 +178,6 @@
 	margin: 0 3px;
 }
 
-/* READ POST */
 /* H4 POSTS */
 .posts__h4 {
 	font-weight: bold;
@@ -194,7 +185,6 @@
 	margin: 30px 10px 10px;
 }
 
-/* READ POST */
 /* P POSTS */
 .posts__p {
 	padding: 0 10px 0 30px;
@@ -222,7 +212,6 @@
 	font-size: 14px;
 }
 
-/* READ POST */
 /* USER NAME */
 .user__name {
 	text-align: right;
