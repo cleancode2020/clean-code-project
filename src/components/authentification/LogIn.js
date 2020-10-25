@@ -46,16 +46,18 @@ class Login extends React.Component {
 						<i className="fas fa-times"></i>
 					</button>
 
-					{/* LOGIN FORM COMPONENT */}
-					<LoginForm
-						setUser={this.props.setUser}
-						fetchFirebase={this.props.fetchFirebase}
-						openModal={this.props.openModal}
-						closeModal={this.props.closeModal}
-						modalIsOpen={this.props.modalIsOpen}
-						firebase={this.props.firebase}
-						user={this.props.user}
-					/>
+					<div className="form__flexwrapper">
+						{/* LOGIN FORM COMPONENT */}
+						<LoginForm
+							setUser={this.props.setUser}
+							fetchFirebase={this.props.fetchFirebase}
+							openModal={this.props.openModal}
+							closeModal={this.props.closeModal}
+							modalIsOpen={this.props.modalIsOpen}
+							firebase={this.props.firebase}
+							user={this.props.user}
+						/>
+					</div>
 				</Modal>
 			</>
 		);

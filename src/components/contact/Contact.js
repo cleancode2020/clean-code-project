@@ -5,7 +5,6 @@ import axios from "axios";
 class Contact extends React.Component {
 	state = {
 		name: "",
-		lastname: "",
 		email: "",
 		message: "",
 		sent: false,
@@ -15,25 +14,21 @@ class Contact extends React.Component {
 		window.scrollTo(0, 0);
 	}
 
-	// HANDLE INPUTS
+	// HANDLE NAME INPUT
 	handleName = (e) => {
 		this.setState({
 			name: e.target.value,
 		});
 	};
 
-	handleLastName = (e) => {
-		this.setState({
-			lastname: e.target.value,
-		});
-	};
-
+	// HANDLE EMAIL INPUT
 	handleEmail = (e) => {
 		this.setState({
 			email: e.target.value,
 		});
 	};
 
+	// HANDLE MESSAGE INPUT
 	handleMessage = (e) => {
 		this.setState({
 			message: e.target.value,
@@ -50,7 +45,6 @@ class Contact extends React.Component {
 	postContactForm = () => {
 		const data = {
 			name: this.state.name,
-			lastsname: this.state.lastname,
 			email: this.state.email,
 			message: this.state.message,
 		};
@@ -77,7 +71,6 @@ class Contact extends React.Component {
 	resetForm = () => {
 		this.setState({
 			name: "",
-			lastname: "",
 			email: "",
 			message: "",
 		});
@@ -93,88 +86,73 @@ class Contact extends React.Component {
 			<form className="container">
 				<legend className="contact__legend">Contact us</legend>
 
-				<div className="email__link__wrapper">
-					<a className="email__link" href="mailto:codeteam35@gmail.com">
-						<i className="mail__icon fas fa-envelope"></i>Send us an email
-					</a>
-				</div>
+				<div className="contactform__flexwrapper">
+					<div className="email__link__wrapper">
+						<a className="email__link" href="mailto:codeteam35@gmail.com">
+							<i className="mail__icon fas fa-envelope"></i>Send us an email
+						</a>
+					</div>
 
-				{/* SINGLE ITEM */}
-				<div className="single__item">
-					<label className="contact__label" htmlFor="name">
-						Name
-					</label>
-					<input
-						className="contact__input"
-						type="text"
-						name="name"
-						placeholder="your name..."
-						value={this.state.name}
-						onChange={this.handleName}
-					></input>
-				</div>
+					{/* NAME */}
+					<div className="single__item">
+						<label className="contact__label" htmlFor="name">
+							Name
+						</label>
+						<input
+							className="contact__input"
+							type="text"
+							name="name"
+							placeholder="your name..."
+							value={this.state.name}
+							onChange={this.handleName}
+						></input>
+					</div>
 
-				{/* END OF SINGLE ITEM */}
-				{/* SINGLE ITEM */}
-				{/* <div className="single__item">
-					<label className="contact__label" htmlFor="lastname">
-						Last Name
-					</label>
-					<input
-						className="contact__input"
-						type="text"
-						name="lastname"
-						placeholder="your last name..."
-						value={this.state.lastname}
-						onChange={this.handleLastName}
-					></input>
-				</div> */}
+					{/* EMAIL */}
+					<div className="single__item">
+						<label className="contact__label" htmlFor="email">
+							E-Mail
+						</label>
+						<input
+							className="contact__input"
+							type="text"
+							name="email"
+							placeholder="your email..."
+							value={this.state.email}
+							onChange={this.handleEmail}
+							required
+						></input>
+					</div>
 
-				{/* END OF SINGLE ITEM */}
-				{/* SINGLE ITEM */}
-				<div className="single__item">
-					<label className="contact__label" htmlFor="email">
-						E-Mail
-					</label>
-					<input
-						className="contact__input"
-						type="text"
-						name="email"
-						placeholder="your email..."
-						value={this.state.email}
-						onChange={this.handleEmail}
-						required
-					></input>
-				</div>
-				{/* END OF SINGLE ITEM */}
-				{/* SINGLE ITEM */}
-				<div className="textArea single__item">
-					<label className="contact__label" htmlFor="message">
-						Message
-					</label>
-					<textarea
-						className="contact__textarea"
-						name="message"
-						id=""
-						cols="30"
-						rows="5"
-						placeholder="your message..."
-						value={this.state.message}
-						onChange={this.handleMessage}
-					></textarea>
-				</div>
-				{/* END OF SINGLE ITEM */}
-				<div className={this.state.sent ? "msg msgAppear" : "msg"}>
-					Message has been sent
-				</div>
+					{/* MESSAGE */}
+					<div className="textArea single__item">
+						<label className="contact__label" htmlFor="message">
+							Message
+						</label>
+						<textarea
+							className="contact__textarea"
+							name="message"
+							id=""
+							cols="30"
+							rows="5"
+							placeholder="your message..."
+							value={this.state.message}
+							onChange={this.handleMessage}
+						></textarea>
+					</div>
+					{/* END OF SINGLE ITEM */}
+					<p className={this.state.sent ? "msg msgAppear" : "msg"}>
+						Message has been sent
+					</p>
 
-				<button
-					className="contact__button"
-					type="submit"
-					onClick={this.formSubmit}
-				>
-					Send
-				</button>
+					<button
+						className="contact__button"
+						type="submit"
+						onClick={this.formSubmit}
+					>
+						Send
+					</button>
+				</div>
 			</form>
 		);
 	}

@@ -167,6 +167,9 @@
 
 /* MODAL INFO */
 .close__info {
+	position: absolute;
+	top: 50px;
+	right: 50px;
 	margin: 20px 20px 20px auto;
 	font-size: 18px;
 	font-weight: bold;
@@ -188,7 +191,7 @@
 .info__text {
 	display: flex;
 	flex-direction: column;
-	margin: 2% 5% 10% 5%;
+	margin: auto;
 	width: 60%;
 	height: 100%;
 	color: #181818;
