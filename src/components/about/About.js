@@ -163,7 +163,7 @@ class About extends React.Component {
 							<h4 className="h4__about">Andreas</h4>
 							<a
 								className="social__link"
-								href="https://www.linkedin.com/"
+								href="https://www.linkedin.com/in/andreaslackmann/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
