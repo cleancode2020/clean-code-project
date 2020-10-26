@@ -79,9 +79,9 @@ function Header(props) {
 							<p>
 								Register, post working code and ask anything you want about
 								clean coding, conventions, naming, refactoring or related topic.
-								Or respond to existing posts and exchange with the community.
+								Or respond to existing posts.
 							</p>
-							<p>Signup to start exchange with the community</p>
+							<p>Sign Up and join the community.</p>
 
 							<div className="infologinbutton__wrapper">
 								<LogIn
