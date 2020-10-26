@@ -138,6 +138,7 @@ class Submitpost extends React.Component {
 				correctLength: false,
 			});
 		}
+		// window.location.reload(false);
 	}
 
 	// POST FIREBASE
@@ -272,15 +273,15 @@ class Submitpost extends React.Component {
 						</p>
 					)}
 
-					<Link to="/">
-						<button
-							type="button"
-							className="submit__post"
-							onClick={this.submitPost}
-						>
+					<button
+						type="button"
+						className="submit__post"
+						onClick={this.submitPost}
+					>
+						<Link className="submit__postlink" to="/">
 							Submit Article
-						</button>
-					</Link>
+						</Link>
+					</button>
 
 					<p className="user__name">{this.state.displayName}</p>
 				</div>

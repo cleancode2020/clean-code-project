@@ -15,6 +15,7 @@ function Posts(props) {
 	const closeInfoModal = () => {
 		setIsInfoActive(false);
 	};
+
 	return (
 		<BrowserRouter>
 			<main className="main__posts">

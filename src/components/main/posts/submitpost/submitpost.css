@@ -101,28 +101,35 @@
 
 /* SUBMIT BUTTON */
 .submit__post {
-	border: solid 1px #00b8ff;
-	background-color: white;
-	color: #00b8ff;
-	font-weight: bold;
-	text-decoration: none;
+	border: none;
+	background-color: #fafaff;
+	height: 50px;
 	width: fit-content;
-	margin: 30px auto;
-	padding: 20px 50px;
-	background-color: #00b8ff;
-	color: white;
-	font-size: 16px;
-	width: fit-content;
+	margin: 50px 0;
+	padding: 0;
 }
 
-.submit__post:hover {
-	background-color: white;
-	color: #00b8ff;
-}
 
 .submit__post:focus {
 	outline-color: transparent;
 	outline-style: none;
+}
+
+/* SUBMIT POST LINK */
+.submit__postlink {
+	border: solid 1px #00b8ff;
+	height: 100%;
+	margin: 0;
+	padding: 20px 50px;
+	font-size: 16px;
+	color: #00b8ff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.submit__postlink:hover {
+	background-color: #00b8ff;
+	color: #fafaff;
 }
 
 /* USER NAME */
