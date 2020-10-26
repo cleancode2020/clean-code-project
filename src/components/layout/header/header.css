@@ -91,6 +91,12 @@
 	padding: 5px 5px 5px 10px;
 }
 
+@media screen and (max-width: 900px) {
+	.header__img {
+		padding: 5px 5px 5px 0;
+	}
+}
+
 .header__info {
 	color: #787878;
 	padding: 10px;
