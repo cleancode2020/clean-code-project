@@ -57,7 +57,6 @@ class SubmitComment extends Component {
 			date: "",
 		});
 		this.getCommentsOfFirebase();
-		window.location.reload(false);
 	}
 
 	// COMMENT
