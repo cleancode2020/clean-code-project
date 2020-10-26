@@ -118,18 +118,20 @@
 /* SUBMIT POST LINK */
 .submit__postlink {
 	border: solid 1px #00b8ff;
+	background-color: #00b8ff;
 	height: 100%;
 	margin: 0;
 	padding: 20px 50px;
 	font-size: 16px;
-	color: #00b8ff;
+	color: #fafaff;
 	text-decoration: none;
 	font-weight: bold;
 }
 
 .submit__postlink:hover {
-	background-color: #00b8ff;
-	color: #fafaff;
+	background-color: #fafafa;
+	
+	color: #00b8ff;
 }
 
 /* USER NAME */
