@@ -71,6 +71,7 @@ class SignUpForm extends React.Component {
 		// FETCH AFTER POST TO REFRESH CONTENT
 		this.props.fetchFirebase();
 		this.props.closeModal();
+		window.location.reload(false);
 	}
 
 	// FETCH  FIREBASE SIGN UP
