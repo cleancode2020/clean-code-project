@@ -64,8 +64,8 @@ class SignUpForm extends React.Component {
 		// VERIFY USER
 		if (user !== null) {
 			this.sendMailVerification(user);
-			this.updateFirebaseUserProfile(user);
-			await this.sendUserName(user);
+			await this.updateFirebaseUserProfile(user);
+			// await this.sendUserName(user);
 		}
 
 		// FETCH AFTER POST TO REFRESH CONTENT
@@ -156,25 +156,6 @@ class SignUpForm extends React.Component {
 			`https://identitytoolkit.googleapis.com/v1/accounts:update?key=${this.props.firebase.apiKey}`,
 			requestOptions
 		);
-	}
-
-	async sendUserName(user) {
-		const databaseURL = this.props.firebase.databaseURL;
-		const localId = user.localId;
-		const idToken = user.idToken;
-		const requestOptions = {
-			method: "PUT",
-			redirect: "follow",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			// CONVERT STATE IN JSON STRING	// }
-			body: JSON.stringify(this.state.userName),
-		};
-		await fetch(
-			`${databaseURL}/users/${localId}/userName.json?auth=${idToken}`,
-			requestOptions
-		).catch((error) => console.log("error:", error));
 	}
 
 	render() {
