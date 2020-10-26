@@ -129,7 +129,7 @@ class Submitpost extends React.Component {
 
 	// SUBMIT
 	submitPost(e) {
-		// e.preventDefault();
+		e.preventDefault();
 
 		if (this.state.title.length >= 3) {
 			this.postFirebase();
@@ -197,6 +197,9 @@ class Submitpost extends React.Component {
 							this.input = inputFocus;
 						}}
 						onChange={this.titleHandleChange}
+						onKeyPress={(e) => {
+							e.key === "Enter" && e.preventDefault();
+						}}
 					/>
 
 					{/* CATIGORIES */}
