@@ -102,7 +102,7 @@ class Contact extends React.Component {
 							className="contact__input"
 							type="text"
 							name="name"
-							placeholder="your name..."
+							placeholder="Tom42"
 							value={this.state.name}
 							onChange={this.handleName}
 						></input>
@@ -117,7 +117,7 @@ class Contact extends React.Component {
 							className="contact__input"
 							type="text"
 							name="email"
-							placeholder="your email..."
+							placeholder="ex@mail.com"
 							value={this.state.email}
 							onChange={this.handleEmail}
 							required
@@ -135,7 +135,7 @@ class Contact extends React.Component {
 							id=""
 							cols="30"
 							rows="5"
-							placeholder="your message..."
+							placeholder="Once upon a terminal..."
 							value={this.state.message}
 							onChange={this.handleMessage}
 						></textarea>
