@@ -191,7 +191,7 @@ class Submitpost extends React.Component {
 					<input
 						className="post__input"
 						type="text"
-						placeholder=""
+						placeholder="Once upon a terminal..."
 						value={this.state.title}
 						ref={(inputFocus) => {
 							this.input = inputFocus;

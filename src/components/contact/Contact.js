@@ -135,7 +135,7 @@ class Contact extends React.Component {
 							id=""
 							cols="30"
 							rows="5"
-							placeholder="Once upon a terminal..."
+							placeholder=""
 							value={this.state.message}
 							onChange={this.handleMessage}
 						></textarea>
