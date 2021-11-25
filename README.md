@@ -61,4 +61,4 @@ Firebase
 
 ### Web deploy:
 
-https://cleancode.fun/
+https://clean-code-project.web.app/
