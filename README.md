@@ -55,10 +55,3 @@ Firebase
 - react-modal - https://www.npmjs.com/package/react-modal
 
 - react-syntax-highlighter - https://www.npmjs.com/package/react-syntax-highlighter
-
-<br />
-<br />
-
-### Web deploy:
-
-https://clean-code-project.web.app/
